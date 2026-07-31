@@ -1,0 +1,76 @@
+﻿# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+
+# Python environments
+.venv/
+venv/
+env/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Local experiment output
+results/logs/
+logs/
+tmp/
+.cache/
+
+# Local model files
+models/
+checkpoints/
+*.safetensors
+*.gguf
+
+# AI assistant working files
+.claude/
+.codex/
+CLAUDE.md
+AGENTS.md
+PROGRESS.md
+ai_notes/
+chat_logs/
+.github/copilot-instructions.md
+
+# LaTeX temporary files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Local thesis documents
+expose_Andrii_Korsun final version.pdf
