@@ -1,9 +1,12 @@
-# Single-Agent vs Multi-Agent LLM Planning Under Equal Token Budget
+# Multi-Agent vs. Single-Agent LLMs Under Equal Token Budgets
 
-Bachelor thesis, TU Berlin (Faculty IV), by Andrii Korsun. Supervisor: Prof. Stefan Hillmann.
+Bachelor thesis, TU Berlin, Quality and Usability Lab (Faculty IV), by Andrii Korsun.
+First examiner: Prof. Sebastian Möller. Second examiner: Prof. Dr. Axel Küpper.
+Supervisor: Dr.-Ing. Stefan Hillmann.
 
-This repository contains the code, the frozen design record and the derived results of the
-thesis. It does not contain the thesis text.
+This repository contains the code, the prompts, the frozen design record and the derived
+results of the thesis. The version referenced in the thesis is the tag `thesis-final`.
+It does not contain the thesis text.
 
 ## Research question
 
@@ -16,8 +19,9 @@ crossover exists, the single agent always wins, or the hierarchy always wins.
 
 **Task.** Meeting planning is generated as an orienteering problem with time windows: a
 deterministic generator controls time windows, travel structure (uniform, clustered, line,
-random) and conflict density. Complexity is the number of *binding conflict pairs* of an
-instance, verified after solving, not the number of people or meetings.
+random) and conflict density. In the main block, complexity is the number of *pairwise
+conflicts* of an instance (two people who can each be met alone but not both, in either
+order), verified after solving, not the number of people.
 
 **Ground truth.** An OR-Tools CP-SAT oracle computes the optimum for every instance. It is
 never exposed to the agents. A hidden validator, independent of the solver, checks every
@@ -53,9 +57,9 @@ robustness question remains open; see `THESIS_DECISIONS.md` §1 and §7.
 ## Held-out study
 
 - 198 instances, 5 architectures, 4 budget caps: 3,960 runs, all present, none missing.
-- **Block A:** n = 8 meetings, complexity levels Low / Medium / High, 50 instances each,
+- **Block A:** n = 8 people, pairwise-conflict groups Low / Medium / High, 50 instances each,
   analysed as Architecture × Budget × Complexity.
-- **Block B:** n = 4, 5, 6 meetings, 16 instances each, size reported descriptively.
+- **Block B:** n = 4, 5, 6 people, 16 instances each, size reported descriptively.
 - Run on the TU Berlin HPC cluster, one NVIDIA H200 per job.
 
 Block A mean satisfaction, pooled over complexity levels (150 instances per cell):
@@ -68,16 +72,16 @@ Block A mean satisfaction, pooled over complexity levels (150 instances per cell
 | C4 | 0.007 | 0.116 | 0.589 | 0.639 |
 | C5 | 0.003 | 0.009 | 0.088 | 0.531 |
 
-These are descriptive means. Two inferential analyses exist and have different standing:
+These are descriptive means. The inferential analysis of the thesis is the factorial
+analysis over all four caps (task-level permutation tests, Holm correction within each
+family, 40 paired architecture comparisons). Architecture, Budget and Architecture × Budget
+are significant; the three-way interaction Architecture × Budget × Complexity is not
+established (Holm p = 0.073). A complexity-dependent change in architecture ranking was not
+established under the present operationalisation of task complexity. The specific test
+procedures were fixed after the runs and before the tests were run.
 
-- The **registered confirmatory analysis** at the 64k cap (five contrasts, interaction and
-  crossover tests, Holm correction over ten p-values) did not detect the pre-registered
-  crossover: 0 of 10 rejected. This is a failure to detect, not evidence that no crossover
-  exists.
-- The **factorial analysis** over all caps was specified after the runs were complete and is
-  not pre-registered. Architecture, Budget and Architecture × Budget are significant after
-  Holm correction within their family; the three-way interaction is not established
-  (Holm p = 0.073).
+`results/analysis/heldout/` holds an earlier single-cap analysis that is superseded and not
+used in the thesis.
 
 The final plan is valid by construction, so plan validity is not reported as a metric; the
 informative secondary outcomes are the valid non-empty rate and the optimality rate. Full
@@ -86,6 +90,20 @@ numbers, amendments and limitations are in `THESIS_DECISIONS.md` and in
 
 The earlier formal pilot (360 runs, C1–C3, 8k–64k caps) is kept as design history in
 `results/analysis/formal_pilot/`. It is not a result of the thesis.
+
+## Where to find what the thesis refers to
+
+| Thesis | Repository |
+|---|---|
+| Prompts of all roles | `src/agents/` (`react_core.py`, `single_agent/`, `multi_agent/prompts.py`) |
+| Run table, 3,960 runs | `results/exports/heldout/runs.csv` |
+| Stage table | `results/exports/heldout_stages/stage_metrics.csv` |
+| Factorial analysis | `scripts/analyse_heldout_factorial.py`, outputs in `results/analysis/heldout_factorial/` |
+| Stage diagnostics | `scripts/analyse_stage_metrics.py`, outputs in `results/analysis/heldout_stages/` |
+| Design record | `THESIS_DECISIONS.md` |
+
+The run documents record commit `f1f1ff7` of the development repository. The source code
+here is the same as in that commit, apart from comments and line endings.
 
 ## Repository layout
 
@@ -138,6 +156,11 @@ table in `results/exports/heldout/` is derived from them.
 `THESIS_DECISIONS.md` is the canonical record of methodology, locked decisions, amendments,
 results and limitations. `SETUP.md` covers the environment, serving configuration and the
 frozen version record.
+
+## Citation
+
+Korsun, A. (2026). *Multi-Agent vs. Single-Agent LLMs Under Equal Token Budgets*.
+Bachelor thesis, Technische Universität Berlin.
 
 ## License
 
