@@ -1,0 +1,66 @@
+{
+  "schema_version": "pilot_manifest/1.0",
+  "selector_version": "lowcx_manifest/1.0",
+  "grid_name": "lowcx_n4",
+  "purpose": "lower-complexity extension: 12 instances at a fixed oracle optimum. Level labels describe conflict density and never task size; n is a generator parameter and is not a complexity metric",
+  "seed_range_name": "lower_complexity_n4",
+  "seed_range": {
+    "start": 40000,
+    "end": 49999
+  },
+  "n_people": 4,
+  "fixed_optimum": 3,
+  "n_per_size": 12,
+  "n_accepted": 12,
+  "boundaries": {
+    "b1_easy_max": 0,
+    "b2_medium_max": 1
+  },
+  "boundary_derivation": {
+    "rule": "the frozen n = 8 cut-points as densities, floored at this size: easy is D <= 1/28, medium is D <= 7/28",
+    "reference_n": 8,
+    "reference_pairs": [
+      1,
+      7
+    ],
+    "max_pairs_here": 6
+  },
+  "level_counts": {
+    "easy": 11,
+    "medium": 1,
+    "hard": 0
+  },
+  "pool": {
+    "dir": "results\\calibration\\lowcx_n4",
+    "git_commit": "e5b6342ab6a356a0305ce053eec7cfc04a3bdfe8",
+    "seed_start": 40000,
+    "seed_end": 40099,
+    "n_candidates": 9600,
+    "candidates_sha256": "1601348e620de74b76253b1b1306bfd2ed8e2b4abb6b706f472a76a07c0ee6d6"
+  },
+  "selection": {
+    "rule": "earliest admissible selection in canonical order (seed, travel structure, tightness, overlap) at O = 3",
+    "fixed_optimum": 3,
+    "diversity": {
+      "min_tightness_values": 2,
+      "max_tightness_share": "6/10",
+      "travel_structure_histogram": {
+        "clustered": 3,
+        "line": 3,
+        "random": 3,
+        "uniform": 3
+      },
+      "travel_structure_rule": "exact and identical at every size, so a change in n is not accompanied by a change in travel topology; supersedes the weaker 'at least 2 structures' rule, which an equal split satisfies",
+      "one_instance_per_seed": true
+    },
+    "n_eligible": 1836,
+    "solver": {
+      "workers": 1,
+      "random_seed": 0,
+      "objective": "minimise total canonical rank"
+    },
+    "no_agent_information_used": true
+  },
+  "content_hash": "9c553e394e79838f349dbb7b03e024ee01ca28bcb5e8daf3463e1a08bcf95a43",
+  "timestamp_utc": "2026-08-16T09:08:00+00:00"
+}

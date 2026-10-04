@@ -34,7 +34,9 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
         "--condition",
         default="c1_react",
         choices=["c1_react", "c2_verify_revise"],
-        help="condition to run (C3/C4 are intentionally not part of this step)",
+        help="condition to run. This development slice covers the single-agent "
+             "conditions only; C3 is implemented and exercised by the sweep runner "
+             "and its own tests, C4 is not implemented",
     )
     parser.add_argument("--cap", type=int, default=4000, help="token budget cap")
     parser.add_argument("--seed", type=int, default=0, help="generator seed")
@@ -52,7 +54,8 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
         default=Path("results/logs/vertical_slice"),
         help="directory for the JSON log (git-ignored by default)",
     )
-    parser.add_argument("--max-steps", type=int, default=12)
+    parser.add_argument("--max-steps", type=int, default=None,
+                        help="step cap; default derives it from --cap")
     return parser.parse_args(argv)
 
 

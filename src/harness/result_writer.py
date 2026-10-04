@@ -118,6 +118,22 @@ def build_document(
             # best_plan_so_far, so the structural plan was scored instead. Cannot affect
             # the score; the pilot reports its rate (THESIS_DECISIONS section 7).
             "finalization_mismatch": agent.finalization_mismatch,
+            # Why the loop stopped, and how many turns carried no post-think content.
+            # Diagnostics only; neither routes anything.
+            "termination": agent.termination,
+            "empty_turns": agent.empty_turns,
+            # Rejected-proposal taxonomy (THESIS_DECISIONS section 6): one row per
+            # propose, written when the propose was handled, with the validator's
+            # reasons. This is where the invalid-plan breakdown is measured -- the
+            # scored plan is valid or empty by construction and carries no error
+            # information. Row shape is versioned per row (`schema_version`) so the
+            # analysis layer can widen it without a document-level bump.
+            "proposals": agent.proposals,
+            # Condition-specific, log-only block: empty for the conditions that have no
+            # structure to describe, and never read by any loop. C5 records its three
+            # trajectory products and the winning attempt here; C4 its pool, headroom and
+            # evidence coverage. Nothing in it can influence a run or a score.
+            "diagnostics": agent.diagnostics,
             "transcript": agent.transcript,
         },
         "usage_audit": usage_audit,

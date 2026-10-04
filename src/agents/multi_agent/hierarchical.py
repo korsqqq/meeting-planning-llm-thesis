@@ -73,10 +73,18 @@ def run_hierarchical(
     cap: int,
     max_steps: int = 12,
     finalization_reserve: int = DEFAULT_FINALIZATION_RESERVE,
+    retry_on_empty: bool = False,
 ) -> ReactResult:
-    """Run C3 on one instance under a token `cap`. Returns the run artifacts."""
+    """Run C3 on one instance under a token `cap`. Returns the run artifacts.
+
+    `retry_on_empty` keeps the shared call shape with C1/C2; it is the EXPERIMENTAL
+    empty-turn arm and defaults to the locked behaviour.
+    """
     ledger = BudgetLedger(cap=cap, finalization_reserve=finalization_reserve)
-    ctx = LoopContext(instance=instance, client=client, ledger=ledger, max_steps=max_steps)
+    ctx = LoopContext(
+        instance=instance, client=client, ledger=ledger, max_steps=max_steps,
+        retry_on_empty=retry_on_empty, condition="c3_mas",
+    )
     working = cap - finalization_reserve
     quota = working * WORKER_SHARE_NUM // WORKER_SHARE_DEN
 
@@ -150,6 +158,12 @@ def run_hierarchical(
         + _transcript_block("critic", final_state["critic_messages"])
     )
     n_steps = oc_a.n_steps + oc_b.n_steps + (1 if final_state["critic_ran"] else 0)
+    # Instance-level taxonomy: both workers' rows (already relabelled to worker_a /
+    # worker_b) followed by the critic's single row, if it proposed at all.
+    critic_proposal = final_state.get("critic_proposal")
+    proposals = list(oc_a.proposals) + list(oc_b.proposals)
+    if critic_proposal is not None:
+        proposals.append(critic_proposal)
 
     return ReactResult(
         final_plan=final_state["final_plan"],
@@ -161,4 +175,9 @@ def run_hierarchical(
         transcript=transcript,
         n_steps=n_steps,
         finalization_mismatch=final_state.get("finalization_mismatch", False),
+        empty_turns=sum(1 for o in (oc_a, oc_b) if o.aborted),
+        termination="aborted" if (oc_a.aborted and oc_b.aborted) else (
+            "budget" if final_state["via_budget"] else "agent_finish"
+        ),
+        proposals=proposals,
     )

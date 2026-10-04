@@ -1,0 +1,213 @@
+{
+  "schema_version": "pilot_subset/1.0",
+  "selector_version": "lowcx_manifest/1.0",
+  "manifest_hash": "9c553e394e79838f349dbb7b03e024ee01ca28bcb5e8daf3463e1a08bcf95a43",
+  "manifest_schema_version": "pilot_manifest/1.0",
+  "grid_name": "lowcx_n4",
+  "seed_range_name": "lower_complexity_n4",
+  "n_people": 4,
+  "fixed_optimum": 3,
+  "per_level_requested": null,
+  "counts": {
+    "easy": 11,
+    "medium": 1,
+    "hard": 0
+  },
+  "representation": {
+    "n_people": [
+      4
+    ],
+    "travel_structure": {
+      "clustered": 3,
+      "line": 3,
+      "random": 3,
+      "uniform": 3
+    },
+    "tightness": {
+      "0.6": 6,
+      "0.8": 6
+    },
+    "overlap": {
+      "0.2": 4,
+      "0.5": 1,
+      "0.8": 3,
+      "1.0": 4
+    },
+    "optimum_counts": {
+      "3": 12
+    },
+    "conflict_pairs": {
+      "0": 11,
+      "1": 1
+    },
+    "higher_order_gap_H": {
+      "0": 1,
+      "1": 11
+    }
+  },
+  "instances": {
+    "easy": [
+      {
+        "instance_id": "uniform-n4-t60-o100-s40000",
+        "seed": 40000,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.6,
+          "overlap": 1.0,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "line-n4-t80-o80-s40001",
+        "seed": 40001,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.8,
+          "overlap": 0.8,
+          "travel_structure": "line"
+        }
+      },
+      {
+        "instance_id": "uniform-n4-t80-o80-s40002",
+        "seed": 40002,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.8,
+          "overlap": 0.8,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "random-n4-t80-o20-s40004",
+        "seed": 40004,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.8,
+          "overlap": 0.2,
+          "travel_structure": "random"
+        }
+      },
+      {
+        "instance_id": "random-n4-t60-o80-s40005",
+        "seed": 40005,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.6,
+          "overlap": 0.8,
+          "travel_structure": "random"
+        }
+      },
+      {
+        "instance_id": "clustered-n4-t80-o20-s40006",
+        "seed": 40006,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.8,
+          "overlap": 0.2,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "line-n4-t60-o100-s40007",
+        "seed": 40007,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.6,
+          "overlap": 1.0,
+          "travel_structure": "line"
+        }
+      },
+      {
+        "instance_id": "clustered-n4-t60-o100-s40008",
+        "seed": 40008,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.6,
+          "overlap": 1.0,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "clustered-n4-t80-o20-s40009",
+        "seed": 40009,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.8,
+          "overlap": 0.2,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "uniform-n4-t60-o50-s40010",
+        "seed": 40010,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.6,
+          "overlap": 0.5,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "random-n4-t60-o100-s40011",
+        "seed": 40011,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.6,
+          "overlap": 1.0,
+          "travel_structure": "random"
+        }
+      }
+    ],
+    "medium": [
+      {
+        "instance_id": "line-n4-t80-o20-s40003",
+        "seed": 40003,
+        "level": "medium",
+        "optimum": 3,
+        "complexity_metric": 1,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.8,
+          "overlap": 0.2,
+          "travel_structure": "line"
+        }
+      }
+    ],
+    "hard": []
+  },
+  "content_hash": "74e57136280d6271991bbbca93ad5188adb2dead7a2e98d10df8b3f92aeacfe4",
+  "timestamp_utc": "2026-08-16T09:08:00+00:00"
+}

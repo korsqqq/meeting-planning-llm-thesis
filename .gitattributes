@@ -1,11 +1,23 @@
-* text=auto
+# Shell scripts run on the Ubuntu run machine: CRLF would break the shebang.
+*.sh text eol=lf
 
-*.py text eol=lf
-*.md text eol=lf
-*.json text eol=lf
-*.toml text eol=lf
-*.yaml text eol=lf
-*.yml text eol=lf
-*.bib text eol=lf
-*.txt text eol=lf
-*.ps1 text eol=lf
+# Slurm batch scripts are shell scripts too, and Slurm executes them on Debian
+# compute nodes. A CRLF checkout on Windows would fail with "bad interpreter".
+*.slurm text eol=lf
+
+# Derived analysis artifacts are byte-compared across machines (git status is the
+# reproducibility check), so they must never be newline-normalised.
+results/analysis/** text eol=lf
+
+# Run documents are byte-compared across machines; never newline-normalise them.
+results/dev_runs/** text eol=lf
+results/formal_pilot/** text eol=lf
+
+# Binary figure artifacts. These live under results/analysis/ and would otherwise be
+# caught by the `text eol=lf` rule above and newline-normalised, which corrupts the
+# bytes. `binary` (= -text -diff) must come AFTER that rule so it wins. Overleaf
+# ingests the PDFs; the PNGs are previews.
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary

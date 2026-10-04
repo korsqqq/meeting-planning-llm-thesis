@@ -1,0 +1,17 @@
+{
+  "optimizer_used": "bfgs",
+  "attempts": [
+    {
+      "method": "bfgs",
+      "status": "ok",
+      "converged": true
+    },
+    {
+      "method": "powell",
+      "status": "ok",
+      "converged": true
+    }
+  ],
+  "cross_check_optimizer": "powell",
+  "max_abs_fixed_effect_difference": 2.7755575615628914e-16
+}

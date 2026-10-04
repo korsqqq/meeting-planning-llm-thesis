@@ -43,6 +43,7 @@ from .tokenizer import QwenTokenizer
 from .usage_audit import extract_endpoint_usage
 
 __all__ = [
+    "ContextWindowError",
     "DEFAULT_BASE_URL",
     "DEFAULT_MODEL",
     "TEMPERATURE",
@@ -146,6 +147,23 @@ class LLMResponse:
     endpoint_usage_raw: dict[str, Any] | None = None
     endpoint_model: str | None = None
     usage_source: str | None = None  # "endpoint.usage" when the endpoint reported usage
+    # Context-window accounting for this call. `requested` is what the budget guard
+    # granted, `effective` is what was actually sent after the deployment's context
+    # window was applied, and `context_limited` says the two differ. Defaults keep
+    # scripted/offline clients honest: they report no limiting rather than inventing
+    # numbers they never computed.
+    requested_max_tokens: int | None = None
+    effective_max_tokens: int | None = None
+    context_limited: bool = False
+
+
+class ContextWindowError(RuntimeError):
+    """The prompt alone does not fit the deployment's context window.
+
+    Raised BEFORE the endpoint is contacted: there is no generation budget left to ask
+    for, and a request in this state can only come back as a server-side error that
+    would be indistinguishable from a transport failure.
+    """
 
 
 class LLMClient:
@@ -160,10 +178,22 @@ class LLMClient:
         api_key: str = "ollama",   # ignored by Ollama; vLLM accepts any non-empty key
         timeout: float = 180.0,
         force_no_thinking: bool = False,
+        max_model_len: int | None = None,
     ) -> None:
         self.tokenizer = tokenizer
         self.model = model
         self.base_url = base_url
+        # The deployment's context window, in tokens. A physical limit of the served
+        # model, NOT a budget policy: the ledger and the instance cap are untouched, and
+        # this only stops a call from asking for more generation than the window can
+        # hold (`prompt + max_tokens <= max_model_len`), which the endpoint would reject
+        # outright. Required for the pilot at the ladder's top rung, where the guard
+        # would otherwise grant a first call ~63.5k tokens against a 32768 window.
+        # None = no limiting, kept for unit tests, offline clients and ad-hoc calls that
+        # have no deployment behind them.
+        if max_model_len is not None and max_model_len <= 0:
+            raise ValueError(f"max_model_len must be > 0 or None, got {max_model_len}")
+        self.max_model_len = max_model_len
         # Local-debug escape hatch: Ollama's Qwen3 GGUF does its thinking internally and
         # returns empty text via /v1/completions, so thinking-ON decide steps come back
         # blank. Setting this renders every call thinking-OFF -- the model emits its
@@ -205,18 +235,47 @@ class LLMClient:
         tools: list[dict[str, Any]] | None = None,
         guided_json: dict[str, Any] | None = None,
         stop: list[str] | None = None,
+        seed: int | None = None,
     ) -> LLMResponse:
         """Render, call `/v1/completions`, split, and count one generation.
 
         `max_tokens` is the guard's `max_new_tokens` for this call. `guided_json`
         constrains the output to a JSON schema (vLLM `guided_json`; used for the
         terminal emit node with enable_thinking=False).
+
+        `seed` overrides the request seed for THIS call only and defaults to the fixed
+        `SEED`, so every existing caller is byte-identical. It exists for C5, the only
+        condition whose internal attempts vary the seed (§4 C5): a fixed request seed
+        would make repeated Best-of-3 attempts likely identical and the condition
+        degenerate. Nothing else about decoding changes, and the finalisation call never
+        passes it, so the terminal emit keeps one seed across C1-C5.
         """
         think = enable_thinking and not self.force_no_thinking
         rendered = self.tokenizer.render_input(
             messages, tools=tools, enable_thinking=think
         )
         input_tokens = self.tokenizer.count_text(rendered)
+
+        # Context-window guard, applied AFTER the exact input count and BEFORE the call.
+        # The budget guard decides how much this call may spend; the window decides how
+        # much the deployment can physically hold. The smaller of the two is what gets
+        # sent -- the ledger, the reserve and the instance cap are not touched, so a
+        # limited call simply leaves its unspent grant in the budget.
+        requested_max_tokens = max(1, max_tokens)
+        if self.max_model_len is None:
+            effective_max_tokens = requested_max_tokens
+            context_limited = False
+        else:
+            available_context = self.max_model_len - input_tokens
+            if available_context <= 0:
+                raise ContextWindowError(
+                    f"prompt is {input_tokens} tokens, context window is "
+                    f"{self.max_model_len}: nothing left to generate. Raise "
+                    "max-model-len on the server or shorten the history; the endpoint "
+                    "would reject this request anyway."
+                )
+            effective_max_tokens = min(requested_max_tokens, available_context)
+            context_limited = effective_max_tokens < requested_max_tokens
 
         # `think` is read by Ollama (disable its hidden reasoning); vLLM ignores it.
         # `return_token_ids` asks vLLM for the generated token ids so the
@@ -229,15 +288,16 @@ class LLMClient:
             "add_special_tokens": False,
         }
         if guided_json is not None:
-            extra_body["guided_json"] = guided_json
+            # vLLM >= 0.19 renamed the wire parameter (SETUP.md 5.1, probe F).
+            extra_body["structured_outputs"] = {"json": guided_json}
 
         completion = self._client.completions.create(
             model=self.model,
             prompt=rendered,
-            max_tokens=max(1, max_tokens),
+            max_tokens=effective_max_tokens,
             temperature=TEMPERATURE,
             top_p=TOP_P,
-            seed=SEED,
+            seed=SEED if seed is None else seed,
             n=1,
             stop=stop,
             extra_body=extra_body,
@@ -274,6 +334,9 @@ class LLMClient:
             endpoint_usage_raw=usage_record["raw"] if usage_record else None,
             endpoint_model=usage_record["model"] if usage_record else None,
             usage_source="endpoint.usage" if usage_record else None,
+            requested_max_tokens=requested_max_tokens,
+            effective_max_tokens=effective_max_tokens,
+            context_limited=context_limited,
         )
 
     def _count_output(self, choice: Any, text: str) -> tuple[int, int]:

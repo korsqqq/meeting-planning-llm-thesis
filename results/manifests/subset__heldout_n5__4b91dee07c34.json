@@ -1,0 +1,271 @@
+{
+  "schema_version": "pilot_subset/1.0",
+  "selector_version": "lowcx_manifest/1.0",
+  "manifest_hash": "1eb669085413b50a44b0662141da6d5c4f236f01287b34c242b133e7219ded56",
+  "manifest_schema_version": "pilot_manifest/1.0",
+  "grid_name": "lowcx_n5",
+  "seed_range_name": "held_out_n5",
+  "n_people": 5,
+  "fixed_optimum": 3,
+  "per_level_requested": null,
+  "counts": {
+    "easy": 5,
+    "medium": 9,
+    "hard": 2
+  },
+  "representation": {
+    "n_people": [
+      5
+    ],
+    "travel_structure": {
+      "clustered": 4,
+      "line": 4,
+      "random": 4,
+      "uniform": 4
+    },
+    "tightness": {
+      "0.6": 1,
+      "0.8": 9,
+      "0.9": 6
+    },
+    "overlap": {
+      "0.2": 3,
+      "0.5": 4,
+      "0.8": 8,
+      "1.0": 1
+    },
+    "optimum_counts": {
+      "3": 16
+    },
+    "conflict_pairs": {
+      "0": 5,
+      "1": 2,
+      "2": 7,
+      "3": 1,
+      "5": 1
+    },
+    "higher_order_gap_H": {
+      "0": 3,
+      "1": 8,
+      "2": 5
+    }
+  },
+  "instances": {
+    "easy": [
+      {
+        "instance_id": "clustered-n5-t80-o50-s120000",
+        "seed": 120000,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 5,
+          "tightness": 0.8,
+          "overlap": 0.5,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "uniform-n5-t60-o100-s120002",
+        "seed": 120002,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 5,
+          "tightness": 0.6,
+          "overlap": 1.0,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "line-n5-t80-o80-s120010",
+        "seed": 120010,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 5,
+          "tightness": 0.8,
+          "overlap": 0.8,
+          "travel_structure": "line"
+        }
+      },
+      {
+        "instance_id": "random-n5-t80-o50-s120012",
+        "seed": 120012,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 5,
+          "tightness": 0.8,
+          "overlap": 0.5,
+          "travel_structure": "random"
+        }
+      },
+      {
+        "instance_id": "random-n5-t80-o80-s120013",
+        "seed": 120013,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 5,
+          "tightness": 0.8,
+          "overlap": 0.8,
+          "travel_structure": "random"
+        }
+      }
+    ],
+    "medium": [
+      {
+        "instance_id": "line-n5-t80-o80-s120001",
+        "seed": 120001,
+        "level": "medium",
+        "optimum": 3,
+        "complexity_metric": 2,
+        "cell": {
+          "n_people": 5,
+          "tightness": 0.8,
+          "overlap": 0.8,
+          "travel_structure": "line"
+        }
+      },
+      {
+        "instance_id": "line-n5-t90-o80-s120003",
+        "seed": 120003,
+        "level": "medium",
+        "optimum": 3,
+        "complexity_metric": 2,
+        "cell": {
+          "n_people": 5,
+          "tightness": 0.9,
+          "overlap": 0.8,
+          "travel_structure": "line"
+        }
+      },
+      {
+        "instance_id": "uniform-n5-t90-o80-s120004",
+        "seed": 120004,
+        "level": "medium",
+        "optimum": 3,
+        "complexity_metric": 2,
+        "cell": {
+          "n_people": 5,
+          "tightness": 0.9,
+          "overlap": 0.8,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "random-n5-t80-o20-s120005",
+        "seed": 120005,
+        "level": "medium",
+        "optimum": 3,
+        "complexity_metric": 2,
+        "cell": {
+          "n_people": 5,
+          "tightness": 0.8,
+          "overlap": 0.2,
+          "travel_structure": "random"
+        }
+      },
+      {
+        "instance_id": "clustered-n5-t80-o80-s120007",
+        "seed": 120007,
+        "level": "medium",
+        "optimum": 3,
+        "complexity_metric": 1,
+        "cell": {
+          "n_people": 5,
+          "tightness": 0.8,
+          "overlap": 0.8,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "uniform-n5-t90-o20-s120008",
+        "seed": 120008,
+        "level": "medium",
+        "optimum": 3,
+        "complexity_metric": 2,
+        "cell": {
+          "n_people": 5,
+          "tightness": 0.9,
+          "overlap": 0.2,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "clustered-n5-t80-o50-s120009",
+        "seed": 120009,
+        "level": "medium",
+        "optimum": 3,
+        "complexity_metric": 2,
+        "cell": {
+          "n_people": 5,
+          "tightness": 0.8,
+          "overlap": 0.5,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "clustered-n5-t80-o80-s120011",
+        "seed": 120011,
+        "level": "medium",
+        "optimum": 3,
+        "complexity_metric": 1,
+        "cell": {
+          "n_people": 5,
+          "tightness": 0.8,
+          "overlap": 0.8,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "random-n5-t90-o50-s120015",
+        "seed": 120015,
+        "level": "medium",
+        "optimum": 3,
+        "complexity_metric": 2,
+        "cell": {
+          "n_people": 5,
+          "tightness": 0.9,
+          "overlap": 0.5,
+          "travel_structure": "random"
+        }
+      }
+    ],
+    "hard": [
+      {
+        "instance_id": "uniform-n5-t90-o20-s120006",
+        "seed": 120006,
+        "level": "hard",
+        "optimum": 3,
+        "complexity_metric": 3,
+        "cell": {
+          "n_people": 5,
+          "tightness": 0.9,
+          "overlap": 0.2,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "line-n5-t90-o80-s120014",
+        "seed": 120014,
+        "level": "hard",
+        "optimum": 3,
+        "complexity_metric": 5,
+        "cell": {
+          "n_people": 5,
+          "tightness": 0.9,
+          "overlap": 0.8,
+          "travel_structure": "line"
+        }
+      }
+    ]
+  },
+  "content_hash": "4b91dee07c34235a8c6c96d5e97ea8fc1127379df1936a8393a34da8ecfcb8a0",
+  "timestamp_utc": "2026-08-27T01:07:43+00:00"
+}

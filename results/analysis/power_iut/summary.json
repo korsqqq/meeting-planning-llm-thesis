@@ -1,0 +1,639 @@
+{
+  "schema_version": "power_iut/1.0",
+  "selects_n_on": {
+    "effect": "target",
+    "delta": 0.2,
+    "power": 0.8,
+    "rule": "smallest N reaching the target power in EVERY nuisance configuration"
+  },
+  "nuisance_axes": {
+    "base_mean": [
+      0.35,
+      0.5,
+      0.65
+    ],
+    "sigma_logit": [
+      0.5,
+      1.0,
+      1.5
+    ],
+    "o_config": {
+      "A_calibration_mix": {
+        "3": 0.6307692307692307,
+        "4": 0.36923076923076925
+      },
+      "B_all_optimum_3": {
+        "3": 1.0
+      },
+      "C_all_optimum_4": {
+        "4": 1.0
+      }
+    }
+  },
+  "o_distribution_status": "sensitivity axis, not an adopted design histogram",
+  "monte_carlo": {
+    "replicates": 2000,
+    "escalated_replicates": 10000,
+    "escalation_rule": "any cell whose 95% interval contains the target power is re-run automatically",
+    "seed": 20260809
+  },
+  "bootstrap": {
+    "unit": "instance",
+    "paired": true,
+    "method": "percentile",
+    "resamples_in_search": 2000,
+    "resamples_registered": 10000,
+    "low_rule": "5th percentile of resampled mean > 0",
+    "high_rule": "95th percentile of resampled mean < 0"
+  },
+  "search": {
+    "selected_n": 35,
+    "attempts": [
+      {
+        "n_per_band": 30,
+        "passes": false,
+        "failed_on": {
+          "base_mean": 0.5,
+          "sigma": 0.5,
+          "o_config": "B_all_optimum_3",
+          "power_iut": 0.7525
+        }
+      },
+      {
+        "n_per_band": 35,
+        "passes": true,
+        "worst_cell": {
+          "base_mean": 0.5,
+          "sigma": 0.5,
+          "o_config": "B_all_optimum_3",
+          "power_iut": 0.834
+        }
+      }
+    ],
+    "selected_detail": {
+      "n_per_band": 35,
+      "passes": true,
+      "cells": [
+        {
+          "n_per_band": 35,
+          "base_mean": 0.35,
+          "sigma": 0.5,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9095,
+          "power_low": 0.951,
+          "power_high": 0.955,
+          "product_sanity_check": 0.9082,
+          "mc_se": 0.00642,
+          "mc_ci95": [
+            0.8969,
+            0.9221
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.35,
+          "sigma": 0.5,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8845,
+          "power_low": 0.94,
+          "power_high": 0.94,
+          "product_sanity_check": 0.8836,
+          "mc_se": 0.00715,
+          "mc_ci95": [
+            0.8705,
+            0.8985
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.35,
+          "sigma": 0.5,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.943,
+          "power_low": 0.9685,
+          "power_high": 0.974,
+          "product_sanity_check": 0.9433,
+          "mc_se": 0.00518,
+          "mc_ci95": [
+            0.9328,
+            0.9532
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.35,
+          "sigma": 1.0,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.938,
+          "power_low": 0.9685,
+          "power_high": 0.9695,
+          "product_sanity_check": 0.939,
+          "mc_se": 0.00539,
+          "mc_ci95": [
+            0.9274,
+            0.9486
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.35,
+          "sigma": 1.0,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9105,
+          "power_low": 0.957,
+          "power_high": 0.951,
+          "product_sanity_check": 0.9101,
+          "mc_se": 0.00638,
+          "mc_ci95": [
+            0.898,
+            0.923
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.35,
+          "sigma": 1.0,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.968,
+          "power_low": 0.985,
+          "power_high": 0.9825,
+          "product_sanity_check": 0.9678,
+          "mc_se": 0.00394,
+          "mc_ci95": [
+            0.9603,
+            0.9757
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.35,
+          "sigma": 1.5,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.967,
+          "power_low": 0.984,
+          "power_high": 0.9825,
+          "product_sanity_check": 0.9668,
+          "mc_se": 0.00399,
+          "mc_ci95": [
+            0.9592,
+            0.9748
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.35,
+          "sigma": 1.5,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.949,
+          "power_low": 0.974,
+          "power_high": 0.974,
+          "product_sanity_check": 0.9487,
+          "mc_se": 0.00492,
+          "mc_ci95": [
+            0.9394,
+            0.9586
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.35,
+          "sigma": 1.5,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.982,
+          "power_low": 0.991,
+          "power_high": 0.991,
+          "product_sanity_check": 0.9821,
+          "mc_se": 0.00297,
+          "mc_ci95": [
+            0.9762,
+            0.9878
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.5,
+          "sigma": 0.5,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.882,
+          "power_low": 0.94,
+          "power_high": 0.94,
+          "product_sanity_check": 0.8836,
+          "mc_se": 0.00721,
+          "mc_ci95": [
+            0.8679,
+            0.8961
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.5,
+          "sigma": 0.5,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.834,
+          "power_low": 0.9205,
+          "power_high": 0.908,
+          "product_sanity_check": 0.8358,
+          "mc_se": 0.00832,
+          "mc_ci95": [
+            0.8177,
+            0.8503
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.5,
+          "sigma": 0.5,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.931,
+          "power_low": 0.9655,
+          "power_high": 0.9635,
+          "product_sanity_check": 0.9303,
+          "mc_se": 0.00567,
+          "mc_ci95": [
+            0.9199,
+            0.9421
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.5,
+          "sigma": 1.0,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9285,
+          "power_low": 0.968,
+          "power_high": 0.9595,
+          "product_sanity_check": 0.9288,
+          "mc_se": 0.00576,
+          "mc_ci95": [
+            0.9172,
+            0.9398
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.5,
+          "sigma": 1.0,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8915,
+          "power_low": 0.9325,
+          "power_high": 0.9545,
+          "product_sanity_check": 0.8901,
+          "mc_se": 0.00695,
+          "mc_ci95": [
+            0.8779,
+            0.9051
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.5,
+          "sigma": 1.0,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.957,
+          "power_low": 0.9785,
+          "power_high": 0.978,
+          "product_sanity_check": 0.957,
+          "mc_se": 0.00454,
+          "mc_ci95": [
+            0.9481,
+            0.9659
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.5,
+          "sigma": 1.5,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.948,
+          "power_low": 0.973,
+          "power_high": 0.9745,
+          "product_sanity_check": 0.9482,
+          "mc_se": 0.00496,
+          "mc_ci95": [
+            0.9383,
+            0.9577
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.5,
+          "sigma": 1.5,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.923,
+          "power_low": 0.959,
+          "power_high": 0.961,
+          "product_sanity_check": 0.9216,
+          "mc_se": 0.00596,
+          "mc_ci95": [
+            0.9113,
+            0.9347
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.5,
+          "sigma": 1.5,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9795,
+          "power_low": 0.989,
+          "power_high": 0.9905,
+          "product_sanity_check": 0.9796,
+          "mc_se": 0.00317,
+          "mc_ci95": [
+            0.9733,
+            0.9857
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.65,
+          "sigma": 0.5,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.915,
+          "power_low": 0.955,
+          "power_high": 0.9595,
+          "product_sanity_check": 0.9163,
+          "mc_se": 0.00624,
+          "mc_ci95": [
+            0.9028,
+            0.9272
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.65,
+          "sigma": 0.5,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.865,
+          "power_low": 0.9295,
+          "power_high": 0.9305,
+          "product_sanity_check": 0.8649,
+          "mc_se": 0.00764,
+          "mc_ci95": [
+            0.85,
+            0.88
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.65,
+          "sigma": 0.5,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9565,
+          "power_low": 0.9775,
+          "power_high": 0.979,
+          "product_sanity_check": 0.957,
+          "mc_se": 0.00456,
+          "mc_ci95": [
+            0.9476,
+            0.9654
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.65,
+          "sigma": 1.0,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9415,
+          "power_low": 0.967,
+          "power_high": 0.974,
+          "product_sanity_check": 0.9419,
+          "mc_se": 0.00525,
+          "mc_ci95": [
+            0.9312,
+            0.9518
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.65,
+          "sigma": 1.0,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.921,
+          "power_low": 0.9625,
+          "power_high": 0.9575,
+          "product_sanity_check": 0.9216,
+          "mc_se": 0.00603,
+          "mc_ci95": [
+            0.9092,
+            0.9328
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.65,
+          "sigma": 1.0,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9655,
+          "power_low": 0.9855,
+          "power_high": 0.98,
+          "product_sanity_check": 0.9658,
+          "mc_se": 0.00408,
+          "mc_ci95": [
+            0.9575,
+            0.9735
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.65,
+          "sigma": 1.5,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9645,
+          "power_low": 0.98,
+          "power_high": 0.9845,
+          "product_sanity_check": 0.9648,
+          "mc_se": 0.00414,
+          "mc_ci95": [
+            0.9564,
+            0.9726
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.65,
+          "sigma": 1.5,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9525,
+          "power_low": 0.976,
+          "power_high": 0.976,
+          "product_sanity_check": 0.9526,
+          "mc_se": 0.00476,
+          "mc_ci95": [
+            0.9432,
+            0.9618
+          ]
+        },
+        {
+          "n_per_band": 35,
+          "base_mean": 0.65,
+          "sigma": 1.5,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.976,
+          "power_low": 0.9875,
+          "power_high": 0.9885,
+          "product_sanity_check": 0.9761,
+          "mc_se": 0.00342,
+          "mc_ci95": [
+            0.9693,
+            0.9827
+          ]
+        }
+      ],
+      "worst_cell": {
+        "base_mean": 0.5,
+        "sigma": 0.5,
+        "o_config": "B_all_optimum_3",
+        "power_iut": 0.834
+      }
+    },
+    "confirmation_at_registered_bootstrap": {
+      "bootstrap": 10000,
+      "passes": true,
+      "worst": {
+        "base_mean": 0.5,
+        "sigma": 0.5,
+        "o_config": "B_all_optimum_3",
+        "power_iut": 0.823
+      }
+    }
+  },
+  "scenarios_at_selected_n": {
+    "target": {
+      "delta_low": 0.2,
+      "delta_high": -0.2,
+      "worst_power": 0.834,
+      "median_power": 0.9415,
+      "selects_n": true
+    },
+    "weak": {
+      "delta_low": 0.1,
+      "delta_high": -0.1,
+      "worst_power": 0.199,
+      "median_power": 0.302,
+      "selects_n": false
+    },
+    "strong": {
+      "delta_low": 0.35,
+      "delta_high": -0.35,
+      "worst_power": 0.9995,
+      "median_power": 1.0,
+      "selects_n": false
+    },
+    "asymmetric": {
+      "delta_low": 0.1,
+      "delta_high": -0.35,
+      "worst_power": 0.469,
+      "median_power": 0.5425,
+      "selects_n": false
+    }
+  }
+}

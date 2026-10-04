@@ -1,7 +1,7 @@
 # src/agents/tools.py
 """Agent tools: the read-only interface every condition uses to inspect an Instance.
 
-THESIS_DECISIONS.md section 4 defines the experimental invariant: all conditions (C1-C4) share exactly
+THESIS_DECISIONS.md section 4: all conditions (C1-C4) share exactly
 these three tools -- list_people, get_availability, get_travel_time. They are pure
 functions of an Instance: no global state, no parsing of a prompt string, no
 condition-specific behaviour. Keeping them identical across conditions is an

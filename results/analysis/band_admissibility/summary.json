@@ -1,0 +1,182 @@
+{
+  "schema_version": "band_admissibility/1.0",
+  "status": "evaluates a proposed design; selects nothing",
+  "pool_dir": "results/calibration/structural",
+  "pool_commit": "2f3f21085d57db001698f7da929a0941c9c119aa",
+  "proposed_bands": {
+    "Low": [
+      1,
+      4
+    ],
+    "Medium": [
+      7,
+      10
+    ],
+    "High": [
+      13,
+      16
+    ]
+  },
+  "criteria": {
+    "min_candidates": 50,
+    "min_tightness_values": 2,
+    "max_dominant_tightness_share": 0.6,
+    "min_travel_structures": 2,
+    "target_per_band": 50
+  },
+  "evaluation": {
+    "stratum": {
+      "n_people": 8,
+      "oracle_optimum": 4,
+      "higher_order_gap_H": 0,
+      "n_in_stratum": 364
+    },
+    "bands": {
+      "Low": {
+        "pairs": [
+          1,
+          4
+        ],
+        "D": [
+          0.0357,
+          0.1429
+        ],
+        "n": 9,
+        "distinct_pair_counts": 3,
+        "tightness_counts": {
+          "0.9": 3,
+          "1.0": 6
+        },
+        "dominant_tightness_share": 0.6667,
+        "structure_counts": {
+          "clustered": 1,
+          "line": 4,
+          "random": 3,
+          "uniform": 1
+        },
+        "overlap_counts": {
+          "0.2": 9
+        },
+        "checks": {
+          "candidates_at_least_50": false,
+          "tightness_values_at_least_2": true,
+          "dominant_tightness_at_most_60pct": false,
+          "travel_structures_at_least_2": true
+        },
+        "passed": false
+      },
+      "Medium": {
+        "pairs": [
+          7,
+          10
+        ],
+        "D": [
+          0.25,
+          0.3571
+        ],
+        "n": 237,
+        "distinct_pair_counts": 4,
+        "tightness_counts": {
+          "0.9": 113,
+          "1.0": 124
+        },
+        "dominant_tightness_share": 0.5232,
+        "structure_counts": {
+          "clustered": 70,
+          "line": 45,
+          "random": 61,
+          "uniform": 61
+        },
+        "overlap_counts": {
+          "0.2": 146,
+          "0.5": 91
+        },
+        "checks": {
+          "candidates_at_least_50": true,
+          "tightness_values_at_least_2": true,
+          "dominant_tightness_at_most_60pct": true,
+          "travel_structures_at_least_2": true
+        },
+        "passed": true
+      },
+      "High": {
+        "pairs": [
+          13,
+          16
+        ],
+        "D": [
+          0.4643,
+          0.5714
+        ],
+        "n": 24,
+        "distinct_pair_counts": 4,
+        "tightness_counts": {
+          "0.9": 5,
+          "1.0": 19
+        },
+        "dominant_tightness_share": 0.7917,
+        "structure_counts": {
+          "clustered": 10,
+          "line": 5,
+          "random": 5,
+          "uniform": 4
+        },
+        "overlap_counts": {
+          "0.2": 14,
+          "0.5": 6,
+          "0.8": 4
+        },
+        "checks": {
+          "candidates_at_least_50": false,
+          "tightness_values_at_least_2": true,
+          "dominant_tightness_at_most_60pct": false,
+          "travel_structures_at_least_2": true
+        },
+        "passed": false
+      }
+    },
+    "buffer_pair_counts": [
+      5,
+      6,
+      11,
+      12
+    ],
+    "common_allocation": {
+      "target_per_band": 50,
+      "shared_strata": 3,
+      "capacity": 7,
+      "feasible": false,
+      "shortfall": 43,
+      "per_band_stratum_counts": {
+        "Low": {
+          "0.9|clustered": 1,
+          "0.9|line": 1,
+          "0.9|uniform": 1,
+          "1.0|line": 3,
+          "1.0|random": 3
+        },
+        "Medium": {
+          "0.9|clustered": 27,
+          "0.9|line": 5,
+          "0.9|random": 44,
+          "0.9|uniform": 37,
+          "1.0|clustered": 43,
+          "1.0|line": 40,
+          "1.0|random": 17,
+          "1.0|uniform": 24
+        },
+        "High": {
+          "0.9|clustered": 3,
+          "0.9|random": 2,
+          "1.0|clustered": 7,
+          "1.0|line": 5,
+          "1.0|random": 3,
+          "1.0|uniform": 4
+        }
+      },
+      "deterministic_allocation": {}
+    },
+    "all_bands_passed": false,
+    "admissible": false
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "schema_version": "n4_budget_probe/1.0",
+  "generated_utc": "2026-08-17T22:36:00+00:00",
+  "standing": "exploratory development follow-up; descriptive only. No hypothesis test, no threshold, no gate, no cap selection.",
+  "n_people": 4,
+  "fixed_optimum": 3,
+  "caps": [
+    32000,
+    64000
+  ],
+  "context_window": 32768,
+  "n_instances": 12,
+  "completeness_audit": {
+    "n_expected": 24,
+    "n_verified": 24,
+    "n_missing": 0,
+    "n_incompatible": 0,
+    "n_unexpected_files": 0,
+    "all_checks_passed": true
+  },
+  "provenance": {
+    "models": [
+      "Qwen/Qwen3-32B-AWQ"
+    ],
+    "binning_hashes": [
+      "9c553e394e79"
+    ],
+    "git_commits": [
+      "1f763c4f7526",
+      "84cd1e243d07"
+    ]
+  },
+  "cells": {
+    "c1_react@32000": {
+      "n": 12,
+      "mean_satisfaction": 0.5,
+      "nonempty_validated": 7,
+      "nonempty_validated_rate": 0.5833,
+      "mean_tokens": 25581,
+      "mean_cap_utilisation": 0.7994,
+      "mean_calls": 13.0,
+      "runs_over_32000_tokens": 0,
+      "runs_at_or_under_32000_tokens": 12,
+      "termination": {
+        "aborted": 4,
+        "agent_finish": 7,
+        "budget": 1
+      },
+      "proposal_attempts": 14,
+      "proposal_validity": 0.5714
+    },
+    "c3_mas@32000": {
+      "n": 12,
+      "mean_satisfaction": 0.7222,
+      "nonempty_validated": 12,
+      "nonempty_validated_rate": 1.0,
+      "mean_tokens": 22546,
+      "mean_cap_utilisation": 0.7045,
+      "mean_calls": 16.5,
+      "runs_over_32000_tokens": 0,
+      "runs_at_or_under_32000_tokens": 12,
+      "termination": {
+        "agent_finish": 12
+      },
+      "proposal_attempts": 31,
+      "proposal_validity": 0.9677
+    },
+    "c1_react@64000": {
+      "n": 12,
+      "mean_satisfaction": 0.5833,
+      "nonempty_validated": 8,
+      "nonempty_validated_rate": 0.6667,
+      "mean_tokens": 29158,
+      "mean_cap_utilisation": 0.4556,
+      "mean_calls": 13.8,
+      "runs_over_32000_tokens": 5,
+      "runs_at_or_under_32000_tokens": 7,
+      "termination": {
+        "agent_finish": 11,
+        "budget": 1
+      },
+      "proposal_attempts": 23,
+      "proposal_validity": 0.7391
+    },
+    "c3_mas@64000": {
+      "n": 12,
+      "mean_satisfaction": 0.9167,
+      "nonempty_validated": 12,
+      "nonempty_validated_rate": 1.0,
+      "mean_tokens": 26708,
+      "mean_cap_utilisation": 0.4173,
+      "mean_calls": 17.2,
+      "runs_over_32000_tokens": 0,
+      "runs_at_or_under_32000_tokens": 12,
+      "termination": {
+        "agent_finish": 12
+      },
+      "proposal_attempts": 36,
+      "proposal_validity": 0.9167
+    }
+  },
+  "architecture_contrast": {
+    "32000": {
+      "n_pairs": 12,
+      "mean_delta_satisfaction": -0.2222,
+      "instances_c1_ahead": 3,
+      "instances_c3_ahead": 6,
+      "instances_tied": 3,
+      "sign_convention": "delta = satisfaction(C1) - satisfaction(C3); negative means the hierarchy is ahead"
+    },
+    "64000": {
+      "n_pairs": 12,
+      "mean_delta_satisfaction": -0.3333,
+      "instances_c1_ahead": 1,
+      "instances_c3_ahead": 6,
+      "instances_tied": 5,
+      "sign_convention": "delta = satisfaction(C1) - satisfaction(C3); negative means the hierarchy is ahead"
+    }
+  },
+  "budget_change": {
+    "c1_react": {
+      "n_pairs": 12,
+      "mean_delta_satisfaction": 0.0833,
+      "improved": 1,
+      "worsened": 0,
+      "unchanged": 11,
+      "gained_a_validated_plan": 1,
+      "lost_a_validated_plan": 0,
+      "mean_delta_tokens": 3576,
+      "runs_with_changed_execution": 5,
+      "identical_token_totals": 7,
+      "runs_exceeding_baseline_cap": 5,
+      "definition": "delta = satisfaction(64000) - satisfaction(32000). `runs_with_changed_execution` is the primary count: a differing token total is direct evidence the cap altered the run. `runs_exceeding_baseline_cap` is sufficient but not necessary evidence of a constraint, and undercounts for a condition that subdivides its cap"
+    },
+    "c3_mas": {
+      "n_pairs": 12,
+      "mean_delta_satisfaction": 0.1944,
+      "improved": 4,
+      "worsened": 0,
+      "unchanged": 8,
+      "gained_a_validated_plan": 0,
+      "lost_a_validated_plan": 0,
+      "mean_delta_tokens": 4163,
+      "runs_with_changed_execution": 6,
+      "identical_token_totals": 6,
+      "runs_exceeding_baseline_cap": 0,
+      "definition": "delta = satisfaction(64000) - satisfaction(32000). `runs_with_changed_execution` is the primary count: a differing token total is direct evidence the cap altered the run. `runs_exceeding_baseline_cap` is sufficient but not necessary evidence of a constraint, and undercounts for a condition that subdivides its cap"
+    }
+  },
+  "registered_reading": {
+    "case": "c1_below_c3",
+    "licenses": "C3 keeps the descriptive ordering even after the cap is doubled on the lowest frozen structural region. The lower-complexity calibration is then closed, and no easier development pool is built in response.",
+    "source": "pre-registration of 2026-08-17, THESIS_DECISIONS section 3"
+  },
+  "selects_a_cap": false,
+  "introduces_a_threshold": false
+}

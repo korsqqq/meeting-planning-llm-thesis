@@ -12,12 +12,13 @@ these are invoked by the agents themselves, not by the runner.
 
 from __future__ import annotations
 
-from .budget import DEFAULT_FINALIZATION_RESERVE, BudgetLedger
+from .budget import DEFAULT_FINALIZATION_RESERVE, DEFAULT_MAX_CALL_TOKENS, BudgetLedger
 from .llm_client import (
     DEFAULT_BASE_URL,
     DEFAULT_MODEL,
     END_THINK,
     LLMClient,
+    ContextWindowError,
     LLMResponse,
     split_thinking,
     split_thinking_raw,
@@ -30,7 +31,9 @@ __all__ = [
     "DEFAULT_TOKENIZER",
     "BudgetLedger",
     "DEFAULT_FINALIZATION_RESERVE",
+    "DEFAULT_MAX_CALL_TOKENS",
     "LLMClient",
+    "ContextWindowError",
     "LLMResponse",
     "split_thinking",
     "split_thinking_raw",

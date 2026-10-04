@@ -14,12 +14,22 @@ ever fed into an agent's prompts, tools, or observations.
 from __future__ import annotations
 
 from .result_writer import DOCUMENT_SCHEMA_VERSION, build_document, write_result
-from .runner import SUPPORTED_CONDITIONS, HarnessRun, run_single_instance
+from .runner import (
+    SUPPORTED_CONDITIONS,
+    STEP_TOKEN_FLOOR,
+    HarnessRun,
+    run_id_for,
+    run_single_instance,
+    steps_for_cap,
+)
 from .sanity import ORACLE_TERMS, transcript_sanity
 from .smoke_client import OfflineSmokeClient
 
 __all__ = [
     "run_single_instance",
+    "steps_for_cap",
+    "run_id_for",
+    "STEP_TOKEN_FLOOR",
     "HarnessRun",
     "SUPPORTED_CONDITIONS",
     "build_document",

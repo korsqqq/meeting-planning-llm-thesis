@@ -1,0 +1,41 @@
+{
+  "n_documents": 3960,
+  "n_expected": 3960,
+  "documents_per_condition": {
+    "c1_react": 792,
+    "c2_verify_revise": 792,
+    "c3_mas": 792,
+    "c4_planner_critic": 792,
+    "c5_best_of_3": 792
+  },
+  "n_exceptions": 0,
+  "n_runs_with_exceptions": 0,
+  "expected_sampling": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 0.0,
+    "thinking_enabled": true,
+    "seed": 42
+  },
+  "calls_by_condition_role_seed": {
+    "c1_react|finalize|None": 792,
+    "c1_react|react_step|None": 11381,
+    "c2_verify_revise|finalize|None": 792,
+    "c2_verify_revise|react_step|None": 11381,
+    "c2_verify_revise|revise|None": 682,
+    "c2_verify_revise|verify|None": 718,
+    "c3_mas|critic|None": 444,
+    "c3_mas|finalize|None": 792,
+    "c3_mas|worker_a|None": 7037,
+    "c3_mas|worker_b|None": 7167,
+    "c4_planner_critic|critic|None": 447,
+    "c4_planner_critic|finalize|None": 792,
+    "c4_planner_critic|planner|None": 10615,
+    "c5_best_of_3|bon_attempt_0|42": 7868,
+    "c5_best_of_3|bon_attempt_1|43": 8151,
+    "c5_best_of_3|bon_attempt_2|44": 7953,
+    "c5_best_of_3|finalize|None": 792
+  }
+}

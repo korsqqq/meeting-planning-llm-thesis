@@ -1,0 +1,430 @@
+{
+  "schema_version": "budget_probe/1.0",
+  "status": "exploratory development probe; descriptive, not confirmatory",
+  "selects_a_cap": false,
+  "registered": "THESIS_DECISIONS.md section 5, amendments of 2026-08-14 and 2026-08-15",
+  "audit": {
+    "n_instances": 12,
+    "n_runs": 48,
+    "conditions": [
+      "c1_react",
+      "c3_mas"
+    ],
+    "caps": [
+      64000,
+      128000
+    ],
+    "model": "Qwen/Qwen3-32B-AWQ",
+    "instances_per_band": {
+      "low": 4,
+      "medium": 4,
+      "high": 4
+    },
+    "probe_subset": "results/manifests/subset__budget_probe_128k__76f3bc0f0654.json",
+    "binning_hash": "8e671cd13dbb262b638048eff58241226f09d5804373534789915bc302ba0dff",
+    "paired_on": "identical instance_id at both caps",
+    "probe_git_commit_per_condition": {
+      "c1_react": [
+        "fb597ad6e479114d78982ecd19e4fb7ae1d34644"
+      ],
+      "c3_mas": [
+        "fb597ad6e479114d78982ecd19e4fb7ae1d34644"
+      ]
+    },
+    "all_checks_passed": true
+  },
+  "analysis": {
+    "by_condition": {
+      "c1_react": {
+        "by_cap": {
+          "64000": {
+            "n": 12,
+            "mean_satisfaction": 0.2778,
+            "nonempty_validated": 4,
+            "nonempty_validated_rate": 0.3333,
+            "mean_tokens": 43593.6,
+            "mean_cap_utilisation": 0.6812,
+            "mean_calls": 17.5,
+            "termination": {
+              "aborted": 3,
+              "agent_finish": 7,
+              "budget": 2
+            },
+            "proposal_attempts": 17,
+            "proposal_validity_rate": 0.2353,
+            "runs_over_64000_tokens": 0,
+            "runs_under_64000_tokens": 12
+          },
+          "128000": {
+            "n": 12,
+            "mean_satisfaction": 0.2778,
+            "nonempty_validated": 4,
+            "nonempty_validated_rate": 0.3333,
+            "mean_tokens": 46967.2,
+            "mean_cap_utilisation": 0.3669,
+            "mean_calls": 17.92,
+            "termination": {
+              "aborted": 1,
+              "agent_finish": 11
+            },
+            "proposal_attempts": 21,
+            "proposal_validity_rate": 0.2857,
+            "runs_over_64000_tokens": 4,
+            "runs_under_64000_tokens": 8
+          }
+        },
+        "by_band": {
+          "low": {
+            "64000": {
+              "n": 4,
+              "mean_satisfaction": 0.6667,
+              "nonempty_validated": 3,
+              "nonempty_validated_rate": 0.75,
+              "mean_tokens": 52783.0,
+              "mean_cap_utilisation": 0.8247,
+              "mean_calls": 22.0,
+              "termination": {
+                "aborted": 1,
+                "agent_finish": 2,
+                "budget": 1
+              },
+              "proposal_attempts": 6,
+              "proposal_validity_rate": 0.5,
+              "runs_over_64000_tokens": 0,
+              "runs_under_64000_tokens": 4
+            },
+            "128000": {
+              "n": 4,
+              "mean_satisfaction": 0.6667,
+              "nonempty_validated": 3,
+              "nonempty_validated_rate": 0.75,
+              "mean_tokens": 56597.8,
+              "mean_cap_utilisation": 0.4421,
+              "mean_calls": 22.5,
+              "termination": {
+                "agent_finish": 4
+              },
+              "proposal_attempts": 7,
+              "proposal_validity_rate": 0.4286,
+              "runs_over_64000_tokens": 2,
+              "runs_under_64000_tokens": 2
+            }
+          },
+          "medium": {
+            "64000": {
+              "n": 4,
+              "mean_satisfaction": 0.1667,
+              "nonempty_validated": 1,
+              "nonempty_validated_rate": 0.25,
+              "mean_tokens": 56152.8,
+              "mean_cap_utilisation": 0.8774,
+              "mean_calls": 19.25,
+              "termination": {
+                "aborted": 1,
+                "agent_finish": 2,
+                "budget": 1
+              },
+              "proposal_attempts": 8,
+              "proposal_validity_rate": 0.125,
+              "runs_over_64000_tokens": 0,
+              "runs_under_64000_tokens": 4
+            },
+            "128000": {
+              "n": 4,
+              "mean_satisfaction": 0.1667,
+              "nonempty_validated": 1,
+              "nonempty_validated_rate": 0.25,
+              "mean_tokens": 62458.8,
+              "mean_cap_utilisation": 0.488,
+              "mean_calls": 20.0,
+              "termination": {
+                "agent_finish": 4
+              },
+              "proposal_attempts": 11,
+              "proposal_validity_rate": 0.2727,
+              "runs_over_64000_tokens": 2,
+              "runs_under_64000_tokens": 2
+            }
+          },
+          "high": {
+            "64000": {
+              "n": 4,
+              "mean_satisfaction": 0.0,
+              "nonempty_validated": 0,
+              "nonempty_validated_rate": 0.0,
+              "mean_tokens": 21845.0,
+              "mean_cap_utilisation": 0.3413,
+              "mean_calls": 11.25,
+              "termination": {
+                "aborted": 1,
+                "agent_finish": 3
+              },
+              "proposal_attempts": 3,
+              "proposal_validity_rate": 0.0,
+              "runs_over_64000_tokens": 0,
+              "runs_under_64000_tokens": 4
+            },
+            "128000": {
+              "n": 4,
+              "mean_satisfaction": 0.0,
+              "nonempty_validated": 0,
+              "nonempty_validated_rate": 0.0,
+              "mean_tokens": 21845.0,
+              "mean_cap_utilisation": 0.1707,
+              "mean_calls": 11.25,
+              "termination": {
+                "aborted": 1,
+                "agent_finish": 3
+              },
+              "proposal_attempts": 3,
+              "proposal_validity_rate": 0.0,
+              "runs_over_64000_tokens": 0,
+              "runs_under_64000_tokens": 4
+            }
+          }
+        },
+        "paired": {
+          "pooled": {
+            "n_paired": 12,
+            "mean_delta_satisfaction": 0.0,
+            "improved": 0,
+            "worsened": 0,
+            "unchanged": 12,
+            "gained_a_validated_plan": 0,
+            "lost_a_validated_plan": 0,
+            "definition": "delta = satisfaction(128000) - satisfaction(64000) on the identical instance",
+            "note": "counts and means only; no hypothesis test is performed"
+          },
+          "low": {
+            "n_paired": 4,
+            "mean_delta_satisfaction": 0.0,
+            "improved": 0,
+            "worsened": 0,
+            "unchanged": 4,
+            "gained_a_validated_plan": 0,
+            "lost_a_validated_plan": 0,
+            "definition": "delta = satisfaction(128000) - satisfaction(64000) on the identical instance",
+            "note": "counts and means only; no hypothesis test is performed"
+          },
+          "medium": {
+            "n_paired": 4,
+            "mean_delta_satisfaction": 0.0,
+            "improved": 0,
+            "worsened": 0,
+            "unchanged": 4,
+            "gained_a_validated_plan": 0,
+            "lost_a_validated_plan": 0,
+            "definition": "delta = satisfaction(128000) - satisfaction(64000) on the identical instance",
+            "note": "counts and means only; no hypothesis test is performed"
+          },
+          "high": {
+            "n_paired": 4,
+            "mean_delta_satisfaction": 0.0,
+            "improved": 0,
+            "worsened": 0,
+            "unchanged": 4,
+            "gained_a_validated_plan": 0,
+            "lost_a_validated_plan": 0,
+            "definition": "delta = satisfaction(128000) - satisfaction(64000) on the identical instance",
+            "note": "counts and means only; no hypothesis test is performed"
+          }
+        }
+      },
+      "c3_mas": {
+        "by_cap": {
+          "64000": {
+            "n": 12,
+            "mean_satisfaction": 0.6875,
+            "nonempty_validated": 10,
+            "nonempty_validated_rate": 0.8333,
+            "mean_tokens": 42975.3,
+            "mean_cap_utilisation": 0.6715,
+            "mean_calls": 23.33,
+            "termination": {
+              "aborted": 1,
+              "agent_finish": 11
+            },
+            "proposal_attempts": 33,
+            "proposal_validity_rate": 0.697,
+            "runs_over_64000_tokens": 0,
+            "runs_under_64000_tokens": 12
+          },
+          "128000": {
+            "n": 12,
+            "mean_satisfaction": 0.7778,
+            "nonempty_validated": 11,
+            "nonempty_validated_rate": 0.9167,
+            "mean_tokens": 62168.4,
+            "mean_cap_utilisation": 0.4857,
+            "mean_calls": 27.08,
+            "termination": {
+              "agent_finish": 12
+            },
+            "proposal_attempts": 56,
+            "proposal_validity_rate": 0.6607,
+            "runs_over_64000_tokens": 5,
+            "runs_under_64000_tokens": 7
+          }
+        },
+        "by_band": {
+          "low": {
+            "64000": {
+              "n": 4,
+              "mean_satisfaction": 0.6667,
+              "nonempty_validated": 3,
+              "nonempty_validated_rate": 0.75,
+              "mean_tokens": 36668.2,
+              "mean_cap_utilisation": 0.5729,
+              "mean_calls": 23.25,
+              "termination": {
+                "aborted": 1,
+                "agent_finish": 3
+              },
+              "proposal_attempts": 9,
+              "proposal_validity_rate": 0.6667,
+              "runs_over_64000_tokens": 0,
+              "runs_under_64000_tokens": 4
+            },
+            "128000": {
+              "n": 4,
+              "mean_satisfaction": 0.75,
+              "nonempty_validated": 3,
+              "nonempty_validated_rate": 0.75,
+              "mean_tokens": 57249.8,
+              "mean_cap_utilisation": 0.4473,
+              "mean_calls": 26.25,
+              "termination": {
+                "agent_finish": 4
+              },
+              "proposal_attempts": 13,
+              "proposal_validity_rate": 0.6923,
+              "runs_over_64000_tokens": 0,
+              "runs_under_64000_tokens": 4
+            }
+          },
+          "medium": {
+            "64000": {
+              "n": 4,
+              "mean_satisfaction": 0.7917,
+              "nonempty_validated": 4,
+              "nonempty_validated_rate": 1.0,
+              "mean_tokens": 45940.5,
+              "mean_cap_utilisation": 0.7178,
+              "mean_calls": 24.25,
+              "termination": {
+                "agent_finish": 4
+              },
+              "proposal_attempts": 15,
+              "proposal_validity_rate": 0.6667,
+              "runs_over_64000_tokens": 0,
+              "runs_under_64000_tokens": 4
+            },
+            "128000": {
+              "n": 4,
+              "mean_satisfaction": 0.7917,
+              "nonempty_validated": 4,
+              "nonempty_validated_rate": 1.0,
+              "mean_tokens": 68050.2,
+              "mean_cap_utilisation": 0.5316,
+              "mean_calls": 30.25,
+              "termination": {
+                "agent_finish": 4
+              },
+              "proposal_attempts": 30,
+              "proposal_validity_rate": 0.5667,
+              "runs_over_64000_tokens": 3,
+              "runs_under_64000_tokens": 1
+            }
+          },
+          "high": {
+            "64000": {
+              "n": 4,
+              "mean_satisfaction": 0.6042,
+              "nonempty_validated": 3,
+              "nonempty_validated_rate": 0.75,
+              "mean_tokens": 46317.2,
+              "mean_cap_utilisation": 0.7237,
+              "mean_calls": 22.5,
+              "termination": {
+                "agent_finish": 4
+              },
+              "proposal_attempts": 9,
+              "proposal_validity_rate": 0.7778,
+              "runs_over_64000_tokens": 0,
+              "runs_under_64000_tokens": 4
+            },
+            "128000": {
+              "n": 4,
+              "mean_satisfaction": 0.7917,
+              "nonempty_validated": 4,
+              "nonempty_validated_rate": 1.0,
+              "mean_tokens": 61205.2,
+              "mean_cap_utilisation": 0.4782,
+              "mean_calls": 24.75,
+              "termination": {
+                "agent_finish": 4
+              },
+              "proposal_attempts": 13,
+              "proposal_validity_rate": 0.8462,
+              "runs_over_64000_tokens": 2,
+              "runs_under_64000_tokens": 2
+            }
+          }
+        },
+        "paired": {
+          "pooled": {
+            "n_paired": 12,
+            "mean_delta_satisfaction": 0.0903,
+            "improved": 3,
+            "worsened": 0,
+            "unchanged": 9,
+            "gained_a_validated_plan": 1,
+            "lost_a_validated_plan": 0,
+            "definition": "delta = satisfaction(128000) - satisfaction(64000) on the identical instance",
+            "note": "counts and means only; no hypothesis test is performed"
+          },
+          "low": {
+            "n_paired": 4,
+            "mean_delta_satisfaction": 0.0833,
+            "improved": 1,
+            "worsened": 0,
+            "unchanged": 3,
+            "gained_a_validated_plan": 0,
+            "lost_a_validated_plan": 0,
+            "definition": "delta = satisfaction(128000) - satisfaction(64000) on the identical instance",
+            "note": "counts and means only; no hypothesis test is performed"
+          },
+          "medium": {
+            "n_paired": 4,
+            "mean_delta_satisfaction": 0.0,
+            "improved": 0,
+            "worsened": 0,
+            "unchanged": 4,
+            "gained_a_validated_plan": 0,
+            "lost_a_validated_plan": 0,
+            "definition": "delta = satisfaction(128000) - satisfaction(64000) on the identical instance",
+            "note": "counts and means only; no hypothesis test is performed"
+          },
+          "high": {
+            "n_paired": 4,
+            "mean_delta_satisfaction": 0.1875,
+            "improved": 2,
+            "worsened": 0,
+            "unchanged": 2,
+            "gained_a_validated_plan": 1,
+            "lost_a_validated_plan": 0,
+            "definition": "delta = satisfaction(128000) - satisfaction(64000) on the identical instance",
+            "note": "counts and means only; no hypothesis test is performed"
+          }
+        }
+      }
+    },
+    "reading": {
+      "status": "exploratory development probe; descriptive, not a hypothesis test",
+      "primary_metric": "satisfaction",
+      "secondary": "validated non-empty rate, diagnostic only, never called performance or accuracy",
+      "no_gate": "no threshold is introduced and no cap is selected; whether 128000 enters the held-out design is a separate later decision",
+      "n_caveat": "4 instances per band supports description and ordering, not inference"
+    }
+  }
+}

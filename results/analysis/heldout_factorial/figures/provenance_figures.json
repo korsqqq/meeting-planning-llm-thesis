@@ -1,0 +1,25 @@
+{
+  "schema_version": "heldout_factorial/1.0",
+  "step": "figures",
+  "written_utc": "2026-09-15T21:30:46+00:00",
+  "git_commit": "6b1ef883fee178e2eff994357e4fd5c5419ac507",
+  "git_dirty": false,
+  "versions": {
+    "python": "3.12.13",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "matplotlib": "3.11.1"
+  },
+  "configuration": {
+    "runs": "D:\\thesis-mas-planning\\results\\exports\\heldout\\runs.csv",
+    "out": "D:\\thesis-mas-planning\\results\\analysis\\heldout_factorial",
+    "step": "figures"
+  },
+  "inputs": {
+    "results\\analysis\\heldout_factorial\\describe\\descriptives.csv": "23618675f092e64dd3ad5127a854c6d49ff95e106914fb460e7da6ff64f1951f",
+    "results\\analysis\\heldout_factorial\\distributions\\satisfaction_value_distribution.csv": "ace585c89bd8690eee389aecee714437164aa41556ba7dd5d98ed8d4cf72803d",
+    "results\\analysis\\heldout_factorial\\pairwise\\pairwise.csv": "9c77bcec15a1501857c1c28cee86d1b7587376e1815999f4c47eb8a84623195b",
+    "results\\analysis\\heldout_factorial\\cost\\cost.csv": "b56c7b448a1e7d64a73daaa15bede20b223bcf802f8cd5b29f3d515c0df12ac7"
+  },
+  "standing": "procedures specified after all runs were complete; not pre-registered (THESIS_DECISIONS.md section 5, amendment 2026-09-14)"
+}

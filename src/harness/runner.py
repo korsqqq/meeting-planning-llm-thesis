@@ -6,9 +6,8 @@
         -> optional JSON log on disk (result_writer)
 
 Scope (deliberate, THESIS_DECISIONS.md section 4 / PROGRESS):
-  * Conditions supported NOW: c1_react, c2_verify_revise and c3_mas.
-    c4_planner_critic raises NotImplementedError -- it is optional and cut first
-    if scope is tight.
+  * All five conditions are implemented: c1_react, c2_verify_revise, c3_mas,
+    c4_planner_critic and c5_best_of_3.
   * This is a single-run slice, not the sweep runner: no run matrix, no resume
     logic, no aggregation. Those come with the pilot.
 
@@ -27,6 +26,7 @@ pass an explicit `level` obtained from real pilot binning.
 
 from __future__ import annotations
 
+import re
 import time
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -34,6 +34,8 @@ from pathlib import Path
 
 from src.agents.multi_agent.hierarchical import run_hierarchical
 from src.agents.react_core import ReactResult
+from src.agents.single_agent.best_of_3 import run_best_of_3
+from src.agents.single_agent.planner_critic import run_planner_critic
 from src.agents.single_agent.react import run_react
 from src.agents.single_agent.react_verify_revise import run_verify_revise
 from src.core import DEFAULT_FINALIZATION_RESERVE
@@ -45,15 +47,23 @@ from src.harness.sanity import transcript_sanity
 from src.oracle import OracleSolution
 from src.schemas import Condition, Instance, Level, RunResult, SamplingConfig
 
-__all__ = ["SUPPORTED_CONDITIONS", "HarnessRun", "run_single_instance"]
+__all__ = ["SUPPORTED_CONDITIONS", "STEP_TOKEN_FLOOR", "HarnessRun", "steps_for_cap",
+           "run_id_for", "run_single_instance"]
 
-# All implemented conditions share one call shape (instance, client, *, cap,
-# max_steps, finalization_reserve). C4 is dispatched to a clear
-# NotImplementedError below -- adding it later must not change this call shape.
+# Conservative lower bound on the token cost of one ReAct step, used to derive the
+# step cap from the budget (see `steps_for_cap`). [PILOT] -- revisit once step costs
+# are measured across both models and all complexity levels.
+STEP_TOKEN_FLOOR = 250
+
+# Every condition shares one call shape (instance, client, *, cap, max_steps,
+# finalization_reserve, retry_on_empty). The dispatch is the only place that knows
+# which runner belongs to which condition.
 SUPPORTED_CONDITIONS: dict[Condition, object] = {
     Condition.C1_REACT: run_react,
     Condition.C2_VERIFY_REVISE: run_verify_revise,
     Condition.C3_MAS: run_hierarchical,
+    Condition.C4_PLANNER_CRITIC: run_planner_critic,
+    Condition.C5_BEST_OF_3: run_best_of_3,
 }
 
 
@@ -71,17 +81,49 @@ class HarnessRun:
     json_path: Path | None            # where the JSON document was written, if requested
 
 
+def run_id_for(
+    condition: Condition | str, instance_id: str, cap: int, model_label: str
+) -> str:
+    """The run identity, and therefore the result filename stem.
+
+    One formula, used both by the runner when it writes and by anything that needs to
+    know in advance whether a run already exists (resume). The model belongs to the
+    identity: without it two models over the same instance and cap collide on
+    `<run_id>.json` and overwrite each other silently. The label is normalised because
+    Hub ids contain '/'.
+    """
+    cond = condition.value if isinstance(condition, Condition) else str(condition)
+    model_tag = re.sub(r"[^A-Za-z0-9._-]+", "-", model_label).strip("-")
+    return f"{cond}__{instance_id}__cap{cap}__{model_tag}"
+
+
+def steps_for_cap(cap: int) -> int:
+    """Step cap derived from the budget, so the BUDGET is what ends a run.
+
+    The research question is about behaviour under an equal TOKEN budget, so the step
+    counter must never be the binding constraint -- otherwise the independent variable
+    is silently "number of steps". A fixed `max_steps=12` fails that: a live C1 run on
+    Qwen3-32B-AWQ solved the EASIEST instance (n=4, zero conflicts) in 11 steps, one
+    short of the cap, so any harder instance would have been cut by the counter rather
+    than by tokens.
+
+    `STEP_TOKEN_FLOOR` is a conservative lower bound on what one ReAct step costs
+    (input + thinking + answer); the cheapest step observed live was ~430 tokens, so
+    250 leaves a margin. The counter therefore stays what it is meant to be -- a
+    runaway guard behind the budget and the `aborted` path, not an experimental knob.
+    """
+    return max(1, cap // STEP_TOKEN_FLOOR)
+
+
 def _resolve_condition(condition: str | Condition) -> Condition:
     try:
         cond = Condition(condition)
     except ValueError as exc:
         valid = ", ".join(c.value for c in Condition)
         raise ValueError(f"unknown condition {condition!r}; expected one of: {valid}") from exc
-    if cond not in SUPPORTED_CONDITIONS:
+    if cond not in SUPPORTED_CONDITIONS:  # pragma: no cover - every member is mapped
         raise NotImplementedError(
-            f"condition {cond.value!r} is intentionally not implemented: C4 "
-            "(planner+critic) is optional (cut first if scope is tight) and will "
-            "be added later on the same dispatch."
+            f"condition {cond.value!r} has no runner on this dispatch."
         )
     return cond
 
@@ -108,7 +150,8 @@ def run_single_instance(
     cap: int,
     model_label: str,
     finalization_reserve: int = DEFAULT_FINALIZATION_RESERVE,
-    max_steps: int = 12,
+    max_steps: int | None = None,
+    retry_on_empty: bool = False,
     level: Level | None = None,
     output_dir: Path | str | None = None,
     notes: str | None = None,
@@ -118,11 +161,20 @@ def run_single_instance(
     `client` is anything with the LLMClient interface (`count_input` /
     `complete`); the offline slice passes a scripted client. `model_label` names
     what actually produced the tokens (e.g. "offline-smoke-client" or
-    "Qwen/Qwen3-32B-FP8") and is stored verbatim -- never claim a model that did
+    "Qwen/Qwen3-32B-AWQ") and is stored verbatim -- never claim a model that did
     not run. If `output_dir` is given, a JSON document is written there as
     `<run_id>.json` and the path is returned on the record.
+
+    `max_steps=None` (the default) derives the step cap from the budget so that the
+    budget, not the step counter, is what ends a run -- see `steps_for_cap`.
+
+    `retry_on_empty` is the EXPERIMENTAL arm of the empty-turn A/B and defaults to the
+    locked section-2 behaviour (False). Nothing in the sweep sets it; only
+    `scripts/run_empty_retry_ab.py` does.
     """
     cond = _resolve_condition(condition)
+    if max_steps is None:
+        max_steps = steps_for_cap(cap)
 
     # --- harness-side ground truth (never enters the agent run) ------------- #
     t0 = time.perf_counter()
@@ -145,6 +197,7 @@ def run_single_instance(
         cap=cap,
         max_steps=max_steps,
         finalization_reserve=finalization_reserve,
+        retry_on_empty=retry_on_empty,
     )
     agent_latency = time.perf_counter() - t1
 
@@ -155,7 +208,7 @@ def run_single_instance(
     # --- hidden validation + scoring (independent of the agent's self-report) - #
     score = score_plan(instance, agent_result.final_plan, oracle.optimum)
 
-    run_id = f"{cond.value}__{annotated.instance_id}__cap{cap}"
+    run_id = run_id_for(cond, annotated.instance_id, cap, model_label)
     run_result = RunResult(
         run_id=run_id,
         instance_id=annotated.instance_id,

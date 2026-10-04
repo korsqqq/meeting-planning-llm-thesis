@@ -1,0 +1,311 @@
+{
+  "schema_version": "lowcx_audit/1.0",
+  "generated_utc": "2026-08-27T01:07:43+00:00",
+  "fixed_optimum": 3,
+  "per_size": 16,
+  "sizes": [
+    "4",
+    "5",
+    "6"
+  ],
+  "no_agent_information_used": true,
+  "per_size_report": {
+    "4": {
+      "n_people": 4,
+      "n_instances": 16,
+      "content_hash": "54f3f48d6232f4a8e6b6f8a31ce1057bba564d1cdc595012a1a5eefddeef2657",
+      "instance_ids": [
+        "line-n4-t80-o80-s110000",
+        "random-n4-t60-o80-s110001",
+        "random-n4-t80-o20-s110002",
+        "random-n4-t80-o80-s110003",
+        "line-n4-t80-o80-s110004",
+        "clustered-n4-t60-o100-s110005",
+        "clustered-n4-t60-o100-s110006",
+        "clustered-n4-t60-o100-s110007",
+        "clustered-n4-t80-o80-s110008",
+        "uniform-n4-t60-o20-s110009",
+        "line-n4-t60-o20-s110010",
+        "uniform-n4-t60-o100-s110011",
+        "uniform-n4-t60-o100-s110012",
+        "uniform-n4-t60-o80-s110013",
+        "line-n4-t80-o20-s110014",
+        "random-n4-t80-o20-s110015"
+      ],
+      "seeds": [
+        110000,
+        110001,
+        110002,
+        110003,
+        110004,
+        110005,
+        110006,
+        110007,
+        110008,
+        110009,
+        110010,
+        110011,
+        110012,
+        110013,
+        110014,
+        110015
+      ],
+      "optimum": {
+        "3": 16
+      },
+      "conflict_pairs": {
+        "0": 15,
+        "1": 1
+      },
+      "density_D": [
+        0.0,
+        0.1667
+      ],
+      "higher_order_gap_H": {
+        "0": 1,
+        "1": 15
+      },
+      "alpha_reachable": {
+        "3": 1,
+        "4": 15
+      },
+      "individually_reachable": {
+        "4": 16
+      },
+      "tightness": {
+        "0.6": 9,
+        "0.8": 7
+      },
+      "overlap": {
+        "0.2": 5,
+        "0.8": 6,
+        "1.0": 5
+      },
+      "travel_structure": {
+        "clustered": 4,
+        "line": 4,
+        "random": 4,
+        "uniform": 4
+      },
+      "levels": {
+        "easy": 15,
+        "medium": 1,
+        "hard": 0
+      },
+      "boundaries": {
+        "b1_easy_max": 0,
+        "b2_medium_max": 1
+      },
+      "max_pairs": 6,
+      "binning_path": "results\\manifests\\binning__heldout_n4__9ff14b084f57.json",
+      "subset_path": "results\\manifests\\subset__heldout_n4__54f3f48d6232.json"
+    },
+    "5": {
+      "n_people": 5,
+      "n_instances": 16,
+      "content_hash": "4b91dee07c34235a8c6c96d5e97ea8fc1127379df1936a8393a34da8ecfcb8a0",
+      "instance_ids": [
+        "clustered-n5-t80-o50-s120000",
+        "line-n5-t80-o80-s120001",
+        "uniform-n5-t60-o100-s120002",
+        "line-n5-t90-o80-s120003",
+        "uniform-n5-t90-o80-s120004",
+        "random-n5-t80-o20-s120005",
+        "uniform-n5-t90-o20-s120006",
+        "clustered-n5-t80-o80-s120007",
+        "uniform-n5-t90-o20-s120008",
+        "clustered-n5-t80-o50-s120009",
+        "line-n5-t80-o80-s120010",
+        "clustered-n5-t80-o80-s120011",
+        "random-n5-t80-o50-s120012",
+        "random-n5-t80-o80-s120013",
+        "line-n5-t90-o80-s120014",
+        "random-n5-t90-o50-s120015"
+      ],
+      "seeds": [
+        120000,
+        120001,
+        120002,
+        120003,
+        120004,
+        120005,
+        120006,
+        120007,
+        120008,
+        120009,
+        120010,
+        120011,
+        120012,
+        120013,
+        120014,
+        120015
+      ],
+      "optimum": {
+        "3": 16
+      },
+      "conflict_pairs": {
+        "0": 5,
+        "1": 2,
+        "2": 7,
+        "3": 1,
+        "5": 1
+      },
+      "density_D": [
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.5
+      ],
+      "higher_order_gap_H": {
+        "0": 3,
+        "1": 8,
+        "2": 5
+      },
+      "alpha_reachable": {
+        "3": 3,
+        "4": 8,
+        "5": 5
+      },
+      "individually_reachable": {
+        "5": 16
+      },
+      "tightness": {
+        "0.6": 1,
+        "0.8": 9,
+        "0.9": 6
+      },
+      "overlap": {
+        "0.2": 3,
+        "0.5": 4,
+        "0.8": 8,
+        "1.0": 1
+      },
+      "travel_structure": {
+        "clustered": 4,
+        "line": 4,
+        "random": 4,
+        "uniform": 4
+      },
+      "levels": {
+        "easy": 5,
+        "medium": 9,
+        "hard": 2
+      },
+      "boundaries": {
+        "b1_easy_max": 0,
+        "b2_medium_max": 2
+      },
+      "max_pairs": 10,
+      "binning_path": "results\\manifests\\binning__heldout_n5__1eb669085413.json",
+      "subset_path": "results\\manifests\\subset__heldout_n5__4b91dee07c34.json"
+    },
+    "6": {
+      "n_people": 6,
+      "n_instances": 16,
+      "content_hash": "44418ababc22e3396519c46d9c5d5088d42e1a8af394f4856458cab3111bf8d2",
+      "instance_ids": [
+        "random-n6-t90-o20-s130000",
+        "uniform-n6-t100-o50-s130001",
+        "uniform-n6-t90-o50-s130002",
+        "line-n6-t90-o80-s130003",
+        "uniform-n6-t60-o100-s130004",
+        "random-n6-t90-o80-s130005",
+        "line-n6-t80-o80-s130006",
+        "random-n6-t80-o80-s130007",
+        "clustered-n6-t80-o50-s130008",
+        "line-n6-t80-o100-s130009",
+        "clustered-n6-t80-o80-s130010",
+        "line-n6-t80-o100-s130011",
+        "clustered-n6-t80-o80-s130012",
+        "uniform-n6-t90-o80-s130013",
+        "random-n6-t80-o50-s130014",
+        "clustered-n6-t80-o80-s130015"
+      ],
+      "seeds": [
+        130000,
+        130001,
+        130002,
+        130003,
+        130004,
+        130005,
+        130006,
+        130007,
+        130008,
+        130009,
+        130010,
+        130011,
+        130012,
+        130013,
+        130014,
+        130015
+      ],
+      "optimum": {
+        "3": 16
+      },
+      "conflict_pairs": {
+        "0": 2,
+        "1": 6,
+        "2": 1,
+        "3": 1,
+        "4": 3,
+        "5": 2,
+        "8": 1
+      },
+      "density_D": [
+        0.0,
+        0.0667,
+        0.1333,
+        0.2,
+        0.2667,
+        0.3333,
+        0.5333
+      ],
+      "higher_order_gap_H": {
+        "0": 1,
+        "1": 5,
+        "2": 8,
+        "3": 2
+      },
+      "alpha_reachable": {
+        "3": 1,
+        "4": 5,
+        "5": 8,
+        "6": 2
+      },
+      "individually_reachable": {
+        "6": 16
+      },
+      "tightness": {
+        "0.6": 1,
+        "0.8": 9,
+        "0.9": 5,
+        "1.0": 1
+      },
+      "overlap": {
+        "0.2": 1,
+        "0.5": 4,
+        "0.8": 8,
+        "1.0": 3
+      },
+      "travel_structure": {
+        "clustered": 4,
+        "line": 4,
+        "random": 4,
+        "uniform": 4
+      },
+      "levels": {
+        "easy": 2,
+        "medium": 8,
+        "hard": 6
+      },
+      "boundaries": {
+        "b1_easy_max": 0,
+        "b2_medium_max": 3
+      },
+      "max_pairs": 15,
+      "binning_path": "results\\manifests\\binning__heldout_n6__2575a3e2b213.json",
+      "subset_path": "results\\manifests\\subset__heldout_n6__44418ababc22.json"
+    }
+  }
+}

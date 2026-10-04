@@ -47,10 +47,11 @@ from src.agents.react_core import (
     agent_step,
     finalize_step,
     initial_state,
+    proposal_record,
+    termination_reason,
     tool_step,
 )
 from src.core import DEFAULT_FINALIZATION_RESERVE, BudgetLedger, LLMClient
-from src.oracle import is_valid
 from src.schemas import CallRecord, Instance
 
 __all__ = ["ReactResult", "run_verify_revise", "MAX_REVISIONS"]
@@ -125,6 +126,10 @@ def _guarded_call(
         thinking_tokens=resp.thinking_tokens,
         answer_tokens=resp.answer_tokens,
         latency_seconds=latency,
+        finish_reason=resp.finish_reason,
+        requested_max_tokens=resp.requested_max_tokens,
+        effective_max_tokens=resp.effective_max_tokens,
+        context_limited=resp.context_limited,
     )
     # Post-think answer only: raw_text may hold a truncated <think> block and must
     # never be parsed nor re-fed into the conversation (same rule as agent_step).
@@ -158,9 +163,16 @@ def revise_step(state: ReactStateC2, ctx: LoopContext) -> dict[str, Any]:
     if action is not None and action["tool"] == "propose":
         plan = _plan_from_args(action["args"])
         # Same hidden bookkeeping as the draft: keep the best VALID plan; the agent is
-        # told nothing about validity (no oracle/validator leakage).
-        if (plan is not None and is_valid(ctx.instance, plan)
-                and len(plan.meetings) > len(state["best_plan"].meetings)):
+        # told nothing about validity (no oracle/validator leakage). The proposal is
+        # recorded for the rejected-proposal taxonomy under its own role, so a revision
+        # that fixes (or fails to fix) the draft is distinguishable from a draft propose.
+        record = proposal_record(
+            ctx.instance, plan, step=state["step"], role="revise",
+            condition=ctx.condition, raw=action.get("raw", ""),
+            best_len=len(state["best_plan"].meetings),
+        )
+        updates["proposals"] = [record]
+        if record["accepted_into_best_plan"]:
             updates["best_plan"] = plan
     elif action is not None and action["tool"] == "finish":
         updates["vr_done"] = True
@@ -203,10 +215,18 @@ def run_verify_revise(
     cap: int,
     max_steps: int = 12,
     finalization_reserve: int = DEFAULT_FINALIZATION_RESERVE,
+    retry_on_empty: bool = False,
 ) -> ReactResult:
-    """Run C2 on one instance under a token `cap`. Returns the run artifacts."""
+    """Run C2 on one instance under a token `cap`. Returns the run artifacts.
+
+    `retry_on_empty` keeps the shared call shape with C1/C3; it is the EXPERIMENTAL
+    empty-turn arm and defaults to the locked behaviour.
+    """
     ledger = BudgetLedger(cap=cap, finalization_reserve=finalization_reserve)
-    ctx = LoopContext(instance=instance, client=client, ledger=ledger, max_steps=max_steps)
+    ctx = LoopContext(
+        instance=instance, client=client, ledger=ledger, max_steps=max_steps,
+        retry_on_empty=retry_on_empty, condition="c2_verify_revise",
+    )
 
     graph = StateGraph(ReactStateC2)
     graph.add_node("agent", lambda s: agent_step(s, ctx))
@@ -243,4 +263,7 @@ def run_verify_revise(
         transcript=final_state["messages"],
         n_steps=final_state["step"],
         finalization_mismatch=final_state.get("finalization_mismatch", False),
+        empty_turns=final_state.get("empty_turns", 0),
+        termination=termination_reason(final_state, max_steps),
+        proposals=final_state.get("proposals", []),
     )

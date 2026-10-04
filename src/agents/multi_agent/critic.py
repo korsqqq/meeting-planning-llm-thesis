@@ -27,7 +27,7 @@ import time
 from typing import Any
 
 from src.agents.react_core import LoopContext, _parse_action, _plan_from_args
-from src.oracle import is_valid
+from src.agents.react_core import proposal_record
 from src.schemas import CallRecord
 
 from .prompts import critic_messages
@@ -62,6 +62,10 @@ def critic_step(state: MasState, ctx: LoopContext) -> dict[str, Any]:
         thinking_tokens=resp.thinking_tokens,
         answer_tokens=resp.answer_tokens,
         latency_seconds=latency,
+        finish_reason=resp.finish_reason,
+        requested_max_tokens=resp.requested_max_tokens,
+        effective_max_tokens=resp.effective_max_tokens,
+        context_limited=resp.context_limited,
     )
     # Post-think answer only; raw_text is never parsed nor re-fed (section 2).
     visible = resp.answer
@@ -78,12 +82,18 @@ def critic_step(state: MasState, ctx: LoopContext) -> dict[str, Any]:
         plan = _plan_from_args(action["args"])
         # The hidden gate (C3-4): subset of the pool, full-instance validator,
         # strictly longer than the fallback. The critic learns nothing about it.
-        if (
-            plan is not None
-            and {m.person_id for m in plan.meetings} <= pool
-            and is_valid(ctx.instance, plan)
-            and len(plan.meetings) > len(state["best_plan"].meetings)
-        ):
+        record = proposal_record(
+            ctx.instance, plan, step=0, role="critic",
+            condition=ctx.condition, raw=action.get("raw", ""),
+            best_len=len(state["best_plan"].meetings),
+        )
+        in_pool = plan is not None and {m.person_id for m in plan.meetings} <= pool
+        # The subset conjunct is the critic's own gate, not a validator verdict, so it
+        # is recorded separately -- an out-of-pool plan can be perfectly feasible.
+        record["in_pool"] = in_pool
+        record["accepted_into_best_plan"] = record["accepted_into_best_plan"] and in_pool
+        updates["critic_proposal"] = record
+        if record["accepted_into_best_plan"]:
             updates["best_plan"] = plan
     # Any other shape (unparseable, finish, tool text) is a no-op: C2's revise
     # has exactly this semantics -- a wasted turn, not a retried one.

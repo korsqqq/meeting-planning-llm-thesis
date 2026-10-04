@@ -90,11 +90,41 @@ def test_reserve_is_single_constant_not_per_call() -> None:
     # The gap between a finalising and an ordinary grant is always exactly one
     # reserve, no matter how many calls have happened -- so C1 (many calls) and
     # C3/C4 (many calls across agents) get the same cap - reserve of working tokens.
-    led = BudgetLedger(cap=10_000, finalization_reserve=200)
+    # max_call_tokens=None isolates the reserve arithmetic: the per-call ceiling is a
+    # separate policy (tested below) and would otherwise mask the quantity under test.
+    led = BudgetLedger(cap=10_000, finalization_reserve=200, max_call_tokens=None)
     led.record_call(input_tokens=100, thinking_tokens=100, answer_tokens=0)
     assert led.max_new_tokens(0, finalizing=True) - led.max_new_tokens(0, finalizing=False) == 200
     led.record_call(input_tokens=100, thinking_tokens=100, answer_tokens=0)
     assert led.max_new_tokens(0, finalizing=True) - led.max_new_tokens(0, finalizing=False) == 200
+
+
+def test_per_call_ceiling_bounds_one_call() -> None:
+    # A single ordinary call may not be handed the whole remainder: a thinking block
+    # that never closes would otherwise destroy the entire budget at once.
+    led = BudgetLedger(cap=64_000, finalization_reserve=256, max_call_tokens=2000)
+    assert led.max_new_tokens(100, finalizing=False) == 2000
+    # Finalisation is exempt (thinking OFF + JSON schema, so it cannot ramble).
+    assert led.max_new_tokens(100, finalizing=True) == 64_000 - 100
+    # Below the ceiling the ordinary grant is still the plain reserve arithmetic.
+    tight = BudgetLedger(cap=1500, finalization_reserve=200, max_call_tokens=2000)
+    assert tight.max_new_tokens(100, finalizing=False) == 1500 - 100 - 200
+    # None disables the ceiling.
+    unbounded = BudgetLedger(cap=64_000, finalization_reserve=256, max_call_tokens=None)
+    assert unbounded.max_new_tokens(100, finalizing=False) == 64_000 - 100 - 256
+    with pytest.raises(ValueError):
+        BudgetLedger(cap=1000, max_call_tokens=0)
+
+
+def test_per_call_ceiling_does_not_change_routing() -> None:
+    # The ceiling caps how much one call may generate; it must not make the guard
+    # think the budget is gone (or that it is still there) any earlier or later.
+    for kwargs in ({"max_call_tokens": 2000}, {"max_call_tokens": None}):
+        led = BudgetLedger(cap=8000, finalization_reserve=256, route_threshold=0, **kwargs)
+        assert not led.should_finalize(next_input_tokens=100)
+        # Leave 200: remaining(200) - input(100) - reserve(256) < 0 -> route to final.
+        led.record_call(input_tokens=7000, thinking_tokens=800, answer_tokens=0)
+        assert led.should_finalize(next_input_tokens=100)
 
 
 def test_guard_protocol_always_leaves_room_to_finalize() -> None:

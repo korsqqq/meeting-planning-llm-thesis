@@ -19,7 +19,7 @@ from typing import Any
 import pytest
 
 from src.core import LLMResponse
-from src.harness import run_single_instance
+from src.harness import STEP_TOKEN_FLOOR, run_single_instance, steps_for_cap
 from src.schemas import (
     Condition,
     GeneratorParams,
@@ -216,16 +216,13 @@ def test_oracle_not_leaked_to_agent_transcript() -> None:
 
 
 # --------------------------------------------------------------------------- #
-# 4. Unsupported conditions fail explicitly.
+# 4. Every declared condition has a runner; an undeclared one fails explicitly.
 # --------------------------------------------------------------------------- #
-@pytest.mark.parametrize("condition", ["c4_planner_critic"])
-def test_unsupported_conditions_fail_explicitly(condition: str) -> None:
-    # C1/C2/C3 are wired; only the optional C4 still dispatches to a clear error.
-    with pytest.raises(NotImplementedError, match="not implemented"):
-        run_single_instance(
-            instance=_instance(), client=_ScriptedClient([]), condition=condition,
-            cap=4000, model_label="scripted-test",
-        )
+def test_every_declared_condition_is_dispatchable() -> None:
+    """C4 was implemented on 2026-08-12, so the dispatch now covers the whole enum.
+    A member without a runner would be a silently unrunnable condition."""
+    from src.harness.runner import SUPPORTED_CONDITIONS
+    assert set(SUPPORTED_CONDITIONS) == set(Condition)
 
 
 def test_unknown_condition_is_a_value_error() -> None:
@@ -314,6 +311,35 @@ def test_c2_condition_through_harness() -> None:
     assert run.run_result.score.valid
     assert run.run_result.score.satisfaction == 1.0
     assert run.run_result.score.optimality
+
+
+# --------------------------------------------------------------------------- #
+# 6a. The step cap follows the budget, so the budget is the binding constraint.
+# --------------------------------------------------------------------------- #
+def test_steps_for_cap_scales_with_the_budget() -> None:
+    # Monotone in the cap, and never zero even for an absurdly small budget.
+    assert steps_for_cap(2_000) == 2_000 // STEP_TOKEN_FLOOR
+    assert steps_for_cap(64_000) == 64_000 // STEP_TOKEN_FLOOR
+    assert steps_for_cap(64_000) > steps_for_cap(16_000) > steps_for_cap(2_000)
+    assert steps_for_cap(1) == 1
+
+    # The floor must stay conservative: the cheapest ReAct step observed live cost
+    # roughly 430 tokens, so the derived cap has to exceed what the budget can pay for.
+    assert steps_for_cap(16_000) > 16_000 // 430
+
+
+def test_runner_derives_max_steps_when_not_given(tmp_path) -> None:
+    # An explicit max_steps still wins (the smoke script and the tests rely on it);
+    # omitting it must not silently fall back to a constant that binds before tokens.
+    run = run_single_instance(
+        instance=_instance(), client=_ScriptedClient(_c1_script_partial_plan()),
+        condition="c1_react", cap=16_000, model_label="scripted-test",
+        output_dir=tmp_path,
+    )
+    assert run.run_result.tokens.cap == 16_000
+    # The scripted client stops on its own well before either limit; what matters is
+    # that the derived cap is far above the number of steps the budget can fund.
+    assert steps_for_cap(16_000) >= 64
 
 
 # --------------------------------------------------------------------------- #

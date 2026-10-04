@@ -1,0 +1,36 @@
+########## logs/vllm_32b_nopc.log
+enable_prefix_caching=False
+GPU KV cache size: 98,928 tokens
+model='Qwen/Qwen3-32B-AWQ'
+quantization=awq_marlin
+seed=42
+tensor_parallel_size=1
+Using MarlinLinearKernel for AWQMarlinLinearMethod
+
+########## logs/vllm_32b_gpu1.log
+enable_prefix_caching=False
+GPU KV cache size: 98,928 tokens
+model='Qwen/Qwen3-32B-AWQ'
+quantization=awq_marlin
+seed=42
+tensor_parallel_size=1
+Using MarlinLinearKernel for AWQMarlinLinearMethod
+
+########## logs/vllm_32b.log
+enable_prefix_caching=True
+GPU KV cache size: 94,320 tokens
+model='Qwen/Qwen3-32B-AWQ'
+quantization=awq_marlin
+seed=42
+tensor_parallel_size=1
+Using MarlinLinearKernel for AWQMarlinLinearMethod
+
+########## logs/vllm_8b.log
+enable_prefix_caching=True
+GPU KV cache size: 260,544 tokens
+model='Qwen/Qwen3-8B-AWQ'
+quantization=awq_marlin
+seed=42
+tensor_parallel_size=1
+Using MarlinLinearKernel for AWQMarlinLinearMethod
+

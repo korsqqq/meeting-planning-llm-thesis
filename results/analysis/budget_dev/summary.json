@@ -1,0 +1,434 @@
+{
+  "schema_version": "budget_dev_analysis/1.0",
+  "purpose": "apply the registered primary-cap rule; it decides nothing new",
+  "registered_rule": {
+    "threshold": 0.5,
+    "per_band": "each band separately, never pooled",
+    "success": "final plan validator-approved AND at least one meeting",
+    "ladder": [
+      8000,
+      16000,
+      32000,
+      64000
+    ],
+    "failure": "no cap selected, calibration failed, main experiment does not start"
+  },
+  "audit": {
+    "n_runs": 240,
+    "n_expected": 240,
+    "distinct_run_ids": 240,
+    "condition": "c1_react",
+    "caps": [
+      8000,
+      16000,
+      32000,
+      64000
+    ],
+    "model": "Qwen/Qwen3-32B-AWQ",
+    "instances_per_band": {
+      "low": 20,
+      "medium": 20,
+      "high": 20
+    },
+    "subset_hash": "911e4864d6fb8ea2a78ff465f8e55a286d3c48afc1b8403d5e63f231bf96fd91",
+    "binning_hash": "8e671cd13dbb262b638048eff58241226f09d5804373534789915bc302ba0dff",
+    "seed_range_observed": [
+      30000,
+      30063
+    ],
+    "all_checks_passed": true
+  },
+  "success_rates": {
+    "8000": {
+      "per_band": {
+        "low": {
+          "n": 20,
+          "qualifying": 0,
+          "rate": 0.0,
+          "meets_threshold": false
+        },
+        "medium": {
+          "n": 20,
+          "qualifying": 0,
+          "rate": 0.0,
+          "meets_threshold": false
+        },
+        "high": {
+          "n": 20,
+          "qualifying": 0,
+          "rate": 0.0,
+          "meets_threshold": false
+        }
+      },
+      "all_bands_meet_threshold": false,
+      "worst_band": "low"
+    },
+    "16000": {
+      "per_band": {
+        "low": {
+          "n": 20,
+          "qualifying": 0,
+          "rate": 0.0,
+          "meets_threshold": false
+        },
+        "medium": {
+          "n": 20,
+          "qualifying": 0,
+          "rate": 0.0,
+          "meets_threshold": false
+        },
+        "high": {
+          "n": 20,
+          "qualifying": 1,
+          "rate": 0.05,
+          "meets_threshold": false
+        }
+      },
+      "all_bands_meet_threshold": false,
+      "worst_band": "low"
+    },
+    "32000": {
+      "per_band": {
+        "low": {
+          "n": 20,
+          "qualifying": 0,
+          "rate": 0.0,
+          "meets_threshold": false
+        },
+        "medium": {
+          "n": 20,
+          "qualifying": 2,
+          "rate": 0.1,
+          "meets_threshold": false
+        },
+        "high": {
+          "n": 20,
+          "qualifying": 1,
+          "rate": 0.05,
+          "meets_threshold": false
+        }
+      },
+      "all_bands_meet_threshold": false,
+      "worst_band": "low"
+    },
+    "64000": {
+      "per_band": {
+        "low": {
+          "n": 20,
+          "qualifying": 9,
+          "rate": 0.45,
+          "meets_threshold": false
+        },
+        "medium": {
+          "n": 20,
+          "qualifying": 9,
+          "rate": 0.45,
+          "meets_threshold": false
+        },
+        "high": {
+          "n": 20,
+          "qualifying": 5,
+          "rate": 0.25,
+          "meets_threshold": false
+        }
+      },
+      "all_bands_meet_threshold": false,
+      "worst_band": "high"
+    }
+  },
+  "decision": {
+    "verdict": "NO_CAP",
+    "primary_cap": null,
+    "secondary_cap": null,
+    "rule": "smallest rung of the frozen ladder with at least 50% qualifying runs in EACH band",
+    "consequence": "budget calibration is declared failed and the main experiment does not start; falling back to the top rung because nothing qualified is not available"
+  },
+  "description": {
+    "by_cap": {
+      "8000": {
+        "n": 60,
+        "mean_satisfaction": 0.0,
+        "n_satisfaction_zero": 60,
+        "n_satisfaction_one": 0,
+        "mean_tokens": 7674.6,
+        "mean_cap_utilisation": 0.9593,
+        "n_budget_exhausted": 29,
+        "nonempty_plan_rate": 0.0,
+        "final_plan_feasible_rate": 1.0,
+        "proposal_attempts": 0,
+        "proposal_validity_rate": null,
+        "termination": {
+          "budget": 29,
+          "aborted": 31
+        }
+      },
+      "16000": {
+        "n": 60,
+        "mean_satisfaction": 0.0111,
+        "n_satisfaction_zero": 59,
+        "n_satisfaction_one": 0,
+        "mean_tokens": 15640.6,
+        "mean_cap_utilisation": 0.9775,
+        "n_budget_exhausted": 15,
+        "nonempty_plan_rate": 0.0167,
+        "final_plan_feasible_rate": 1.0,
+        "proposal_attempts": 6,
+        "proposal_validity_rate": 0.1667,
+        "termination": {
+          "aborted": 44,
+          "budget": 15,
+          "agent_finish": 1
+        }
+      },
+      "32000": {
+        "n": 60,
+        "mean_satisfaction": 0.0403,
+        "n_satisfaction_zero": 57,
+        "n_satisfaction_one": 1,
+        "mean_tokens": 29841.9,
+        "mean_cap_utilisation": 0.9325,
+        "n_budget_exhausted": 11,
+        "nonempty_plan_rate": 0.05,
+        "final_plan_feasible_rate": 1.0,
+        "proposal_attempts": 36,
+        "proposal_validity_rate": 0.0833,
+        "termination": {
+          "agent_finish": 10,
+          "aborted": 39,
+          "budget": 11
+        }
+      },
+      "64000": {
+        "n": 60,
+        "mean_satisfaction": 0.3,
+        "n_satisfaction_zero": 37,
+        "n_satisfaction_one": 6,
+        "mean_tokens": 48673.4,
+        "mean_cap_utilisation": 0.7605,
+        "n_budget_exhausted": 6,
+        "nonempty_plan_rate": 0.3833,
+        "final_plan_feasible_rate": 1.0,
+        "proposal_attempts": 93,
+        "proposal_validity_rate": 0.2473,
+        "termination": {
+          "agent_finish": 38,
+          "aborted": 16,
+          "budget": 6
+        }
+      }
+    },
+    "by_cap_and_band": {
+      "8000|low": {
+        "n": 20,
+        "mean_satisfaction": 0.0,
+        "n_satisfaction_zero": 20,
+        "n_satisfaction_one": 0,
+        "mean_tokens": 7617.0,
+        "mean_cap_utilisation": 0.9521,
+        "n_budget_exhausted": 12,
+        "nonempty_plan_rate": 0.0,
+        "final_plan_feasible_rate": 1.0,
+        "proposal_attempts": 0,
+        "proposal_validity_rate": null,
+        "termination": {
+          "budget": 12,
+          "aborted": 8
+        }
+      },
+      "8000|medium": {
+        "n": 20,
+        "mean_satisfaction": 0.0,
+        "n_satisfaction_zero": 20,
+        "n_satisfaction_one": 0,
+        "mean_tokens": 7735.9,
+        "mean_cap_utilisation": 0.967,
+        "n_budget_exhausted": 7,
+        "nonempty_plan_rate": 0.0,
+        "final_plan_feasible_rate": 1.0,
+        "proposal_attempts": 0,
+        "proposal_validity_rate": null,
+        "termination": {
+          "budget": 7,
+          "aborted": 13
+        }
+      },
+      "8000|high": {
+        "n": 20,
+        "mean_satisfaction": 0.0,
+        "n_satisfaction_zero": 20,
+        "n_satisfaction_one": 0,
+        "mean_tokens": 7670.9,
+        "mean_cap_utilisation": 0.9589,
+        "n_budget_exhausted": 10,
+        "nonempty_plan_rate": 0.0,
+        "final_plan_feasible_rate": 1.0,
+        "proposal_attempts": 0,
+        "proposal_validity_rate": null,
+        "termination": {
+          "aborted": 10,
+          "budget": 10
+        }
+      },
+      "16000|low": {
+        "n": 20,
+        "mean_satisfaction": 0.0,
+        "n_satisfaction_zero": 20,
+        "n_satisfaction_one": 0,
+        "mean_tokens": 15700.8,
+        "mean_cap_utilisation": 0.9813,
+        "n_budget_exhausted": 5,
+        "nonempty_plan_rate": 0.0,
+        "final_plan_feasible_rate": 1.0,
+        "proposal_attempts": 0,
+        "proposal_validity_rate": null,
+        "termination": {
+          "aborted": 15,
+          "budget": 5
+        }
+      },
+      "16000|medium": {
+        "n": 20,
+        "mean_satisfaction": 0.0,
+        "n_satisfaction_zero": 20,
+        "n_satisfaction_one": 0,
+        "mean_tokens": 15761.1,
+        "mean_cap_utilisation": 0.985,
+        "n_budget_exhausted": 5,
+        "nonempty_plan_rate": 0.0,
+        "final_plan_feasible_rate": 1.0,
+        "proposal_attempts": 1,
+        "proposal_validity_rate": 0.0,
+        "termination": {
+          "aborted": 15,
+          "budget": 5
+        }
+      },
+      "16000|high": {
+        "n": 20,
+        "mean_satisfaction": 0.0333,
+        "n_satisfaction_zero": 19,
+        "n_satisfaction_one": 0,
+        "mean_tokens": 15460.0,
+        "mean_cap_utilisation": 0.9662,
+        "n_budget_exhausted": 5,
+        "nonempty_plan_rate": 0.05,
+        "final_plan_feasible_rate": 1.0,
+        "proposal_attempts": 5,
+        "proposal_validity_rate": 0.2,
+        "termination": {
+          "aborted": 14,
+          "budget": 5,
+          "agent_finish": 1
+        }
+      },
+      "32000|low": {
+        "n": 20,
+        "mean_satisfaction": 0.0,
+        "n_satisfaction_zero": 20,
+        "n_satisfaction_one": 0,
+        "mean_tokens": 30522.0,
+        "mean_cap_utilisation": 0.9538,
+        "n_budget_exhausted": 6,
+        "nonempty_plan_rate": 0.0,
+        "final_plan_feasible_rate": 1.0,
+        "proposal_attempts": 11,
+        "proposal_validity_rate": 0.0,
+        "termination": {
+          "budget": 6,
+          "aborted": 9,
+          "agent_finish": 5
+        }
+      },
+      "32000|medium": {
+        "n": 20,
+        "mean_satisfaction": 0.0875,
+        "n_satisfaction_zero": 18,
+        "n_satisfaction_one": 1,
+        "mean_tokens": 30943.9,
+        "mean_cap_utilisation": 0.967,
+        "n_budget_exhausted": 3,
+        "nonempty_plan_rate": 0.1,
+        "final_plan_feasible_rate": 1.0,
+        "proposal_attempts": 14,
+        "proposal_validity_rate": 0.1429,
+        "termination": {
+          "agent_finish": 1,
+          "aborted": 16,
+          "budget": 3
+        }
+      },
+      "32000|high": {
+        "n": 20,
+        "mean_satisfaction": 0.0333,
+        "n_satisfaction_zero": 19,
+        "n_satisfaction_one": 0,
+        "mean_tokens": 28059.7,
+        "mean_cap_utilisation": 0.8768,
+        "n_budget_exhausted": 2,
+        "nonempty_plan_rate": 0.05,
+        "final_plan_feasible_rate": 1.0,
+        "proposal_attempts": 11,
+        "proposal_validity_rate": 0.0909,
+        "termination": {
+          "agent_finish": 4,
+          "aborted": 14,
+          "budget": 2
+        }
+      },
+      "64000|low": {
+        "n": 20,
+        "mean_satisfaction": 0.3625,
+        "n_satisfaction_zero": 11,
+        "n_satisfaction_one": 3,
+        "mean_tokens": 49126.8,
+        "mean_cap_utilisation": 0.7676,
+        "n_budget_exhausted": 2,
+        "nonempty_plan_rate": 0.45,
+        "final_plan_feasible_rate": 1.0,
+        "proposal_attempts": 29,
+        "proposal_validity_rate": 0.3103,
+        "termination": {
+          "agent_finish": 14,
+          "budget": 2,
+          "aborted": 4
+        }
+      },
+      "64000|medium": {
+        "n": 20,
+        "mean_satisfaction": 0.3583,
+        "n_satisfaction_zero": 11,
+        "n_satisfaction_one": 3,
+        "mean_tokens": 50202.8,
+        "mean_cap_utilisation": 0.7844,
+        "n_budget_exhausted": 1,
+        "nonempty_plan_rate": 0.45,
+        "final_plan_feasible_rate": 1.0,
+        "proposal_attempts": 32,
+        "proposal_validity_rate": 0.2812,
+        "termination": {
+          "agent_finish": 14,
+          "aborted": 5,
+          "budget": 1
+        }
+      },
+      "64000|high": {
+        "n": 20,
+        "mean_satisfaction": 0.1792,
+        "n_satisfaction_zero": 15,
+        "n_satisfaction_one": 0,
+        "mean_tokens": 46690.7,
+        "mean_cap_utilisation": 0.7295,
+        "n_budget_exhausted": 3,
+        "nonempty_plan_rate": 0.25,
+        "final_plan_feasible_rate": 1.0,
+        "proposal_attempts": 32,
+        "proposal_validity_rate": 0.1562,
+        "termination": {
+          "agent_finish": 10,
+          "aborted": 7,
+          "budget": 3
+        }
+      }
+    }
+  }
+}

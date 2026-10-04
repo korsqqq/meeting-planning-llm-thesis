@@ -1,0 +1,8 @@
+block,outcome,caps,term,test,df,statistic,rms_effect,n_tasks,permutations,p_raw,p_holm,reject_holm_0.05,holm_family,role
+A,satisfaction,16k/32k/64k/128k,Architecture,task-level sign-flip,4,0.03716996913580245,0.09639757405635586,150,99999,1e-05,7.000000000000001e-05,True,blockA_satisfaction_primary,primary
+A,satisfaction,16k/32k/64k/128k,Budget,task-level sign-flip,3,0.2069011944444439,0.26261581219495267,150,99999,1e-05,7.000000000000001e-05,True,blockA_satisfaction_primary,primary
+A,satisfaction,16k/32k/64k/128k,Complexity,complexity-label permutation between tasks,2,0.22922870370370385,0.04787783450655468,150,99999,0.00567,0.02268,True,blockA_satisfaction_primary,primary
+A,satisfaction,16k/32k/64k/128k,Architecture x Budget,task-level sign-flip,12,0.18191802469135798,0.12312528331316237,150,99999,1e-05,7.000000000000001e-05,True,blockA_satisfaction_primary,primary
+A,satisfaction,16k/32k/64k/128k,Architecture x Complexity,complexity-label permutation between tasks,8,0.08384490740740731,0.014477992558311331,150,99999,0.85732,0.85732,False,blockA_satisfaction_primary,primary
+A,satisfaction,16k/32k/64k/128k,Budget x Complexity,complexity-label permutation between tasks,6,0.49861111111111167,0.04076808846434964,150,99999,0.00782,0.02346,True,blockA_satisfaction_primary,primary
+A,satisfaction,16k/32k/64k/128k,Architecture x Budget x Complexity,complexity-label permutation between tasks,24,1.939212962962964,0.040199636844990734,150,99999,0.03642,0.07284,False,blockA_satisfaction_primary,primary

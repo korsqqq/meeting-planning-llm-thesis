@@ -1,0 +1,317 @@
+{
+  "schema_version": "ab_empty_retry/1.0",
+  "banner": "EMPTY-TURN A/B — NOT PILOT, NOT EXPERIMENT",
+  "timestamp_utc": "2026-08-04T12:35:02+00:00",
+  "endpoint": "http://localhost:8000/v1",
+  "model": "Qwen/Qwen3-32B-AWQ",
+  "condition": "c1_react",
+  "caps": [
+    16000,
+    32000
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "generator": {
+    "n_people": 4,
+    "tightness": 0.2,
+    "overlap": 0.2,
+    "travel_structure": "uniform"
+  },
+  "runs": [
+    {
+      "cap": 16000,
+      "seed": 0,
+      "A": {
+        "satisfaction": 1.0,
+        "valid": true,
+        "tokens_used": 14595,
+        "unused_budget": 1405,
+        "unused_share": 0.0878,
+        "empty_turns": 0,
+        "termination": "agent_finish",
+        "n_steps": 11,
+        "budget_exhausted": false
+      },
+      "B": {
+        "satisfaction": 1.0,
+        "valid": true,
+        "tokens_used": 14595,
+        "unused_budget": 1405,
+        "unused_share": 0.0878,
+        "empty_turns": 0,
+        "termination": "agent_finish",
+        "n_steps": 11,
+        "budget_exhausted": false
+      }
+    },
+    {
+      "cap": 16000,
+      "seed": 1,
+      "A": {
+        "satisfaction": 0.0,
+        "valid": true,
+        "tokens_used": 15844,
+        "unused_budget": 156,
+        "unused_share": 0.0097,
+        "empty_turns": 1,
+        "termination": "aborted",
+        "n_steps": 10,
+        "budget_exhausted": false
+      },
+      "B": {
+        "satisfaction": 0.0,
+        "valid": true,
+        "tokens_used": 15844,
+        "unused_budget": 156,
+        "unused_share": 0.0097,
+        "empty_turns": 1,
+        "termination": "budget",
+        "n_steps": 9,
+        "budget_exhausted": true
+      }
+    },
+    {
+      "cap": 16000,
+      "seed": 2,
+      "A": {
+        "satisfaction": 0.0,
+        "valid": true,
+        "tokens_used": 15255,
+        "unused_budget": 745,
+        "unused_share": 0.0466,
+        "empty_turns": 0,
+        "termination": "budget",
+        "n_steps": 10,
+        "budget_exhausted": true
+      },
+      "B": {
+        "satisfaction": 0.0,
+        "valid": true,
+        "tokens_used": 15255,
+        "unused_budget": 745,
+        "unused_share": 0.0466,
+        "empty_turns": 0,
+        "termination": "budget",
+        "n_steps": 10,
+        "budget_exhausted": true
+      }
+    },
+    {
+      "cap": 16000,
+      "seed": 3,
+      "A": {
+        "satisfaction": 0.0,
+        "valid": true,
+        "tokens_used": 15844,
+        "unused_budget": 156,
+        "unused_share": 0.0097,
+        "empty_turns": 1,
+        "termination": "aborted",
+        "n_steps": 10,
+        "budget_exhausted": false
+      },
+      "B": {
+        "satisfaction": 0.0,
+        "valid": true,
+        "tokens_used": 15844,
+        "unused_budget": 156,
+        "unused_share": 0.0097,
+        "empty_turns": 1,
+        "termination": "budget",
+        "n_steps": 10,
+        "budget_exhausted": true
+      }
+    },
+    {
+      "cap": 16000,
+      "seed": 4,
+      "A": {
+        "satisfaction": 0.0,
+        "valid": true,
+        "tokens_used": 15844,
+        "unused_budget": 156,
+        "unused_share": 0.0097,
+        "empty_turns": 1,
+        "termination": "aborted",
+        "n_steps": 11,
+        "budget_exhausted": false
+      },
+      "B": {
+        "satisfaction": 0.0,
+        "valid": true,
+        "tokens_used": 15431,
+        "unused_budget": 569,
+        "unused_share": 0.0356,
+        "empty_turns": 0,
+        "termination": "budget",
+        "n_steps": 10,
+        "budget_exhausted": true
+      }
+    },
+    {
+      "cap": 32000,
+      "seed": 0,
+      "A": {
+        "satisfaction": 1.0,
+        "valid": true,
+        "tokens_used": 14595,
+        "unused_budget": 17405,
+        "unused_share": 0.5439,
+        "empty_turns": 0,
+        "termination": "agent_finish",
+        "n_steps": 11,
+        "budget_exhausted": false
+      },
+      "B": {
+        "satisfaction": 1.0,
+        "valid": true,
+        "tokens_used": 14595,
+        "unused_budget": 17405,
+        "unused_share": 0.5439,
+        "empty_turns": 0,
+        "termination": "agent_finish",
+        "n_steps": 11,
+        "budget_exhausted": false
+      }
+    },
+    {
+      "cap": 32000,
+      "seed": 1,
+      "A": {
+        "satisfaction": 0.0,
+        "valid": true,
+        "tokens_used": 31579,
+        "unused_budget": 421,
+        "unused_share": 0.0132,
+        "empty_turns": 0,
+        "termination": "agent_finish",
+        "n_steps": 12,
+        "budget_exhausted": false
+      },
+      "B": {
+        "satisfaction": 0.0,
+        "valid": true,
+        "tokens_used": 31844,
+        "unused_budget": 156,
+        "unused_share": 0.0049,
+        "empty_turns": 1,
+        "termination": "budget",
+        "n_steps": 13,
+        "budget_exhausted": true
+      }
+    },
+    {
+      "cap": 32000,
+      "seed": 2,
+      "A": {
+        "satisfaction": 0.0,
+        "valid": true,
+        "tokens_used": 18192,
+        "unused_budget": 13808,
+        "unused_share": 0.4315,
+        "empty_turns": 0,
+        "termination": "agent_finish",
+        "n_steps": 9,
+        "budget_exhausted": false
+      },
+      "B": {
+        "satisfaction": 0.75,
+        "valid": true,
+        "tokens_used": 18298,
+        "unused_budget": 13702,
+        "unused_share": 0.4282,
+        "empty_turns": 0,
+        "termination": "agent_finish",
+        "n_steps": 11,
+        "budget_exhausted": false
+      }
+    },
+    {
+      "cap": 32000,
+      "seed": 3,
+      "A": {
+        "satisfaction": 1.0,
+        "valid": true,
+        "tokens_used": 28151,
+        "unused_budget": 3849,
+        "unused_share": 0.1203,
+        "empty_turns": 0,
+        "termination": "agent_finish",
+        "n_steps": 13,
+        "budget_exhausted": false
+      },
+      "B": {
+        "satisfaction": 1.0,
+        "valid": true,
+        "tokens_used": 31134,
+        "unused_budget": 866,
+        "unused_share": 0.0271,
+        "empty_turns": 0,
+        "termination": "agent_finish",
+        "n_steps": 15,
+        "budget_exhausted": false
+      }
+    },
+    {
+      "cap": 32000,
+      "seed": 4,
+      "A": {
+        "satisfaction": 1.0,
+        "valid": true,
+        "tokens_used": 30819,
+        "unused_budget": 1181,
+        "unused_share": 0.0369,
+        "empty_turns": 0,
+        "termination": "agent_finish",
+        "n_steps": 15,
+        "budget_exhausted": false
+      },
+      "B": {
+        "satisfaction": 1.0,
+        "valid": true,
+        "tokens_used": 31932,
+        "unused_budget": 68,
+        "unused_share": 0.0021,
+        "empty_turns": 1,
+        "termination": "budget",
+        "n_steps": 16,
+        "budget_exhausted": true
+      }
+    }
+  ],
+  "summary": [
+    {
+      "cap": 16000,
+      "n": 5,
+      "satisfaction_A": 0.2,
+      "satisfaction_B": 0.2,
+      "unused_budget_A": 523.6,
+      "unused_budget_B": 606.2,
+      "empty_turns_A": 3,
+      "empty_turns_B": 2,
+      "aborted_A": 3,
+      "aborted_B": 0,
+      "rescued": 0,
+      "regressed": 0
+    },
+    {
+      "cap": 32000,
+      "n": 5,
+      "satisfaction_A": 0.6,
+      "satisfaction_B": 0.75,
+      "unused_budget_A": 7332.8,
+      "unused_budget_B": 6439.4,
+      "empty_turns_A": 0,
+      "empty_turns_B": 2,
+      "aborted_A": 0,
+      "aborted_B": 0,
+      "rescued": 1,
+      "regressed": 0
+    }
+  ]
+}

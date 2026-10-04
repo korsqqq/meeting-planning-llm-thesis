@@ -1,0 +1,24 @@
+{
+  "schema_version": "expected_runs_audit/1.0",
+  "audited_utc": "2026-08-17T22:06:35+00:00",
+  "runs_dir": "results/logs/lowcx_n4_64k_probe",
+  "n_expected": 24,
+  "n_verified": 24,
+  "n_missing": 0,
+  "n_incompatible": 0,
+  "n_unexpected_files": 0,
+  "missing": [],
+  "incompatible": [],
+  "unexpected_files": [],
+  "verified_by_condition_and_cap": {
+    "c1_react@64000": 12,
+    "c3_mas@64000": 12
+  },
+  "verified_by_source_manifest": {
+    "expected_runs__lowcx_n4_64k_probe.json": 24
+  },
+  "models": [
+    "Qwen/Qwen3-32B-AWQ"
+  ],
+  "all_checks_passed": true
+}

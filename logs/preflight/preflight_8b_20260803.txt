@@ -1,0 +1,21 @@
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+========================================================================
+ENDPOINT PRE-FLIGHT — capability probe, not an experiment
+========================================================================
+endpoint : http://localhost:8001/v1
+model    : Qwen/Qwen3-8B-AWQ
+[PASS] A  endpoint reachable — serves Qwen/Qwen3-8B-AWQ
+tokenizer: Qwen/Qwen3-8B-AWQ (revision latest)
+
+[PASS] B  plain completion — 9 chars, usage=yes
+[PASS] C  client extra_body accepted — top_k, min_p, think, return_token_ids, add_special_tokens
+[PASS] D  thinking delimiter — </think> present, 8336 chars of reasoning before it
+[PASS] E  return_token_ids — 2315 ids vs usage.completion_tokens=2315
+[PASS] F  constrained JSON — structured_outputs accepted, parsed 1 meeting(s)
+      NOTE: this vLLM version wants 'structured_outputs'. src/core/llm_client.py sends 'guided_json' — update it before the pilot, or pin a version that accepts guided_json.
+[PASS] G  input token parity — local=63 endpoint=63 delta=0
+[INFO] H  seed stability — identical output on repeat
+
+PRE-FLIGHT PASSED — the endpoint supports everything the harness needs.
+Next: REQUIRE_TOKENIZER_PARITY=1 pytest tests/test_tokenizer.py, then scripts/run_live_smoke.py per docs/LIVE_SMOKE.md.

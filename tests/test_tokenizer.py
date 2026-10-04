@@ -76,8 +76,8 @@ def test_render_input_is_a_string(tok: QwenTokenizer) -> None:
 
 
 # --------------------------------------------------------------------------- #
-# FP8-8B <-> FP8-32B tokenizer parity, on the EXACT repos the thesis serves
-# (`Qwen/Qwen3-*-FP8` are separate HF repos with their own tokenizer files and
+# AWQ-8B <-> AWQ-32B tokenizer parity, on the EXACT repos the thesis serves
+# (`Qwen/Qwen3-*-AWQ` are separate HF repos with their own tokenizer files and
 # revisions -- base-repo parity would not prove anything about them).
 #
 # Caps calibrated on the 8B pilot transfer to the 32B main run ONLY IF both
@@ -89,8 +89,8 @@ def test_render_input_is_a_string(tok: QwenTokenizer) -> None:
 # system+user, tool schemas, a ReAct Thought/Action/Observation history,
 # the thinking-OFF finalise prompt, and non-ASCII content.
 # --------------------------------------------------------------------------- #
-PARITY_TOKENIZER_8B = "Qwen/Qwen3-8B-FP8"
-PARITY_TOKENIZER_32B = "Qwen/Qwen3-32B-FP8"
+PARITY_TOKENIZER_8B = "Qwen/Qwen3-8B-AWQ"
+PARITY_TOKENIZER_32B = "Qwen/Qwen3-32B-AWQ"
 _PARITY_TOOLS = [{
     "type": "function",
     "function": {
@@ -160,7 +160,7 @@ def tok_pair() -> tuple[QwenTokenizer, QwenTokenizer]:
     assert DEFAULT_TOKENIZER == PARITY_TOKENIZER_8B
     return _load_or_skip(
         lambda: (QwenTokenizer(PARITY_TOKENIZER_8B), QwenTokenizer(PARITY_TOKENIZER_32B)),
-        "an FP8 Qwen tokenizer pair",
+        "an AWQ Qwen tokenizer pair",
     )
 
 

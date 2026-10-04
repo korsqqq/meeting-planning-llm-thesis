@@ -1,0 +1,212 @@
+{
+  "schema_version": "harness_slice/1.0",
+  "run_id": "c1_react__uniform-n4-t20-o20-s0__cap2000__Qwen-Qwen3-32B-AWQ",
+  "timestamp_utc": "2026-08-03T23:23:12+00:00",
+  "condition": "c1_react",
+  "cap": 2000,
+  "model_label": "Qwen/Qwen3-32B-AWQ",
+  "finalization_reserve": 256,
+  "seeds": {
+    "generator": 0,
+    "solver": 0,
+    "inference": 42
+  },
+  "provenance": {
+    "git_commit": "525ad1bfa1313a2f8738bf159cb9263d9c85639d",
+    "git_branch": "main"
+  },
+  "instance": {
+    "instance_id": "uniform-n4-t20-o20-s0",
+    "generator_params": {
+      "n_people": 4,
+      "tightness": 0.2,
+      "overlap": 0.2,
+      "travel_structure": "uniform"
+    },
+    "n_people": 4,
+    "travel_structure": "uniform",
+    "waiting_allowed": true,
+    "start_time": 0,
+    "end_of_day": 480,
+    "meeting_duration": 30,
+    "complexity_metric": 0,
+    "level": "easy"
+  },
+  "oracle": {
+    "optimum": 4,
+    "status": "OPTIMAL",
+    "proven_optimal": true,
+    "latency_seconds": 0.003896063193678856
+  },
+  "agent": {
+    "n_steps": 2,
+    "finalization_mismatch": false,
+    "transcript": [
+      {
+        "role": "system",
+        "content": "You are a meeting-planning agent. Plan a one-day route that meets as many people as possible.\nYou start at location 'start' at minute 0. Every meeting lasts exactly 30 minutes and must fit inside the person's availability window. You must have time to travel between consecutive meetings, and every meeting must end by minute 480. You may arrive early and wait for a window to open.\n\nWork step by step. Each step write one 'Thought:' line, then exactly one of:\n  Action: list_people[]\n  Action: get_availability[person_id]\n  Action: get_travel_time[from_location, to_location]\nYou will receive an 'Observation:' with the result. Record your plan (even a partial one) at any time with:\n  Action: propose[p0@10, p1@60]   (person_id @ meeting-start-minute)\nYou may refine and propose again. When you are done, write 'Action: finish'."
+      },
+      {
+        "role": "user",
+        "content": "Plan the route now. Start by listing the people."
+      },
+      {
+        "role": "assistant",
+        "content": "Action: list_people[]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: People: p0, p1, p2, p3"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ]
+  },
+  "usage_audit": {
+    "has_endpoint_usage": true,
+    "n_internal_calls": 3,
+    "n_endpoint_records": 3,
+    "calls_aligned": true,
+    "totals": {
+      "internal_input_tokens": 574,
+      "internal_thinking_tokens": 1256,
+      "internal_answer_tokens": 14,
+      "internal_total_tokens": 1844,
+      "endpoint_prompt_tokens": 574,
+      "endpoint_completion_tokens": 1270,
+      "endpoint_total_tokens": 1844,
+      "delta_total_tokens": 0,
+      "relative_delta_total": 0.0
+    },
+    "per_call": [
+      {
+        "role": "react_step",
+        "internal_input_tokens": 225,
+        "internal_thinking_tokens": 1177,
+        "internal_answer_tokens": 7,
+        "internal_total_tokens": 1409,
+        "endpoint_prompt_tokens": 225,
+        "endpoint_completion_tokens": 1184,
+        "endpoint_total_tokens": 1409,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "react_step",
+        "internal_input_tokens": 256,
+        "internal_thinking_tokens": 79,
+        "internal_answer_tokens": 0,
+        "internal_total_tokens": 335,
+        "endpoint_prompt_tokens": 256,
+        "endpoint_completion_tokens": 79,
+        "endpoint_total_tokens": 335,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "finalize",
+        "internal_input_tokens": 93,
+        "internal_thinking_tokens": 0,
+        "internal_answer_tokens": 7,
+        "internal_total_tokens": 100,
+        "endpoint_prompt_tokens": 93,
+        "endpoint_completion_tokens": 7,
+        "endpoint_total_tokens": 100,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      }
+    ],
+    "notes": [
+      "internal output counts include <think> tags and inter-part whitespace (split at the last </think>); expect ~0 delta, small residuals only when text segments are re-tokenised instead of using endpoint token ids"
+    ]
+  },
+  "transcript_sanity": {
+    "n_messages": 5,
+    "think_leak": false,
+    "think_open_message_indices": [],
+    "think_close_message_indices": [],
+    "oracle_term_hits": [],
+    "clean": true
+  },
+  "run_result": {
+    "schema_version": "result/1.0",
+    "run_id": "c1_react__uniform-n4-t20-o20-s0__cap2000__Qwen-Qwen3-32B-AWQ",
+    "instance_id": "uniform-n4-t20-o20-s0",
+    "seed": 0,
+    "condition": "c1_react",
+    "level": "easy",
+    "cap": 2000,
+    "model": "Qwen/Qwen3-32B-AWQ",
+    "sampling": {
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "thinking_enabled": true,
+      "seed": 42
+    },
+    "final_plan": {
+      "schema_version": "answer/1.0",
+      "meetings": []
+    },
+    "best_plan_so_far": {
+      "schema_version": "answer/1.0",
+      "meetings": []
+    },
+    "tokens": {
+      "cap": 2000,
+      "total": 1844,
+      "input_tokens": 574,
+      "thinking_tokens": 1256,
+      "answer_tokens": 14,
+      "n_calls": 3,
+      "budget_exhausted": false
+    },
+    "score": {
+      "valid": true,
+      "satisfaction": 0.0,
+      "n_valid_meetings": 0,
+      "solver_optimum": 4,
+      "optimality": false,
+      "invalid_reasons": []
+    },
+    "latency_seconds": 36.83868230879307,
+    "calls": [
+      {
+        "role": "react_step",
+        "input_tokens": 225,
+        "thinking_tokens": 1177,
+        "answer_tokens": 7,
+        "latency_seconds": 34.30837965477258
+      },
+      {
+        "role": "react_step",
+        "input_tokens": 256,
+        "thinking_tokens": 79,
+        "answer_tokens": 0,
+        "latency_seconds": 2.2968558790162206
+      },
+      {
+        "role": "finalize",
+        "input_tokens": 93,
+        "thinking_tokens": 0,
+        "answer_tokens": 7,
+        "latency_seconds": 0.21286161802709103
+      }
+    ],
+    "timestamp": "2026-08-03T23:23:12+00:00",
+    "notes": "live smoke (LIVE SMOKE ONLY — NOT PILOT, NOT EXPERIMENT); endpoint=http://localhost:8000/v1"
+  }
+}

@@ -21,7 +21,14 @@ from src.agents.single_agent.react import (
     run_react,
 )
 from src.core import LLMResponse
-from src.schemas import GeneratorParams, Instance, Person, TravelStructure
+from src.agents.react_core import PROPOSAL_SCHEMA_VERSION
+from src.schemas import (
+    GeneratorParams,
+    Instance,
+    InvalidReason,
+    Person,
+    TravelStructure,
+)
 
 
 def _instance() -> Instance:
@@ -56,21 +63,22 @@ def _instance() -> Instance:
 # --------------------------------------------------------------------------- #
 def test_parse_plain_action() -> None:
     assert _parse_action("Thought: list them\nAction: list_people[]") == {
-        "tool": "list_people", "args": []
+        "tool": "list_people", "args": [], "raw": ""
     }
 
 
 def test_parse_strips_quotes_around_args() -> None:
-    # The exact bug from the first transcript.
+    # The exact bug from the first transcript. `raw` keeps the argument text as
+    # written, for the proposal taxonomy; `args` stays the cleaned parse.
     assert _parse_action("Action: get_travel_time['start', 'loc_0']") == {
-        "tool": "get_travel_time", "args": ["start", "loc_0"]
+        "tool": "get_travel_time", "args": ["start", "loc_0"], "raw": "'start', 'loc_0'"
     }
 
 
 def test_parse_ignores_trailing_junk() -> None:
     # Weak models append noise after the action; the first [...] still parses.
     parsed = _parse_action('Action: get_availability[p0]   {"id": 0, "name": "x"}')
-    assert parsed == {"tool": "get_availability", "args": ["p0"]}
+    assert parsed == {"tool": "get_availability", "args": ["p0"], "raw": "p0"}
 
 
 def test_parse_finish_with_and_without_brackets() -> None:
@@ -306,3 +314,218 @@ def test_finalize_serialises_best_plan_not_trajectory() -> None:
     assert all("Observation" not in m["content"] for m in fmsgs)
     assert result.final_plan is not None
     assert [(m.person_id, m.start_time) for m in result.final_plan.meetings] == [("p0", 10)]
+
+
+# --------------------------------------------------------------------------- #
+# Empty-turn A/B: the locked arm (A) and the experimental retry arm (B).
+# The default MUST stay arm A -- only the A/B script passes retry_on_empty=True.
+# --------------------------------------------------------------------------- #
+def test_arm_a_is_the_default_first_empty_turn_finalises() -> None:
+    client = _ScriptedClient([
+        _resp(answer="Action: list_people[]"),
+        _resp(thinking="thinking with nothing after it", answer=""),
+        _resp(answer='{"meetings": []}'),  # terminal emit
+    ])
+    result = run_react(_instance(), client, cap=8000)  # type: ignore[arg-type]
+
+    assert client.i == 3  # one tool step, one empty turn, then straight to the emit
+    assert [c.role for c in result.calls] == ["react_step", "react_step", "finalize"]
+    assert result.empty_turns == 1
+    assert result.termination == "aborted"
+
+
+def test_arm_b_retries_once_after_an_empty_turn() -> None:
+    # Same script as arm A, except the retry is granted: the agent gets one more
+    # decide step, uses it, and the run reaches a plan the locked arm never sees.
+    client = _ScriptedClient([
+        _resp(answer="Action: list_people[]"),
+        _resp(thinking="thinking with nothing after it", answer=""),
+        _resp(answer="Action: propose[p0@10, p1@60]"),
+        _resp(answer="Action: finish"),
+        _resp(answer='{"meetings": [{"person_id": "p0", "start_time": 10}, '
+                     '{"person_id": "p1", "start_time": 60}]}'),
+    ])
+    result = run_react(_instance(), client, cap=8000, retry_on_empty=True)  # type: ignore[arg-type]
+
+    assert client.i == 5
+    assert result.empty_turns == 1
+    assert result.termination == "agent_finish"
+    assert len(result.best_plan_so_far.meetings) == 2
+    # The retry nudge is a plain Observation -- no validity, no budget, no oracle terms.
+    nudges = [m for m in result.transcript if "no answer" in m["content"]]
+    assert len(nudges) == 1
+    assert "Action: finish" in nudges[0]["content"]
+
+
+def test_arm_b_stops_on_two_consecutive_empty_turns() -> None:
+    client = _ScriptedClient([
+        _resp(thinking="nothing after this", answer=""),
+        _resp(thinking="nothing after this either", answer=""),
+        _resp(answer='{"meetings": []}'),
+    ])
+    result = run_react(_instance(), client, cap=8000, retry_on_empty=True)  # type: ignore[arg-type]
+
+    assert client.i == 3  # two empty decide steps, then the emit -- no third retry
+    assert result.empty_turns == 2
+    assert result.termination == "aborted"
+
+
+def test_arm_b_streak_resets_after_a_useful_turn() -> None:
+    # empty -> retry -> useful turn -> empty again: the second empty is a FIRST
+    # consecutive empty, so it is retried too. Only back-to-back empties stop the run.
+    client = _ScriptedClient([
+        _resp(thinking="x", answer=""),
+        _resp(answer="Action: list_people[]"),
+        _resp(thinking="y", answer=""),
+        _resp(answer="Action: finish"),
+        _resp(answer='{"meetings": []}'),
+    ])
+    result = run_react(_instance(), client, cap=8000, retry_on_empty=True)  # type: ignore[arg-type]
+
+    assert client.i == 5
+    assert result.empty_turns == 2
+    assert result.termination == "agent_finish"
+
+
+def test_termination_reason_distinguishes_budget_from_finish() -> None:
+    finished = _ScriptedClient([
+        _resp(answer="Action: finish"), _resp(answer='{"meetings": []}'),
+    ])
+    assert run_react(_instance(), finished, cap=8000).termination == "agent_finish"  # type: ignore[arg-type]
+
+    # A cap that only affords the terminal emit: the guard routes before any decide step.
+    starved = _ScriptedClient([_resp(answer='{"meetings": []}')])
+    starved_result = run_react(_instance(), starved, cap=300)  # type: ignore[arg-type]
+    assert starved_result.termination == "budget"
+    assert starved_result.empty_turns == 0
+
+
+# --------------------------------------------------------------------------- #
+# Rejected-proposal taxonomy: one row per propose, written when it is handled.
+# Diagnostics only -- the score and the agent's view must not change.
+# --------------------------------------------------------------------------- #
+def _rows(result) -> list[dict]:
+    return result.proposals
+
+
+def test_taxonomy_records_an_unparseable_proposal() -> None:
+    client = _ScriptedClient([
+        _resp(answer="Action: propose[p0@10, p1@60+T2]"),   # symbolic offset, not a number
+        _resp(answer="Action: finish"),
+        _resp(answer='{"meetings": []}'),
+    ])
+    result = run_react(_instance(), client, cap=8000)  # type: ignore[arg-type]
+
+    row = _rows(result)[0]
+    assert row["schema_version"] == PROPOSAL_SCHEMA_VERSION
+    assert row["condition"] == "c1_react" and row["role"] == "react_step"
+    assert row["parsed"] is False and row["plan"] is None
+    assert row["n_meetings"] == 0
+    assert row["valid"] is False and row["reasons"] == ["malformed"]
+    assert row["accepted_into_best_plan"] is False
+    assert "p1@60+T2" in row["raw"]
+    # The scored artefact is untouched by the diagnostics.
+    assert result.best_plan_so_far.meetings == []
+
+
+def test_taxonomy_records_a_travel_infeasible_proposal() -> None:
+    # p0 is at A and p1 at B; p0 runs 10-40, A->B costs 20, so p1 cannot start before
+    # 60. Starting it at 45 leaves the meetings disjoint but the travel impossible --
+    # the failure mode that dominates the live 32B runs.
+    client = _ScriptedClient([
+        _resp(answer="Action: propose[p0@10, p1@45]"),
+        _resp(answer="Action: finish"),
+        _resp(answer='{"meetings": []}'),
+    ])
+    result = run_react(_instance(), client, cap=8000)  # type: ignore[arg-type]
+
+    row = _rows(result)[0]
+    assert row["parsed"] is True
+    assert row["n_meetings"] == 2
+    assert row["valid"] is False
+    assert InvalidReason.TRAVEL_INFEASIBLE.value in row["reasons"]
+    assert row["accepted_into_best_plan"] is False
+    assert row["plan"] == [{"person_id": "p0", "start_time": 10},
+                           {"person_id": "p1", "start_time": 45}]
+    assert result.best_plan_so_far.meetings == []
+
+
+def test_taxonomy_records_a_valid_but_not_longer_proposal() -> None:
+    # First a valid 2-meeting plan is accepted; then a valid 1-meeting plan arrives.
+    # It is valid, but not strictly longer, so the hidden gate refuses it.
+    client = _ScriptedClient([
+        _resp(answer="Action: propose[p0@10, p1@60]"),
+        _resp(answer="Action: propose[p0@10]"),
+        _resp(answer="Action: finish"),
+        _resp(answer='{"meetings": [{"person_id": "p0", "start_time": 10}, '
+                     '{"person_id": "p1", "start_time": 60}]}'),
+    ])
+    result = run_react(_instance(), client, cap=8000)  # type: ignore[arg-type]
+
+    first, second = _rows(result)[0], _rows(result)[1]
+    assert first["valid"] is True and first["accepted_into_best_plan"] is True
+    assert second["valid"] is True and second["reasons"] == []
+    assert second["n_meetings"] == 1
+    assert second["accepted_into_best_plan"] is False  # valid, but not an improvement
+    # best_plan_so_far still holds the longer plan.
+    assert len(result.best_plan_so_far.meetings) == 2
+
+
+def test_taxonomy_records_a_valid_accepted_proposal() -> None:
+    client = _ScriptedClient([
+        _resp(answer="Action: propose[p0@10, p1@60]"),
+        _resp(answer="Action: finish"),
+        _resp(answer='{"meetings": [{"person_id": "p0", "start_time": 10}, '
+                     '{"person_id": "p1", "start_time": 60}]}'),
+    ])
+    result = run_react(_instance(), client, cap=8000)  # type: ignore[arg-type]
+
+    row = _rows(result)[0]
+    assert row["valid"] is True
+    assert row["reasons"] == []
+    assert row["n_meetings"] == 2
+    assert row["accepted_into_best_plan"] is True
+    assert row["step"] == 1
+    # Nothing about validity reached the agent: the Observation echoes only the count.
+    obs = [m["content"] for m in result.transcript if m["content"].startswith("Observation")]
+    assert any("Recorded a plan with 2 meeting(s)." in o for o in obs)
+    assert not any("valid" in o.lower() or "infeasible" in o.lower() for o in obs)
+
+
+def test_taxonomy_reasons_are_multi_label() -> None:
+    # p0 runs 75-105 but its window closes at 100 -> WINDOW_VIOLATION; p1 then starts
+    # at 110 while arrival is only possible at 125 (105 + 20 travel) -> TRAVEL_INFEASIBLE.
+    # Both must be reported: collapsing to the first would bias the breakdown toward
+    # whichever check the validator happens to run earlier.
+    client = _ScriptedClient([
+        _resp(answer="Action: propose[p0@75, p1@110]"),
+        _resp(answer="Action: finish"),
+        _resp(answer='{"meetings": []}'),
+    ])
+    result = run_react(_instance(), client, cap=8000)  # type: ignore[arg-type]
+
+    row = _rows(result)[0]
+    assert row["parsed"] is True
+    assert row["valid"] is False
+    assert row["reasons"] == [InvalidReason.TRAVEL_INFEASIBLE.value,
+                              InvalidReason.WINDOW_VIOLATION.value]
+    assert row["accepted_into_best_plan"] is False
+
+
+def test_finish_reason_is_carried_into_the_call_record() -> None:
+    # The empty-post-think rule cannot tell a generation cut short by the grant from a
+    # model that closed </think> and said nothing -- the token counts are identical.
+    # finish_reason is the only thing that separates them, so it must survive the hop
+    # from the client response into the run record.
+    client = _ScriptedClient([
+        LLMResponse(thinking="ran out of room", answer="", raw_text="<think>ran out",
+                    input_tokens=50, thinking_tokens=10, answer_tokens=0,
+                    finish_reason="length"),
+        _resp(answer='{"meetings": []}'),
+    ])
+    result = run_react(_instance(), client, cap=8000)  # type: ignore[arg-type]
+
+    assert [c.finish_reason for c in result.calls] == ["length", "stop"]
+    # The rule itself is unchanged: an empty visible answer still aborts.
+    assert result.termination == "aborted"
+    assert result.empty_turns == 1

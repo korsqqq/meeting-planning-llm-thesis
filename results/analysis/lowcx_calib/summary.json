@@ -1,0 +1,693 @@
+{
+  "schema_version": "lowcx_calibration/1.0",
+  "generated_utc": "2026-08-17T17:18:32+00:00",
+  "standing": "exploratory development calibration; descriptive only. No hypothesis test, no threshold, no cap selection, no gate.",
+  "primary_metric": "satisfaction = achieved / oracle optimum, optimum 3 throughout",
+  "secondary_diagnostic": "validated non-empty rate; never described as performance or accuracy",
+  "sign_convention": "delta = satisfaction(C1) - satisfaction(C3)",
+  "n_runs": 216,
+  "n_instances": 36,
+  "sizes": [
+    4,
+    5,
+    6
+  ],
+  "caps": [
+    8000,
+    16000,
+    32000
+  ],
+  "c3_worker_quota_by_cap": {
+    "8000": 2904,
+    "16000": 5904,
+    "32000": 11904
+  },
+  "completeness_audit": {
+    "n_expected": 216,
+    "n_verified": 216,
+    "n_missing": 0,
+    "n_incompatible": 0,
+    "n_unexpected_files": 0,
+    "all_checks_passed": true
+  },
+  "provenance": {
+    "models": [
+      "Qwen/Qwen3-32B-AWQ"
+    ],
+    "binning_hashes": [
+      "65d7ebc329f2",
+      "9c553e394e79",
+      "eb01223da4a0"
+    ],
+    "git_commits": [
+      "84cd1e243d07"
+    ]
+  },
+  "cells": {
+    "n4|8000|c1_react": {
+      "n": 12,
+      "mean_satisfaction": 0.0,
+      "nonempty_validated": 0,
+      "nonempty_validated_rate": 0.0,
+      "mean_tokens": 7790,
+      "mean_cap_utilisation": 0.9738,
+      "mean_calls": 8.1,
+      "mean_meetings": 0.0,
+      "termination": {
+        "aborted": 10,
+        "budget": 2
+      },
+      "proposal_attempts": 0,
+      "proposal_validity": null
+    },
+    "n4|8000|c3_mas": {
+      "n": 12,
+      "mean_satisfaction": 0.0,
+      "nonempty_validated": 0,
+      "nonempty_validated_rate": 0.0,
+      "mean_tokens": 5689,
+      "mean_cap_utilisation": 0.7112,
+      "mean_calls": 7.1,
+      "mean_meetings": 0.0,
+      "termination": {
+        "aborted": 5,
+        "agent_finish": 7
+      },
+      "proposal_attempts": 0,
+      "proposal_validity": null
+    },
+    "n4|16000|c1_react": {
+      "n": 12,
+      "mean_satisfaction": 0.0833,
+      "nonempty_validated": 1,
+      "nonempty_validated_rate": 0.0833,
+      "mean_tokens": 15364,
+      "mean_cap_utilisation": 0.9602,
+      "mean_calls": 10.8,
+      "mean_meetings": 0.25,
+      "termination": {
+        "aborted": 8,
+        "agent_finish": 1,
+        "budget": 3
+      },
+      "proposal_attempts": 3,
+      "proposal_validity": 0.3333
+    },
+    "n4|16000|c3_mas": {
+      "n": 12,
+      "mean_satisfaction": 0.1944,
+      "nonempty_validated": 6,
+      "nonempty_validated_rate": 0.5,
+      "mean_tokens": 11858,
+      "mean_cap_utilisation": 0.7411,
+      "mean_calls": 12.7,
+      "mean_meetings": 0.58,
+      "termination": {
+        "aborted": 2,
+        "agent_finish": 10
+      },
+      "proposal_attempts": 12,
+      "proposal_validity": 1.0
+    },
+    "n4|32000|c1_react": {
+      "n": 12,
+      "mean_satisfaction": 0.5,
+      "nonempty_validated": 7,
+      "nonempty_validated_rate": 0.5833,
+      "mean_tokens": 25581,
+      "mean_cap_utilisation": 0.7994,
+      "mean_calls": 13.0,
+      "mean_meetings": 1.5,
+      "termination": {
+        "aborted": 4,
+        "agent_finish": 7,
+        "budget": 1
+      },
+      "proposal_attempts": 14,
+      "proposal_validity": 0.5714
+    },
+    "n4|32000|c3_mas": {
+      "n": 12,
+      "mean_satisfaction": 0.7222,
+      "nonempty_validated": 12,
+      "nonempty_validated_rate": 1.0,
+      "mean_tokens": 22546,
+      "mean_cap_utilisation": 0.7045,
+      "mean_calls": 16.5,
+      "mean_meetings": 2.17,
+      "termination": {
+        "agent_finish": 12
+      },
+      "proposal_attempts": 31,
+      "proposal_validity": 0.9677
+    },
+    "n5|8000|c1_react": {
+      "n": 12,
+      "mean_satisfaction": 0.0,
+      "nonempty_validated": 0,
+      "nonempty_validated_rate": 0.0,
+      "mean_tokens": 7708,
+      "mean_cap_utilisation": 0.9636,
+      "mean_calls": 8.2,
+      "mean_meetings": 0.0,
+      "termination": {
+        "aborted": 8,
+        "budget": 4
+      },
+      "proposal_attempts": 0,
+      "proposal_validity": null
+    },
+    "n5|8000|c3_mas": {
+      "n": 12,
+      "mean_satisfaction": 0.0,
+      "nonempty_validated": 0,
+      "nonempty_validated_rate": 0.0,
+      "mean_tokens": 5706,
+      "mean_cap_utilisation": 0.7133,
+      "mean_calls": 7.1,
+      "mean_meetings": 0.0,
+      "termination": {
+        "aborted": 3,
+        "agent_finish": 9
+      },
+      "proposal_attempts": 0,
+      "proposal_validity": null
+    },
+    "n5|16000|c1_react": {
+      "n": 12,
+      "mean_satisfaction": 0.0,
+      "nonempty_validated": 0,
+      "nonempty_validated_rate": 0.0,
+      "mean_tokens": 15821,
+      "mean_cap_utilisation": 0.9887,
+      "mean_calls": 10.7,
+      "mean_meetings": 0.0,
+      "termination": {
+        "aborted": 11,
+        "budget": 1
+      },
+      "proposal_attempts": 0,
+      "proposal_validity": null
+    },
+    "n5|16000|c3_mas": {
+      "n": 12,
+      "mean_satisfaction": 0.1389,
+      "nonempty_validated": 5,
+      "nonempty_validated_rate": 0.4167,
+      "mean_tokens": 11900,
+      "mean_cap_utilisation": 0.7437,
+      "mean_calls": 13.1,
+      "mean_meetings": 0.42,
+      "termination": {
+        "aborted": 6,
+        "agent_finish": 6
+      },
+      "proposal_attempts": 10,
+      "proposal_validity": 1.0
+    },
+    "n5|32000|c1_react": {
+      "n": 12,
+      "mean_satisfaction": 0.2778,
+      "nonempty_validated": 4,
+      "nonempty_validated_rate": 0.3333,
+      "mean_tokens": 29139,
+      "mean_cap_utilisation": 0.9106,
+      "mean_calls": 13.8,
+      "mean_meetings": 0.83,
+      "termination": {
+        "aborted": 7,
+        "agent_finish": 3,
+        "budget": 2
+      },
+      "proposal_attempts": 15,
+      "proposal_validity": 0.2667
+    },
+    "n5|32000|c3_mas": {
+      "n": 12,
+      "mean_satisfaction": 0.5833,
+      "nonempty_validated": 11,
+      "nonempty_validated_rate": 0.9167,
+      "mean_tokens": 22540,
+      "mean_cap_utilisation": 0.7044,
+      "mean_calls": 17.1,
+      "mean_meetings": 1.75,
+      "termination": {
+        "aborted": 1,
+        "agent_finish": 11
+      },
+      "proposal_attempts": 24,
+      "proposal_validity": 0.9167
+    },
+    "n6|8000|c1_react": {
+      "n": 12,
+      "mean_satisfaction": 0.0,
+      "nonempty_validated": 0,
+      "nonempty_validated_rate": 0.0,
+      "mean_tokens": 7757,
+      "mean_cap_utilisation": 0.9696,
+      "mean_calls": 7.8,
+      "mean_meetings": 0.0,
+      "termination": {
+        "aborted": 8,
+        "budget": 4
+      },
+      "proposal_attempts": 0,
+      "proposal_validity": null
+    },
+    "n6|8000|c3_mas": {
+      "n": 12,
+      "mean_satisfaction": 0.0,
+      "nonempty_validated": 0,
+      "nonempty_validated_rate": 0.0,
+      "mean_tokens": 5821,
+      "mean_cap_utilisation": 0.7277,
+      "mean_calls": 7.0,
+      "mean_meetings": 0.0,
+      "termination": {
+        "aborted": 5,
+        "agent_finish": 7
+      },
+      "proposal_attempts": 0,
+      "proposal_validity": null
+    },
+    "n6|16000|c1_react": {
+      "n": 12,
+      "mean_satisfaction": 0.0,
+      "nonempty_validated": 0,
+      "nonempty_validated_rate": 0.0,
+      "mean_tokens": 15618,
+      "mean_cap_utilisation": 0.9761,
+      "mean_calls": 10.5,
+      "mean_meetings": 0.0,
+      "termination": {
+        "aborted": 5,
+        "budget": 7
+      },
+      "proposal_attempts": 3,
+      "proposal_validity": 0.0
+    },
+    "n6|16000|c3_mas": {
+      "n": 12,
+      "mean_satisfaction": 0.0556,
+      "nonempty_validated": 2,
+      "nonempty_validated_rate": 0.1667,
+      "mean_tokens": 11884,
+      "mean_cap_utilisation": 0.7427,
+      "mean_calls": 12.8,
+      "mean_meetings": 0.17,
+      "termination": {
+        "aborted": 8,
+        "agent_finish": 4
+      },
+      "proposal_attempts": 6,
+      "proposal_validity": 0.6667
+    },
+    "n6|32000|c1_react": {
+      "n": 12,
+      "mean_satisfaction": 0.0,
+      "nonempty_validated": 0,
+      "nonempty_validated_rate": 0.0,
+      "mean_tokens": 30972,
+      "mean_cap_utilisation": 0.9679,
+      "mean_calls": 14.7,
+      "mean_meetings": 0.0,
+      "termination": {
+        "aborted": 9,
+        "agent_finish": 2,
+        "budget": 1
+      },
+      "proposal_attempts": 12,
+      "proposal_validity": 0.0
+    },
+    "n6|32000|c3_mas": {
+      "n": 12,
+      "mean_satisfaction": 0.2222,
+      "nonempty_validated": 5,
+      "nonempty_validated_rate": 0.4167,
+      "mean_tokens": 22950,
+      "mean_cap_utilisation": 0.7172,
+      "mean_calls": 17.4,
+      "mean_meetings": 0.67,
+      "termination": {
+        "aborted": 4,
+        "agent_finish": 8
+      },
+      "proposal_attempts": 14,
+      "proposal_validity": 0.7143
+    }
+  },
+  "pooled_by_cap": {
+    "8000": {
+      "c1_react": {
+        "n": 36,
+        "mean_satisfaction": 0.0,
+        "nonempty_validated": 0,
+        "nonempty_validated_rate": 0.0,
+        "mean_tokens": 7752,
+        "mean_cap_utilisation": 0.969,
+        "mean_calls": 8.0,
+        "mean_meetings": 0.0,
+        "termination": {
+          "aborted": 26,
+          "budget": 10
+        },
+        "proposal_attempts": 0,
+        "proposal_validity": null
+      },
+      "c3_mas": {
+        "n": 36,
+        "mean_satisfaction": 0.0,
+        "nonempty_validated": 0,
+        "nonempty_validated_rate": 0.0,
+        "mean_tokens": 5739,
+        "mean_cap_utilisation": 0.7174,
+        "mean_calls": 7.1,
+        "mean_meetings": 0.0,
+        "termination": {
+          "aborted": 13,
+          "agent_finish": 23
+        },
+        "proposal_attempts": 0,
+        "proposal_validity": null
+      }
+    },
+    "16000": {
+      "c1_react": {
+        "n": 36,
+        "mean_satisfaction": 0.0278,
+        "nonempty_validated": 1,
+        "nonempty_validated_rate": 0.0278,
+        "mean_tokens": 15601,
+        "mean_cap_utilisation": 0.975,
+        "mean_calls": 10.6,
+        "mean_meetings": 0.08,
+        "termination": {
+          "aborted": 24,
+          "agent_finish": 1,
+          "budget": 11
+        },
+        "proposal_attempts": 6,
+        "proposal_validity": 0.1667
+      },
+      "c3_mas": {
+        "n": 36,
+        "mean_satisfaction": 0.1296,
+        "nonempty_validated": 13,
+        "nonempty_validated_rate": 0.3611,
+        "mean_tokens": 11881,
+        "mean_cap_utilisation": 0.7425,
+        "mean_calls": 12.8,
+        "mean_meetings": 0.39,
+        "termination": {
+          "aborted": 16,
+          "agent_finish": 20
+        },
+        "proposal_attempts": 28,
+        "proposal_validity": 0.9286
+      }
+    },
+    "32000": {
+      "c1_react": {
+        "n": 36,
+        "mean_satisfaction": 0.2593,
+        "nonempty_validated": 11,
+        "nonempty_validated_rate": 0.3056,
+        "mean_tokens": 28564,
+        "mean_cap_utilisation": 0.8926,
+        "mean_calls": 13.8,
+        "mean_meetings": 0.78,
+        "termination": {
+          "aborted": 20,
+          "agent_finish": 12,
+          "budget": 4
+        },
+        "proposal_attempts": 41,
+        "proposal_validity": 0.2927
+      },
+      "c3_mas": {
+        "n": 36,
+        "mean_satisfaction": 0.5093,
+        "nonempty_validated": 28,
+        "nonempty_validated_rate": 0.7778,
+        "mean_tokens": 22679,
+        "mean_cap_utilisation": 0.7087,
+        "mean_calls": 17.0,
+        "mean_meetings": 1.53,
+        "termination": {
+          "aborted": 5,
+          "agent_finish": 31
+        },
+        "proposal_attempts": 69,
+        "proposal_validity": 0.8986
+      }
+    }
+  },
+  "pooled_by_size": {
+    "4": {
+      "c1_react": {
+        "n": 36,
+        "mean_satisfaction": 0.1944,
+        "nonempty_validated": 8,
+        "nonempty_validated_rate": 0.2222,
+        "mean_tokens": 16245,
+        "mean_cap_utilisation": 0.9111,
+        "mean_calls": 10.6,
+        "mean_meetings": 0.58,
+        "termination": {
+          "aborted": 22,
+          "agent_finish": 8,
+          "budget": 6
+        },
+        "proposal_attempts": 17,
+        "proposal_validity": 0.5294
+      },
+      "c3_mas": {
+        "n": 36,
+        "mean_satisfaction": 0.3056,
+        "nonempty_validated": 18,
+        "nonempty_validated_rate": 0.5,
+        "mean_tokens": 13364,
+        "mean_cap_utilisation": 0.7189,
+        "mean_calls": 12.1,
+        "mean_meetings": 0.92,
+        "termination": {
+          "aborted": 7,
+          "agent_finish": 29
+        },
+        "proposal_attempts": 43,
+        "proposal_validity": 0.9767
+      }
+    },
+    "5": {
+      "c1_react": {
+        "n": 36,
+        "mean_satisfaction": 0.0926,
+        "nonempty_validated": 4,
+        "nonempty_validated_rate": 0.1111,
+        "mean_tokens": 17556,
+        "mean_cap_utilisation": 0.9543,
+        "mean_calls": 10.9,
+        "mean_meetings": 0.28,
+        "termination": {
+          "aborted": 26,
+          "agent_finish": 3,
+          "budget": 7
+        },
+        "proposal_attempts": 15,
+        "proposal_validity": 0.2667
+      },
+      "c3_mas": {
+        "n": 36,
+        "mean_satisfaction": 0.2407,
+        "nonempty_validated": 16,
+        "nonempty_validated_rate": 0.4444,
+        "mean_tokens": 13382,
+        "mean_cap_utilisation": 0.7205,
+        "mean_calls": 12.4,
+        "mean_meetings": 0.72,
+        "termination": {
+          "aborted": 10,
+          "agent_finish": 26
+        },
+        "proposal_attempts": 34,
+        "proposal_validity": 0.9412
+      }
+    },
+    "6": {
+      "c1_react": {
+        "n": 36,
+        "mean_satisfaction": 0.0,
+        "nonempty_validated": 0,
+        "nonempty_validated_rate": 0.0,
+        "mean_tokens": 18116,
+        "mean_cap_utilisation": 0.9712,
+        "mean_calls": 11.0,
+        "mean_meetings": 0.0,
+        "termination": {
+          "aborted": 22,
+          "agent_finish": 2,
+          "budget": 12
+        },
+        "proposal_attempts": 15,
+        "proposal_validity": 0.0
+      },
+      "c3_mas": {
+        "n": 36,
+        "mean_satisfaction": 0.0926,
+        "nonempty_validated": 7,
+        "nonempty_validated_rate": 0.1944,
+        "mean_tokens": 13552,
+        "mean_cap_utilisation": 0.7292,
+        "mean_calls": 12.4,
+        "mean_meetings": 0.28,
+        "termination": {
+          "aborted": 17,
+          "agent_finish": 19
+        },
+        "proposal_attempts": 20,
+        "proposal_validity": 0.7
+      }
+    }
+  },
+  "contrasts": {
+    "n4|8000": {
+      "n_pairs": 12,
+      "mean_delta_satisfaction": 0.0,
+      "instances_c1_ahead": 0,
+      "instances_c3_ahead": 0,
+      "instances_tied": 12,
+      "mean_delta_tokens": 2101,
+      "sign_convention": "delta = satisfaction(C1) - satisfaction(C3); negative means the hierarchy is ahead"
+    },
+    "n4|16000": {
+      "n_pairs": 12,
+      "mean_delta_satisfaction": -0.1111,
+      "instances_c1_ahead": 1,
+      "instances_c3_ahead": 6,
+      "instances_tied": 5,
+      "mean_delta_tokens": 3506,
+      "sign_convention": "delta = satisfaction(C1) - satisfaction(C3); negative means the hierarchy is ahead"
+    },
+    "n4|32000": {
+      "n_pairs": 12,
+      "mean_delta_satisfaction": -0.2222,
+      "instances_c1_ahead": 3,
+      "instances_c3_ahead": 6,
+      "instances_tied": 3,
+      "mean_delta_tokens": 3036,
+      "sign_convention": "delta = satisfaction(C1) - satisfaction(C3); negative means the hierarchy is ahead"
+    },
+    "n5|8000": {
+      "n_pairs": 12,
+      "mean_delta_satisfaction": 0.0,
+      "instances_c1_ahead": 0,
+      "instances_c3_ahead": 0,
+      "instances_tied": 12,
+      "mean_delta_tokens": 2002,
+      "sign_convention": "delta = satisfaction(C1) - satisfaction(C3); negative means the hierarchy is ahead"
+    },
+    "n5|16000": {
+      "n_pairs": 12,
+      "mean_delta_satisfaction": -0.1389,
+      "instances_c1_ahead": 0,
+      "instances_c3_ahead": 5,
+      "instances_tied": 7,
+      "mean_delta_tokens": 3921,
+      "sign_convention": "delta = satisfaction(C1) - satisfaction(C3); negative means the hierarchy is ahead"
+    },
+    "n5|32000": {
+      "n_pairs": 12,
+      "mean_delta_satisfaction": -0.3056,
+      "instances_c1_ahead": 2,
+      "instances_c3_ahead": 7,
+      "instances_tied": 3,
+      "mean_delta_tokens": 6598,
+      "sign_convention": "delta = satisfaction(C1) - satisfaction(C3); negative means the hierarchy is ahead"
+    },
+    "n6|8000": {
+      "n_pairs": 12,
+      "mean_delta_satisfaction": 0.0,
+      "instances_c1_ahead": 0,
+      "instances_c3_ahead": 0,
+      "instances_tied": 12,
+      "mean_delta_tokens": 1936,
+      "sign_convention": "delta = satisfaction(C1) - satisfaction(C3); negative means the hierarchy is ahead"
+    },
+    "n6|16000": {
+      "n_pairs": 12,
+      "mean_delta_satisfaction": -0.0556,
+      "instances_c1_ahead": 0,
+      "instances_c3_ahead": 2,
+      "instances_tied": 10,
+      "mean_delta_tokens": 3734,
+      "sign_convention": "delta = satisfaction(C1) - satisfaction(C3); negative means the hierarchy is ahead"
+    },
+    "n6|32000": {
+      "n_pairs": 12,
+      "mean_delta_satisfaction": -0.2222,
+      "instances_c1_ahead": 0,
+      "instances_c3_ahead": 5,
+      "instances_tied": 7,
+      "mean_delta_tokens": 8022,
+      "sign_convention": "delta = satisfaction(C1) - satisfaction(C3); negative means the hierarchy is ahead"
+    }
+  },
+  "contrasts_by_cap": {
+    "8000": {
+      "n_pairs": 36,
+      "mean_delta_satisfaction": 0.0,
+      "instances_c1_ahead": 0,
+      "instances_c3_ahead": 0,
+      "instances_tied": 36,
+      "mean_delta_tokens": 2013,
+      "sign_convention": "delta = satisfaction(C1) - satisfaction(C3); negative means the hierarchy is ahead"
+    },
+    "16000": {
+      "n_pairs": 36,
+      "mean_delta_satisfaction": -0.1019,
+      "instances_c1_ahead": 1,
+      "instances_c3_ahead": 13,
+      "instances_tied": 22,
+      "mean_delta_tokens": 3720,
+      "sign_convention": "delta = satisfaction(C1) - satisfaction(C3); negative means the hierarchy is ahead"
+    },
+    "32000": {
+      "n_pairs": 36,
+      "mean_delta_satisfaction": -0.25,
+      "instances_c1_ahead": 5,
+      "instances_c3_ahead": 18,
+      "instances_tied": 13,
+      "mean_delta_tokens": 5885,
+      "sign_convention": "delta = satisfaction(C1) - satisfaction(C3); negative means the hierarchy is ahead"
+    }
+  },
+  "contrasts_by_size": {
+    "4": {
+      "n_pairs": 36,
+      "mean_delta_satisfaction": -0.1111,
+      "instances_c1_ahead": 4,
+      "instances_c3_ahead": 12,
+      "instances_tied": 20,
+      "mean_delta_tokens": 2881,
+      "sign_convention": "delta = satisfaction(C1) - satisfaction(C3); negative means the hierarchy is ahead"
+    },
+    "5": {
+      "n_pairs": 36,
+      "mean_delta_satisfaction": -0.1481,
+      "instances_c1_ahead": 2,
+      "instances_c3_ahead": 12,
+      "instances_tied": 22,
+      "mean_delta_tokens": 4174,
+      "sign_convention": "delta = satisfaction(C1) - satisfaction(C3); negative means the hierarchy is ahead"
+    },
+    "6": {
+      "n_pairs": 36,
+      "mean_delta_satisfaction": -0.0926,
+      "instances_c1_ahead": 0,
+      "instances_c3_ahead": 7,
+      "instances_tied": 29,
+      "mean_delta_tokens": 4564,
+      "sign_convention": "delta = satisfaction(C1) - satisfaction(C3); negative means the hierarchy is ahead"
+    }
+  }
+}

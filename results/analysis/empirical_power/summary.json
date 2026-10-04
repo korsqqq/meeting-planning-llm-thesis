@@ -1,0 +1,337 @@
+{
+  "schema_version": "empirical_power/1.0",
+  "standing": "Calibration and power estimated by resampling REAL development paired differences. Development data only -- no held-out seed is read. This is the registered replacement for the synthetic power model (amendment 2026-08-10); it binds N and the choice of test, and reports no outcome.",
+  "seed": 20260826,
+  "alpha": 0.05,
+  "cap": 64000,
+  "reps": 1000,
+  "paired_instances": 60,
+  "contrasts": {
+    "c1_react-vs-c2_verify_revise": {
+      "pooled": {
+        "observed": {
+          "n": 60,
+          "mean": -0.11805555555555555,
+          "median": 0.0,
+          "sd": 0.279007693818426,
+          "ties": 50,
+          "tie_rate": 0.8333333333333334,
+          "distinct_values": 6,
+          "value_counts": {
+            "-1.0": 3,
+            "-0.75": 1,
+            "-0.6666666666666666": 3,
+            "-0.5": 2,
+            "-0.3333333333333333": 1,
+            "0.0": 50
+          }
+        },
+        "type_one": {
+          "60": {
+            "bootstrap": 0.076,
+            "sign": 0.022
+          }
+        },
+        "power": {
+          "20": {
+            "bootstrap": 0.443,
+            "sign": 0.094,
+            "perm": 0.121
+          },
+          "50": {
+            "bootstrap": 0.976,
+            "sign": 0.865,
+            "perm": 0.869
+          }
+        }
+      }
+    },
+    "c1_react-vs-c3_mas": {
+      "pooled": {
+        "observed": {
+          "n": 60,
+          "mean": -0.34305555555555556,
+          "median": -0.33333333333333337,
+          "sd": 0.5869119725991683,
+          "ties": 14,
+          "tie_rate": 0.23333333333333334,
+          "distinct_values": 11,
+          "value_counts": {
+            "-1.0": 18,
+            "-0.75": 1,
+            "-0.6666666666666666": 7,
+            "-0.5": 2,
+            "-0.33333333333333337": 6,
+            "-0.25": 2,
+            "0.0": 14,
+            "0.25": 3,
+            "0.6666666666666666": 2,
+            "0.75": 3,
+            "1.0": 2
+          }
+        },
+        "type_one": {
+          "60": {
+            "bootstrap": 0.059,
+            "sign": 0.029
+          }
+        },
+        "power": {
+          "20": {
+            "bootstrap": 0.719,
+            "sign": 0.539,
+            "perm": 0.646
+          },
+          "30": {
+            "bootstrap": 0.867,
+            "sign": 0.758,
+            "perm": 0.83
+          },
+          "50": {
+            "bootstrap": 0.979,
+            "sign": 0.944,
+            "perm": 0.968
+          },
+          "75": {
+            "bootstrap": 0.995,
+            "sign": 0.99,
+            "perm": 0.997
+          }
+        }
+      },
+      "easy": {
+        "observed": {
+          "n": 20,
+          "mean": -0.37916666666666665,
+          "median": -0.5,
+          "sd": 0.6205256508262437,
+          "ties": 4,
+          "tie_rate": 0.2,
+          "distinct_values": 8,
+          "value_counts": {
+            "-1.0": 8,
+            "-0.6666666666666666": 2,
+            "-0.33333333333333337": 1,
+            "-0.25": 1,
+            "0.0": 4,
+            "0.25": 1,
+            "0.6666666666666666": 2,
+            "0.75": 1
+          }
+        },
+        "type_one": {
+          "20": {
+            "bootstrap": 0.063,
+            "sign": 0.026
+          }
+        },
+        "power": {
+          "20": {
+            "bootstrap": 0.748,
+            "sign": 0.443,
+            "perm": 0.665
+          },
+          "30": {
+            "bootstrap": 0.908,
+            "sign": 0.658,
+            "perm": 0.881
+          },
+          "50": {
+            "bootstrap": 0.99,
+            "sign": 0.882,
+            "perm": 0.983
+          },
+          "75": {
+            "bootstrap": 1.0,
+            "sign": 0.975,
+            "perm": 0.998
+          }
+        }
+      },
+      "medium": {
+        "observed": {
+          "n": 20,
+          "mean": -0.24166666666666664,
+          "median": -0.33333333333333337,
+          "sd": 0.6296493733287863,
+          "ties": 5,
+          "tie_rate": 0.25,
+          "distinct_values": 8,
+          "value_counts": {
+            "-1.0": 5,
+            "-0.6666666666666666": 2,
+            "-0.5": 1,
+            "-0.33333333333333337": 3,
+            "0.0": 5,
+            "0.25": 1,
+            "0.75": 1,
+            "1.0": 2
+          }
+        },
+        "type_one": {
+          "20": {
+            "bootstrap": 0.06,
+            "sign": 0.031
+          }
+        },
+        "power": {
+          "20": {
+            "bootstrap": 0.424,
+            "sign": 0.345,
+            "perm": 0.346
+          },
+          "30": {
+            "bootstrap": 0.538,
+            "sign": 0.517,
+            "perm": 0.488
+          },
+          "50": {
+            "bootstrap": 0.754,
+            "sign": 0.785,
+            "perm": 0.741
+          },
+          "75": {
+            "bootstrap": 0.895,
+            "sign": 0.943,
+            "perm": 0.893
+          }
+        }
+      },
+      "hard": {
+        "observed": {
+          "n": 20,
+          "mean": -0.4083333333333333,
+          "median": -0.4166666666666667,
+          "sd": 0.485841194904947,
+          "ties": 5,
+          "tie_rate": 0.25,
+          "distinct_values": 9,
+          "value_counts": {
+            "-1.0": 5,
+            "-0.75": 1,
+            "-0.6666666666666666": 3,
+            "-0.5": 1,
+            "-0.33333333333333337": 2,
+            "-0.25": 1,
+            "0.0": 5,
+            "0.25": 1,
+            "0.75": 1
+          }
+        },
+        "type_one": {
+          "20": {
+            "bootstrap": 0.076,
+            "sign": 0.022
+          }
+        },
+        "power": {
+          "20": {
+            "bootstrap": 0.947,
+            "sign": 0.831,
+            "perm": 0.912
+          },
+          "30": {
+            "bootstrap": 0.993,
+            "sign": 0.961,
+            "perm": 0.991
+          },
+          "50": {
+            "bootstrap": 1.0,
+            "sign": 0.998,
+            "perm": 1.0
+          },
+          "75": {
+            "bootstrap": 1.0,
+            "sign": 1.0,
+            "perm": 1.0
+          }
+        }
+      }
+    },
+    "c1_react-vs-c4_planner_critic": {
+      "pooled": {
+        "observed": {
+          "n": 60,
+          "mean": -0.18888888888888886,
+          "median": 0.0,
+          "sd": 0.43537623859806873,
+          "ties": 26,
+          "tie_rate": 0.43333333333333335,
+          "distinct_values": 12,
+          "value_counts": {
+            "-1.0": 4,
+            "-0.75": 4,
+            "-0.6666666666666666": 7,
+            "-0.5": 2,
+            "-0.3333333333333333": 7,
+            "-0.25": 2,
+            "0.0": 26,
+            "0.25": 3,
+            "0.33333333333333337": 1,
+            "0.6666666666666666": 2,
+            "0.75": 1,
+            "1.0": 1
+          }
+        },
+        "type_one": {
+          "60": {
+            "bootstrap": 0.066,
+            "sign": 0.037
+          }
+        },
+        "power": {
+          "20": {
+            "bootstrap": 0.514,
+            "sign": 0.312,
+            "perm": 0.432
+          },
+          "50": {
+            "bootstrap": 0.88,
+            "sign": 0.798,
+            "perm": 0.861
+          }
+        }
+      }
+    },
+    "c1_react-vs-c5_best_of_3": {
+      "pooled": {
+        "observed": {
+          "n": 60,
+          "mean": 0.22083333333333333,
+          "median": 0.0,
+          "sd": 0.41550532598984324,
+          "ties": 38,
+          "tie_rate": 0.6333333333333333,
+          "distinct_values": 7,
+          "value_counts": {
+            "-1.0": 1,
+            "-0.75": 1,
+            "0.0": 38,
+            "0.33333333333333337": 1,
+            "0.6666666666666666": 7,
+            "0.75": 8,
+            "1.0": 4
+          }
+        },
+        "type_one": {
+          "60": {
+            "bootstrap": 0.049,
+            "sign": 0.026
+          }
+        },
+        "power": {
+          "20": {
+            "bootstrap": 0.67,
+            "sign": 0.472,
+            "perm": 0.48
+          },
+          "50": {
+            "bootstrap": 0.966,
+            "sign": 0.97,
+            "perm": 0.961
+          }
+        }
+      }
+    }
+  }
+}

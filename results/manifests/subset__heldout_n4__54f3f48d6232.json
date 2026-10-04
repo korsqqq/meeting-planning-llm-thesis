@@ -1,0 +1,264 @@
+{
+  "schema_version": "pilot_subset/1.0",
+  "selector_version": "lowcx_manifest/1.0",
+  "manifest_hash": "9ff14b084f578f9cd890885d84bdfbe3a30a52c714211d35a859c9e2b6eeb625",
+  "manifest_schema_version": "pilot_manifest/1.0",
+  "grid_name": "lowcx_n4",
+  "seed_range_name": "held_out_n4",
+  "n_people": 4,
+  "fixed_optimum": 3,
+  "per_level_requested": null,
+  "counts": {
+    "easy": 15,
+    "medium": 1,
+    "hard": 0
+  },
+  "representation": {
+    "n_people": [
+      4
+    ],
+    "travel_structure": {
+      "clustered": 4,
+      "line": 4,
+      "random": 4,
+      "uniform": 4
+    },
+    "tightness": {
+      "0.6": 9,
+      "0.8": 7
+    },
+    "overlap": {
+      "0.2": 5,
+      "0.8": 6,
+      "1.0": 5
+    },
+    "optimum_counts": {
+      "3": 16
+    },
+    "conflict_pairs": {
+      "0": 15,
+      "1": 1
+    },
+    "higher_order_gap_H": {
+      "0": 1,
+      "1": 15
+    }
+  },
+  "instances": {
+    "easy": [
+      {
+        "instance_id": "line-n4-t80-o80-s110000",
+        "seed": 110000,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.8,
+          "overlap": 0.8,
+          "travel_structure": "line"
+        }
+      },
+      {
+        "instance_id": "random-n4-t60-o80-s110001",
+        "seed": 110001,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.6,
+          "overlap": 0.8,
+          "travel_structure": "random"
+        }
+      },
+      {
+        "instance_id": "random-n4-t80-o20-s110002",
+        "seed": 110002,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.8,
+          "overlap": 0.2,
+          "travel_structure": "random"
+        }
+      },
+      {
+        "instance_id": "random-n4-t80-o80-s110003",
+        "seed": 110003,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.8,
+          "overlap": 0.8,
+          "travel_structure": "random"
+        }
+      },
+      {
+        "instance_id": "line-n4-t80-o80-s110004",
+        "seed": 110004,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.8,
+          "overlap": 0.8,
+          "travel_structure": "line"
+        }
+      },
+      {
+        "instance_id": "clustered-n4-t60-o100-s110005",
+        "seed": 110005,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.6,
+          "overlap": 1.0,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "clustered-n4-t60-o100-s110006",
+        "seed": 110006,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.6,
+          "overlap": 1.0,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "clustered-n4-t60-o100-s110007",
+        "seed": 110007,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.6,
+          "overlap": 1.0,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "clustered-n4-t80-o80-s110008",
+        "seed": 110008,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.8,
+          "overlap": 0.8,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "uniform-n4-t60-o20-s110009",
+        "seed": 110009,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.6,
+          "overlap": 0.2,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "line-n4-t60-o20-s110010",
+        "seed": 110010,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.6,
+          "overlap": 0.2,
+          "travel_structure": "line"
+        }
+      },
+      {
+        "instance_id": "uniform-n4-t60-o100-s110011",
+        "seed": 110011,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.6,
+          "overlap": 1.0,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "uniform-n4-t60-o100-s110012",
+        "seed": 110012,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.6,
+          "overlap": 1.0,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "uniform-n4-t60-o80-s110013",
+        "seed": 110013,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.6,
+          "overlap": 0.8,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "line-n4-t80-o20-s110014",
+        "seed": 110014,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.8,
+          "overlap": 0.2,
+          "travel_structure": "line"
+        }
+      }
+    ],
+    "medium": [
+      {
+        "instance_id": "random-n4-t80-o20-s110015",
+        "seed": 110015,
+        "level": "medium",
+        "optimum": 3,
+        "complexity_metric": 1,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.8,
+          "overlap": 0.2,
+          "travel_structure": "random"
+        }
+      }
+    ],
+    "hard": []
+  },
+  "content_hash": "54f3f48d6232f4a8e6b6f8a31ce1057bba564d1cdc595012a1a5eefddeef2657",
+  "timestamp_utc": "2026-08-27T01:07:43+00:00"
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "heldout_factorial/1.0",
+  "step": "audit",
+  "written_utc": "2026-09-15T20:58:38+00:00",
+  "git_commit": "3e32b310dbabb4bfea8656781d6cfbcfa386742d",
+  "git_dirty": false,
+  "versions": {
+    "python": "3.12.13",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5"
+  },
+  "configuration": {
+    "runs": "D:\\thesis-mas-planning\\results\\exports\\heldout\\runs.csv",
+    "out": "D:\\thesis-mas-planning\\results\\analysis\\heldout_factorial",
+    "step": "audit"
+  },
+  "inputs": {
+    "results\\exports\\heldout\\runs.csv": "0e6698396d7309f724775a15fcad5a90fd660cb54c6ba5c90181d892f6a66ffc",
+    "results\\manifests\\expected_runs__bands_held_out_n8.json": "8f72d8c93a0331452542f3ceb48a79df5a9f4e7132568da0900ee1089da00008",
+    "results\\manifests\\expected_runs__heldout_n4.json": "ba3a0760e9b5bbc0e385e8fc1ce3e977dfc60122674c8b44bff4db1a08a3d19d",
+    "results\\manifests\\expected_runs__heldout_n5.json": "178a7f8e07e9b476aadec650d56cd3c8c17a18a6561bd4644cdcae7f36d9c17c",
+    "results\\manifests\\expected_runs__heldout_n6.json": "6d48b2a9892e95179ceca461bce5fb6dd7f356b57b65af91b99c7d2151faf4ce"
+  },
+  "standing": "procedures specified after all runs were complete; not pre-registered (THESIS_DECISIONS.md section 5, amendment 2026-09-14)"
+}

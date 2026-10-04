@@ -1,0 +1,448 @@
+{
+  "schema_version": "pilot_subset/1.0",
+  "manifest_hash": "67d1c874261f59eb3c4a040113562e7693514235a20375a5341adebec72ce302",
+  "manifest_schema_version": "pilot_manifest/1.0",
+  "grid_name": "pilot",
+  "per_level_requested": 10,
+  "counts": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 10
+  },
+  "short_levels": [],
+  "representation": {
+    "easy": {
+      "n_people": [
+        4,
+        6,
+        8
+      ],
+      "travel_structure": [
+        "clustered",
+        "uniform"
+      ]
+    },
+    "medium": {
+      "n_people": [
+        4,
+        6,
+        8
+      ],
+      "travel_structure": [
+        "clustered",
+        "uniform"
+      ]
+    },
+    "hard": {
+      "n_people": [
+        4,
+        6,
+        8
+      ],
+      "travel_structure": [
+        "clustered",
+        "uniform"
+      ]
+    }
+  },
+  "instances": {
+    "easy": [
+      {
+        "instance_id": "clustered-n4-t20-o20-s10000",
+        "seed": 10000,
+        "level": "easy",
+        "optimum": 4,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.2,
+          "overlap": 0.2,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "uniform-n4-t20-o20-s10000",
+        "seed": 10000,
+        "level": "easy",
+        "optimum": 4,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.2,
+          "overlap": 0.2,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "clustered-n6-t20-o20-s10000",
+        "seed": 10000,
+        "level": "easy",
+        "optimum": 6,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 6,
+          "tightness": 0.2,
+          "overlap": 0.2,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "uniform-n6-t20-o20-s10000",
+        "seed": 10000,
+        "level": "easy",
+        "optimum": 6,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 6,
+          "tightness": 0.2,
+          "overlap": 0.2,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "clustered-n8-t20-o20-s10000",
+        "seed": 10000,
+        "level": "easy",
+        "optimum": 8,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 8,
+          "tightness": 0.2,
+          "overlap": 0.2,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "uniform-n8-t20-o20-s10000",
+        "seed": 10000,
+        "level": "easy",
+        "optimum": 7,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 8,
+          "tightness": 0.2,
+          "overlap": 0.2,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "clustered-n4-t20-o80-s10000",
+        "seed": 10000,
+        "level": "easy",
+        "optimum": 4,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.2,
+          "overlap": 0.8,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "uniform-n4-t20-o80-s10000",
+        "seed": 10000,
+        "level": "easy",
+        "optimum": 4,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 4,
+          "tightness": 0.2,
+          "overlap": 0.8,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "clustered-n6-t20-o80-s10000",
+        "seed": 10000,
+        "level": "easy",
+        "optimum": 6,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 6,
+          "tightness": 0.2,
+          "overlap": 0.8,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "uniform-n6-t20-o80-s10000",
+        "seed": 10000,
+        "level": "easy",
+        "optimum": 6,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 6,
+          "tightness": 0.2,
+          "overlap": 0.8,
+          "travel_structure": "uniform"
+        }
+      }
+    ],
+    "medium": [
+      {
+        "instance_id": "clustered-n4-t100-o20-s10000",
+        "seed": 10000,
+        "level": "medium",
+        "optimum": 3,
+        "complexity_metric": 2,
+        "cell": {
+          "n_people": 4,
+          "tightness": 1.0,
+          "overlap": 0.2,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "uniform-n4-t100-o20-s10000",
+        "seed": 10000,
+        "level": "medium",
+        "optimum": 3,
+        "complexity_metric": 1,
+        "cell": {
+          "n_people": 4,
+          "tightness": 1.0,
+          "overlap": 0.2,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "clustered-n6-t100-o20-s10000",
+        "seed": 10000,
+        "level": "medium",
+        "optimum": 4,
+        "complexity_metric": 2,
+        "cell": {
+          "n_people": 6,
+          "tightness": 1.0,
+          "overlap": 0.2,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "uniform-n6-t85-o20-s10000",
+        "seed": 10000,
+        "level": "medium",
+        "optimum": 5,
+        "complexity_metric": 1,
+        "cell": {
+          "n_people": 6,
+          "tightness": 0.85,
+          "overlap": 0.2,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "clustered-n8-t85-o20-s10000",
+        "seed": 10000,
+        "level": "medium",
+        "optimum": 4,
+        "complexity_metric": 1,
+        "cell": {
+          "n_people": 8,
+          "tightness": 0.85,
+          "overlap": 0.2,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "uniform-n8-t85-o20-s10000",
+        "seed": 10000,
+        "level": "medium",
+        "optimum": 5,
+        "complexity_metric": 3,
+        "cell": {
+          "n_people": 8,
+          "tightness": 0.85,
+          "overlap": 0.2,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "clustered-n4-t100-o80-s10000",
+        "seed": 10000,
+        "level": "medium",
+        "optimum": 2,
+        "complexity_metric": 4,
+        "cell": {
+          "n_people": 4,
+          "tightness": 1.0,
+          "overlap": 0.8,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "uniform-n4-t100-o80-s10000",
+        "seed": 10000,
+        "level": "medium",
+        "optimum": 2,
+        "complexity_metric": 5,
+        "cell": {
+          "n_people": 4,
+          "tightness": 1.0,
+          "overlap": 0.8,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "clustered-n6-t85-o20-s10000",
+        "seed": 10000,
+        "level": "medium",
+        "optimum": 5,
+        "complexity_metric": 1,
+        "cell": {
+          "n_people": 6,
+          "tightness": 0.85,
+          "overlap": 0.2,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "uniform-n6-t85-o80-s10000",
+        "seed": 10000,
+        "level": "medium",
+        "optimum": 3,
+        "complexity_metric": 4,
+        "cell": {
+          "n_people": 6,
+          "tightness": 0.85,
+          "overlap": 0.8,
+          "travel_structure": "uniform"
+        }
+      }
+    ],
+    "hard": [
+      {
+        "instance_id": "clustered-n4-t100-o80-s10001",
+        "seed": 10001,
+        "level": "hard",
+        "optimum": 1,
+        "complexity_metric": 6,
+        "cell": {
+          "n_people": 4,
+          "tightness": 1.0,
+          "overlap": 0.8,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "uniform-n4-t100-o80-s10001",
+        "seed": 10001,
+        "level": "hard",
+        "optimum": 1,
+        "complexity_metric": 6,
+        "cell": {
+          "n_people": 4,
+          "tightness": 1.0,
+          "overlap": 0.8,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "clustered-n6-t100-o80-s10000",
+        "seed": 10000,
+        "level": "hard",
+        "optimum": 2,
+        "complexity_metric": 13,
+        "cell": {
+          "n_people": 6,
+          "tightness": 1.0,
+          "overlap": 0.8,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "uniform-n6-t100-o20-s10000",
+        "seed": 10000,
+        "level": "hard",
+        "optimum": 3,
+        "complexity_metric": 6,
+        "cell": {
+          "n_people": 6,
+          "tightness": 1.0,
+          "overlap": 0.2,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "clustered-n8-t100-o20-s10000",
+        "seed": 10000,
+        "level": "hard",
+        "optimum": 3,
+        "complexity_metric": 11,
+        "cell": {
+          "n_people": 8,
+          "tightness": 1.0,
+          "overlap": 0.2,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "uniform-n8-t100-o20-s10000",
+        "seed": 10000,
+        "level": "hard",
+        "optimum": 4,
+        "complexity_metric": 7,
+        "cell": {
+          "n_people": 8,
+          "tightness": 1.0,
+          "overlap": 0.2,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "clustered-n4-t100-o80-s10002",
+        "seed": 10002,
+        "level": "hard",
+        "optimum": 1,
+        "complexity_metric": 6,
+        "cell": {
+          "n_people": 4,
+          "tightness": 1.0,
+          "overlap": 0.8,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "uniform-n4-t100-o80-s10002",
+        "seed": 10002,
+        "level": "hard",
+        "optimum": 1,
+        "complexity_metric": 6,
+        "cell": {
+          "n_people": 4,
+          "tightness": 1.0,
+          "overlap": 0.8,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "clustered-n6-t100-o20-s10001",
+        "seed": 10001,
+        "level": "hard",
+        "optimum": 2,
+        "complexity_metric": 7,
+        "cell": {
+          "n_people": 6,
+          "tightness": 1.0,
+          "overlap": 0.2,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "uniform-n6-t100-o80-s10000",
+        "seed": 10000,
+        "level": "hard",
+        "optimum": 2,
+        "complexity_metric": 11,
+        "cell": {
+          "n_people": 6,
+          "tightness": 1.0,
+          "overlap": 0.8,
+          "travel_structure": "uniform"
+        }
+      }
+    ]
+  },
+  "content_hash": "d29b547529713e54dffbf3bc902f0007cbd3590d4a121b929fcea1b053a8bcd8",
+  "timestamp_utc": "2026-08-04T22:25:18+00:00"
+}

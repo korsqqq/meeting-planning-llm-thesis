@@ -1,0 +1,41 @@
+                        Mixed Linear Model Regression Results
+=====================================================================================
+Model:                     MixedLM          Dependent Variable:          satisfaction
+No. Observations:          960              Method:                      REML        
+No. Groups:                48               Scale:                       0.0930      
+Min. group size:           20               Log-Likelihood:              -315.2920   
+Max. group size:           20               Converged:                   Yes         
+Mean group size:           20.0                                                      
+-------------------------------------------------------------------------------------
+                                          Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-------------------------------------------------------------------------------------
+Intercept                                  0.427    0.026  16.397 0.000  0.376  0.479
+C(arch, Sum)[S.C1]                        -0.105    0.020  -5.310 0.000 -0.143 -0.066
+C(arch, Sum)[S.C2]                        -0.025    0.020  -1.252 0.210 -0.063  0.014
+C(arch, Sum)[S.C3]                         0.211    0.020  10.743 0.000  0.173  0.250
+C(arch, Sum)[S.C4]                         0.076    0.020   3.863 0.000  0.037  0.115
+C(budget, Sum)[S.128k]                     0.278    0.017  16.315 0.000  0.245  0.312
+C(budget, Sum)[S.16k]                     -0.389    0.017 -22.793 0.000 -0.422 -0.355
+C(budget, Sum)[S.32k]                     -0.089    0.017  -5.194 0.000 -0.122 -0.055
+C(arch, Sum)[S.C1]:C(budget, Sum)[S.128k] -0.108    0.034  -3.167 0.002 -0.175 -0.041
+C(arch, Sum)[S.C2]:C(budget, Sum)[S.128k] -0.028    0.034  -0.825 0.409 -0.095  0.039
+C(arch, Sum)[S.C3]:C(budget, Sum)[S.128k] -0.021    0.034  -0.621 0.534 -0.088  0.046
+C(arch, Sum)[S.C4]:C(budget, Sum)[S.128k]  0.010    0.034   0.295 0.768 -0.057  0.077
+C(arch, Sum)[S.C1]:C(budget, Sum)[S.16k]   0.066    0.034   1.925 0.054 -0.001  0.132
+C(arch, Sum)[S.C2]:C(budget, Sum)[S.16k]  -0.014    0.034  -0.418 0.676 -0.081  0.053
+C(arch, Sum)[S.C3]:C(budget, Sum)[S.16k]  -0.084    0.034  -2.454 0.014 -0.151 -0.017
+C(arch, Sum)[S.C4]:C(budget, Sum)[S.16k]  -0.087    0.034  -2.556 0.011 -0.154 -0.020
+C(arch, Sum)[S.C1]:C(budget, Sum)[S.32k]   0.071    0.034   2.088 0.037  0.004  0.138
+C(arch, Sum)[S.C2]:C(budget, Sum)[S.32k]   0.005    0.034   0.153 0.879 -0.062  0.072
+C(arch, Sum)[S.C3]:C(budget, Sum)[S.32k]   0.089    0.034   2.597 0.009  0.022  0.155
+C(arch, Sum)[S.C4]:C(budget, Sum)[S.32k]   0.016    0.034   0.458 0.647 -0.051  0.082
+Group Var                                  0.028    0.023                            
+=====================================================================================
+
+
+converged: True
+fit: {"optimizer_used": "bfgs", "attempts": [{"method": "bfgs", "status": "ok", "converged": true}, {"method": "powell", "status": "ok", "converged": true}], "cross_check_optimizer": "powell", "max_abs_fixed_effect_difference": 2.7755575615628914e-16}
+warnings:
+
+
+statsmodels 0.15.0. Supporting check only: residuals of a bounded, discrete outcome are not normal; p-values here are not part of any Holm family.

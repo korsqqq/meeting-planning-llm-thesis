@@ -1,0 +1,30 @@
+{
+  "schema_version": "expected_runs_audit/1.0",
+  "audited_utc": "2026-08-17T17:05:57+00:00",
+  "runs_dir": "results/logs/lowcx_calib",
+  "n_expected": 216,
+  "n_verified": 216,
+  "n_missing": 0,
+  "n_incompatible": 0,
+  "n_unexpected_files": 0,
+  "missing": [],
+  "incompatible": [],
+  "unexpected_files": [],
+  "verified_by_condition_and_cap": {
+    "c1_react@8000": 36,
+    "c1_react@16000": 36,
+    "c1_react@32000": 36,
+    "c3_mas@8000": 36,
+    "c3_mas@16000": 36,
+    "c3_mas@32000": 36
+  },
+  "verified_by_source_manifest": {
+    "expected_runs__lowcx_n4.json": 72,
+    "expected_runs__lowcx_n5.json": 72,
+    "expected_runs__lowcx_n6.json": 72
+  },
+  "models": [
+    "Qwen/Qwen3-32B-AWQ"
+  ],
+  "all_checks_passed": true
+}

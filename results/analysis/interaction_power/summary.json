@@ -1,0 +1,477 @@
+{
+  "schema_version": "interaction_power/1.0",
+  "plan": "results/analysis/interaction_power/PRE_ANALYSIS_PLAN.md (frozen 2026-08-27, amended 2026-08-27)",
+  "standing": "Development data only; no held-out seed is read. Power for the CROSSOVER claim under an ASSUMED sign-reversal alternative -- the development data supplies noise structure, not direction. Primary estimand: the mean paired difference. Sign test is sensitivity on a different functional. The medium band is descriptive and determines nothing.",
+  "seed": 20260827,
+  "alpha": 0.05,
+  "cap": 64000,
+  "resampling": {
+    "outer": 200,
+    "reps": 200,
+    "perms": 299
+  },
+  "observed": {
+    "low": {
+      "n": 20,
+      "mean": 0.3791666666666666,
+      "sd": 0.6205256508262437,
+      "tie_rate": 0.2,
+      "distinct_values": 8,
+      "skewness": -0.46770283490663034
+    },
+    "medium": {
+      "n": 20,
+      "mean": 0.2416666666666667,
+      "sd": 0.6296493733287863,
+      "tie_rate": 0.25,
+      "distinct_values": 8,
+      "skewness": -0.5287275086348731
+    },
+    "high": {
+      "n": 20,
+      "mean": 0.4083333333333334,
+      "sd": 0.4858411949049469,
+      "tie_rate": 0.25,
+      "distinct_values": 9,
+      "skewness": -0.46073748160924277
+    }
+  },
+  "type_one": {
+    "50": {
+      "iut_raw": {
+        "median": 0.0,
+        "p90": 0.005
+      },
+      "iut_holm": {
+        "median": 0.0,
+        "p90": 0.005
+      },
+      "delta_raw": {
+        "median": 0.045,
+        "p90": 0.065
+      },
+      "delta_holm": {
+        "median": 0.02,
+        "p90": 0.035
+      },
+      "both_holm": {
+        "median": 0.0,
+        "p90": 0.005
+      },
+      "sens_iut_raw": {
+        "median": 0.0,
+        "p90": 0.005
+      },
+      "sens_iut_holm": {
+        "median": 0.0,
+        "p90": 0.005
+      }
+    },
+    "60": {
+      "iut_raw": {
+        "median": 0.0,
+        "p90": 0.005
+      },
+      "iut_holm": {
+        "median": 0.0,
+        "p90": 0.005
+      },
+      "delta_raw": {
+        "median": 0.05,
+        "p90": 0.07
+      },
+      "delta_holm": {
+        "median": 0.02,
+        "p90": 0.04
+      },
+      "both_holm": {
+        "median": 0.0,
+        "p90": 0.005
+      },
+      "sens_iut_raw": {
+        "median": 0.0,
+        "p90": 0.005
+      },
+      "sens_iut_holm": {
+        "median": 0.0,
+        "p90": 0.0
+      }
+    },
+    "65": {
+      "iut_raw": {
+        "median": 0.0,
+        "p90": 0.005
+      },
+      "iut_holm": {
+        "median": 0.0,
+        "p90": 0.005
+      },
+      "delta_raw": {
+        "median": 0.045,
+        "p90": 0.07
+      },
+      "delta_holm": {
+        "median": 0.025,
+        "p90": 0.04
+      },
+      "both_holm": {
+        "median": 0.0,
+        "p90": 0.005
+      },
+      "sens_iut_raw": {
+        "median": 0.0,
+        "p90": 0.005
+      },
+      "sens_iut_holm": {
+        "median": 0.0,
+        "p90": 0.005
+      }
+    }
+  },
+  "power": {
+    "1.0": {
+      "50": {
+        "iut_raw": {
+          "median": 0.985,
+          "p10": 0.6,
+          "p90": 1.0
+        },
+        "iut_holm": {
+          "median": 0.985,
+          "p10": 0.6,
+          "p90": 1.0
+        },
+        "delta_raw": {
+          "median": 1.0,
+          "p10": 0.995,
+          "p90": 1.0
+        },
+        "delta_holm": {
+          "median": 1.0,
+          "p10": 0.98,
+          "p90": 1.0
+        },
+        "both_holm": {
+          "median": 0.985,
+          "p10": 0.6,
+          "p90": 1.0
+        },
+        "sens_iut_raw": {
+          "median": 0.885,
+          "p10": 0.29800000000000004,
+          "p90": 1.0
+        },
+        "sens_iut_holm": {
+          "median": 0.885,
+          "p10": 0.29800000000000004,
+          "p90": 1.0
+        }
+      },
+      "60": {
+        "iut_raw": {
+          "median": 0.995,
+          "p10": 0.655,
+          "p90": 1.0
+        },
+        "iut_holm": {
+          "median": 0.995,
+          "p10": 0.655,
+          "p90": 1.0
+        },
+        "delta_raw": {
+          "median": 1.0,
+          "p10": 1.0,
+          "p90": 1.0
+        },
+        "delta_holm": {
+          "median": 1.0,
+          "p10": 1.0,
+          "p90": 1.0
+        },
+        "both_holm": {
+          "median": 0.995,
+          "p10": 0.655,
+          "p90": 1.0
+        },
+        "sens_iut_raw": {
+          "median": 0.9225000000000001,
+          "p10": 0.3,
+          "p90": 1.0
+        },
+        "sens_iut_holm": {
+          "median": 0.9225000000000001,
+          "p10": 0.3,
+          "p90": 1.0
+        }
+      },
+      "65": {
+        "iut_raw": {
+          "median": 0.9975,
+          "p10": 0.6970000000000001,
+          "p90": 1.0
+        },
+        "iut_holm": {
+          "median": 0.9975,
+          "p10": 0.6970000000000001,
+          "p90": 1.0
+        },
+        "delta_raw": {
+          "median": 1.0,
+          "p10": 1.0,
+          "p90": 1.0
+        },
+        "delta_holm": {
+          "median": 1.0,
+          "p10": 1.0,
+          "p90": 1.0
+        },
+        "both_holm": {
+          "median": 0.9975,
+          "p10": 0.6970000000000001,
+          "p90": 1.0
+        },
+        "sens_iut_raw": {
+          "median": 0.97,
+          "p10": 0.32,
+          "p90": 1.0
+        },
+        "sens_iut_holm": {
+          "median": 0.97,
+          "p10": 0.32,
+          "p90": 1.0
+        }
+      }
+    },
+    "0.75": {
+      "50": {
+        "iut_raw": {
+          "median": 0.9524999999999999,
+          "p10": 0.544,
+          "p90": 1.0
+        },
+        "iut_holm": {
+          "median": 0.9524999999999999,
+          "p10": 0.544,
+          "p90": 1.0
+        },
+        "delta_raw": {
+          "median": 1.0,
+          "p10": 0.975,
+          "p90": 1.0
+        },
+        "delta_holm": {
+          "median": 1.0,
+          "p10": 0.939,
+          "p90": 1.0
+        },
+        "both_holm": {
+          "median": 0.9524999999999999,
+          "p10": 0.544,
+          "p90": 1.0
+        },
+        "sens_iut_raw": {
+          "median": 0.8025,
+          "p10": 0.18650000000000008,
+          "p90": 0.995
+        },
+        "sens_iut_holm": {
+          "median": 0.8025,
+          "p10": 0.18650000000000008,
+          "p90": 0.995
+        }
+      },
+      "60": {
+        "iut_raw": {
+          "median": 0.9775,
+          "p10": 0.544,
+          "p90": 1.0
+        },
+        "iut_holm": {
+          "median": 0.9775,
+          "p10": 0.5395000000000001,
+          "p90": 1.0
+        },
+        "delta_raw": {
+          "median": 1.0,
+          "p10": 0.99,
+          "p90": 1.0
+        },
+        "delta_holm": {
+          "median": 1.0,
+          "p10": 0.9695,
+          "p90": 1.0
+        },
+        "both_holm": {
+          "median": 0.9775,
+          "p10": 0.5395000000000001,
+          "p90": 1.0
+        },
+        "sens_iut_raw": {
+          "median": 0.89,
+          "p10": 0.25,
+          "p90": 1.0
+        },
+        "sens_iut_holm": {
+          "median": 0.89,
+          "p10": 0.25,
+          "p90": 1.0
+        }
+      },
+      "65": {
+        "iut_raw": {
+          "median": 0.99,
+          "p10": 0.7060000000000001,
+          "p90": 1.0
+        },
+        "iut_holm": {
+          "median": 0.99,
+          "p10": 0.7060000000000001,
+          "p90": 1.0
+        },
+        "delta_raw": {
+          "median": 1.0,
+          "p10": 0.995,
+          "p90": 1.0
+        },
+        "delta_holm": {
+          "median": 1.0,
+          "p10": 0.99,
+          "p90": 1.0
+        },
+        "both_holm": {
+          "median": 0.99,
+          "p10": 0.7060000000000001,
+          "p90": 1.0
+        },
+        "sens_iut_raw": {
+          "median": 0.915,
+          "p10": 0.409,
+          "p90": 1.0
+        },
+        "sens_iut_holm": {
+          "median": 0.915,
+          "p10": 0.409,
+          "p90": 1.0
+        }
+      }
+    },
+    "0.5": {
+      "50": {
+        "iut_raw": {
+          "median": 0.8025,
+          "p10": 0.3745,
+          "p90": 0.98
+        },
+        "iut_holm": {
+          "median": 0.8025,
+          "p10": 0.374,
+          "p90": 0.98
+        },
+        "delta_raw": {
+          "median": 0.995,
+          "p10": 0.91,
+          "p90": 1.0
+        },
+        "delta_holm": {
+          "median": 0.99,
+          "p10": 0.8545,
+          "p90": 1.0
+        },
+        "both_holm": {
+          "median": 0.8025,
+          "p10": 0.374,
+          "p90": 0.98
+        },
+        "sens_iut_raw": {
+          "median": 0.605,
+          "p10": 0.15300000000000005,
+          "p90": 0.9055
+        },
+        "sens_iut_holm": {
+          "median": 0.605,
+          "p10": 0.15300000000000005,
+          "p90": 0.9055
+        }
+      },
+      "60": {
+        "iut_raw": {
+          "median": 0.8875,
+          "p10": 0.434,
+          "p90": 0.9904999999999999
+        },
+        "iut_holm": {
+          "median": 0.8875,
+          "p10": 0.434,
+          "p90": 0.9904999999999999
+        },
+        "delta_raw": {
+          "median": 1.0,
+          "p10": 0.949,
+          "p90": 1.0
+        },
+        "delta_holm": {
+          "median": 0.995,
+          "p10": 0.91,
+          "p90": 1.0
+        },
+        "both_holm": {
+          "median": 0.8875,
+          "p10": 0.434,
+          "p90": 0.9904999999999999
+        },
+        "sens_iut_raw": {
+          "median": 0.675,
+          "p10": 0.20800000000000005,
+          "p90": 0.9604999999999999
+        },
+        "sens_iut_holm": {
+          "median": 0.675,
+          "p10": 0.20800000000000005,
+          "p90": 0.9604999999999999
+        }
+      },
+      "65": {
+        "iut_raw": {
+          "median": 0.8975,
+          "p10": 0.45,
+          "p90": 1.0
+        },
+        "iut_holm": {
+          "median": 0.8975,
+          "p10": 0.45,
+          "p90": 1.0
+        },
+        "delta_raw": {
+          "median": 1.0,
+          "p10": 0.96,
+          "p90": 1.0
+        },
+        "delta_holm": {
+          "median": 1.0,
+          "p10": 0.9225000000000001,
+          "p90": 1.0
+        },
+        "both_holm": {
+          "median": 0.8975,
+          "p10": 0.45,
+          "p90": 1.0
+        },
+        "sens_iut_raw": {
+          "median": 0.7024999999999999,
+          "p10": 0.19900000000000004,
+          "p90": 0.985
+        },
+        "sens_iut_holm": {
+          "median": 0.7024999999999999,
+          "p10": 0.19900000000000004,
+          "p90": 0.985
+        }
+      }
+    }
+  },
+  "decision": {
+    "rule": "smallest N in {50,60,65} with 10th-percentile power >= 0.80 for BOTH the IUT and Delta, at effect scale 1.0, after Holm across the two primary tests",
+    "chosen_N": null,
+    "satisfied": false
+  }
+}

@@ -32,11 +32,27 @@ from dataclasses import dataclass
 
 from src.schemas import TokenUsage
 
-__all__ = ["DEFAULT_FINALIZATION_RESERVE", "BudgetLedger"]
+__all__ = ["DEFAULT_FINALIZATION_RESERVE", "DEFAULT_MAX_CALL_TOKENS", "BudgetLedger"]
 
 # Tokens held back for the finalisation node so a plan can always be emitted.
 # [PILOT] -- the exact value is confirmed once real answer sizes are observed.
 DEFAULT_FINALIZATION_RESERVE = 256
+
+# Candidate ceiling on what ONE ordinary reasoning call may generate, independent of
+# how much budget is left. Motivation: without a ceiling the guard hands a single call
+# the whole remainder, and a thinking block that never closes destroys all of it at
+# once (Qwen3-8B-AWQ at cap 16000: one call spent 5083 tokens and returned nothing
+# after </think>).
+#
+# NOT enabled by default, and the reason is measured, not theoretical. Enabling it at
+# 2000 made things strictly worse: truncating a think block leaves nothing after
+# </think>, which the section-2 rule reads as "the model produced nothing" and routes
+# straight to finalisation. Both models then died on their ninth step with the budget
+# still half full, and C1 on Qwen3-32B-AWQ fell from satisfaction 1.00 to 0.00 at cap
+# 16000. A ceiling therefore cannot be introduced on its own: it needs a way to tell
+# "the harness cut this call short" apart from "the agent had nothing to say".
+# [PILOT] -- decide the ceiling and that distinction together, before the main run.
+DEFAULT_MAX_CALL_TOKENS = 2000
 
 
 @dataclass
@@ -51,6 +67,10 @@ class BudgetLedger:
     cap: int
     finalization_reserve: int = DEFAULT_FINALIZATION_RESERVE
     route_threshold: int = 0
+    # Per-call generation ceiling for ordinary reasoning calls. None (the default)
+    # means unbounded: see DEFAULT_MAX_CALL_TOKENS for why a ceiling cannot be turned
+    # on until truncation is distinguishable from an empty answer.
+    max_call_tokens: int | None = None
     input_tokens: int = 0
     thinking_tokens: int = 0
     answer_tokens: int = 0
@@ -70,6 +90,10 @@ class BudgetLedger:
             )
         if self.route_threshold < 0:
             raise ValueError(f"route_threshold must be >= 0, got {self.route_threshold}")
+        if self.max_call_tokens is not None and self.max_call_tokens <= 0:
+            raise ValueError(
+                f"max_call_tokens must be > 0 or None, got {self.max_call_tokens}"
+            )
 
     # --- running totals --------------------------------------------------- #
     @property
@@ -91,10 +115,18 @@ class BudgetLedger:
 
         Leaves the finalisation reserve untouched for ordinary calls; a finalising
         call may spend it. Never negative.
+
+        Ordinary calls are additionally capped at `max_call_tokens`, so one runaway
+        thinking block cannot consume the whole remaining budget. The finalising call
+        is deliberately NOT capped: it runs with thinking OFF under a JSON schema, so
+        it cannot ramble, and capping it would change the reserve arithmetic that
+        keeps "equal budget" equal across conditions.
         """
         room = self.remaining - input_tokens
         if not finalizing:
             room -= self.finalization_reserve
+            if self.max_call_tokens is not None:
+                room = min(room, self.max_call_tokens)
         return max(0, room)
 
     def should_finalize(self, next_input_tokens: int = 0) -> bool:

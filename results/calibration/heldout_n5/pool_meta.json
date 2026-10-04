@@ -1,0 +1,50 @@
+{
+  "schema_version": "structural_calibration/1.0",
+  "purpose": "structural calibration pool; collects, decides nothing",
+  "git_commit": "72e9cded2e56eb3d04340efbfaea973d788df3fe",
+  "n_people": 5,
+  "seed_range_name": "held_out_n5",
+  "seed_start": 120000,
+  "seed_end": 120099,
+  "reserved_range": [
+    120000,
+    129999
+  ],
+  "tightness": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "overlap": [
+    0.2,
+    0.5,
+    0.8,
+    1.0
+  ],
+  "structures": [
+    "uniform",
+    "clustered",
+    "line",
+    "random"
+  ],
+  "n_expected": 9600,
+  "n_completed": 9600,
+  "n_not_proven": 0,
+  "wall_seconds": 97.1,
+  "audit": {
+    "n_candidates": 9600,
+    "n_expected": 9600,
+    "distinct_instance_ids": 9600,
+    "distinct_knob_keys": 9600,
+    "seed_range_observed": [
+      120000,
+      120099
+    ],
+    "unproven_optima": 0,
+    "triangle_triples_per_instance": 120,
+    "all_checks_passed": true
+  }
+}

@@ -1,0 +1,3497 @@
+{
+  "schema_version": "power_iut/2.0",
+  "supersedes": "results/analysis/power_iut (N=35)",
+  "binding_axes": {
+    "base_mean": [
+      0.35,
+      0.5,
+      0.65
+    ],
+    "sigma_logit": [
+      0.0,
+      0.5,
+      1.0,
+      1.5
+    ],
+    "lambda_no_plan": [
+      0.0,
+      0.5,
+      0.9
+    ],
+    "o_config": {
+      "A_calibration_mix": {
+        "3": 0.6307692307692307,
+        "4": 0.36923076923076925
+      },
+      "B_all_optimum_3": {
+        "3": 1.0
+      },
+      "C_all_optimum_4": {
+        "4": 1.0
+      }
+    }
+  },
+  "selection_rule": "smallest N reaching target power in EVERY binding configuration",
+  "monte_carlo": {
+    "replicates": 2000,
+    "escalated": 10000,
+    "seed": 20260810,
+    "escalation": "any cell whose 95% interval straddles the decision boundary is re-run automatically"
+  },
+  "search": {
+    "selected_n": 95,
+    "attempts": [
+      {
+        "n_per_band": 30,
+        "passes": false,
+        "failed_on": {
+          "base_mean": 0.35,
+          "sigma": 0.0,
+          "lam": 0.0,
+          "o_config": "B_all_optimum_3",
+          "power_iut": 0.7885,
+          "mc_ci95": [
+            0.7805,
+            0.7965
+          ]
+        }
+      },
+      {
+        "n_per_band": 35,
+        "passes": false,
+        "failed_on": {
+          "base_mean": 0.35,
+          "sigma": 0.0,
+          "lam": 0.5,
+          "o_config": "A_calibration_mix",
+          "power_iut": 0.6625,
+          "mc_ci95": [
+            0.6418,
+            0.6832
+          ]
+        }
+      },
+      {
+        "n_per_band": 40,
+        "passes": false,
+        "failed_on": {
+          "base_mean": 0.35,
+          "sigma": 0.0,
+          "lam": 0.5,
+          "o_config": "A_calibration_mix",
+          "power_iut": 0.724,
+          "mc_ci95": [
+            0.7044,
+            0.7436
+          ]
+        }
+      },
+      {
+        "n_per_band": 45,
+        "passes": false,
+        "failed_on": {
+          "base_mean": 0.35,
+          "sigma": 0.0,
+          "lam": 0.5,
+          "o_config": "B_all_optimum_3",
+          "power_iut": 0.78,
+          "mc_ci95": [
+            0.7618,
+            0.7982
+          ]
+        }
+      },
+      {
+        "n_per_band": 50,
+        "passes": false,
+        "failed_on": {
+          "base_mean": 0.35,
+          "sigma": 0.0,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "power_iut": 0.581,
+          "mc_ci95": [
+            0.5594,
+            0.6026
+          ]
+        }
+      },
+      {
+        "n_per_band": 55,
+        "passes": false,
+        "failed_on": {
+          "base_mean": 0.35,
+          "sigma": 0.0,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "power_iut": 0.6275,
+          "mc_ci95": [
+            0.6063,
+            0.6487
+          ]
+        }
+      },
+      {
+        "n_per_band": 60,
+        "passes": false,
+        "failed_on": {
+          "base_mean": 0.35,
+          "sigma": 0.0,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "power_iut": 0.6675,
+          "mc_ci95": [
+            0.6469,
+            0.6881
+          ]
+        }
+      },
+      {
+        "n_per_band": 65,
+        "passes": false,
+        "failed_on": {
+          "base_mean": 0.35,
+          "sigma": 0.0,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "power_iut": 0.7315,
+          "mc_ci95": [
+            0.7121,
+            0.7509
+          ]
+        }
+      },
+      {
+        "n_per_band": 70,
+        "passes": false,
+        "failed_on": {
+          "base_mean": 0.35,
+          "sigma": 0.0,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "power_iut": 0.7475,
+          "mc_ci95": [
+            0.7285,
+            0.7665
+          ]
+        }
+      },
+      {
+        "n_per_band": 75,
+        "passes": false,
+        "failed_on": {
+          "base_mean": 0.35,
+          "sigma": 0.0,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "power_iut": 0.777,
+          "mc_ci95": [
+            0.7588,
+            0.7952
+          ]
+        }
+      },
+      {
+        "n_per_band": 80,
+        "passes": false,
+        "failed_on": {
+          "base_mean": 0.5,
+          "sigma": 0.0,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "power_iut": 0.7485,
+          "mc_ci95": [
+            0.7295,
+            0.7675
+          ]
+        }
+      },
+      {
+        "n_per_band": 85,
+        "passes": false,
+        "failed_on": {
+          "base_mean": 0.5,
+          "sigma": 0.0,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "power_iut": 0.7755,
+          "mc_ci95": [
+            0.7572,
+            0.7938
+          ]
+        }
+      },
+      {
+        "n_per_band": 90,
+        "passes": false,
+        "failed_on": {
+          "base_mean": 0.5,
+          "sigma": 0.0,
+          "lam": 0.9,
+          "o_config": "C_all_optimum_4",
+          "power_iut": 0.7993,
+          "mc_ci95": [
+            0.7914,
+            0.8072
+          ]
+        }
+      },
+      {
+        "n_per_band": 95,
+        "passes": true,
+        "n_cells": 108,
+        "worst_cell": {
+          "base_mean": 0.5,
+          "sigma": 1.5,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "power_iut": 0.8195,
+          "mc_ci95": [
+            0.8026,
+            0.8364
+          ],
+          "replicates": 2000
+        }
+      }
+    ],
+    "selected_detail": {
+      "n_per_band": 95,
+      "passes": true,
+      "cells": [
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 0.0,
+          "lam": 0.0,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 0.0,
+          "lam": 0.0,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9995,
+          "power_low": 0.9995,
+          "power_high": 1.0,
+          "product_sanity_check": 0.9995,
+          "mc_se": 0.0005,
+          "mc_ci95": [
+            0.9985,
+            1.0
+          ],
+          "mc_ci95_low": [
+            0.9985,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 0.0,
+          "lam": 0.0,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 0.0,
+          "lam": 0.5,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9865,
+          "power_low": 0.9935,
+          "power_high": 0.993,
+          "product_sanity_check": 0.9865,
+          "mc_se": 0.00258,
+          "mc_ci95": [
+            0.9814,
+            0.9916
+          ],
+          "mc_ci95_low": [
+            0.99,
+            0.997
+          ],
+          "mc_ci95_high": [
+            0.9893,
+            0.9967
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 0.0,
+          "lam": 0.5,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9915,
+          "power_low": 0.9955,
+          "power_high": 0.996,
+          "product_sanity_check": 0.9915,
+          "mc_se": 0.00205,
+          "mc_ci95": [
+            0.9875,
+            0.9955
+          ],
+          "mc_ci95_low": [
+            0.9926,
+            0.9984
+          ],
+          "mc_ci95_high": [
+            0.9932,
+            0.9988
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 0.0,
+          "lam": 0.5,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.99,
+          "power_low": 0.9945,
+          "power_high": 0.9955,
+          "product_sanity_check": 0.99,
+          "mc_se": 0.00222,
+          "mc_ci95": [
+            0.9856,
+            0.9944
+          ],
+          "mc_ci95_low": [
+            0.9913,
+            0.9977
+          ],
+          "mc_ci95_high": [
+            0.9926,
+            0.9984
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 0.0,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8875,
+          "power_low": 0.9415,
+          "power_high": 0.942,
+          "product_sanity_check": 0.8869,
+          "mc_se": 0.00707,
+          "mc_ci95": [
+            0.8737,
+            0.9013
+          ],
+          "mc_ci95_low": [
+            0.9312,
+            0.9518
+          ],
+          "mc_ci95_high": [
+            0.9318,
+            0.9522
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 0.0,
+          "lam": 0.9,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8845,
+          "power_low": 0.942,
+          "power_high": 0.94,
+          "product_sanity_check": 0.8855,
+          "mc_se": 0.00715,
+          "mc_ci95": [
+            0.8705,
+            0.8985
+          ],
+          "mc_ci95_low": [
+            0.9318,
+            0.9522
+          ],
+          "mc_ci95_high": [
+            0.9296,
+            0.9504
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 0.0,
+          "lam": 0.9,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8825,
+          "power_low": 0.9425,
+          "power_high": 0.937,
+          "product_sanity_check": 0.8831,
+          "mc_se": 0.0072,
+          "mc_ci95": [
+            0.8684,
+            0.8966
+          ],
+          "mc_ci95_low": [
+            0.9323,
+            0.9527
+          ],
+          "mc_ci95_high": [
+            0.9264,
+            0.9476
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 0.5,
+          "lam": 0.0,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 0.5,
+          "lam": 0.0,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9995,
+          "power_low": 1.0,
+          "power_high": 0.9995,
+          "product_sanity_check": 0.9995,
+          "mc_se": 0.0005,
+          "mc_ci95": [
+            0.9985,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            0.9985,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 0.5,
+          "lam": 0.0,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 0.5,
+          "lam": 0.5,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9885,
+          "power_low": 0.9945,
+          "power_high": 0.9935,
+          "product_sanity_check": 0.988,
+          "mc_se": 0.00238,
+          "mc_ci95": [
+            0.9838,
+            0.9932
+          ],
+          "mc_ci95_low": [
+            0.9913,
+            0.9977
+          ],
+          "mc_ci95_high": [
+            0.99,
+            0.997
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 0.5,
+          "lam": 0.5,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9885,
+          "power_low": 0.9945,
+          "power_high": 0.994,
+          "product_sanity_check": 0.9885,
+          "mc_se": 0.00238,
+          "mc_ci95": [
+            0.9838,
+            0.9932
+          ],
+          "mc_ci95_low": [
+            0.9913,
+            0.9977
+          ],
+          "mc_ci95_high": [
+            0.9906,
+            0.9974
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 0.5,
+          "lam": 0.5,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9915,
+          "power_low": 0.996,
+          "power_high": 0.9955,
+          "product_sanity_check": 0.9915,
+          "mc_se": 0.00205,
+          "mc_ci95": [
+            0.9875,
+            0.9955
+          ],
+          "mc_ci95_low": [
+            0.9932,
+            0.9988
+          ],
+          "mc_ci95_high": [
+            0.9926,
+            0.9984
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 0.5,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8855,
+          "power_low": 0.941,
+          "power_high": 0.942,
+          "product_sanity_check": 0.8864,
+          "mc_se": 0.00712,
+          "mc_ci95": [
+            0.8715,
+            0.8995
+          ],
+          "mc_ci95_low": [
+            0.9307,
+            0.9513
+          ],
+          "mc_ci95_high": [
+            0.9318,
+            0.9522
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 0.5,
+          "lam": 0.9,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8915,
+          "power_low": 0.946,
+          "power_high": 0.9425,
+          "product_sanity_check": 0.8916,
+          "mc_se": 0.00695,
+          "mc_ci95": [
+            0.8779,
+            0.9051
+          ],
+          "mc_ci95_low": [
+            0.9361,
+            0.9559
+          ],
+          "mc_ci95_high": [
+            0.9323,
+            0.9527
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 0.5,
+          "lam": 0.9,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8845,
+          "power_low": 0.9385,
+          "power_high": 0.941,
+          "product_sanity_check": 0.8831,
+          "mc_se": 0.00715,
+          "mc_ci95": [
+            0.8705,
+            0.8985
+          ],
+          "mc_ci95_low": [
+            0.928,
+            0.949
+          ],
+          "mc_ci95_high": [
+            0.9307,
+            0.9513
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 1.0,
+          "lam": 0.0,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9995,
+          "power_low": 0.9995,
+          "power_high": 1.0,
+          "product_sanity_check": 0.9995,
+          "mc_se": 0.0005,
+          "mc_ci95": [
+            0.9985,
+            1.0
+          ],
+          "mc_ci95_low": [
+            0.9985,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 1.0,
+          "lam": 0.0,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9995,
+          "power_low": 1.0,
+          "power_high": 0.9995,
+          "product_sanity_check": 0.9995,
+          "mc_se": 0.0005,
+          "mc_ci95": [
+            0.9985,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            0.9985,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 1.0,
+          "lam": 0.0,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 1.0,
+          "lam": 0.5,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.987,
+          "power_low": 0.994,
+          "power_high": 0.993,
+          "product_sanity_check": 0.987,
+          "mc_se": 0.00253,
+          "mc_ci95": [
+            0.982,
+            0.992
+          ],
+          "mc_ci95_low": [
+            0.9906,
+            0.9974
+          ],
+          "mc_ci95_high": [
+            0.9893,
+            0.9967
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 1.0,
+          "lam": 0.5,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.986,
+          "power_low": 0.994,
+          "power_high": 0.992,
+          "product_sanity_check": 0.986,
+          "mc_se": 0.00263,
+          "mc_ci95": [
+            0.9809,
+            0.9911
+          ],
+          "mc_ci95_low": [
+            0.9906,
+            0.9974
+          ],
+          "mc_ci95_high": [
+            0.9881,
+            0.9959
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 1.0,
+          "lam": 0.5,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9955,
+          "power_low": 0.999,
+          "power_high": 0.9965,
+          "product_sanity_check": 0.9955,
+          "mc_se": 0.0015,
+          "mc_ci95": [
+            0.9926,
+            0.9984
+          ],
+          "mc_ci95_low": [
+            0.9976,
+            1.0
+          ],
+          "mc_ci95_high": [
+            0.9939,
+            0.9991
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 1.0,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8905,
+          "power_low": 0.9395,
+          "power_high": 0.948,
+          "product_sanity_check": 0.8906,
+          "mc_se": 0.00698,
+          "mc_ci95": [
+            0.8768,
+            0.9042
+          ],
+          "mc_ci95_low": [
+            0.9291,
+            0.9499
+          ],
+          "mc_ci95_high": [
+            0.9383,
+            0.9577
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 1.0,
+          "lam": 0.9,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8785,
+          "power_low": 0.9375,
+          "power_high": 0.9385,
+          "product_sanity_check": 0.8798,
+          "mc_se": 0.00731,
+          "mc_ci95": [
+            0.8642,
+            0.8928
+          ],
+          "mc_ci95_low": [
+            0.9269,
+            0.9481
+          ],
+          "mc_ci95_high": [
+            0.928,
+            0.949
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 1.0,
+          "lam": 0.9,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8775,
+          "power_low": 0.9365,
+          "power_high": 0.9365,
+          "product_sanity_check": 0.877,
+          "mc_se": 0.00733,
+          "mc_ci95": [
+            0.8631,
+            0.8919
+          ],
+          "mc_ci95_low": [
+            0.9258,
+            0.9472
+          ],
+          "mc_ci95_high": [
+            0.9258,
+            0.9472
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 1.5,
+          "lam": 0.0,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 1.5,
+          "lam": 0.0,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 1.5,
+          "lam": 0.0,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 1.5,
+          "lam": 0.5,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.988,
+          "power_low": 0.9945,
+          "power_high": 0.9935,
+          "product_sanity_check": 0.988,
+          "mc_se": 0.00243,
+          "mc_ci95": [
+            0.9832,
+            0.9928
+          ],
+          "mc_ci95_low": [
+            0.9913,
+            0.9977
+          ],
+          "mc_ci95_high": [
+            0.99,
+            0.997
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 1.5,
+          "lam": 0.5,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.989,
+          "power_low": 0.994,
+          "power_high": 0.995,
+          "product_sanity_check": 0.989,
+          "mc_se": 0.00233,
+          "mc_ci95": [
+            0.9844,
+            0.9936
+          ],
+          "mc_ci95_low": [
+            0.9906,
+            0.9974
+          ],
+          "mc_ci95_high": [
+            0.9919,
+            0.9981
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 1.5,
+          "lam": 0.5,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.983,
+          "power_low": 0.9915,
+          "power_high": 0.9915,
+          "product_sanity_check": 0.9831,
+          "mc_se": 0.00289,
+          "mc_ci95": [
+            0.9773,
+            0.9887
+          ],
+          "mc_ci95_low": [
+            0.9875,
+            0.9955
+          ],
+          "mc_ci95_high": [
+            0.9875,
+            0.9955
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 1.5,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.869,
+          "power_low": 0.94,
+          "power_high": 0.9245,
+          "product_sanity_check": 0.869,
+          "mc_se": 0.00754,
+          "mc_ci95": [
+            0.8542,
+            0.8838
+          ],
+          "mc_ci95_low": [
+            0.9296,
+            0.9504
+          ],
+          "mc_ci95_high": [
+            0.9129,
+            0.9361
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 1.5,
+          "lam": 0.9,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.88,
+          "power_low": 0.935,
+          "power_high": 0.939,
+          "product_sanity_check": 0.878,
+          "mc_se": 0.00727,
+          "mc_ci95": [
+            0.8658,
+            0.8942
+          ],
+          "mc_ci95_low": [
+            0.9242,
+            0.9458
+          ],
+          "mc_ci95_high": [
+            0.9285,
+            0.9495
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.35,
+          "sigma": 1.5,
+          "lam": 0.9,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.885,
+          "power_low": 0.948,
+          "power_high": 0.9325,
+          "product_sanity_check": 0.884,
+          "mc_se": 0.00713,
+          "mc_ci95": [
+            0.871,
+            0.899
+          ],
+          "mc_ci95_low": [
+            0.9383,
+            0.9577
+          ],
+          "mc_ci95_high": [
+            0.9215,
+            0.9435
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 0.0,
+          "lam": 0.0,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9995,
+          "power_low": 0.9995,
+          "power_high": 1.0,
+          "product_sanity_check": 0.9995,
+          "mc_se": 0.0005,
+          "mc_ci95": [
+            0.9985,
+            1.0
+          ],
+          "mc_ci95_low": [
+            0.9985,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 0.0,
+          "lam": 0.0,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9995,
+          "power_low": 1.0,
+          "power_high": 0.9995,
+          "product_sanity_check": 0.9995,
+          "mc_se": 0.0005,
+          "mc_ci95": [
+            0.9985,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            0.9985,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 0.0,
+          "lam": 0.0,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9995,
+          "power_low": 0.9995,
+          "power_high": 1.0,
+          "product_sanity_check": 0.9995,
+          "mc_se": 0.0005,
+          "mc_ci95": [
+            0.9985,
+            1.0
+          ],
+          "mc_ci95_low": [
+            0.9985,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 0.0,
+          "lam": 0.5,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.964,
+          "power_low": 0.981,
+          "power_high": 0.9825,
+          "product_sanity_check": 0.9638,
+          "mc_se": 0.00417,
+          "mc_ci95": [
+            0.9558,
+            0.9722
+          ],
+          "mc_ci95_low": [
+            0.975,
+            0.987
+          ],
+          "mc_ci95_high": [
+            0.9768,
+            0.9882
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 0.0,
+          "lam": 0.5,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.967,
+          "power_low": 0.984,
+          "power_high": 0.9825,
+          "product_sanity_check": 0.9668,
+          "mc_se": 0.00399,
+          "mc_ci95": [
+            0.9592,
+            0.9748
+          ],
+          "mc_ci95_low": [
+            0.9785,
+            0.9895
+          ],
+          "mc_ci95_high": [
+            0.9768,
+            0.9882
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 0.0,
+          "lam": 0.5,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9705,
+          "power_low": 0.982,
+          "power_high": 0.988,
+          "product_sanity_check": 0.9702,
+          "mc_se": 0.00378,
+          "mc_ci95": [
+            0.9631,
+            0.9779
+          ],
+          "mc_ci95_low": [
+            0.9762,
+            0.9878
+          ],
+          "mc_ci95_high": [
+            0.9832,
+            0.9928
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 0.0,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.825,
+          "power_low": 0.902,
+          "power_high": 0.9115,
+          "product_sanity_check": 0.8222,
+          "mc_se": 0.0085,
+          "mc_ci95": [
+            0.8083,
+            0.8417
+          ],
+          "mc_ci95_low": [
+            0.889,
+            0.915
+          ],
+          "mc_ci95_high": [
+            0.8991,
+            0.9239
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 0.0,
+          "lam": 0.9,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.834,
+          "power_low": 0.9115,
+          "power_high": 0.9135,
+          "product_sanity_check": 0.8327,
+          "mc_se": 0.00832,
+          "mc_ci95": [
+            0.8177,
+            0.8503
+          ],
+          "mc_ci95_low": [
+            0.8991,
+            0.9239
+          ],
+          "mc_ci95_high": [
+            0.9012,
+            0.9258
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 0.0,
+          "lam": 0.9,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.824,
+          "power_low": 0.914,
+          "power_high": 0.904,
+          "product_sanity_check": 0.8263,
+          "mc_se": 0.00852,
+          "mc_ci95": [
+            0.8073,
+            0.8407
+          ],
+          "mc_ci95_low": [
+            0.9017,
+            0.9263
+          ],
+          "mc_ci95_high": [
+            0.8911,
+            0.9169
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 0.5,
+          "lam": 0.0,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9995,
+          "power_low": 0.9995,
+          "power_high": 1.0,
+          "product_sanity_check": 0.9995,
+          "mc_se": 0.0005,
+          "mc_ci95": [
+            0.9985,
+            1.0
+          ],
+          "mc_ci95_low": [
+            0.9985,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 0.5,
+          "lam": 0.0,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9995,
+          "power_low": 0.9995,
+          "power_high": 1.0,
+          "product_sanity_check": 0.9995,
+          "mc_se": 0.0005,
+          "mc_ci95": [
+            0.9985,
+            1.0
+          ],
+          "mc_ci95_low": [
+            0.9985,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 0.5,
+          "lam": 0.0,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 0.5,
+          "lam": 0.5,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.973,
+          "power_low": 0.9865,
+          "power_high": 0.986,
+          "product_sanity_check": 0.9727,
+          "mc_se": 0.00362,
+          "mc_ci95": [
+            0.9659,
+            0.9801
+          ],
+          "mc_ci95_low": [
+            0.9814,
+            0.9916
+          ],
+          "mc_ci95_high": [
+            0.9809,
+            0.9911
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 0.5,
+          "lam": 0.5,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.958,
+          "power_low": 0.9795,
+          "power_high": 0.9785,
+          "product_sanity_check": 0.9584,
+          "mc_se": 0.00449,
+          "mc_ci95": [
+            0.9492,
+            0.9668
+          ],
+          "mc_ci95_low": [
+            0.9733,
+            0.9857
+          ],
+          "mc_ci95_high": [
+            0.9721,
+            0.9849
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 0.5,
+          "lam": 0.5,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.974,
+          "power_low": 0.985,
+          "power_high": 0.989,
+          "product_sanity_check": 0.9742,
+          "mc_se": 0.00356,
+          "mc_ci95": [
+            0.967,
+            0.981
+          ],
+          "mc_ci95_low": [
+            0.9797,
+            0.9903
+          ],
+          "mc_ci95_high": [
+            0.9844,
+            0.9936
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 0.5,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.828,
+          "power_low": 0.911,
+          "power_high": 0.907,
+          "product_sanity_check": 0.8263,
+          "mc_se": 0.00844,
+          "mc_ci95": [
+            0.8115,
+            0.8445
+          ],
+          "mc_ci95_low": [
+            0.8985,
+            0.9235
+          ],
+          "mc_ci95_high": [
+            0.8943,
+            0.9197
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 0.5,
+          "lam": 0.9,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.823,
+          "power_low": 0.91,
+          "power_high": 0.9035,
+          "product_sanity_check": 0.8222,
+          "mc_se": 0.00853,
+          "mc_ci95": [
+            0.8063,
+            0.8397
+          ],
+          "mc_ci95_low": [
+            0.8975,
+            0.9225
+          ],
+          "mc_ci95_high": [
+            0.8906,
+            0.9164
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 0.5,
+          "lam": 0.9,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8425,
+          "power_low": 0.915,
+          "power_high": 0.9165,
+          "product_sanity_check": 0.8386,
+          "mc_se": 0.00815,
+          "mc_ci95": [
+            0.8265,
+            0.8585
+          ],
+          "mc_ci95_low": [
+            0.9028,
+            0.9272
+          ],
+          "mc_ci95_high": [
+            0.9044,
+            0.9286
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 1.0,
+          "lam": 0.0,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 1.0,
+          "lam": 0.0,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 1.0,
+          "lam": 0.0,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 1.0,
+          "lam": 0.5,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9685,
+          "power_low": 0.986,
+          "power_high": 0.9825,
+          "product_sanity_check": 0.9687,
+          "mc_se": 0.00391,
+          "mc_ci95": [
+            0.9608,
+            0.9762
+          ],
+          "mc_ci95_low": [
+            0.9809,
+            0.9911
+          ],
+          "mc_ci95_high": [
+            0.9768,
+            0.9882
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 1.0,
+          "lam": 0.5,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9675,
+          "power_low": 0.985,
+          "power_high": 0.9825,
+          "product_sanity_check": 0.9678,
+          "mc_se": 0.00397,
+          "mc_ci95": [
+            0.9597,
+            0.9753
+          ],
+          "mc_ci95_low": [
+            0.9797,
+            0.9903
+          ],
+          "mc_ci95_high": [
+            0.9768,
+            0.9882
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 1.0,
+          "lam": 0.5,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.98,
+          "power_low": 0.9905,
+          "power_high": 0.9895,
+          "product_sanity_check": 0.9801,
+          "mc_se": 0.00313,
+          "mc_ci95": [
+            0.9739,
+            0.9861
+          ],
+          "mc_ci95_low": [
+            0.9862,
+            0.9948
+          ],
+          "mc_ci95_high": [
+            0.985,
+            0.994
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 1.0,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8255,
+          "power_low": 0.9095,
+          "power_high": 0.9075,
+          "product_sanity_check": 0.8254,
+          "mc_se": 0.00849,
+          "mc_ci95": [
+            0.8089,
+            0.8421
+          ],
+          "mc_ci95_low": [
+            0.8969,
+            0.9221
+          ],
+          "mc_ci95_high": [
+            0.8948,
+            0.9202
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 1.0,
+          "lam": 0.9,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.836,
+          "power_low": 0.9155,
+          "power_high": 0.914,
+          "product_sanity_check": 0.8368,
+          "mc_se": 0.00828,
+          "mc_ci95": [
+            0.8198,
+            0.8522
+          ],
+          "mc_ci95_low": [
+            0.9033,
+            0.9277
+          ],
+          "mc_ci95_high": [
+            0.9017,
+            0.9263
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 1.0,
+          "lam": 0.9,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 10000,
+          "bootstrap": 2000,
+          "power_iut": 0.8282,
+          "power_low": 0.9107,
+          "power_high": 0.9091,
+          "product_sanity_check": 0.8279,
+          "mc_se": 0.00377,
+          "mc_ci95": [
+            0.8208,
+            0.8356
+          ],
+          "mc_ci95_low": [
+            0.9051,
+            0.9163
+          ],
+          "mc_ci95_high": [
+            0.9035,
+            0.9147
+          ],
+          "escalated": true
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 1.5,
+          "lam": 0.0,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 1.5,
+          "lam": 0.0,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9995,
+          "power_low": 1.0,
+          "power_high": 0.9995,
+          "product_sanity_check": 0.9995,
+          "mc_se": 0.0005,
+          "mc_ci95": [
+            0.9985,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            0.9985,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 1.5,
+          "lam": 0.0,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 1.5,
+          "lam": 0.5,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.964,
+          "power_low": 0.981,
+          "power_high": 0.983,
+          "product_sanity_check": 0.9643,
+          "mc_se": 0.00417,
+          "mc_ci95": [
+            0.9558,
+            0.9722
+          ],
+          "mc_ci95_low": [
+            0.975,
+            0.987
+          ],
+          "mc_ci95_high": [
+            0.9773,
+            0.9887
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 1.5,
+          "lam": 0.5,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.966,
+          "power_low": 0.9845,
+          "power_high": 0.9815,
+          "product_sanity_check": 0.9663,
+          "mc_se": 0.00405,
+          "mc_ci95": [
+            0.9581,
+            0.9739
+          ],
+          "mc_ci95_low": [
+            0.9791,
+            0.9899
+          ],
+          "mc_ci95_high": [
+            0.9756,
+            0.9874
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 1.5,
+          "lam": 0.5,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9775,
+          "power_low": 0.99,
+          "power_high": 0.9875,
+          "product_sanity_check": 0.9776,
+          "mc_se": 0.00332,
+          "mc_ci95": [
+            0.971,
+            0.984
+          ],
+          "mc_ci95_low": [
+            0.9856,
+            0.9944
+          ],
+          "mc_ci95_high": [
+            0.9826,
+            0.9924
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 1.5,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8195,
+          "power_low": 0.903,
+          "power_high": 0.9065,
+          "product_sanity_check": 0.8186,
+          "mc_se": 0.0086,
+          "mc_ci95": [
+            0.8026,
+            0.8364
+          ],
+          "mc_ci95_low": [
+            0.89,
+            0.916
+          ],
+          "mc_ci95_high": [
+            0.8937,
+            0.9193
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 1.5,
+          "lam": 0.9,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.824,
+          "power_low": 0.906,
+          "power_high": 0.9085,
+          "product_sanity_check": 0.8231,
+          "mc_se": 0.00852,
+          "mc_ci95": [
+            0.8073,
+            0.8407
+          ],
+          "mc_ci95_low": [
+            0.8932,
+            0.9188
+          ],
+          "mc_ci95_high": [
+            0.8959,
+            0.9211
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.5,
+          "sigma": 1.5,
+          "lam": 0.9,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.823,
+          "power_low": 0.9045,
+          "power_high": 0.9095,
+          "product_sanity_check": 0.8226,
+          "mc_se": 0.00853,
+          "mc_ci95": [
+            0.8063,
+            0.8397
+          ],
+          "mc_ci95_low": [
+            0.8916,
+            0.9174
+          ],
+          "mc_ci95_high": [
+            0.8969,
+            0.9221
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 0.0,
+          "lam": 0.0,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 0.0,
+          "lam": 0.0,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9995,
+          "power_low": 0.9995,
+          "power_high": 1.0,
+          "product_sanity_check": 0.9995,
+          "mc_se": 0.0005,
+          "mc_ci95": [
+            0.9985,
+            1.0
+          ],
+          "mc_ci95_low": [
+            0.9985,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 0.0,
+          "lam": 0.0,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 0.0,
+          "lam": 0.5,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9765,
+          "power_low": 0.987,
+          "power_high": 0.9895,
+          "product_sanity_check": 0.9766,
+          "mc_se": 0.00339,
+          "mc_ci95": [
+            0.9699,
+            0.9831
+          ],
+          "mc_ci95_low": [
+            0.982,
+            0.992
+          ],
+          "mc_ci95_high": [
+            0.985,
+            0.994
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 0.0,
+          "lam": 0.5,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9735,
+          "power_low": 0.984,
+          "power_high": 0.9895,
+          "product_sanity_check": 0.9737,
+          "mc_se": 0.00359,
+          "mc_ci95": [
+            0.9665,
+            0.9805
+          ],
+          "mc_ci95_low": [
+            0.9785,
+            0.9895
+          ],
+          "mc_ci95_high": [
+            0.985,
+            0.994
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 0.0,
+          "lam": 0.5,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.978,
+          "power_low": 0.988,
+          "power_high": 0.99,
+          "product_sanity_check": 0.9781,
+          "mc_se": 0.00328,
+          "mc_ci95": [
+            0.9716,
+            0.9844
+          ],
+          "mc_ci95_low": [
+            0.9832,
+            0.9928
+          ],
+          "mc_ci95_high": [
+            0.9856,
+            0.9944
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 0.0,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8575,
+          "power_low": 0.9255,
+          "power_high": 0.926,
+          "product_sanity_check": 0.857,
+          "mc_se": 0.00782,
+          "mc_ci95": [
+            0.8422,
+            0.8728
+          ],
+          "mc_ci95_low": [
+            0.914,
+            0.937
+          ],
+          "mc_ci95_high": [
+            0.9145,
+            0.9375
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 0.0,
+          "lam": 0.9,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8525,
+          "power_low": 0.9175,
+          "power_high": 0.9275,
+          "product_sanity_check": 0.851,
+          "mc_se": 0.00793,
+          "mc_ci95": [
+            0.837,
+            0.868
+          ],
+          "mc_ci95_low": [
+            0.9054,
+            0.9296
+          ],
+          "mc_ci95_high": [
+            0.9161,
+            0.9389
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 0.0,
+          "lam": 0.9,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.853,
+          "power_low": 0.923,
+          "power_high": 0.924,
+          "product_sanity_check": 0.8529,
+          "mc_se": 0.00792,
+          "mc_ci95": [
+            0.8375,
+            0.8685
+          ],
+          "mc_ci95_low": [
+            0.9113,
+            0.9347
+          ],
+          "mc_ci95_high": [
+            0.9124,
+            0.9356
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 0.5,
+          "lam": 0.0,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9995,
+          "power_low": 1.0,
+          "power_high": 0.9995,
+          "product_sanity_check": 0.9995,
+          "mc_se": 0.0005,
+          "mc_ci95": [
+            0.9985,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            0.9985,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 0.5,
+          "lam": 0.0,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9995,
+          "power_low": 1.0,
+          "power_high": 0.9995,
+          "product_sanity_check": 0.9995,
+          "mc_se": 0.0005,
+          "mc_ci95": [
+            0.9985,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            0.9985,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 0.5,
+          "lam": 0.0,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 0.5,
+          "lam": 0.5,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9735,
+          "power_low": 0.9865,
+          "power_high": 0.9865,
+          "product_sanity_check": 0.9732,
+          "mc_se": 0.00359,
+          "mc_ci95": [
+            0.9665,
+            0.9805
+          ],
+          "mc_ci95_low": [
+            0.9814,
+            0.9916
+          ],
+          "mc_ci95_high": [
+            0.9814,
+            0.9916
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 0.5,
+          "lam": 0.5,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.974,
+          "power_low": 0.984,
+          "power_high": 0.99,
+          "product_sanity_check": 0.9742,
+          "mc_se": 0.00356,
+          "mc_ci95": [
+            0.967,
+            0.981
+          ],
+          "mc_ci95_low": [
+            0.9785,
+            0.9895
+          ],
+          "mc_ci95_high": [
+            0.9856,
+            0.9944
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 0.5,
+          "lam": 0.5,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.983,
+          "power_low": 0.989,
+          "power_high": 0.994,
+          "product_sanity_check": 0.9831,
+          "mc_se": 0.00289,
+          "mc_ci95": [
+            0.9773,
+            0.9887
+          ],
+          "mc_ci95_low": [
+            0.9844,
+            0.9936
+          ],
+          "mc_ci95_high": [
+            0.9906,
+            0.9974
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 0.5,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8585,
+          "power_low": 0.925,
+          "power_high": 0.929,
+          "product_sanity_check": 0.8593,
+          "mc_se": 0.00779,
+          "mc_ci95": [
+            0.8432,
+            0.8738
+          ],
+          "mc_ci95_low": [
+            0.9135,
+            0.9365
+          ],
+          "mc_ci95_high": [
+            0.9177,
+            0.9403
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 0.5,
+          "lam": 0.9,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8505,
+          "power_low": 0.9185,
+          "power_high": 0.9275,
+          "product_sanity_check": 0.8519,
+          "mc_se": 0.00797,
+          "mc_ci95": [
+            0.8349,
+            0.8661
+          ],
+          "mc_ci95_low": [
+            0.9065,
+            0.9305
+          ],
+          "mc_ci95_high": [
+            0.9161,
+            0.9389
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 0.5,
+          "lam": 0.9,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.858,
+          "power_low": 0.927,
+          "power_high": 0.927,
+          "product_sanity_check": 0.8593,
+          "mc_se": 0.0078,
+          "mc_ci95": [
+            0.8427,
+            0.8733
+          ],
+          "mc_ci95_low": [
+            0.9156,
+            0.9384
+          ],
+          "mc_ci95_high": [
+            0.9156,
+            0.9384
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 1.0,
+          "lam": 0.0,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 1.0,
+          "lam": 0.0,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.999,
+          "power_low": 1.0,
+          "power_high": 0.999,
+          "product_sanity_check": 0.999,
+          "mc_se": 0.00071,
+          "mc_ci95": [
+            0.9976,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            0.9976,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 1.0,
+          "lam": 0.0,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 1.0,
+          "lam": 0.5,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.975,
+          "power_low": 0.989,
+          "power_high": 0.986,
+          "product_sanity_check": 0.9752,
+          "mc_se": 0.00349,
+          "mc_ci95": [
+            0.9682,
+            0.9818
+          ],
+          "mc_ci95_low": [
+            0.9844,
+            0.9936
+          ],
+          "mc_ci95_high": [
+            0.9809,
+            0.9911
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 1.0,
+          "lam": 0.5,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.97,
+          "power_low": 0.9825,
+          "power_high": 0.9875,
+          "product_sanity_check": 0.9702,
+          "mc_se": 0.00381,
+          "mc_ci95": [
+            0.9625,
+            0.9775
+          ],
+          "mc_ci95_low": [
+            0.9768,
+            0.9882
+          ],
+          "mc_ci95_high": [
+            0.9826,
+            0.9924
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 1.0,
+          "lam": 0.5,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9775,
+          "power_low": 0.988,
+          "power_high": 0.9895,
+          "product_sanity_check": 0.9776,
+          "mc_se": 0.00332,
+          "mc_ci95": [
+            0.971,
+            0.984
+          ],
+          "mc_ci95_low": [
+            0.9832,
+            0.9928
+          ],
+          "mc_ci95_high": [
+            0.985,
+            0.994
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 1.0,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8675,
+          "power_low": 0.9315,
+          "power_high": 0.932,
+          "product_sanity_check": 0.8682,
+          "mc_se": 0.00758,
+          "mc_ci95": [
+            0.8526,
+            0.8824
+          ],
+          "mc_ci95_low": [
+            0.9204,
+            0.9426
+          ],
+          "mc_ci95_high": [
+            0.921,
+            0.943
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 1.0,
+          "lam": 0.9,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8515,
+          "power_low": 0.9175,
+          "power_high": 0.927,
+          "product_sanity_check": 0.8505,
+          "mc_se": 0.00795,
+          "mc_ci95": [
+            0.8359,
+            0.8671
+          ],
+          "mc_ci95_low": [
+            0.9054,
+            0.9296
+          ],
+          "mc_ci95_high": [
+            0.9156,
+            0.9384
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 1.0,
+          "lam": 0.9,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.866,
+          "power_low": 0.9305,
+          "power_high": 0.9295,
+          "product_sanity_check": 0.8649,
+          "mc_se": 0.00762,
+          "mc_ci95": [
+            0.8511,
+            0.8809
+          ],
+          "mc_ci95_low": [
+            0.9194,
+            0.9416
+          ],
+          "mc_ci95_high": [
+            0.9183,
+            0.9407
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 1.5,
+          "lam": 0.0,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 1.5,
+          "lam": 0.0,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 1.5,
+          "lam": 0.0,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 1.0,
+          "power_low": 1.0,
+          "power_high": 1.0,
+          "product_sanity_check": 1.0,
+          "mc_se": 0.0,
+          "mc_ci95": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_low": [
+            1.0,
+            1.0
+          ],
+          "mc_ci95_high": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 1.5,
+          "lam": 0.5,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.969,
+          "power_low": 0.985,
+          "power_high": 0.984,
+          "product_sanity_check": 0.9692,
+          "mc_se": 0.00388,
+          "mc_ci95": [
+            0.9614,
+            0.9766
+          ],
+          "mc_ci95_low": [
+            0.9797,
+            0.9903
+          ],
+          "mc_ci95_high": [
+            0.9785,
+            0.9895
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 1.5,
+          "lam": 0.5,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.9705,
+          "power_low": 0.9855,
+          "power_high": 0.985,
+          "product_sanity_check": 0.9707,
+          "mc_se": 0.00378,
+          "mc_ci95": [
+            0.9631,
+            0.9779
+          ],
+          "mc_ci95_low": [
+            0.9803,
+            0.9907
+          ],
+          "mc_ci95_high": [
+            0.9797,
+            0.9903
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 1.5,
+          "lam": 0.5,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.979,
+          "power_low": 0.989,
+          "power_high": 0.99,
+          "product_sanity_check": 0.9791,
+          "mc_se": 0.00321,
+          "mc_ci95": [
+            0.9727,
+            0.9853
+          ],
+          "mc_ci95_low": [
+            0.9844,
+            0.9936
+          ],
+          "mc_ci95_high": [
+            0.9856,
+            0.9944
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 1.5,
+          "lam": 0.9,
+          "o_config": "A_calibration_mix",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8795,
+          "power_low": 0.9395,
+          "power_high": 0.936,
+          "product_sanity_check": 0.8794,
+          "mc_se": 0.00728,
+          "mc_ci95": [
+            0.8652,
+            0.8938
+          ],
+          "mc_ci95_low": [
+            0.9291,
+            0.9499
+          ],
+          "mc_ci95_high": [
+            0.9253,
+            0.9467
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 1.5,
+          "lam": 0.9,
+          "o_config": "B_all_optimum_3",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.848,
+          "power_low": 0.9195,
+          "power_high": 0.9235,
+          "product_sanity_check": 0.8492,
+          "mc_se": 0.00803,
+          "mc_ci95": [
+            0.8323,
+            0.8637
+          ],
+          "mc_ci95_low": [
+            0.9076,
+            0.9314
+          ],
+          "mc_ci95_high": [
+            0.9119,
+            0.9351
+          ]
+        },
+        {
+          "n_per_band": 95,
+          "base_mean": 0.65,
+          "sigma": 1.5,
+          "lam": 0.9,
+          "o_config": "C_all_optimum_4",
+          "delta_low": 0.2,
+          "delta_high": -0.2,
+          "shared_failure": false,
+          "replicates": 2000,
+          "bootstrap": 2000,
+          "power_iut": 0.8495,
+          "power_low": 0.9205,
+          "power_high": 0.926,
+          "product_sanity_check": 0.8524,
+          "mc_se": 0.008,
+          "mc_ci95": [
+            0.8338,
+            0.8652
+          ],
+          "mc_ci95_low": [
+            0.9086,
+            0.9324
+          ],
+          "mc_ci95_high": [
+            0.9145,
+            0.9375
+          ]
+        }
+      ],
+      "n_cells": 108,
+      "worst_cell": {
+        "base_mean": 0.5,
+        "sigma": 1.5,
+        "lam": 0.9,
+        "o_config": "A_calibration_mix",
+        "power_iut": 0.8195,
+        "mc_ci95": [
+          0.8026,
+          0.8364
+        ],
+        "replicates": 2000
+      }
+    }
+  },
+  "confirmation_at_registered_bootstrap": {
+    "bootstrap": 10000,
+    "passes": true,
+    "worst": {
+      "base_mean": 0.5,
+      "sigma": 1.5,
+      "lam": 0.9,
+      "o_config": "B_all_optimum_3",
+      "power_iut": 0.8185,
+      "mc_ci95": [
+        0.8016,
+        0.8354
+      ],
+      "replicates": 2000
+    }
+  },
+  "type_one_validation": {
+    "A_null_low": {
+      "null_component": "low",
+      "worst_null_rejection_rate": 0.0645,
+      "mc_ci95": [
+        0.0537,
+        0.0753
+      ],
+      "joint_rejection_rate": 0.059,
+      "config": {
+        "base_mean": 0.65,
+        "sigma": 0.0,
+        "lam": 0.9,
+        "o_config": "B_all_optimum_3"
+      },
+      "anticonservative": true
+    },
+    "B_null_high": {
+      "null_component": "high",
+      "worst_null_rejection_rate": 0.066,
+      "mc_ci95": [
+        0.0551,
+        0.0769
+      ],
+      "joint_rejection_rate": 0.066,
+      "config": {
+        "base_mean": 0.65,
+        "sigma": 0.5,
+        "lam": 0.0,
+        "o_config": "B_all_optimum_3"
+      },
+      "anticonservative": true
+    },
+    "verdict": "ANTICONSERVATIVE"
+  },
+  "scenarios_at_selected_n": {
+    "target": {
+      "delta_low": 0.2,
+      "delta_high": -0.2,
+      "worst_power": 0.8165,
+      "median_power": 0.977,
+      "selects_n": true
+    },
+    "weak": {
+      "delta_low": 0.1,
+      "delta_high": -0.1,
+      "worst_power": 0.1715,
+      "median_power": 0.3858,
+      "selects_n": false
+    },
+    "strong": {
+      "delta_low": 0.35,
+      "delta_high": -0.35,
+      "worst_power": 0.9995,
+      "median_power": 1.0,
+      "selects_n": false
+    },
+    "asymmetric": {
+      "delta_low": 0.1,
+      "delta_high": -0.35,
+      "worst_power": 0.41,
+      "median_power": 0.6215,
+      "selects_n": false
+    },
+    "shared_failure_sensitivity": {
+      "binding": false,
+      "worst_power": 0.9985,
+      "note": "correlated failures cannot lower the selected N"
+    }
+  },
+  "verdict": "NO-GO"
+}

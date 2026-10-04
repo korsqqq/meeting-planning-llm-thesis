@@ -1,0 +1,150 @@
+{
+  "reps": 300,
+  "perms": 999,
+  "seed": 20260916,
+  "written_utc": "2026-09-15T13:23:05+00:00",
+  "scenarios": {
+    "null_discrete": {
+      "terms": {
+        "Architecture": {
+          "true_null": true,
+          "rejection_rate": 0.03333333333333333,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        },
+        "Budget": {
+          "true_null": false,
+          "rejection_rate": 1.0,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        },
+        "Complexity": {
+          "true_null": true,
+          "rejection_rate": 0.06,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        },
+        "Architecture x Budget": {
+          "true_null": true,
+          "rejection_rate": 0.056666666666666664,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        },
+        "Architecture x Complexity": {
+          "true_null": true,
+          "rejection_rate": 0.02666666666666667,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        },
+        "Budget x Complexity": {
+          "true_null": true,
+          "rejection_rate": 0.06666666666666667,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        },
+        "Architecture x Budget x Complexity": {
+          "true_null": true,
+          "rejection_rate": 0.06333333333333334,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        }
+      },
+      "pairwise_rejection_rate_mean": 0.03883333333333334,
+      "pairwise_rejection_rate_max": 0.07333333333333333,
+      "pairwise_fwer_after_holm": 0.03666666666666667
+    },
+    "null_additive": {
+      "terms": {
+        "Architecture": {
+          "true_null": false,
+          "rejection_rate": 1.0,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        },
+        "Budget": {
+          "true_null": false,
+          "rejection_rate": 1.0,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        },
+        "Complexity": {
+          "true_null": true,
+          "rejection_rate": 0.06,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        },
+        "Architecture x Budget": {
+          "true_null": true,
+          "rejection_rate": 0.05333333333333334,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        },
+        "Architecture x Complexity": {
+          "true_null": true,
+          "rejection_rate": 0.043333333333333335,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        },
+        "Budget x Complexity": {
+          "true_null": true,
+          "rejection_rate": 0.04666666666666667,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        },
+        "Architecture x Budget x Complexity": {
+          "true_null": true,
+          "rejection_rate": 0.056666666666666664,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        }
+      }
+    },
+    "effects": {
+      "terms": {
+        "Architecture": {
+          "true_null": false,
+          "rejection_rate": 1.0,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        },
+        "Budget": {
+          "true_null": false,
+          "rejection_rate": 1.0,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        },
+        "Complexity": {
+          "true_null": false,
+          "rejection_rate": 0.05,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        },
+        "Architecture x Budget": {
+          "true_null": false,
+          "rejection_rate": 0.97,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        },
+        "Architecture x Complexity": {
+          "true_null": false,
+          "rejection_rate": 0.14333333333333334,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        },
+        "Budget x Complexity": {
+          "true_null": false,
+          "rejection_rate": 0.12666666666666668,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        },
+        "Architecture x Budget x Complexity": {
+          "true_null": false,
+          "rejection_rate": 0.22,
+          "mc_se_at_0.05": 0.012583057392117916,
+          "flag": false
+        }
+      }
+    }
+  },
+  "flags": []
+}

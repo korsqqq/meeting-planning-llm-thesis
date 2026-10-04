@@ -1,0 +1,47 @@
+paired development instances at cap 64000: 60  (seed 20260826)
+
+=== c1_react-vs-c2_verify_revise
+  pooled  n=60  mean=-0.118 ties=83% distinct=6
+    type-I @n=60  bootstrap=0.076  sign=0.022
+    power  @n=20  bootstrap=0.443  sign=0.094  perm=0.121
+    power  @n=50  bootstrap=0.976  sign=0.865  perm=0.869
+
+=== c1_react-vs-c3_mas
+  pooled  n=60  mean=-0.343 ties=23% distinct=11
+    type-I @n=60  bootstrap=0.059  sign=0.029
+    power  @n=20  bootstrap=0.719  sign=0.539  perm=0.646
+    power  @n=30  bootstrap=0.867  sign=0.758  perm=0.830
+    power  @n=50  bootstrap=0.979  sign=0.944  perm=0.968
+    power  @n=75  bootstrap=0.995  sign=0.990  perm=0.997
+  easy    n=20  mean=-0.379 ties=20% distinct=8
+    type-I @n=20  bootstrap=0.063  sign=0.026
+    power  @n=20  bootstrap=0.748  sign=0.443  perm=0.665
+    power  @n=30  bootstrap=0.908  sign=0.658  perm=0.881
+    power  @n=50  bootstrap=0.990  sign=0.882  perm=0.983
+    power  @n=75  bootstrap=1.000  sign=0.975  perm=0.998
+  medium  n=20  mean=-0.242 ties=25% distinct=8
+    type-I @n=20  bootstrap=0.060  sign=0.031
+    power  @n=20  bootstrap=0.424  sign=0.345  perm=0.346
+    power  @n=30  bootstrap=0.538  sign=0.517  perm=0.488
+    power  @n=50  bootstrap=0.754  sign=0.785  perm=0.741
+    power  @n=75  bootstrap=0.895  sign=0.943  perm=0.893
+  hard    n=20  mean=-0.408 ties=25% distinct=9
+    type-I @n=20  bootstrap=0.076  sign=0.022
+    power  @n=20  bootstrap=0.947  sign=0.831  perm=0.912
+    power  @n=30  bootstrap=0.993  sign=0.961  perm=0.991
+    power  @n=50  bootstrap=1.000  sign=0.998  perm=1.000
+    power  @n=75  bootstrap=1.000  sign=1.000  perm=1.000
+
+=== c1_react-vs-c4_planner_critic
+  pooled  n=60  mean=-0.189 ties=43% distinct=12
+    type-I @n=60  bootstrap=0.066  sign=0.037
+    power  @n=20  bootstrap=0.514  sign=0.312  perm=0.432
+    power  @n=50  bootstrap=0.880  sign=0.798  perm=0.861
+
+=== c1_react-vs-c5_best_of_3
+  pooled  n=60  mean=+0.221 ties=63% distinct=7
+    type-I @n=60  bootstrap=0.049  sign=0.026
+    power  @n=20  bootstrap=0.670  sign=0.472  perm=0.480
+    power  @n=50  bootstrap=0.966  sign=0.970  perm=0.961
+
+written: results\analysis\empirical_power\summary.json

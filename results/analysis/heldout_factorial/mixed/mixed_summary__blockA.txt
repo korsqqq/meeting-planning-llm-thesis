@@ -1,0 +1,81 @@
+                                     Mixed Linear Model Regression Results
+================================================================================================================
+Model:                              MixedLM                   Dependent Variable:                   satisfaction
+No. Observations:                   3000                      Method:                               REML        
+No. Groups:                         150                       Scale:                                0.0676      
+Min. group size:                    20                        Log-Likelihood:                       -525.8097   
+Max. group size:                    20                        Converged:                            Yes         
+Mean group size:                    20.0                                                                        
+----------------------------------------------------------------------------------------------------------------
+                                                                     Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+----------------------------------------------------------------------------------------------------------------
+Intercept                                                             0.282    0.012  23.586 0.000  0.259  0.306
+C(arch, Sum)[S.C1]                                                   -0.062    0.009  -6.576 0.000 -0.081 -0.044
+C(arch, Sum)[S.C2]                                                    0.010    0.009   1.092 0.275 -0.008  0.029
+C(arch, Sum)[S.C3]                                                    0.121    0.009  12.740 0.000  0.102  0.140
+C(arch, Sum)[S.C4]                                                    0.056    0.009   5.848 0.000  0.037  0.074
+C(budget, Sum)[S.128k]                                                0.295    0.008  35.927 0.000  0.279  0.311
+C(budget, Sum)[S.16k]                                                -0.277    0.008 -33.649 0.000 -0.293 -0.260
+C(budget, Sum)[S.32k]                                                -0.156    0.008 -18.982 0.000 -0.172 -0.140
+C(complexity, Sum)[S.High]                                           -0.027    0.017  -1.589 0.112 -0.060  0.006
+C(complexity, Sum)[S.Low]                                             0.055    0.017   3.268 0.001  0.022  0.088
+C(arch, Sum)[S.C1]:C(budget, Sum)[S.128k]                            -0.147    0.016  -8.923 0.000 -0.179 -0.114
+C(arch, Sum)[S.C2]:C(budget, Sum)[S.128k]                            -0.061    0.016  -3.719 0.000 -0.093 -0.029
+C(arch, Sum)[S.C3]:C(budget, Sum)[S.128k]                             0.124    0.016   7.534 0.000  0.092  0.156
+C(arch, Sum)[S.C4]:C(budget, Sum)[S.128k]                             0.006    0.016   0.395 0.693 -0.026  0.039
+C(arch, Sum)[S.C1]:C(budget, Sum)[S.16k]                              0.060    0.016   3.662 0.000  0.028  0.092
+C(arch, Sum)[S.C2]:C(budget, Sum)[S.16k]                             -0.013    0.016  -0.765 0.444 -0.045  0.020
+C(arch, Sum)[S.C3]:C(budget, Sum)[S.16k]                             -0.115    0.016  -7.017 0.000 -0.148 -0.083
+C(arch, Sum)[S.C4]:C(budget, Sum)[S.16k]                             -0.054    0.016  -3.308 0.001 -0.087 -0.022
+C(arch, Sum)[S.C1]:C(budget, Sum)[S.32k]                              0.114    0.016   6.906 0.000  0.081  0.146
+C(arch, Sum)[S.C2]:C(budget, Sum)[S.32k]                              0.057    0.016   3.459 0.001  0.025  0.089
+C(arch, Sum)[S.C3]:C(budget, Sum)[S.32k]                             -0.111    0.016  -6.781 0.000 -0.144 -0.079
+C(arch, Sum)[S.C4]:C(budget, Sum)[S.32k]                             -0.066    0.016  -4.018 0.000 -0.098 -0.034
+C(arch, Sum)[S.C1]:C(complexity, Sum)[S.High]                        -0.021    0.013  -1.577 0.115 -0.047  0.005
+C(arch, Sum)[S.C2]:C(complexity, Sum)[S.High]                         0.016    0.013   1.165 0.244 -0.011  0.042
+C(arch, Sum)[S.C3]:C(complexity, Sum)[S.High]                        -0.004    0.013  -0.335 0.737 -0.031  0.022
+C(arch, Sum)[S.C4]:C(complexity, Sum)[S.High]                         0.009    0.013   0.658 0.510 -0.017  0.035
+C(arch, Sum)[S.C1]:C(complexity, Sum)[S.Low]                          0.012    0.013   0.900 0.368 -0.014  0.038
+C(arch, Sum)[S.C2]:C(complexity, Sum)[S.Low]                         -0.019    0.013  -1.387 0.166 -0.045  0.008
+C(arch, Sum)[S.C3]:C(complexity, Sum)[S.Low]                          0.013    0.013   0.993 0.321 -0.013  0.040
+C(arch, Sum)[S.C4]:C(complexity, Sum)[S.Low]                         -0.005    0.013  -0.341 0.733 -0.031  0.022
+C(budget, Sum)[S.128k]:C(complexity, Sum)[S.High]                    -0.039    0.012  -3.345 0.001 -0.062 -0.016
+C(budget, Sum)[S.16k]:C(complexity, Sum)[S.High]                      0.027    0.012   2.351 0.019  0.005  0.050
+C(budget, Sum)[S.32k]:C(complexity, Sum)[S.High]                      0.007    0.012   0.612 0.541 -0.016  0.030
+C(budget, Sum)[S.128k]:C(complexity, Sum)[S.Low]                      0.051    0.012   4.354 0.000  0.028  0.073
+C(budget, Sum)[S.16k]:C(complexity, Sum)[S.Low]                      -0.055    0.012  -4.717 0.000 -0.078 -0.032
+C(budget, Sum)[S.32k]:C(complexity, Sum)[S.Low]                      -0.015    0.012  -1.267 0.205 -0.038  0.008
+C(arch, Sum)[S.C1]:C(budget, Sum)[S.128k]:C(complexity, Sum)[S.High] -0.003    0.023  -0.131 0.895 -0.049  0.043
+C(arch, Sum)[S.C2]:C(budget, Sum)[S.128k]:C(complexity, Sum)[S.High]  0.032    0.023   1.368 0.171 -0.014  0.077
+C(arch, Sum)[S.C3]:C(budget, Sum)[S.128k]:C(complexity, Sum)[S.High]  0.038    0.023   1.637 0.102 -0.008  0.084
+C(arch, Sum)[S.C4]:C(budget, Sum)[S.128k]:C(complexity, Sum)[S.High]  0.006    0.023   0.251 0.802 -0.040  0.051
+C(arch, Sum)[S.C1]:C(budget, Sum)[S.16k]:C(complexity, Sum)[S.High]   0.017    0.023   0.748 0.454 -0.028  0.063
+C(arch, Sum)[S.C2]:C(budget, Sum)[S.16k]:C(complexity, Sum)[S.High]  -0.019    0.023  -0.835 0.404 -0.065  0.026
+C(arch, Sum)[S.C3]:C(budget, Sum)[S.16k]:C(complexity, Sum)[S.High]   0.013    0.023   0.557 0.578 -0.033  0.059
+C(arch, Sum)[S.C4]:C(budget, Sum)[S.16k]:C(complexity, Sum)[S.High]  -0.016    0.023  -0.686 0.493 -0.062  0.030
+C(arch, Sum)[S.C1]:C(budget, Sum)[S.32k]:C(complexity, Sum)[S.High]   0.015    0.023   0.662 0.508 -0.030  0.061
+C(arch, Sum)[S.C2]:C(budget, Sum)[S.32k]:C(complexity, Sum)[S.High]  -0.013    0.023  -0.539 0.590 -0.058  0.033
+C(arch, Sum)[S.C3]:C(budget, Sum)[S.32k]:C(complexity, Sum)[S.High]  -0.036    0.023  -1.560 0.119 -0.082  0.009
+C(arch, Sum)[S.C4]:C(budget, Sum)[S.32k]:C(complexity, Sum)[S.High]   0.007    0.023   0.303 0.762 -0.039  0.053
+C(arch, Sum)[S.C1]:C(budget, Sum)[S.128k]:C(complexity, Sum)[S.Low]  -0.025    0.023  -1.060 0.289 -0.070  0.021
+C(arch, Sum)[S.C2]:C(budget, Sum)[S.128k]:C(complexity, Sum)[S.Low]  -0.049    0.023  -2.105 0.035 -0.095 -0.003
+C(arch, Sum)[S.C3]:C(budget, Sum)[S.128k]:C(complexity, Sum)[S.Low]  -0.008    0.023  -0.349 0.727 -0.054  0.037
+C(arch, Sum)[S.C4]:C(budget, Sum)[S.128k]:C(complexity, Sum)[S.Low]  -0.002    0.023  -0.104 0.917 -0.048  0.043
+C(arch, Sum)[S.C1]:C(budget, Sum)[S.16k]:C(complexity, Sum)[S.Low]   -0.006    0.023  -0.252 0.801 -0.051  0.040
+C(arch, Sum)[S.C2]:C(budget, Sum)[S.16k]:C(complexity, Sum)[S.Low]    0.025    0.023   1.068 0.285 -0.021  0.070
+C(arch, Sum)[S.C3]:C(budget, Sum)[S.16k]:C(complexity, Sum)[S.Low]   -0.025    0.023  -1.071 0.284 -0.070  0.021
+C(arch, Sum)[S.C4]:C(budget, Sum)[S.16k]:C(complexity, Sum)[S.Low]    0.007    0.023   0.321 0.748 -0.038  0.053
+C(arch, Sum)[S.C1]:C(budget, Sum)[S.32k]:C(complexity, Sum)[S.Low]    0.005    0.023   0.221 0.825 -0.040  0.051
+C(arch, Sum)[S.C2]:C(budget, Sum)[S.32k]:C(complexity, Sum)[S.Low]    0.033    0.023   1.422 0.155 -0.013  0.079
+C(arch, Sum)[S.C3]:C(budget, Sum)[S.32k]:C(complexity, Sum)[S.Low]    0.031    0.023   1.314 0.189 -0.015  0.076
+C(arch, Sum)[S.C4]:C(budget, Sum)[S.32k]:C(complexity, Sum)[S.Low]   -0.032    0.023  -1.356 0.175 -0.077  0.014
+Group Var                                                             0.018    0.010                            
+================================================================================================================
+
+
+converged: True
+fit: {"optimizer_used": "bfgs", "attempts": [{"method": "bfgs", "status": "ok", "converged": true}, {"method": "powell", "status": "ok", "converged": true}], "cross_check_optimizer": "powell", "max_abs_fixed_effect_difference": 1.7208456881689926e-15}
+warnings:
+
+
+statsmodels 0.15.0. Supporting check only: residuals of a bounded, discrete outcome are not normal; p-values here are not part of any Holm family.

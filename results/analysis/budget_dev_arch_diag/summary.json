@@ -1,0 +1,569 @@
+{
+  "schema_version": "arch_diagnostic/1.0",
+  "status": "post-gate development diagnostic; descriptive, not confirmatory",
+  "cannot_repair_the_c1_gate": true,
+  "registered": "THESIS_DECISIONS.md section 5, amendment of 2026-08-11",
+  "question": "on the same n = 8 development instances at 64 000, do C2 and C3 recover validator-approved non-empty plans substantially more often than plain C1?",
+  "reported_quantity": "validator-approved AND at least one meeting; a generic feasibility rate is ~1.0 by construction in this harness",
+  "audit": {
+    "n_diagnostic_runs": 120,
+    "n_c1_baseline_runs": 60,
+    "conditions": [
+      "c2_verify_revise",
+      "c3_mas"
+    ],
+    "cap": 64000,
+    "model": "Qwen/Qwen3-32B-AWQ",
+    "instances_per_band": 20,
+    "subset_hash": "911e4864d6fb8ea2a78ff465f8e55a286d3c48afc1b8403d5e63f231bf96fd91",
+    "binning_hash": "8e671cd13dbb262b638048eff58241226f09d5804373534789915bc302ba0dff",
+    "paired_on": "identical instance_id across c1_react, c2_verify_revise, c3_mas",
+    "diagnostic_git_commits": [
+      "4e52673ac1fbf51107e454d1a81aae4491c30d70"
+    ],
+    "git_commit_per_condition": {
+      "c2_verify_revise": [
+        "4e52673ac1fbf51107e454d1a81aae4491c30d70"
+      ],
+      "c3_mas": [
+        "4e52673ac1fbf51107e454d1a81aae4491c30d70"
+      ]
+    },
+    "conditions_with_split_provenance": [],
+    "single_provenance_commit": true,
+    "all_checks_passed": true
+  },
+  "analysis": {
+    "by_condition": {
+      "c1_react": {
+        "pooled": {
+          "n": 60,
+          "nonempty_validated": 23,
+          "nonempty_validated_rate": 0.3833,
+          "at_least_reference_rate": false,
+          "mean_satisfaction": 0.3,
+          "n_satisfaction_zero": 37,
+          "n_satisfaction_one": 6,
+          "mean_tokens": 48673.4,
+          "mean_cap_utilisation": 0.7605,
+          "n_budget_exhausted": 6,
+          "mean_calls": 18.77,
+          "call_roles": {
+            "finalize": 60,
+            "react_step": 1066
+          },
+          "termination": {
+            "aborted": 16,
+            "agent_finish": 38,
+            "budget": 6
+          },
+          "proposal_attempts": 93,
+          "proposal_valid": 23,
+          "proposal_validity_rate": 0.2473,
+          "proposals_by_role": {
+            "react_step": 93
+          },
+          "valid_by_role": {
+            "react_step": 23
+          },
+          "rejection_reasons": {
+            "travel_infeasible": 57,
+            "window_violation": 40,
+            "overlapping_meeting": 5
+          }
+        },
+        "by_band": {
+          "low": {
+            "n": 20,
+            "nonempty_validated": 9,
+            "nonempty_validated_rate": 0.45,
+            "at_least_reference_rate": false,
+            "mean_satisfaction": 0.3625,
+            "n_satisfaction_zero": 11,
+            "n_satisfaction_one": 3,
+            "mean_tokens": 49126.8,
+            "mean_cap_utilisation": 0.7676,
+            "n_budget_exhausted": 2,
+            "mean_calls": 19.85,
+            "call_roles": {
+              "finalize": 20,
+              "react_step": 377
+            },
+            "termination": {
+              "aborted": 4,
+              "agent_finish": 14,
+              "budget": 2
+            },
+            "proposal_attempts": 29,
+            "proposal_valid": 9,
+            "proposal_validity_rate": 0.3103,
+            "proposals_by_role": {
+              "react_step": 29
+            },
+            "valid_by_role": {
+              "react_step": 9
+            },
+            "rejection_reasons": {
+              "travel_infeasible": 18,
+              "window_violation": 9,
+              "overlapping_meeting": 1
+            }
+          },
+          "medium": {
+            "n": 20,
+            "nonempty_validated": 9,
+            "nonempty_validated_rate": 0.45,
+            "at_least_reference_rate": false,
+            "mean_satisfaction": 0.3583,
+            "n_satisfaction_zero": 11,
+            "n_satisfaction_one": 3,
+            "mean_tokens": 50202.8,
+            "mean_cap_utilisation": 0.7844,
+            "n_budget_exhausted": 1,
+            "mean_calls": 19.0,
+            "call_roles": {
+              "finalize": 20,
+              "react_step": 360
+            },
+            "termination": {
+              "aborted": 5,
+              "agent_finish": 14,
+              "budget": 1
+            },
+            "proposal_attempts": 32,
+            "proposal_valid": 9,
+            "proposal_validity_rate": 0.2812,
+            "proposals_by_role": {
+              "react_step": 32
+            },
+            "valid_by_role": {
+              "react_step": 9
+            },
+            "rejection_reasons": {
+              "travel_infeasible": 19,
+              "window_violation": 15,
+              "overlapping_meeting": 1
+            }
+          },
+          "high": {
+            "n": 20,
+            "nonempty_validated": 5,
+            "nonempty_validated_rate": 0.25,
+            "at_least_reference_rate": false,
+            "mean_satisfaction": 0.1792,
+            "n_satisfaction_zero": 15,
+            "n_satisfaction_one": 0,
+            "mean_tokens": 46690.7,
+            "mean_cap_utilisation": 0.7295,
+            "n_budget_exhausted": 3,
+            "mean_calls": 17.45,
+            "call_roles": {
+              "finalize": 20,
+              "react_step": 329
+            },
+            "termination": {
+              "aborted": 7,
+              "agent_finish": 10,
+              "budget": 3
+            },
+            "proposal_attempts": 32,
+            "proposal_valid": 5,
+            "proposal_validity_rate": 0.1562,
+            "proposals_by_role": {
+              "react_step": 32
+            },
+            "valid_by_role": {
+              "react_step": 5
+            },
+            "rejection_reasons": {
+              "travel_infeasible": 20,
+              "window_violation": 16,
+              "overlapping_meeting": 3
+            }
+          }
+        }
+      },
+      "c2_verify_revise": {
+        "pooled": {
+          "n": 60,
+          "nonempty_validated": 33,
+          "nonempty_validated_rate": 0.55,
+          "at_least_reference_rate": true,
+          "mean_satisfaction": 0.4181,
+          "n_satisfaction_zero": 27,
+          "n_satisfaction_one": 9,
+          "mean_tokens": 55140.8,
+          "mean_cap_utilisation": 0.8616,
+          "n_budget_exhausted": 17,
+          "mean_calls": 20.73,
+          "call_roles": {
+            "finalize": 60,
+            "react_step": 1066,
+            "revise": 56,
+            "verify": 62
+          },
+          "termination": {
+            "aborted": 16,
+            "agent_finish": 27,
+            "budget": 17
+          },
+          "proposal_attempts": 144,
+          "proposal_valid": 54,
+          "proposal_validity_rate": 0.375,
+          "proposals_by_role": {
+            "react_step": 93,
+            "revise": 51
+          },
+          "valid_by_role": {
+            "react_step": 23,
+            "revise": 31
+          },
+          "rejection_reasons": {
+            "travel_infeasible": 72,
+            "window_violation": 54,
+            "overlapping_meeting": 8
+          }
+        },
+        "by_band": {
+          "low": {
+            "n": 20,
+            "nonempty_validated": 14,
+            "nonempty_validated_rate": 0.7,
+            "at_least_reference_rate": true,
+            "mean_satisfaction": 0.5667,
+            "n_satisfaction_zero": 6,
+            "n_satisfaction_one": 5,
+            "mean_tokens": 56204.7,
+            "mean_cap_utilisation": 0.8782,
+            "n_budget_exhausted": 8,
+            "mean_calls": 22.0,
+            "call_roles": {
+              "finalize": 20,
+              "react_step": 377,
+              "revise": 20,
+              "verify": 23
+            },
+            "termination": {
+              "aborted": 4,
+              "agent_finish": 8,
+              "budget": 8
+            },
+            "proposal_attempts": 47,
+            "proposal_valid": 23,
+            "proposal_validity_rate": 0.4894,
+            "proposals_by_role": {
+              "react_step": 29,
+              "revise": 18
+            },
+            "valid_by_role": {
+              "react_step": 9,
+              "revise": 14
+            },
+            "rejection_reasons": {
+              "travel_infeasible": 22,
+              "window_violation": 10,
+              "overlapping_meeting": 1
+            }
+          },
+          "medium": {
+            "n": 20,
+            "nonempty_validated": 10,
+            "nonempty_validated_rate": 0.5,
+            "at_least_reference_rate": true,
+            "mean_satisfaction": 0.3833,
+            "n_satisfaction_zero": 10,
+            "n_satisfaction_one": 3,
+            "mean_tokens": 56452.7,
+            "mean_cap_utilisation": 0.8821,
+            "n_budget_exhausted": 4,
+            "mean_calls": 21.0,
+            "call_roles": {
+              "finalize": 20,
+              "react_step": 360,
+              "revise": 19,
+              "verify": 21
+            },
+            "termination": {
+              "aborted": 5,
+              "agent_finish": 11,
+              "budget": 4
+            },
+            "proposal_attempts": 49,
+            "proposal_valid": 18,
+            "proposal_validity_rate": 0.3673,
+            "proposals_by_role": {
+              "react_step": 32,
+              "revise": 17
+            },
+            "valid_by_role": {
+              "react_step": 9,
+              "revise": 9
+            },
+            "rejection_reasons": {
+              "travel_infeasible": 25,
+              "window_violation": 22,
+              "overlapping_meeting": 2
+            }
+          },
+          "high": {
+            "n": 20,
+            "nonempty_validated": 9,
+            "nonempty_validated_rate": 0.45,
+            "at_least_reference_rate": false,
+            "mean_satisfaction": 0.3042,
+            "n_satisfaction_zero": 11,
+            "n_satisfaction_one": 1,
+            "mean_tokens": 52764.9,
+            "mean_cap_utilisation": 0.8245,
+            "n_budget_exhausted": 5,
+            "mean_calls": 19.2,
+            "call_roles": {
+              "finalize": 20,
+              "react_step": 329,
+              "revise": 17,
+              "verify": 18
+            },
+            "termination": {
+              "aborted": 7,
+              "agent_finish": 8,
+              "budget": 5
+            },
+            "proposal_attempts": 48,
+            "proposal_valid": 13,
+            "proposal_validity_rate": 0.2708,
+            "proposals_by_role": {
+              "react_step": 32,
+              "revise": 16
+            },
+            "valid_by_role": {
+              "react_step": 5,
+              "revise": 8
+            },
+            "rejection_reasons": {
+              "travel_infeasible": 25,
+              "window_violation": 22,
+              "overlapping_meeting": 5
+            }
+          }
+        },
+        "stage_reach": {
+          "n": 60,
+          "runs_with_verify_at_least_1": 35,
+          "runs_with_verify_at_least_2": 27,
+          "rate_verify_at_least_1": 0.5833,
+          "mean_verify_calls": 1.033,
+          "runs_with_revise_at_least_1": 32,
+          "runs_with_revise_at_least_2": 24,
+          "rate_revise_at_least_1": 0.5333,
+          "mean_revise_calls": 0.933,
+          "runs_reaching_full_two_cycles": 24
+        },
+        "paired_vs_c1": {
+          "n_paired": 60,
+          "recovered_where_c1_failed": 10,
+          "lost_where_c1_succeeded": 0,
+          "same_outcome": 50,
+          "mean_satisfaction_delta_vs_c1": 0.1181,
+          "definition": "delta = S(this condition) - S(c1_react) on the identical instance",
+          "note": "counts only; no hypothesis test is performed by this diagnostic"
+        }
+      },
+      "c3_mas": {
+        "pooled": {
+          "n": 60,
+          "nonempty_validated": 44,
+          "nonempty_validated_rate": 0.7333,
+          "at_least_reference_rate": true,
+          "mean_satisfaction": 0.6431,
+          "n_satisfaction_zero": 16,
+          "n_satisfaction_one": 30,
+          "mean_tokens": 45273.8,
+          "mean_cap_utilisation": 0.7074,
+          "n_budget_exhausted": 0,
+          "mean_calls": 23.33,
+          "call_roles": {
+            "critic": 44,
+            "finalize": 60,
+            "worker_a": 638,
+            "worker_b": 658
+          },
+          "termination": {
+            "aborted": 7,
+            "agent_finish": 53
+          },
+          "proposal_attempts": 149,
+          "proposal_valid": 103,
+          "proposal_validity_rate": 0.6913,
+          "proposals_by_role": {
+            "critic": 43,
+            "worker_a": 51,
+            "worker_b": 55
+          },
+          "valid_by_role": {
+            "critic": 42,
+            "worker_a": 24,
+            "worker_b": 37
+          },
+          "rejection_reasons": {
+            "travel_infeasible": 39,
+            "window_violation": 17
+          }
+        },
+        "by_band": {
+          "low": {
+            "n": 20,
+            "nonempty_validated": 16,
+            "nonempty_validated_rate": 0.8,
+            "at_least_reference_rate": true,
+            "mean_satisfaction": 0.7417,
+            "n_satisfaction_zero": 4,
+            "n_satisfaction_one": 13,
+            "mean_tokens": 44027.7,
+            "mean_cap_utilisation": 0.6879,
+            "n_budget_exhausted": 0,
+            "mean_calls": 24.1,
+            "call_roles": {
+              "critic": 16,
+              "finalize": 20,
+              "worker_a": 213,
+              "worker_b": 233
+            },
+            "termination": {
+              "aborted": 3,
+              "agent_finish": 17
+            },
+            "proposal_attempts": 54,
+            "proposal_valid": 38,
+            "proposal_validity_rate": 0.7037,
+            "proposals_by_role": {
+              "critic": 16,
+              "worker_a": 19,
+              "worker_b": 19
+            },
+            "valid_by_role": {
+              "critic": 15,
+              "worker_a": 9,
+              "worker_b": 14
+            },
+            "rejection_reasons": {
+              "travel_infeasible": 15,
+              "window_violation": 4
+            }
+          },
+          "medium": {
+            "n": 20,
+            "nonempty_validated": 14,
+            "nonempty_validated_rate": 0.7,
+            "at_least_reference_rate": true,
+            "mean_satisfaction": 0.6,
+            "n_satisfaction_zero": 6,
+            "n_satisfaction_one": 9,
+            "mean_tokens": 45972.2,
+            "mean_cap_utilisation": 0.7183,
+            "n_budget_exhausted": 0,
+            "mean_calls": 23.35,
+            "call_roles": {
+              "critic": 14,
+              "finalize": 20,
+              "worker_a": 218,
+              "worker_b": 215
+            },
+            "termination": {
+              "aborted": 3,
+              "agent_finish": 17
+            },
+            "proposal_attempts": 51,
+            "proposal_valid": 33,
+            "proposal_validity_rate": 0.6471,
+            "proposals_by_role": {
+              "critic": 13,
+              "worker_a": 19,
+              "worker_b": 19
+            },
+            "valid_by_role": {
+              "critic": 13,
+              "worker_a": 10,
+              "worker_b": 10
+            },
+            "rejection_reasons": {
+              "travel_infeasible": 17,
+              "window_violation": 7
+            }
+          },
+          "high": {
+            "n": 20,
+            "nonempty_validated": 14,
+            "nonempty_validated_rate": 0.7,
+            "at_least_reference_rate": true,
+            "mean_satisfaction": 0.5875,
+            "n_satisfaction_zero": 6,
+            "n_satisfaction_one": 8,
+            "mean_tokens": 45821.4,
+            "mean_cap_utilisation": 0.716,
+            "n_budget_exhausted": 0,
+            "mean_calls": 22.55,
+            "call_roles": {
+              "critic": 14,
+              "finalize": 20,
+              "worker_a": 207,
+              "worker_b": 210
+            },
+            "termination": {
+              "aborted": 1,
+              "agent_finish": 19
+            },
+            "proposal_attempts": 44,
+            "proposal_valid": 32,
+            "proposal_validity_rate": 0.7273,
+            "proposals_by_role": {
+              "critic": 14,
+              "worker_a": 13,
+              "worker_b": 17
+            },
+            "valid_by_role": {
+              "critic": 14,
+              "worker_a": 5,
+              "worker_b": 13
+            },
+            "rejection_reasons": {
+              "travel_infeasible": 7,
+              "window_violation": 6
+            }
+          }
+        },
+        "role_split": {
+          "n": 60,
+          "worker_proposal_attempts": 106,
+          "worker_proposal_valid": 61,
+          "worker_validity_rate": 0.5755,
+          "critic_proposal_attempts": 43,
+          "critic_proposal_valid": 42,
+          "critic_validity_rate": 0.9767,
+          "runs_where_critic_ran": 44,
+          "critic_reach_rate": 0.7333,
+          "note": "worker and critic rates are not comparable with each other or with C1: workers solve a decomposed sub-problem and the critic is validator-gated"
+        },
+        "paired_vs_c1": {
+          "n_paired": 60,
+          "recovered_where_c1_failed": 28,
+          "lost_where_c1_succeeded": 7,
+          "same_outcome": 25,
+          "mean_satisfaction_delta_vs_c1": 0.3431,
+          "definition": "delta = S(this condition) - S(c1_react) on the identical instance",
+          "note": "counts only; no hypothesis test is performed by this diagnostic"
+        }
+      }
+    },
+    "reference_rate": 0.5,
+    "reaches_reference_in_every_band": {
+      "c2_verify_revise": false,
+      "c3_mas": true
+    },
+    "reading": {
+      "verdict": "NOT_A_UNIVERSAL_TASK_WIDE_FLOOR",
+      "statement": "at least one structured condition reaches the reference rate in every band, so the n = 8 floor is not universal across architectures",
+      "does_not_repair_the_c1_gate": "The C1 budget gate remains failed. It read C1 only, by design, so this diagnostic is not evidence about it in either direction; no primary cap is selected here and the main experiment does not start on this result.",
+      "status": "development diagnostic, descriptive; no hypothesis test, no threshold tuned from these outcomes"
+    }
+  }
+}

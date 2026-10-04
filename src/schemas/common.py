@@ -21,12 +21,16 @@ class Level(StrEnum):
 
 
 class Condition(StrEnum):
-    """The four experimental conditions (THESIS_DECISIONS.md section 4)."""
+    """The experimental conditions (THESIS_DECISIONS.md section 4, C1-C5)."""
 
     C1_REACT = "c1_react"
     C2_VERIFY_REVISE = "c2_verify_revise"
     C3_MAS = "c3_mas"
     C4_PLANNER_CRITIC = "c4_planner_critic"  # optional, cut first if scope is tight
+    # Validated Best-of-3 single-agent sampling (LOCKED 2026-07-26). The secondary
+    # strong single-agent baseline: three independent C1 search trajectories under one
+    # shared budget, deterministic zero-token selection, then ONE finalisation.
+    C5_BEST_OF_3 = "c5_best_of_3"
 
 
 class InvalidReason(StrEnum):

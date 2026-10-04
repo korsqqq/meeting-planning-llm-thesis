@@ -1,0 +1,15 @@
+# requirements/serving.txt
+# vLLM serving environment (GPU machine only). Installed in its OWN venv --
+# never mixed with requirements/harness.txt.
+#
+# The thesis requires ONE exact pinned vLLM release (THESIS_DECISIONS.md section 1):
+# a floor such as ">=0.8.5" is NOT acceptable, because chat templating, sampling
+# behaviour and the response format may drift between pilot and main run.
+#
+# Procedure (SETUP.md step 1): install the current release, verify it on the
+# preflight script, then replace the line below with the exact resolved version
+# and freeze requirements/serving.lock.txt.
+
+vllm==0.19.1
+huggingface-hub>=0.24
+hf-transfer>=0.1.6          # faster checkpoint download (HF_HUB_ENABLE_HF_TRANSFER=1)

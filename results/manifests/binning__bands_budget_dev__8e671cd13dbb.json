@@ -1,0 +1,150 @@
+{
+  "schema_version": "pilot_manifest/1.0",
+  "selector_version": "band_manifest/1.0",
+  "grid_name": "bands_budget_dev",
+  "purpose": "frozen density bands (THESIS_DECISIONS section 3, amendment 2026-08-09); level labels are a compatibility alias for the bands",
+  "seed_range_name": "budget_dev",
+  "seed_range": {
+    "start": 30000,
+    "end": 39999
+  },
+  "n_people": 8,
+  "bands": [
+    {
+      "band": "low",
+      "level": "easy",
+      "pairs": [
+        0,
+        1
+      ],
+      "D": [
+        0.0,
+        0.0357
+      ]
+    },
+    {
+      "band": "medium",
+      "level": "medium",
+      "pairs": [
+        7,
+        7
+      ],
+      "D": [
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "band": "high",
+      "level": "hard",
+      "pairs": [
+        13,
+        16
+      ],
+      "D": [
+        0.4643,
+        0.5714
+      ]
+    }
+  ],
+  "boundaries": {
+    "b1_easy_max": 1,
+    "b2_medium_max": 7
+  },
+  "n_per_band": 20,
+  "n_accepted": 60,
+  "level_counts": {
+    "easy": 20,
+    "medium": 20,
+    "hard": 20
+  },
+  "pool": {
+    "dir": "results/calibration/budget_dev",
+    "git_commit": "4b1c1977c58f4f96782797d05d9ab28c8e7a516e",
+    "seed_start": 30000,
+    "seed_end": 30099,
+    "n_candidates": 9600,
+    "candidates_sha256": "7f0f2f2ab32821100e442d3c0c12801f01f790aeeb19e28213683b4456bfdfd9"
+  },
+  "selection": {
+    "optimum_histogram": {
+      "3": 12,
+      "4": 8
+    },
+    "reference_histogram": {
+      "3": 41,
+      "4": 24
+    },
+    "scaled_reference": {
+      "3": 13,
+      "4": 7
+    },
+    "used_the_scaled_reference": false,
+    "attempts": [
+      {
+        "histogram": {
+          "3": 13,
+          "4": 7
+        },
+        "attainable": false
+      },
+      {
+        "histogram": {
+          "2": 1,
+          "3": 12,
+          "4": 7
+        },
+        "attainable": false
+      },
+      {
+        "histogram": {
+          "2": 1,
+          "3": 13,
+          "4": 6
+        },
+        "attainable": false
+      },
+      {
+        "histogram": {
+          "3": 12,
+          "4": 7,
+          "5": 1
+        },
+        "attainable": false
+      },
+      {
+        "histogram": {
+          "3": 12,
+          "4": 7,
+          "6": 1
+        },
+        "attainable": false
+      },
+      {
+        "histogram": {
+          "3": 12,
+          "4": 7,
+          "7": 1
+        },
+        "attainable": false
+      },
+      {
+        "histogram": {
+          "3": 12,
+          "4": 7,
+          "8": 1
+        },
+        "attainable": false
+      },
+      {
+        "histogram": {
+          "3": 12,
+          "4": 8
+        },
+        "attainable": true
+      }
+    ]
+  },
+  "content_hash": "8e671cd13dbb262b638048eff58241226f09d5804373534789915bc302ba0dff",
+  "timestamp_utc": "2026-08-10T19:01:47+00:00"
+}

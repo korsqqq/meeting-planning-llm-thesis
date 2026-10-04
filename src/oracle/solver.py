@@ -30,7 +30,7 @@ validator.py):
 
 Determinism: fixed solver seed, single search worker. The solver seed (0) is
 deliberately distinct from the generator seed and the inference seed, and all
-three are logged separately as part of the reproducibility protocol.
+three are logged separately.
 """
 
 from __future__ import annotations

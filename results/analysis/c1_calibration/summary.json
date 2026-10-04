@@ -1,0 +1,2554 @@
+{
+  "schema_version": "c1_calibration_analysis/1.1",
+  "runs_dir": "results/calibration/c1_20260805",
+  "integrity_audit": {
+    "n_runs": 120,
+    "n_instances": 30,
+    "caps": [
+      8000,
+      16000,
+      32000,
+      64000
+    ],
+    "condition": "c1_react",
+    "model": "Qwen/Qwen3-32B-AWQ",
+    "max_model_len": 32768,
+    "subset_hash": "d29b547529713e54dffbf3bc902f0007cbd3590d4a121b929fcea1b053a8bcd8",
+    "binning_hash": "67d1c874261f59eb3c4a040113562e7693514235a20375a5341adebec72ce302",
+    "duplicate_run_ids": [],
+    "runs_without_endpoint_usage": 0,
+    "runs_with_token_mismatch": 0,
+    "runs_with_think_leak": 0,
+    "all_checks_passed": true
+  },
+  "n_run_documents": 120,
+  "exposed_instance": "uniform-n4-t20-o20-s10000",
+  "n_runs_excluding_exposed": 116,
+  "full": {
+    "label": "All runs",
+    "n_runs": 120,
+    "caps": [
+      8000,
+      16000,
+      32000,
+      64000
+    ],
+    "by_cap": {
+      "8000": {
+        "all": {
+          "n_runs": 30,
+          "optimum_mean": 3.7,
+          "optimum_median": 4.0,
+          "achieved_mean": 0.0333,
+          "achieved_median": 0.0,
+          "abs_gap_mean": 3.6667,
+          "satisfaction_mean": 0.0111,
+          "satisfaction_median": 0.0,
+          "tokens_mean": 7659.5,
+          "attempts_total": 1,
+          "attempts_per_run": 0.0333,
+          "parse_rate": 1.0,
+          "validity_rate": 1.0,
+          "acceptance_rate": 1.0,
+          "share_runs_any_valid": 0.0333,
+          "n_runs_with_valid": 1,
+          "median_tokens_to_first_valid": 4358,
+          "median_first_valid_index": 0,
+          "rejection_reasons": {},
+          "termination": {
+            "aborted": 16,
+            "budget": 14
+          },
+          "ctx_limited_calls": 0,
+          "total_calls": 225,
+          "length_calls": 18
+        },
+        "by_level_old": {
+          "easy": {
+            "n_runs": 10,
+            "optimum_mean": 5.5,
+            "optimum_median": 6.0,
+            "achieved_mean": 0.0,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 5.5,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 7436.5,
+            "attempts_total": 0,
+            "attempts_per_run": 0.0,
+            "parse_rate": null,
+            "validity_rate": null,
+            "acceptance_rate": null,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {},
+            "termination": {
+              "budget": 8,
+              "aborted": 2
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 74,
+            "length_calls": 2
+          },
+          "medium": {
+            "n_runs": 10,
+            "optimum_mean": 3.6,
+            "optimum_median": 3.5,
+            "achieved_mean": 0.0,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 3.6,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 7787.6,
+            "attempts_total": 0,
+            "attempts_per_run": 0.0,
+            "parse_rate": null,
+            "validity_rate": null,
+            "acceptance_rate": null,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {},
+            "termination": {
+              "aborted": 8,
+              "budget": 2
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 77,
+            "length_calls": 8
+          },
+          "hard": {
+            "n_runs": 10,
+            "optimum_mean": 2.0,
+            "optimum_median": 2.0,
+            "achieved_mean": 0.1,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 1.9,
+            "satisfaction_mean": 0.0333,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 7754.4,
+            "attempts_total": 1,
+            "attempts_per_run": 0.1,
+            "parse_rate": 1.0,
+            "validity_rate": 1.0,
+            "acceptance_rate": 1.0,
+            "share_runs_any_valid": 0.1,
+            "n_runs_with_valid": 1,
+            "median_tokens_to_first_valid": 4358,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {},
+            "termination": {
+              "aborted": 6,
+              "budget": 4
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 74,
+            "length_calls": 8
+          }
+        },
+        "by_n_people": {
+          "4": {
+            "n_runs": 12,
+            "optimum_mean": 2.5,
+            "optimum_median": 2.5,
+            "achieved_mean": 0.0,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 2.5,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 7673.6667,
+            "attempts_total": 0,
+            "attempts_per_run": 0.0,
+            "parse_rate": null,
+            "validity_rate": null,
+            "acceptance_rate": null,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {},
+            "termination": {
+              "aborted": 6,
+              "budget": 6
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 90,
+            "length_calls": 8
+          },
+          "6": {
+            "n_runs": 12,
+            "optimum_mean": 4.1667,
+            "optimum_median": 4.5,
+            "achieved_mean": 0.0,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 4.1667,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 7603.4167,
+            "attempts_total": 0,
+            "attempts_per_run": 0.0,
+            "parse_rate": null,
+            "validity_rate": null,
+            "acceptance_rate": null,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {},
+            "termination": {
+              "aborted": 6,
+              "budget": 6
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 91,
+            "length_calls": 6
+          },
+          "8": {
+            "n_runs": 6,
+            "optimum_mean": 5.1667,
+            "optimum_median": 4.5,
+            "achieved_mean": 0.1667,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 5.0,
+            "satisfaction_mean": 0.0556,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 7743.3333,
+            "attempts_total": 1,
+            "attempts_per_run": 0.1667,
+            "parse_rate": 1.0,
+            "validity_rate": 1.0,
+            "acceptance_rate": 1.0,
+            "share_runs_any_valid": 0.1667,
+            "n_runs_with_valid": 1,
+            "median_tokens_to_first_valid": 4358,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {},
+            "termination": {
+              "aborted": 4,
+              "budget": 2
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 44,
+            "length_calls": 4
+          }
+        },
+        "by_travel_structure": {
+          "clustered": {
+            "n_runs": 15,
+            "optimum_mean": 3.6667,
+            "optimum_median": 4,
+            "achieved_mean": 0.0667,
+            "achieved_median": 0,
+            "abs_gap_mean": 3.6,
+            "satisfaction_mean": 0.0222,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 7706.0,
+            "attempts_total": 1,
+            "attempts_per_run": 0.0667,
+            "parse_rate": 1.0,
+            "validity_rate": 1.0,
+            "acceptance_rate": 1.0,
+            "share_runs_any_valid": 0.0667,
+            "n_runs_with_valid": 1,
+            "median_tokens_to_first_valid": 4358,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {},
+            "termination": {
+              "aborted": 10,
+              "budget": 5
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 114,
+            "length_calls": 11
+          },
+          "uniform": {
+            "n_runs": 15,
+            "optimum_mean": 3.7333,
+            "optimum_median": 4,
+            "achieved_mean": 0.0,
+            "achieved_median": 0,
+            "abs_gap_mean": 3.7333,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 7613.0,
+            "attempts_total": 0,
+            "attempts_per_run": 0.0,
+            "parse_rate": null,
+            "validity_rate": null,
+            "acceptance_rate": null,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {},
+            "termination": {
+              "aborted": 6,
+              "budget": 9
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 111,
+            "length_calls": 7
+          }
+        },
+        "context": {
+          "limited_and_length": 0,
+          "limited_and_stop": 0,
+          "not_limited_and_length": 18,
+          "limited_calls": 0,
+          "total_calls": 225
+        }
+      },
+      "16000": {
+        "all": {
+          "n_runs": 30,
+          "optimum_mean": 3.7,
+          "optimum_median": 4.0,
+          "achieved_mean": 0.0333,
+          "achieved_median": 0.0,
+          "abs_gap_mean": 3.6667,
+          "satisfaction_mean": 0.0111,
+          "satisfaction_median": 0.0,
+          "tokens_mean": 15781.0667,
+          "attempts_total": 9,
+          "attempts_per_run": 0.3,
+          "parse_rate": 1.0,
+          "validity_rate": 0.1111,
+          "acceptance_rate": 0.1111,
+          "share_runs_any_valid": 0.0333,
+          "n_runs_with_valid": 1,
+          "median_tokens_to_first_valid": 4358,
+          "median_first_valid_index": 0,
+          "rejection_reasons": {
+            "travel_infeasible": 8,
+            "window_violation": 2
+          },
+          "termination": {
+            "aborted": 26,
+            "budget": 4
+          },
+          "ctx_limited_calls": 0,
+          "total_calls": 332,
+          "length_calls": 26
+        },
+        "by_level_old": {
+          "easy": {
+            "n_runs": 10,
+            "optimum_mean": 5.5,
+            "optimum_median": 6.0,
+            "achieved_mean": 0.0,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 5.5,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 15738.0,
+            "attempts_total": 5,
+            "attempts_per_run": 0.5,
+            "parse_rate": 1.0,
+            "validity_rate": 0.0,
+            "acceptance_rate": 0.0,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {
+              "travel_infeasible": 5,
+              "window_violation": 1
+            },
+            "termination": {
+              "aborted": 8,
+              "budget": 2
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 111,
+            "length_calls": 8
+          },
+          "medium": {
+            "n_runs": 10,
+            "optimum_mean": 3.6,
+            "optimum_median": 3.5,
+            "achieved_mean": 0.0,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 3.6,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 15763.0,
+            "attempts_total": 1,
+            "attempts_per_run": 0.1,
+            "parse_rate": 1.0,
+            "validity_rate": 0.0,
+            "acceptance_rate": 0.0,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {
+              "travel_infeasible": 1,
+              "window_violation": 1
+            },
+            "termination": {
+              "aborted": 9,
+              "budget": 1
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 115,
+            "length_calls": 9
+          },
+          "hard": {
+            "n_runs": 10,
+            "optimum_mean": 2.0,
+            "optimum_median": 2.0,
+            "achieved_mean": 0.1,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 1.9,
+            "satisfaction_mean": 0.0333,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 15842.2,
+            "attempts_total": 3,
+            "attempts_per_run": 0.3,
+            "parse_rate": 1.0,
+            "validity_rate": 0.3333,
+            "acceptance_rate": 0.3333,
+            "share_runs_any_valid": 0.1,
+            "n_runs_with_valid": 1,
+            "median_tokens_to_first_valid": 4358,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {
+              "travel_infeasible": 2
+            },
+            "termination": {
+              "aborted": 9,
+              "budget": 1
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 106,
+            "length_calls": 9
+          }
+        },
+        "by_n_people": {
+          "4": {
+            "n_runs": 12,
+            "optimum_mean": 2.5,
+            "optimum_median": 2.5,
+            "achieved_mean": 0.0,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 2.5,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 15784.5833,
+            "attempts_total": 4,
+            "attempts_per_run": 0.3333,
+            "parse_rate": 1.0,
+            "validity_rate": 0.0,
+            "acceptance_rate": 0.0,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {
+              "travel_infeasible": 4
+            },
+            "termination": {
+              "aborted": 10,
+              "budget": 2
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 128,
+            "length_calls": 10
+          },
+          "6": {
+            "n_runs": 12,
+            "optimum_mean": 4.1667,
+            "optimum_median": 4.5,
+            "achieved_mean": 0.0,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 4.1667,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 15745.8333,
+            "attempts_total": 4,
+            "attempts_per_run": 0.3333,
+            "parse_rate": 1.0,
+            "validity_rate": 0.0,
+            "acceptance_rate": 0.0,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {
+              "travel_infeasible": 4,
+              "window_violation": 2
+            },
+            "termination": {
+              "aborted": 10,
+              "budget": 2
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 133,
+            "length_calls": 10
+          },
+          "8": {
+            "n_runs": 6,
+            "optimum_mean": 5.1667,
+            "optimum_median": 4.5,
+            "achieved_mean": 0.1667,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 5.0,
+            "satisfaction_mean": 0.0556,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 15844.5,
+            "attempts_total": 1,
+            "attempts_per_run": 0.1667,
+            "parse_rate": 1.0,
+            "validity_rate": 1.0,
+            "acceptance_rate": 1.0,
+            "share_runs_any_valid": 0.1667,
+            "n_runs_with_valid": 1,
+            "median_tokens_to_first_valid": 4358,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {},
+            "termination": {
+              "aborted": 6
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 71,
+            "length_calls": 6
+          }
+        },
+        "by_travel_structure": {
+          "clustered": {
+            "n_runs": 15,
+            "optimum_mean": 3.6667,
+            "optimum_median": 4,
+            "achieved_mean": 0.0667,
+            "achieved_median": 0,
+            "abs_gap_mean": 3.6,
+            "satisfaction_mean": 0.0222,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 15790.2,
+            "attempts_total": 5,
+            "attempts_per_run": 0.3333,
+            "parse_rate": 1.0,
+            "validity_rate": 0.2,
+            "acceptance_rate": 0.2,
+            "share_runs_any_valid": 0.0667,
+            "n_runs_with_valid": 1,
+            "median_tokens_to_first_valid": 4358,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {
+              "travel_infeasible": 4,
+              "window_violation": 1
+            },
+            "termination": {
+              "aborted": 14,
+              "budget": 1
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 162,
+            "length_calls": 14
+          },
+          "uniform": {
+            "n_runs": 15,
+            "optimum_mean": 3.7333,
+            "optimum_median": 4,
+            "achieved_mean": 0.0,
+            "achieved_median": 0,
+            "abs_gap_mean": 3.7333,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 15771.9333,
+            "attempts_total": 4,
+            "attempts_per_run": 0.2667,
+            "parse_rate": 1.0,
+            "validity_rate": 0.0,
+            "acceptance_rate": 0.0,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {
+              "travel_infeasible": 4,
+              "window_violation": 1
+            },
+            "termination": {
+              "aborted": 12,
+              "budget": 3
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 170,
+            "length_calls": 12
+          }
+        },
+        "context": {
+          "limited_and_length": 0,
+          "limited_and_stop": 0,
+          "not_limited_and_length": 26,
+          "limited_calls": 0,
+          "total_calls": 332
+        }
+      },
+      "32000": {
+        "all": {
+          "n_runs": 30,
+          "optimum_mean": 3.7,
+          "optimum_median": 4.0,
+          "achieved_mean": 0.9667,
+          "achieved_median": 0.0,
+          "abs_gap_mean": 2.7333,
+          "satisfaction_mean": 0.3,
+          "satisfaction_median": 0.0,
+          "tokens_mean": 29660.4,
+          "attempts_total": 30,
+          "attempts_per_run": 1.0,
+          "parse_rate": 1.0,
+          "validity_rate": 0.3333,
+          "acceptance_rate": 0.3333,
+          "share_runs_any_valid": 0.3333,
+          "n_runs_with_valid": 10,
+          "median_tokens_to_first_valid": 24015.0,
+          "median_first_valid_index": 0.0,
+          "rejection_reasons": {
+            "travel_infeasible": 20,
+            "window_violation": 9
+          },
+          "termination": {
+            "agent_finish": 10,
+            "aborted": 14,
+            "budget": 6
+          },
+          "ctx_limited_calls": 0,
+          "total_calls": 426,
+          "length_calls": 14
+        },
+        "by_level_old": {
+          "easy": {
+            "n_runs": 10,
+            "optimum_mean": 5.5,
+            "optimum_median": 6.0,
+            "achieved_mean": 1.6,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 3.9,
+            "satisfaction_mean": 0.4,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 30289.3,
+            "attempts_total": 11,
+            "attempts_per_run": 1.1,
+            "parse_rate": 1.0,
+            "validity_rate": 0.3636,
+            "acceptance_rate": 0.3636,
+            "share_runs_any_valid": 0.4,
+            "n_runs_with_valid": 4,
+            "median_tokens_to_first_valid": 26214.5,
+            "median_first_valid_index": 0.5,
+            "rejection_reasons": {
+              "travel_infeasible": 7,
+              "window_violation": 1
+            },
+            "termination": {
+              "agent_finish": 4,
+              "budget": 2,
+              "aborted": 4
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 154,
+            "length_calls": 4
+          },
+          "medium": {
+            "n_runs": 10,
+            "optimum_mean": 3.6,
+            "optimum_median": 3.5,
+            "achieved_mean": 0.7,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 2.9,
+            "satisfaction_mean": 0.2667,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 29163.8,
+            "attempts_total": 7,
+            "attempts_per_run": 0.7,
+            "parse_rate": 1.0,
+            "validity_rate": 0.4286,
+            "acceptance_rate": 0.4286,
+            "share_runs_any_valid": 0.3,
+            "n_runs_with_valid": 3,
+            "median_tokens_to_first_valid": 21623,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {
+              "travel_infeasible": 4,
+              "window_violation": 4
+            },
+            "termination": {
+              "agent_finish": 3,
+              "aborted": 4,
+              "budget": 3
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 141,
+            "length_calls": 4
+          },
+          "hard": {
+            "n_runs": 10,
+            "optimum_mean": 2.0,
+            "optimum_median": 2.0,
+            "achieved_mean": 0.6,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 1.4,
+            "satisfaction_mean": 0.2333,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 29528.1,
+            "attempts_total": 12,
+            "attempts_per_run": 1.2,
+            "parse_rate": 1.0,
+            "validity_rate": 0.25,
+            "acceptance_rate": 0.25,
+            "share_runs_any_valid": 0.3,
+            "n_runs_with_valid": 3,
+            "median_tokens_to_first_valid": 19115,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {
+              "travel_infeasible": 9,
+              "window_violation": 4
+            },
+            "termination": {
+              "aborted": 6,
+              "agent_finish": 3,
+              "budget": 1
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 131,
+            "length_calls": 6
+          }
+        },
+        "by_n_people": {
+          "4": {
+            "n_runs": 12,
+            "optimum_mean": 2.5,
+            "optimum_median": 2.5,
+            "achieved_mean": 2.0,
+            "achieved_median": 2.0,
+            "abs_gap_mean": 0.5,
+            "satisfaction_mean": 0.6389,
+            "satisfaction_median": 1.0,
+            "tokens_mean": 29400.75,
+            "attempts_total": 15,
+            "attempts_per_run": 1.25,
+            "parse_rate": 1.0,
+            "validity_rate": 0.5333,
+            "acceptance_rate": 0.5333,
+            "share_runs_any_valid": 0.6667,
+            "n_runs_with_valid": 8,
+            "median_tokens_to_first_valid": 25200.5,
+            "median_first_valid_index": 0.0,
+            "rejection_reasons": {
+              "travel_infeasible": 7
+            },
+            "termination": {
+              "agent_finish": 7,
+              "aborted": 5
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 164,
+            "length_calls": 5
+          },
+          "6": {
+            "n_runs": 12,
+            "optimum_mean": 4.1667,
+            "optimum_median": 4.5,
+            "achieved_mean": 0.0,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 4.1667,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 31631.1667,
+            "attempts_total": 11,
+            "attempts_per_run": 0.9167,
+            "parse_rate": 1.0,
+            "validity_rate": 0.0,
+            "acceptance_rate": 0.0,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {
+              "travel_infeasible": 11,
+              "window_violation": 7
+            },
+            "termination": {
+              "budget": 5,
+              "aborted": 7
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 175,
+            "length_calls": 7
+          },
+          "8": {
+            "n_runs": 6,
+            "optimum_mean": 5.1667,
+            "optimum_median": 4.5,
+            "achieved_mean": 0.8333,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 4.3333,
+            "satisfaction_mean": 0.2222,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 26238.1667,
+            "attempts_total": 4,
+            "attempts_per_run": 0.6667,
+            "parse_rate": 1.0,
+            "validity_rate": 0.5,
+            "acceptance_rate": 0.5,
+            "share_runs_any_valid": 0.3333,
+            "n_runs_with_valid": 2,
+            "median_tokens_to_first_valid": 11736.5,
+            "median_first_valid_index": 0.0,
+            "rejection_reasons": {
+              "travel_infeasible": 2,
+              "window_violation": 2
+            },
+            "termination": {
+              "agent_finish": 3,
+              "aborted": 2,
+              "budget": 1
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 87,
+            "length_calls": 2
+          }
+        },
+        "by_travel_structure": {
+          "clustered": {
+            "n_runs": 15,
+            "optimum_mean": 3.6667,
+            "optimum_median": 4,
+            "achieved_mean": 0.8,
+            "achieved_median": 0,
+            "abs_gap_mean": 2.8667,
+            "satisfaction_mean": 0.2222,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 29786.8667,
+            "attempts_total": 16,
+            "attempts_per_run": 1.0667,
+            "parse_rate": 1.0,
+            "validity_rate": 0.25,
+            "acceptance_rate": 0.25,
+            "share_runs_any_valid": 0.2667,
+            "n_runs_with_valid": 4,
+            "median_tokens_to_first_valid": 23831.5,
+            "median_first_valid_index": 0.0,
+            "rejection_reasons": {
+              "travel_infeasible": 12,
+              "window_violation": 6
+            },
+            "termination": {
+              "agent_finish": 5,
+              "aborted": 6,
+              "budget": 4
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 205,
+            "length_calls": 6
+          },
+          "uniform": {
+            "n_runs": 15,
+            "optimum_mean": 3.7333,
+            "optimum_median": 4,
+            "achieved_mean": 1.1333,
+            "achieved_median": 0,
+            "abs_gap_mean": 2.6,
+            "satisfaction_mean": 0.3778,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 29533.9333,
+            "attempts_total": 14,
+            "attempts_per_run": 0.9333,
+            "parse_rate": 1.0,
+            "validity_rate": 0.4286,
+            "acceptance_rate": 0.4286,
+            "share_runs_any_valid": 0.4,
+            "n_runs_with_valid": 6,
+            "median_tokens_to_first_valid": 24015.0,
+            "median_first_valid_index": 0.0,
+            "rejection_reasons": {
+              "travel_infeasible": 8,
+              "window_violation": 3
+            },
+            "termination": {
+              "aborted": 8,
+              "agent_finish": 5,
+              "budget": 2
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 221,
+            "length_calls": 8
+          }
+        },
+        "context": {
+          "limited_and_length": 0,
+          "limited_and_stop": 0,
+          "not_limited_and_length": 14,
+          "limited_calls": 0,
+          "total_calls": 426
+        },
+        "correlations": {
+          "n": 30,
+          "spearman_complexity_vs_satisfaction": -0.0935,
+          "spearman_complexity_vs_achieved": -0.1429,
+          "spearman_complexity_vs_abs_gap": -0.3118,
+          "spearman_complexity_vs_optimum": -0.778
+        }
+      },
+      "64000": {
+        "all": {
+          "n_runs": 30,
+          "optimum_mean": 3.7,
+          "optimum_median": 4.0,
+          "achieved_mean": 1.6667,
+          "achieved_median": 1.0,
+          "abs_gap_mean": 2.0333,
+          "satisfaction_mean": 0.5016,
+          "satisfaction_median": 0.5238,
+          "tokens_mean": 40630.6333,
+          "attempts_total": 51,
+          "attempts_per_run": 1.7,
+          "parse_rate": 1.0,
+          "validity_rate": 0.3333,
+          "acceptance_rate": 0.3333,
+          "share_runs_any_valid": 0.5333,
+          "n_runs_with_valid": 16,
+          "median_tokens_to_first_valid": 27219.0,
+          "median_first_valid_index": 0.0,
+          "rejection_reasons": {
+            "travel_infeasible": 31,
+            "window_violation": 16,
+            "overlapping_meeting": 1
+          },
+          "termination": {
+            "agent_finish": 23,
+            "aborted": 6,
+            "budget": 1
+          },
+          "ctx_limited_calls": 408,
+          "total_calls": 482,
+          "length_calls": 5
+        },
+        "by_level_old": {
+          "easy": {
+            "n_runs": 10,
+            "optimum_mean": 5.5,
+            "optimum_median": 6.0,
+            "achieved_mean": 2.1,
+            "achieved_median": 2.0,
+            "abs_gap_mean": 3.4,
+            "satisfaction_mean": 0.4714,
+            "satisfaction_median": 0.3571,
+            "tokens_mean": 39760.9,
+            "attempts_total": 17,
+            "attempts_per_run": 1.7,
+            "parse_rate": 1.0,
+            "validity_rate": 0.2941,
+            "acceptance_rate": 0.2941,
+            "share_runs_any_valid": 0.5,
+            "n_runs_with_valid": 5,
+            "median_tokens_to_first_valid": 26389,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {
+              "travel_infeasible": 10,
+              "window_violation": 4
+            },
+            "termination": {
+              "agent_finish": 9,
+              "aborted": 1
+            },
+            "ctx_limited_calls": 148,
+            "total_calls": 175,
+            "length_calls": 1
+          },
+          "medium": {
+            "n_runs": 10,
+            "optimum_mean": 3.6,
+            "optimum_median": 3.5,
+            "achieved_mean": 2.0,
+            "achieved_median": 2.5,
+            "abs_gap_mean": 1.6,
+            "satisfaction_mean": 0.6,
+            "satisfaction_median": 1.0,
+            "tokens_mean": 40679.6,
+            "attempts_total": 13,
+            "attempts_per_run": 1.3,
+            "parse_rate": 1.0,
+            "validity_rate": 0.5385,
+            "acceptance_rate": 0.5385,
+            "share_runs_any_valid": 0.6,
+            "n_runs_with_valid": 6,
+            "median_tokens_to_first_valid": 30606.0,
+            "median_first_valid_index": 0.0,
+            "rejection_reasons": {
+              "travel_infeasible": 6,
+              "window_violation": 4
+            },
+            "termination": {
+              "agent_finish": 6,
+              "aborted": 4
+            },
+            "ctx_limited_calls": 136,
+            "total_calls": 160,
+            "length_calls": 3
+          },
+          "hard": {
+            "n_runs": 10,
+            "optimum_mean": 2.0,
+            "optimum_median": 2.0,
+            "achieved_mean": 0.9,
+            "achieved_median": 0.5,
+            "abs_gap_mean": 1.1,
+            "satisfaction_mean": 0.4333,
+            "satisfaction_median": 0.1667,
+            "tokens_mean": 41451.4,
+            "attempts_total": 21,
+            "attempts_per_run": 2.1,
+            "parse_rate": 1.0,
+            "validity_rate": 0.2381,
+            "acceptance_rate": 0.2381,
+            "share_runs_any_valid": 0.5,
+            "n_runs_with_valid": 5,
+            "median_tokens_to_first_valid": 29636,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {
+              "travel_infeasible": 15,
+              "window_violation": 8,
+              "overlapping_meeting": 1
+            },
+            "termination": {
+              "agent_finish": 8,
+              "aborted": 1,
+              "budget": 1
+            },
+            "ctx_limited_calls": 124,
+            "total_calls": 147,
+            "length_calls": 1
+          }
+        },
+        "by_n_people": {
+          "4": {
+            "n_runs": 12,
+            "optimum_mean": 2.5,
+            "optimum_median": 2.5,
+            "achieved_mean": 2.1667,
+            "achieved_median": 2.5,
+            "abs_gap_mean": 0.3333,
+            "satisfaction_mean": 0.75,
+            "satisfaction_median": 1.0,
+            "tokens_mean": 32616.25,
+            "attempts_total": 17,
+            "attempts_per_run": 1.4167,
+            "parse_rate": 1.0,
+            "validity_rate": 0.5882,
+            "acceptance_rate": 0.5882,
+            "share_runs_any_valid": 0.75,
+            "n_runs_with_valid": 9,
+            "median_tokens_to_first_valid": 26040,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {
+              "travel_infeasible": 7
+            },
+            "termination": {
+              "agent_finish": 11,
+              "aborted": 1
+            },
+            "ctx_limited_calls": 159,
+            "total_calls": 166,
+            "length_calls": 1
+          },
+          "6": {
+            "n_runs": 12,
+            "optimum_mean": 4.1667,
+            "optimum_median": 4.5,
+            "achieved_mean": 0.8333,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 3.3333,
+            "satisfaction_mean": 0.25,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 50782.5,
+            "attempts_total": 26,
+            "attempts_per_run": 2.1667,
+            "parse_rate": 1.0,
+            "validity_rate": 0.1154,
+            "acceptance_rate": 0.1154,
+            "share_runs_any_valid": 0.25,
+            "n_runs_with_valid": 3,
+            "median_tokens_to_first_valid": 58684,
+            "median_first_valid_index": 2,
+            "rejection_reasons": {
+              "travel_infeasible": 22,
+              "window_violation": 12,
+              "overlapping_meeting": 1
+            },
+            "termination": {
+              "aborted": 5,
+              "agent_finish": 6,
+              "budget": 1
+            },
+            "ctx_limited_calls": 164,
+            "total_calls": 217,
+            "length_calls": 4
+          },
+          "8": {
+            "n_runs": 6,
+            "optimum_mean": 5.1667,
+            "optimum_median": 4.5,
+            "achieved_mean": 2.3333,
+            "achieved_median": 2.5,
+            "abs_gap_mean": 2.8333,
+            "satisfaction_mean": 0.5079,
+            "satisfaction_median": 0.5238,
+            "tokens_mean": 36355.6667,
+            "attempts_total": 8,
+            "attempts_per_run": 1.3333,
+            "parse_rate": 1.0,
+            "validity_rate": 0.5,
+            "acceptance_rate": 0.5,
+            "share_runs_any_valid": 0.6667,
+            "n_runs_with_valid": 4,
+            "median_tokens_to_first_valid": 27983.0,
+            "median_first_valid_index": 0.0,
+            "rejection_reasons": {
+              "travel_infeasible": 2,
+              "window_violation": 4
+            },
+            "termination": {
+              "agent_finish": 6
+            },
+            "ctx_limited_calls": 85,
+            "total_calls": 99,
+            "length_calls": 0
+          }
+        },
+        "by_travel_structure": {
+          "clustered": {
+            "n_runs": 15,
+            "optimum_mean": 3.6667,
+            "optimum_median": 4,
+            "achieved_mean": 1.2,
+            "achieved_median": 0,
+            "abs_gap_mean": 2.4667,
+            "satisfaction_mean": 0.3556,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 39829.8667,
+            "attempts_total": 26,
+            "attempts_per_run": 1.7333,
+            "parse_rate": 1.0,
+            "validity_rate": 0.2308,
+            "acceptance_rate": 0.2308,
+            "share_runs_any_valid": 0.4,
+            "n_runs_with_valid": 6,
+            "median_tokens_to_first_valid": 27044.5,
+            "median_first_valid_index": 0.0,
+            "rejection_reasons": {
+              "travel_infeasible": 17,
+              "window_violation": 12,
+              "overlapping_meeting": 1
+            },
+            "termination": {
+              "agent_finish": 11,
+              "aborted": 4
+            },
+            "ctx_limited_calls": 197,
+            "total_calls": 229,
+            "length_calls": 3
+          },
+          "uniform": {
+            "n_runs": 15,
+            "optimum_mean": 3.7333,
+            "optimum_median": 4,
+            "achieved_mean": 2.1333,
+            "achieved_median": 2,
+            "abs_gap_mean": 1.6,
+            "satisfaction_mean": 0.6476,
+            "satisfaction_median": 1.0,
+            "tokens_mean": 41431.4,
+            "attempts_total": 25,
+            "attempts_per_run": 1.6667,
+            "parse_rate": 1.0,
+            "validity_rate": 0.44,
+            "acceptance_rate": 0.44,
+            "share_runs_any_valid": 0.6667,
+            "n_runs_with_valid": 10,
+            "median_tokens_to_first_valid": 28012.5,
+            "median_first_valid_index": 0.0,
+            "rejection_reasons": {
+              "travel_infeasible": 14,
+              "window_violation": 4
+            },
+            "termination": {
+              "agent_finish": 12,
+              "budget": 1,
+              "aborted": 2
+            },
+            "ctx_limited_calls": 211,
+            "total_calls": 253,
+            "length_calls": 2
+          }
+        },
+        "context": {
+          "limited_and_length": 2,
+          "limited_and_stop": 406,
+          "not_limited_and_length": 3,
+          "limited_calls": 408,
+          "total_calls": 482
+        },
+        "correlations": {
+          "n": 30,
+          "spearman_complexity_vs_satisfaction": -0.0018,
+          "spearman_complexity_vs_achieved": -0.2003,
+          "spearman_complexity_vs_abs_gap": -0.2298,
+          "spearman_complexity_vs_optimum": -0.778
+        }
+      }
+    },
+    "paired_32k_64k": {
+      "n_paired": 30,
+      "improved": 7,
+      "tied": 23,
+      "worsened": 0,
+      "satisfaction_delta_mean": 0.2016,
+      "satisfaction_delta_median": 0.0,
+      "attempts_delta_mean": 0.7,
+      "tokens_delta_mean": 10970.2333,
+      "tokens_at_hi_quartiles": [
+        28641.8,
+        39295.5,
+        52597.0
+      ],
+      "share_hi_over_32k_tokens": 0.6333,
+      "share_hi_over_48k_tokens": 0.2667
+    }
+  },
+  "without_exposed": {
+    "label": "Excluding uniform-n4-t20-o20-s10000",
+    "n_runs": 116,
+    "caps": [
+      8000,
+      16000,
+      32000,
+      64000
+    ],
+    "by_cap": {
+      "8000": {
+        "all": {
+          "n_runs": 29,
+          "optimum_mean": 3.6897,
+          "optimum_median": 4,
+          "achieved_mean": 0.0345,
+          "achieved_median": 0,
+          "abs_gap_mean": 3.6552,
+          "satisfaction_mean": 0.0115,
+          "satisfaction_median": 0.0,
+          "tokens_mean": 7668.8276,
+          "attempts_total": 1,
+          "attempts_per_run": 0.0345,
+          "parse_rate": 1.0,
+          "validity_rate": 1.0,
+          "acceptance_rate": 1.0,
+          "share_runs_any_valid": 0.0345,
+          "n_runs_with_valid": 1,
+          "median_tokens_to_first_valid": 4358,
+          "median_first_valid_index": 0,
+          "rejection_reasons": {},
+          "termination": {
+            "aborted": 16,
+            "budget": 13
+          },
+          "ctx_limited_calls": 0,
+          "total_calls": 217,
+          "length_calls": 18
+        },
+        "by_level_old": {
+          "easy": {
+            "n_runs": 9,
+            "optimum_mean": 5.6667,
+            "optimum_median": 6,
+            "achieved_mean": 0.0,
+            "achieved_median": 0,
+            "abs_gap_mean": 5.6667,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 7441.7778,
+            "attempts_total": 0,
+            "attempts_per_run": 0.0,
+            "parse_rate": null,
+            "validity_rate": null,
+            "acceptance_rate": null,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {},
+            "termination": {
+              "budget": 7,
+              "aborted": 2
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 66,
+            "length_calls": 2
+          },
+          "medium": {
+            "n_runs": 10,
+            "optimum_mean": 3.6,
+            "optimum_median": 3.5,
+            "achieved_mean": 0.0,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 3.6,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 7787.6,
+            "attempts_total": 0,
+            "attempts_per_run": 0.0,
+            "parse_rate": null,
+            "validity_rate": null,
+            "acceptance_rate": null,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {},
+            "termination": {
+              "aborted": 8,
+              "budget": 2
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 77,
+            "length_calls": 8
+          },
+          "hard": {
+            "n_runs": 10,
+            "optimum_mean": 2.0,
+            "optimum_median": 2.0,
+            "achieved_mean": 0.1,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 1.9,
+            "satisfaction_mean": 0.0333,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 7754.4,
+            "attempts_total": 1,
+            "attempts_per_run": 0.1,
+            "parse_rate": 1.0,
+            "validity_rate": 1.0,
+            "acceptance_rate": 1.0,
+            "share_runs_any_valid": 0.1,
+            "n_runs_with_valid": 1,
+            "median_tokens_to_first_valid": 4358,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {},
+            "termination": {
+              "aborted": 6,
+              "budget": 4
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 74,
+            "length_calls": 8
+          }
+        },
+        "by_n_people": {
+          "4": {
+            "n_runs": 11,
+            "optimum_mean": 2.3636,
+            "optimum_median": 2,
+            "achieved_mean": 0.0,
+            "achieved_median": 0,
+            "abs_gap_mean": 2.3636,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 7699.5455,
+            "attempts_total": 0,
+            "attempts_per_run": 0.0,
+            "parse_rate": null,
+            "validity_rate": null,
+            "acceptance_rate": null,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {},
+            "termination": {
+              "aborted": 6,
+              "budget": 5
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 82,
+            "length_calls": 8
+          },
+          "6": {
+            "n_runs": 12,
+            "optimum_mean": 4.1667,
+            "optimum_median": 4.5,
+            "achieved_mean": 0.0,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 4.1667,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 7603.4167,
+            "attempts_total": 0,
+            "attempts_per_run": 0.0,
+            "parse_rate": null,
+            "validity_rate": null,
+            "acceptance_rate": null,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {},
+            "termination": {
+              "aborted": 6,
+              "budget": 6
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 91,
+            "length_calls": 6
+          },
+          "8": {
+            "n_runs": 6,
+            "optimum_mean": 5.1667,
+            "optimum_median": 4.5,
+            "achieved_mean": 0.1667,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 5.0,
+            "satisfaction_mean": 0.0556,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 7743.3333,
+            "attempts_total": 1,
+            "attempts_per_run": 0.1667,
+            "parse_rate": 1.0,
+            "validity_rate": 1.0,
+            "acceptance_rate": 1.0,
+            "share_runs_any_valid": 0.1667,
+            "n_runs_with_valid": 1,
+            "median_tokens_to_first_valid": 4358,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {},
+            "termination": {
+              "aborted": 4,
+              "budget": 2
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 44,
+            "length_calls": 4
+          }
+        },
+        "by_travel_structure": {
+          "clustered": {
+            "n_runs": 15,
+            "optimum_mean": 3.6667,
+            "optimum_median": 4,
+            "achieved_mean": 0.0667,
+            "achieved_median": 0,
+            "abs_gap_mean": 3.6,
+            "satisfaction_mean": 0.0222,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 7706.0,
+            "attempts_total": 1,
+            "attempts_per_run": 0.0667,
+            "parse_rate": 1.0,
+            "validity_rate": 1.0,
+            "acceptance_rate": 1.0,
+            "share_runs_any_valid": 0.0667,
+            "n_runs_with_valid": 1,
+            "median_tokens_to_first_valid": 4358,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {},
+            "termination": {
+              "aborted": 10,
+              "budget": 5
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 114,
+            "length_calls": 11
+          },
+          "uniform": {
+            "n_runs": 14,
+            "optimum_mean": 3.7143,
+            "optimum_median": 3.5,
+            "achieved_mean": 0.0,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 3.7143,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 7629.0,
+            "attempts_total": 0,
+            "attempts_per_run": 0.0,
+            "parse_rate": null,
+            "validity_rate": null,
+            "acceptance_rate": null,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {},
+            "termination": {
+              "aborted": 6,
+              "budget": 8
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 103,
+            "length_calls": 7
+          }
+        },
+        "context": {
+          "limited_and_length": 0,
+          "limited_and_stop": 0,
+          "not_limited_and_length": 18,
+          "limited_calls": 0,
+          "total_calls": 217
+        }
+      },
+      "16000": {
+        "all": {
+          "n_runs": 29,
+          "optimum_mean": 3.6897,
+          "optimum_median": 4,
+          "achieved_mean": 0.0345,
+          "achieved_median": 0,
+          "abs_gap_mean": 3.6552,
+          "satisfaction_mean": 0.0115,
+          "satisfaction_median": 0.0,
+          "tokens_mean": 15778.8966,
+          "attempts_total": 8,
+          "attempts_per_run": 0.2759,
+          "parse_rate": 1.0,
+          "validity_rate": 0.125,
+          "acceptance_rate": 0.125,
+          "share_runs_any_valid": 0.0345,
+          "n_runs_with_valid": 1,
+          "median_tokens_to_first_valid": 4358,
+          "median_first_valid_index": 0,
+          "rejection_reasons": {
+            "travel_infeasible": 7,
+            "window_violation": 2
+          },
+          "termination": {
+            "aborted": 25,
+            "budget": 4
+          },
+          "ctx_limited_calls": 0,
+          "total_calls": 320,
+          "length_calls": 25
+        },
+        "by_level_old": {
+          "easy": {
+            "n_runs": 9,
+            "optimum_mean": 5.6667,
+            "optimum_median": 6,
+            "achieved_mean": 0.0,
+            "achieved_median": 0,
+            "abs_gap_mean": 5.6667,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 15726.2222,
+            "attempts_total": 4,
+            "attempts_per_run": 0.4444,
+            "parse_rate": 1.0,
+            "validity_rate": 0.0,
+            "acceptance_rate": 0.0,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {
+              "travel_infeasible": 4,
+              "window_violation": 1
+            },
+            "termination": {
+              "aborted": 7,
+              "budget": 2
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 99,
+            "length_calls": 7
+          },
+          "medium": {
+            "n_runs": 10,
+            "optimum_mean": 3.6,
+            "optimum_median": 3.5,
+            "achieved_mean": 0.0,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 3.6,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 15763.0,
+            "attempts_total": 1,
+            "attempts_per_run": 0.1,
+            "parse_rate": 1.0,
+            "validity_rate": 0.0,
+            "acceptance_rate": 0.0,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {
+              "travel_infeasible": 1,
+              "window_violation": 1
+            },
+            "termination": {
+              "aborted": 9,
+              "budget": 1
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 115,
+            "length_calls": 9
+          },
+          "hard": {
+            "n_runs": 10,
+            "optimum_mean": 2.0,
+            "optimum_median": 2.0,
+            "achieved_mean": 0.1,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 1.9,
+            "satisfaction_mean": 0.0333,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 15842.2,
+            "attempts_total": 3,
+            "attempts_per_run": 0.3,
+            "parse_rate": 1.0,
+            "validity_rate": 0.3333,
+            "acceptance_rate": 0.3333,
+            "share_runs_any_valid": 0.1,
+            "n_runs_with_valid": 1,
+            "median_tokens_to_first_valid": 4358,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {
+              "travel_infeasible": 2
+            },
+            "termination": {
+              "aborted": 9,
+              "budget": 1
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 106,
+            "length_calls": 9
+          }
+        },
+        "by_n_people": {
+          "4": {
+            "n_runs": 11,
+            "optimum_mean": 2.3636,
+            "optimum_median": 2,
+            "achieved_mean": 0.0,
+            "achieved_median": 0,
+            "abs_gap_mean": 2.3636,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 15779.1818,
+            "attempts_total": 3,
+            "attempts_per_run": 0.2727,
+            "parse_rate": 1.0,
+            "validity_rate": 0.0,
+            "acceptance_rate": 0.0,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {
+              "travel_infeasible": 3
+            },
+            "termination": {
+              "aborted": 9,
+              "budget": 2
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 116,
+            "length_calls": 9
+          },
+          "6": {
+            "n_runs": 12,
+            "optimum_mean": 4.1667,
+            "optimum_median": 4.5,
+            "achieved_mean": 0.0,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 4.1667,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 15745.8333,
+            "attempts_total": 4,
+            "attempts_per_run": 0.3333,
+            "parse_rate": 1.0,
+            "validity_rate": 0.0,
+            "acceptance_rate": 0.0,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {
+              "travel_infeasible": 4,
+              "window_violation": 2
+            },
+            "termination": {
+              "aborted": 10,
+              "budget": 2
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 133,
+            "length_calls": 10
+          },
+          "8": {
+            "n_runs": 6,
+            "optimum_mean": 5.1667,
+            "optimum_median": 4.5,
+            "achieved_mean": 0.1667,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 5.0,
+            "satisfaction_mean": 0.0556,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 15844.5,
+            "attempts_total": 1,
+            "attempts_per_run": 0.1667,
+            "parse_rate": 1.0,
+            "validity_rate": 1.0,
+            "acceptance_rate": 1.0,
+            "share_runs_any_valid": 0.1667,
+            "n_runs_with_valid": 1,
+            "median_tokens_to_first_valid": 4358,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {},
+            "termination": {
+              "aborted": 6
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 71,
+            "length_calls": 6
+          }
+        },
+        "by_travel_structure": {
+          "clustered": {
+            "n_runs": 15,
+            "optimum_mean": 3.6667,
+            "optimum_median": 4,
+            "achieved_mean": 0.0667,
+            "achieved_median": 0,
+            "abs_gap_mean": 3.6,
+            "satisfaction_mean": 0.0222,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 15790.2,
+            "attempts_total": 5,
+            "attempts_per_run": 0.3333,
+            "parse_rate": 1.0,
+            "validity_rate": 0.2,
+            "acceptance_rate": 0.2,
+            "share_runs_any_valid": 0.0667,
+            "n_runs_with_valid": 1,
+            "median_tokens_to_first_valid": 4358,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {
+              "travel_infeasible": 4,
+              "window_violation": 1
+            },
+            "termination": {
+              "aborted": 14,
+              "budget": 1
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 162,
+            "length_calls": 14
+          },
+          "uniform": {
+            "n_runs": 14,
+            "optimum_mean": 3.7143,
+            "optimum_median": 3.5,
+            "achieved_mean": 0.0,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 3.7143,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 15766.7857,
+            "attempts_total": 3,
+            "attempts_per_run": 0.2143,
+            "parse_rate": 1.0,
+            "validity_rate": 0.0,
+            "acceptance_rate": 0.0,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {
+              "travel_infeasible": 3,
+              "window_violation": 1
+            },
+            "termination": {
+              "aborted": 11,
+              "budget": 3
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 158,
+            "length_calls": 11
+          }
+        },
+        "context": {
+          "limited_and_length": 0,
+          "limited_and_stop": 0,
+          "not_limited_and_length": 25,
+          "limited_calls": 0,
+          "total_calls": 320
+        }
+      },
+      "32000": {
+        "all": {
+          "n_runs": 29,
+          "optimum_mean": 3.6897,
+          "optimum_median": 4,
+          "achieved_mean": 0.8621,
+          "achieved_median": 0,
+          "abs_gap_mean": 2.8276,
+          "satisfaction_mean": 0.2759,
+          "satisfaction_median": 0.0,
+          "tokens_mean": 29810.069,
+          "attempts_total": 28,
+          "attempts_per_run": 0.9655,
+          "parse_rate": 1.0,
+          "validity_rate": 0.3214,
+          "acceptance_rate": 0.3214,
+          "share_runs_any_valid": 0.3103,
+          "n_runs_with_valid": 9,
+          "median_tokens_to_first_valid": 24361,
+          "median_first_valid_index": 0,
+          "rejection_reasons": {
+            "travel_infeasible": 19,
+            "window_violation": 9
+          },
+          "termination": {
+            "agent_finish": 9,
+            "aborted": 14,
+            "budget": 6
+          },
+          "ctx_limited_calls": 0,
+          "total_calls": 410,
+          "length_calls": 14
+        },
+        "by_level_old": {
+          "easy": {
+            "n_runs": 9,
+            "optimum_mean": 5.6667,
+            "optimum_median": 6,
+            "achieved_mean": 1.3333,
+            "achieved_median": 0,
+            "abs_gap_mean": 4.3333,
+            "satisfaction_mean": 0.3333,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 30841.4444,
+            "attempts_total": 9,
+            "attempts_per_run": 1.0,
+            "parse_rate": 1.0,
+            "validity_rate": 0.3333,
+            "acceptance_rate": 0.3333,
+            "share_runs_any_valid": 0.3333,
+            "n_runs_with_valid": 3,
+            "median_tokens_to_first_valid": 26389,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {
+              "travel_infeasible": 6,
+              "window_violation": 1
+            },
+            "termination": {
+              "agent_finish": 3,
+              "budget": 2,
+              "aborted": 4
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 138,
+            "length_calls": 4
+          },
+          "medium": {
+            "n_runs": 10,
+            "optimum_mean": 3.6,
+            "optimum_median": 3.5,
+            "achieved_mean": 0.7,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 2.9,
+            "satisfaction_mean": 0.2667,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 29163.8,
+            "attempts_total": 7,
+            "attempts_per_run": 0.7,
+            "parse_rate": 1.0,
+            "validity_rate": 0.4286,
+            "acceptance_rate": 0.4286,
+            "share_runs_any_valid": 0.3,
+            "n_runs_with_valid": 3,
+            "median_tokens_to_first_valid": 21623,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {
+              "travel_infeasible": 4,
+              "window_violation": 4
+            },
+            "termination": {
+              "agent_finish": 3,
+              "aborted": 4,
+              "budget": 3
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 141,
+            "length_calls": 4
+          },
+          "hard": {
+            "n_runs": 10,
+            "optimum_mean": 2.0,
+            "optimum_median": 2.0,
+            "achieved_mean": 0.6,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 1.4,
+            "satisfaction_mean": 0.2333,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 29528.1,
+            "attempts_total": 12,
+            "attempts_per_run": 1.2,
+            "parse_rate": 1.0,
+            "validity_rate": 0.25,
+            "acceptance_rate": 0.25,
+            "share_runs_any_valid": 0.3,
+            "n_runs_with_valid": 3,
+            "median_tokens_to_first_valid": 19115,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {
+              "travel_infeasible": 9,
+              "window_violation": 4
+            },
+            "termination": {
+              "aborted": 6,
+              "agent_finish": 3,
+              "budget": 1
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 131,
+            "length_calls": 6
+          }
+        },
+        "by_n_people": {
+          "4": {
+            "n_runs": 11,
+            "optimum_mean": 2.3636,
+            "optimum_median": 2,
+            "achieved_mean": 1.8182,
+            "achieved_median": 2,
+            "abs_gap_mean": 0.5455,
+            "satisfaction_mean": 0.6061,
+            "satisfaction_median": 1.0,
+            "tokens_mean": 29771.7273,
+            "attempts_total": 13,
+            "attempts_per_run": 1.1818,
+            "parse_rate": 1.0,
+            "validity_rate": 0.5385,
+            "acceptance_rate": 0.5385,
+            "share_runs_any_valid": 0.6364,
+            "n_runs_with_valid": 7,
+            "median_tokens_to_first_valid": 26040,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {
+              "travel_infeasible": 6
+            },
+            "termination": {
+              "agent_finish": 6,
+              "aborted": 5
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 148,
+            "length_calls": 5
+          },
+          "6": {
+            "n_runs": 12,
+            "optimum_mean": 4.1667,
+            "optimum_median": 4.5,
+            "achieved_mean": 0.0,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 4.1667,
+            "satisfaction_mean": 0.0,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 31631.1667,
+            "attempts_total": 11,
+            "attempts_per_run": 0.9167,
+            "parse_rate": 1.0,
+            "validity_rate": 0.0,
+            "acceptance_rate": 0.0,
+            "share_runs_any_valid": 0.0,
+            "n_runs_with_valid": 0,
+            "median_tokens_to_first_valid": null,
+            "median_first_valid_index": null,
+            "rejection_reasons": {
+              "travel_infeasible": 11,
+              "window_violation": 7
+            },
+            "termination": {
+              "budget": 5,
+              "aborted": 7
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 175,
+            "length_calls": 7
+          },
+          "8": {
+            "n_runs": 6,
+            "optimum_mean": 5.1667,
+            "optimum_median": 4.5,
+            "achieved_mean": 0.8333,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 4.3333,
+            "satisfaction_mean": 0.2222,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 26238.1667,
+            "attempts_total": 4,
+            "attempts_per_run": 0.6667,
+            "parse_rate": 1.0,
+            "validity_rate": 0.5,
+            "acceptance_rate": 0.5,
+            "share_runs_any_valid": 0.3333,
+            "n_runs_with_valid": 2,
+            "median_tokens_to_first_valid": 11736.5,
+            "median_first_valid_index": 0.0,
+            "rejection_reasons": {
+              "travel_infeasible": 2,
+              "window_violation": 2
+            },
+            "termination": {
+              "agent_finish": 3,
+              "aborted": 2,
+              "budget": 1
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 87,
+            "length_calls": 2
+          }
+        },
+        "by_travel_structure": {
+          "clustered": {
+            "n_runs": 15,
+            "optimum_mean": 3.6667,
+            "optimum_median": 4,
+            "achieved_mean": 0.8,
+            "achieved_median": 0,
+            "abs_gap_mean": 2.8667,
+            "satisfaction_mean": 0.2222,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 29786.8667,
+            "attempts_total": 16,
+            "attempts_per_run": 1.0667,
+            "parse_rate": 1.0,
+            "validity_rate": 0.25,
+            "acceptance_rate": 0.25,
+            "share_runs_any_valid": 0.2667,
+            "n_runs_with_valid": 4,
+            "median_tokens_to_first_valid": 23831.5,
+            "median_first_valid_index": 0.0,
+            "rejection_reasons": {
+              "travel_infeasible": 12,
+              "window_violation": 6
+            },
+            "termination": {
+              "agent_finish": 5,
+              "aborted": 6,
+              "budget": 4
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 205,
+            "length_calls": 6
+          },
+          "uniform": {
+            "n_runs": 14,
+            "optimum_mean": 3.7143,
+            "optimum_median": 3.5,
+            "achieved_mean": 0.9286,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 2.7857,
+            "satisfaction_mean": 0.3333,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 29834.9286,
+            "attempts_total": 12,
+            "attempts_per_run": 0.8571,
+            "parse_rate": 1.0,
+            "validity_rate": 0.4167,
+            "acceptance_rate": 0.4167,
+            "share_runs_any_valid": 0.3571,
+            "n_runs_with_valid": 5,
+            "median_tokens_to_first_valid": 24361,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {
+              "travel_infeasible": 7,
+              "window_violation": 3
+            },
+            "termination": {
+              "aborted": 8,
+              "agent_finish": 4,
+              "budget": 2
+            },
+            "ctx_limited_calls": 0,
+            "total_calls": 205,
+            "length_calls": 8
+          }
+        },
+        "context": {
+          "limited_and_length": 0,
+          "limited_and_stop": 0,
+          "not_limited_and_length": 14,
+          "limited_calls": 0,
+          "total_calls": 410
+        },
+        "correlations": {
+          "n": 29,
+          "spearman_complexity_vs_satisfaction": -0.03,
+          "spearman_complexity_vs_achieved": -0.0723,
+          "spearman_complexity_vs_abs_gap": -0.3945,
+          "spearman_complexity_vs_optimum": -0.7844
+        }
+      },
+      "64000": {
+        "all": {
+          "n_runs": 29,
+          "optimum_mean": 3.6897,
+          "optimum_median": 4,
+          "achieved_mean": 1.5862,
+          "achieved_median": 1,
+          "abs_gap_mean": 2.1034,
+          "satisfaction_mean": 0.4844,
+          "satisfaction_median": 0.3333,
+          "tokens_mean": 41158.5862,
+          "attempts_total": 49,
+          "attempts_per_run": 1.6897,
+          "parse_rate": 1.0,
+          "validity_rate": 0.3265,
+          "acceptance_rate": 0.3265,
+          "share_runs_any_valid": 0.5172,
+          "n_runs_with_valid": 15,
+          "median_tokens_to_first_valid": 28049,
+          "median_first_valid_index": 0,
+          "rejection_reasons": {
+            "travel_infeasible": 30,
+            "window_violation": 16,
+            "overlapping_meeting": 1
+          },
+          "termination": {
+            "agent_finish": 22,
+            "aborted": 6,
+            "budget": 1
+          },
+          "ctx_limited_calls": 392,
+          "total_calls": 466,
+          "length_calls": 5
+        },
+        "by_level_old": {
+          "easy": {
+            "n_runs": 9,
+            "optimum_mean": 5.6667,
+            "optimum_median": 6,
+            "achieved_mean": 1.8889,
+            "achieved_median": 0,
+            "abs_gap_mean": 3.7778,
+            "satisfaction_mean": 0.4127,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 41365.4444,
+            "attempts_total": 15,
+            "attempts_per_run": 1.6667,
+            "parse_rate": 1.0,
+            "validity_rate": 0.2667,
+            "acceptance_rate": 0.2667,
+            "share_runs_any_valid": 0.4444,
+            "n_runs_with_valid": 4,
+            "median_tokens_to_first_valid": 27219.0,
+            "median_first_valid_index": 0.0,
+            "rejection_reasons": {
+              "travel_infeasible": 9,
+              "window_violation": 4
+            },
+            "termination": {
+              "agent_finish": 8,
+              "aborted": 1
+            },
+            "ctx_limited_calls": 132,
+            "total_calls": 159,
+            "length_calls": 1
+          },
+          "medium": {
+            "n_runs": 10,
+            "optimum_mean": 3.6,
+            "optimum_median": 3.5,
+            "achieved_mean": 2.0,
+            "achieved_median": 2.5,
+            "abs_gap_mean": 1.6,
+            "satisfaction_mean": 0.6,
+            "satisfaction_median": 1.0,
+            "tokens_mean": 40679.6,
+            "attempts_total": 13,
+            "attempts_per_run": 1.3,
+            "parse_rate": 1.0,
+            "validity_rate": 0.5385,
+            "acceptance_rate": 0.5385,
+            "share_runs_any_valid": 0.6,
+            "n_runs_with_valid": 6,
+            "median_tokens_to_first_valid": 30606.0,
+            "median_first_valid_index": 0.0,
+            "rejection_reasons": {
+              "travel_infeasible": 6,
+              "window_violation": 4
+            },
+            "termination": {
+              "agent_finish": 6,
+              "aborted": 4
+            },
+            "ctx_limited_calls": 136,
+            "total_calls": 160,
+            "length_calls": 3
+          },
+          "hard": {
+            "n_runs": 10,
+            "optimum_mean": 2.0,
+            "optimum_median": 2.0,
+            "achieved_mean": 0.9,
+            "achieved_median": 0.5,
+            "abs_gap_mean": 1.1,
+            "satisfaction_mean": 0.4333,
+            "satisfaction_median": 0.1667,
+            "tokens_mean": 41451.4,
+            "attempts_total": 21,
+            "attempts_per_run": 2.1,
+            "parse_rate": 1.0,
+            "validity_rate": 0.2381,
+            "acceptance_rate": 0.2381,
+            "share_runs_any_valid": 0.5,
+            "n_runs_with_valid": 5,
+            "median_tokens_to_first_valid": 29636,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {
+              "travel_infeasible": 15,
+              "window_violation": 8,
+              "overlapping_meeting": 1
+            },
+            "termination": {
+              "agent_finish": 8,
+              "aborted": 1,
+              "budget": 1
+            },
+            "ctx_limited_calls": 124,
+            "total_calls": 147,
+            "length_calls": 1
+          }
+        },
+        "by_n_people": {
+          "4": {
+            "n_runs": 11,
+            "optimum_mean": 2.3636,
+            "optimum_median": 2,
+            "achieved_mean": 2.0,
+            "achieved_median": 2,
+            "abs_gap_mean": 0.3636,
+            "satisfaction_mean": 0.7273,
+            "satisfaction_median": 1.0,
+            "tokens_mean": 33279.5455,
+            "attempts_total": 15,
+            "attempts_per_run": 1.3636,
+            "parse_rate": 1.0,
+            "validity_rate": 0.6,
+            "acceptance_rate": 0.6,
+            "share_runs_any_valid": 0.7273,
+            "n_runs_with_valid": 8,
+            "median_tokens_to_first_valid": 26214.5,
+            "median_first_valid_index": 0.0,
+            "rejection_reasons": {
+              "travel_infeasible": 6
+            },
+            "termination": {
+              "agent_finish": 10,
+              "aborted": 1
+            },
+            "ctx_limited_calls": 143,
+            "total_calls": 150,
+            "length_calls": 1
+          },
+          "6": {
+            "n_runs": 12,
+            "optimum_mean": 4.1667,
+            "optimum_median": 4.5,
+            "achieved_mean": 0.8333,
+            "achieved_median": 0.0,
+            "abs_gap_mean": 3.3333,
+            "satisfaction_mean": 0.25,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 50782.5,
+            "attempts_total": 26,
+            "attempts_per_run": 2.1667,
+            "parse_rate": 1.0,
+            "validity_rate": 0.1154,
+            "acceptance_rate": 0.1154,
+            "share_runs_any_valid": 0.25,
+            "n_runs_with_valid": 3,
+            "median_tokens_to_first_valid": 58684,
+            "median_first_valid_index": 2,
+            "rejection_reasons": {
+              "travel_infeasible": 22,
+              "window_violation": 12,
+              "overlapping_meeting": 1
+            },
+            "termination": {
+              "aborted": 5,
+              "agent_finish": 6,
+              "budget": 1
+            },
+            "ctx_limited_calls": 164,
+            "total_calls": 217,
+            "length_calls": 4
+          },
+          "8": {
+            "n_runs": 6,
+            "optimum_mean": 5.1667,
+            "optimum_median": 4.5,
+            "achieved_mean": 2.3333,
+            "achieved_median": 2.5,
+            "abs_gap_mean": 2.8333,
+            "satisfaction_mean": 0.5079,
+            "satisfaction_median": 0.5238,
+            "tokens_mean": 36355.6667,
+            "attempts_total": 8,
+            "attempts_per_run": 1.3333,
+            "parse_rate": 1.0,
+            "validity_rate": 0.5,
+            "acceptance_rate": 0.5,
+            "share_runs_any_valid": 0.6667,
+            "n_runs_with_valid": 4,
+            "median_tokens_to_first_valid": 27983.0,
+            "median_first_valid_index": 0.0,
+            "rejection_reasons": {
+              "travel_infeasible": 2,
+              "window_violation": 4
+            },
+            "termination": {
+              "agent_finish": 6
+            },
+            "ctx_limited_calls": 85,
+            "total_calls": 99,
+            "length_calls": 0
+          }
+        },
+        "by_travel_structure": {
+          "clustered": {
+            "n_runs": 15,
+            "optimum_mean": 3.6667,
+            "optimum_median": 4,
+            "achieved_mean": 1.2,
+            "achieved_median": 0,
+            "abs_gap_mean": 2.4667,
+            "satisfaction_mean": 0.3556,
+            "satisfaction_median": 0.0,
+            "tokens_mean": 39829.8667,
+            "attempts_total": 26,
+            "attempts_per_run": 1.7333,
+            "parse_rate": 1.0,
+            "validity_rate": 0.2308,
+            "acceptance_rate": 0.2308,
+            "share_runs_any_valid": 0.4,
+            "n_runs_with_valid": 6,
+            "median_tokens_to_first_valid": 27044.5,
+            "median_first_valid_index": 0.0,
+            "rejection_reasons": {
+              "travel_infeasible": 17,
+              "window_violation": 12,
+              "overlapping_meeting": 1
+            },
+            "termination": {
+              "agent_finish": 11,
+              "aborted": 4
+            },
+            "ctx_limited_calls": 197,
+            "total_calls": 229,
+            "length_calls": 3
+          },
+          "uniform": {
+            "n_runs": 14,
+            "optimum_mean": 3.7143,
+            "optimum_median": 3.5,
+            "achieved_mean": 2.0,
+            "achieved_median": 1.5,
+            "abs_gap_mean": 1.7143,
+            "satisfaction_mean": 0.6224,
+            "satisfaction_median": 1.0,
+            "tokens_mean": 42582.2143,
+            "attempts_total": 23,
+            "attempts_per_run": 1.6429,
+            "parse_rate": 1.0,
+            "validity_rate": 0.4348,
+            "acceptance_rate": 0.4348,
+            "share_runs_any_valid": 0.6429,
+            "n_runs_with_valid": 9,
+            "median_tokens_to_first_valid": 29636,
+            "median_first_valid_index": 0,
+            "rejection_reasons": {
+              "travel_infeasible": 13,
+              "window_violation": 4
+            },
+            "termination": {
+              "agent_finish": 11,
+              "budget": 1,
+              "aborted": 2
+            },
+            "ctx_limited_calls": 195,
+            "total_calls": 237,
+            "length_calls": 2
+          }
+        },
+        "context": {
+          "limited_and_length": 2,
+          "limited_and_stop": 390,
+          "not_limited_and_length": 3,
+          "limited_calls": 392,
+          "total_calls": 466
+        },
+        "correlations": {
+          "n": 29,
+          "spearman_complexity_vs_satisfaction": 0.0398,
+          "spearman_complexity_vs_achieved": -0.1515,
+          "spearman_complexity_vs_abs_gap": -0.2843,
+          "spearman_complexity_vs_optimum": -0.7844
+        }
+      }
+    },
+    "paired_32k_64k": {
+      "n_paired": 29,
+      "improved": 7,
+      "tied": 22,
+      "worsened": 0,
+      "satisfaction_delta_mean": 0.2085,
+      "satisfaction_delta_median": 0.0,
+      "attempts_delta_mean": 0.7241,
+      "tokens_delta_mean": 11348.5172,
+      "tokens_at_hi_quartiles": [
+        28977.5,
+        39886.0,
+        53345.0
+      ],
+      "share_hi_over_32k_tokens": 0.6552,
+      "share_hi_over_48k_tokens": 0.2759
+    }
+  },
+  "formal_subset_audit": {
+    "subset_hash": "29d836cb56141f3a29ac3fa9670e662c123586e967f2d5ae1280925c2228edbd",
+    "manifest_hash": "e6a365481dd4a485867c62377ac5bc6dc58b277113ccd207605a0258d5cba306",
+    "counts": {
+      "easy": 10,
+      "medium": 10,
+      "hard": 10
+    },
+    "is_10_10_10": true,
+    "duplicate_instance_ids": [],
+    "per_level": {
+      "easy": {
+        "n": 10,
+        "strata_n_people_travel": {
+          "4-clustered": 2,
+          "4-uniform": 2,
+          "6-clustered": 2,
+          "6-uniform": 2,
+          "8-clustered": 1,
+          "8-uniform": 1
+        },
+        "n_people": {
+          "4": 4,
+          "6": 4,
+          "8": 2
+        },
+        "travel_structure": {
+          "clustered": 5,
+          "uniform": 5
+        },
+        "tightness": {
+          "0.2": 10
+        },
+        "overlap": {
+          "0.2": 6,
+          "0.8": 4
+        },
+        "seeds": [
+          10005
+        ],
+        "complexity_min_median_max": [
+          0,
+          0.0,
+          0
+        ],
+        "optimum_mean": 5.5,
+        "optimum_median": 6.0,
+        "optimum_min": 4,
+        "optimum_max": 8
+      },
+      "medium": {
+        "n": 10,
+        "strata_n_people_travel": {
+          "4-clustered": 2,
+          "4-uniform": 2,
+          "6-clustered": 2,
+          "6-uniform": 2,
+          "8-clustered": 1,
+          "8-uniform": 1
+        },
+        "n_people": {
+          "4": 4,
+          "6": 4,
+          "8": 2
+        },
+        "travel_structure": {
+          "clustered": 5,
+          "uniform": 5
+        },
+        "tightness": {
+          "1.0": 6,
+          "0.85": 4
+        },
+        "overlap": {
+          "0.2": 8,
+          "0.8": 2
+        },
+        "seeds": [
+          10005
+        ],
+        "complexity_min_median_max": [
+          1,
+          5.0,
+          6
+        ],
+        "optimum_mean": 3.3,
+        "optimum_median": 3.0,
+        "optimum_min": 1,
+        "optimum_max": 5
+      },
+      "hard": {
+        "n": 10,
+        "strata_n_people_travel": {
+          "6-clustered": 3,
+          "6-uniform": 3,
+          "8-clustered": 2,
+          "8-uniform": 2
+        },
+        "n_people": {
+          "6": 6,
+          "8": 4
+        },
+        "travel_structure": {
+          "clustered": 5,
+          "uniform": 5
+        },
+        "tightness": {
+          "1.0": 10
+        },
+        "overlap": {
+          "0.8": 6,
+          "0.2": 4
+        },
+        "seeds": [
+          10005,
+          10006,
+          10007
+        ],
+        "complexity_min_median_max": [
+          7,
+          12.5,
+          26
+        ],
+        "optimum_mean": 2.5,
+        "optimum_median": 2.0,
+        "optimum_min": 1,
+        "optimum_max": 4
+      }
+    },
+    "overlap_with_superseded_subset": []
+  }
+}

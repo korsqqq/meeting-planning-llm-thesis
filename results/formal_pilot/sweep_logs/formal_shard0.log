@@ -1,0 +1,235 @@
+=== c1_react ===
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+========================================================================
+PILOT SWEEP over the frozen subset -- composition is replayed, never chosen
+========================================================================
+subset  : results/manifests/subset__pilot__29d836cb5614.json  (29d836cb5614)
+binning : e6a365481dd4   grid pilot
+condition c1_react | caps [8000, 16000, 32000, 64000] | shard 0/2 | max_model_len 32768 | timeout 1800.0s
+items: 60 of 120 in the canonical order
+verified 15 distinct instances against the manifest: id, complexity metric, optimum and level all match
+resume: 0 verified complete on disk, 60 to run
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[1/60] easy    cap   8000 sat 0.00 tokens   7844 clustered-n4-t20-o20-s10005
+[2/60] easy    cap   8000 sat 0.00 tokens   7510 clustered-n6-t20-o20-s10005
+[3/60] easy    cap   8000 sat 0.00 tokens   7349 clustered-n8-t20-o20-s10005
+[4/60] easy    cap   8000 sat 0.00 tokens   7844 clustered-n4-t20-o80-s10005
+[5/60] easy    cap   8000 sat 0.00 tokens   7844 clustered-n6-t20-o80-s10005
+[6/60] medium  cap   8000 sat 0.00 tokens   7844 clustered-n4-t100-o20-s10005
+[7/60] medium  cap   8000 sat 0.00 tokens   7844 clustered-n6-t100-o20-s10005
+[8/60] medium  cap   8000 sat 0.00 tokens   7438 clustered-n8-t85-o20-s10005
+[9/60] medium  cap   8000 sat 0.00 tokens   7844 clustered-n4-t100-o80-s10005
+[10/60] medium  cap   8000 sat 0.00 tokens   7329 clustered-n6-t85-o20-s10005
+[11/60] hard    cap   8000 sat 0.00 tokens   7392 clustered-n6-t100-o80-s10005
+[12/60] hard    cap   8000 sat 0.00 tokens   7844 clustered-n8-t100-o20-s10005
+[13/60] hard    cap   8000 sat 0.00 tokens   7844 clustered-n6-t100-o80-s10006
+[14/60] hard    cap   8000 sat 0.00 tokens   7844 clustered-n8-t100-o80-s10005
+[15/60] hard    cap   8000 sat 0.00 tokens   7844 clustered-n6-t100-o20-s10007
+[16/60] easy    cap  16000 sat 0.00 tokens  12866 clustered-n4-t20-o20-s10005
+[17/60] easy    cap  16000 sat 0.00 tokens  15844 clustered-n6-t20-o20-s10005
+[18/60] easy    cap  16000 sat 0.00 tokens  15514 clustered-n8-t20-o20-s10005
+[19/60] easy    cap  16000 sat 0.00 tokens  15741 clustered-n4-t20-o80-s10005
+[20/60] easy    cap  16000 sat 0.00 tokens  15844 clustered-n6-t20-o80-s10005
+[21/60] medium  cap  16000 sat 1.00 tokens  15910 clustered-n4-t100-o20-s10005
+[22/60] medium  cap  16000 sat 0.00 tokens  15256 clustered-n6-t100-o20-s10005
+[23/60] medium  cap  16000 sat 0.00 tokens  15695 clustered-n8-t85-o20-s10005
+[24/60] medium  cap  16000 sat 0.00 tokens  15844 clustered-n4-t100-o80-s10005
+[25/60] medium  cap  16000 sat 0.00 tokens  15844 clustered-n6-t85-o20-s10005
+[26/60] hard    cap  16000 sat 0.00 tokens  15844 clustered-n6-t100-o80-s10005
+[27/60] hard    cap  16000 sat 0.00 tokens  15844 clustered-n8-t100-o20-s10005
+[28/60] hard    cap  16000 sat 0.00 tokens  15844 clustered-n6-t100-o80-s10006
+[29/60] hard    cap  16000 sat 0.00 tokens  15844 clustered-n8-t100-o80-s10005
+[30/60] hard    cap  16000 sat 0.00 tokens  15844 clustered-n6-t100-o20-s10007
+[31/60] easy    cap  32000 sat 0.00 tokens  12866 clustered-n4-t20-o20-s10005
+[32/60] easy    cap  32000 sat 0.00 tokens  31844 clustered-n6-t20-o20-s10005
+[33/60] easy    cap  32000 sat 0.50 tokens  30675 clustered-n8-t20-o20-s10005
+[34/60] easy    cap  32000 sat 1.00 tokens  22462 clustered-n4-t20-o80-s10005
+[35/60] easy    cap  32000 sat 0.00 tokens  31157 clustered-n6-t20-o80-s10005
+[36/60] medium  cap  32000 sat 1.00 tokens  22743 clustered-n4-t100-o20-s10005
+[37/60] medium  cap  32000 sat 0.00 tokens  31844 clustered-n6-t100-o20-s10005
+[38/60] medium  cap  32000 sat 0.00 tokens  31844 clustered-n8-t85-o20-s10005
+[39/60] medium  cap  32000 sat 1.00 tokens  31855 clustered-n4-t100-o80-s10005
+[40/60] medium  cap  32000 sat 0.00 tokens  28590 clustered-n6-t85-o20-s10005
+[41/60] hard    cap  32000 sat 0.00 tokens  31844 clustered-n6-t100-o80-s10005
+[42/60] hard    cap  32000 sat 0.00 tokens  31844 clustered-n8-t100-o20-s10005
+[43/60] hard    cap  32000 sat 0.00 tokens  31322 clustered-n6-t100-o80-s10006
+[44/60] hard    cap  32000 sat 0.00 tokens  31844 clustered-n8-t100-o80-s10005
+[45/60] hard    cap  32000 sat 1.00 tokens  31861 clustered-n6-t100-o20-s10007
+[46/60] easy    cap  64000 sat 0.00 tokens  12866 clustered-n4-t20-o20-s10005
+[47/60] easy    cap  64000 sat 0.83 tokens  45316 clustered-n6-t20-o20-s10005
+[48/60] easy    cap  64000 sat 0.50 tokens  32775 clustered-n8-t20-o20-s10005
+[49/60] easy    cap  64000 sat 1.00 tokens  22462 clustered-n4-t20-o80-s10005
+[50/60] easy    cap  64000 sat 0.00 tokens  39579 clustered-n6-t20-o80-s10005
+[51/60] medium  cap  64000 sat 1.00 tokens  22743 clustered-n4-t100-o20-s10005
+[52/60] medium  cap  64000 sat 0.00 tokens  48483 clustered-n6-t100-o20-s10005
+[53/60] medium  cap  64000 sat 0.00 tokens  63844 clustered-n8-t85-o20-s10005
+[54/60] medium  cap  64000 sat 1.00 tokens  32983 clustered-n4-t100-o80-s10005
+[55/60] medium  cap  64000 sat 0.00 tokens  28590 clustered-n6-t85-o20-s10005
+[56/60] hard    cap  64000 sat 0.00 tokens  53392 clustered-n6-t100-o80-s10005
+[57/60] hard    cap  64000 sat 1.00 tokens  63934 clustered-n8-t100-o20-s10005
+[58/60] hard    cap  64000 sat 1.00 tokens  46738 clustered-n6-t100-o80-s10006
+[59/60] hard    cap  64000 sat 1.00 tokens  41371 clustered-n8-t100-o80-s10005
+[60/60] hard    cap  64000 sat 1.00 tokens  32841 clustered-n6-t100-o20-s10007
+
+========================================================================
+cap   8000: {"n_runs": 15, "mean_satisfaction": 0.0, "satisfaction": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "mean_tokens": 7697.2, "proposal_attempts": 0, "proposal_parse_rate": null, "proposal_validity_rate": null, "proposal_acceptance_rate": null, "rejection_reasons": {}, "termination": {"aborted": 10, "budget": 5}, "finish_reason": {"stop": 104, "length": 10}}
+cap  16000: {"n_runs": 15, "mean_satisfaction": 0.0667, "satisfaction": [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "mean_tokens": 15571.9, "proposal_attempts": 2, "proposal_parse_rate": 1.0, "proposal_validity_rate": 0.5, "proposal_acceptance_rate": 0.5, "rejection_reasons": {"travel_infeasible": 1}, "termination": {"agent_finish": 1, "aborted": 10, "budget": 4}, "finish_reason": {"stop": 152, "length": 10}}
+cap  32000: {"n_runs": 15, "mean_satisfaction": 0.3, "satisfaction": [0.0, 0.0, 0.5, 1.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0], "mean_tokens": 28973.0, "proposal_attempts": 10, "proposal_parse_rate": 1.0, "proposal_validity_rate": 0.5, "proposal_acceptance_rate": 0.5, "rejection_reasons": {"travel_infeasible": 4, "window_violation": 3}, "termination": {"agent_finish": 4, "aborted": 8, "budget": 3}, "finish_reason": {"stop": 207, "length": 8}}
+cap  64000: {"n_runs": 15, "mean_satisfaction": 0.5556, "satisfaction": [0.0, 0.8333333333333334, 0.5, 1.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0], "mean_tokens": 39194.5, "proposal_attempts": 23, "proposal_parse_rate": 1.0, "proposal_validity_rate": 0.4783, "proposal_acceptance_rate": 0.4348, "rejection_reasons": {"travel_infeasible": 9, "window_violation": 8}, "termination": {"agent_finish": 12, "aborted": 3}, "finish_reason": {"stop": 240, "length": 2}}
+=== c2_verify_revise ===
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+========================================================================
+PILOT SWEEP over the frozen subset -- composition is replayed, never chosen
+========================================================================
+subset  : results/manifests/subset__pilot__29d836cb5614.json  (29d836cb5614)
+binning : e6a365481dd4   grid pilot
+condition c2_verify_revise | caps [8000, 16000, 32000, 64000] | shard 0/2 | max_model_len 32768 | timeout 1800.0s
+items: 60 of 120 in the canonical order
+verified 15 distinct instances against the manifest: id, complexity metric, optimum and level all match
+resume: 0 verified complete on disk, 60 to run
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[1/60] easy    cap   8000 sat 0.00 tokens   7844 clustered-n4-t20-o20-s10005
+[2/60] easy    cap   8000 sat 0.00 tokens   7510 clustered-n6-t20-o20-s10005
+[3/60] easy    cap   8000 sat 0.00 tokens   7349 clustered-n8-t20-o20-s10005
+[4/60] easy    cap   8000 sat 0.00 tokens   7844 clustered-n4-t20-o80-s10005
+[5/60] easy    cap   8000 sat 0.00 tokens   7844 clustered-n6-t20-o80-s10005
+[6/60] medium  cap   8000 sat 0.00 tokens   7844 clustered-n4-t100-o20-s10005
+[7/60] medium  cap   8000 sat 0.00 tokens   7844 clustered-n6-t100-o20-s10005
+[8/60] medium  cap   8000 sat 0.00 tokens   7438 clustered-n8-t85-o20-s10005
+[9/60] medium  cap   8000 sat 0.00 tokens   7844 clustered-n4-t100-o80-s10005
+[10/60] medium  cap   8000 sat 0.00 tokens   7329 clustered-n6-t85-o20-s10005
+[11/60] hard    cap   8000 sat 0.00 tokens   7392 clustered-n6-t100-o80-s10005
+[12/60] hard    cap   8000 sat 0.00 tokens   7844 clustered-n8-t100-o20-s10005
+[13/60] hard    cap   8000 sat 0.00 tokens   7844 clustered-n6-t100-o80-s10006
+[14/60] hard    cap   8000 sat 0.00 tokens   7844 clustered-n8-t100-o80-s10005
+[15/60] hard    cap   8000 sat 0.00 tokens   7844 clustered-n6-t100-o20-s10007
+[16/60] easy    cap  16000 sat 0.00 tokens  14912 clustered-n4-t20-o20-s10005
+[17/60] easy    cap  16000 sat 0.00 tokens  15844 clustered-n6-t20-o20-s10005
+[18/60] easy    cap  16000 sat 0.00 tokens  15514 clustered-n8-t20-o20-s10005
+[19/60] easy    cap  16000 sat 0.00 tokens  15741 clustered-n4-t20-o80-s10005
+[20/60] easy    cap  16000 sat 0.00 tokens  15844 clustered-n6-t20-o80-s10005
+[21/60] medium  cap  16000 sat 1.00 tokens  15910 clustered-n4-t100-o20-s10005
+[22/60] medium  cap  16000 sat 0.00 tokens  15256 clustered-n6-t100-o20-s10005
+[23/60] medium  cap  16000 sat 0.00 tokens  15695 clustered-n8-t85-o20-s10005
+[24/60] medium  cap  16000 sat 0.00 tokens  15844 clustered-n4-t100-o80-s10005
+[25/60] medium  cap  16000 sat 0.00 tokens  15844 clustered-n6-t85-o20-s10005
+[26/60] hard    cap  16000 sat 0.00 tokens  15844 clustered-n6-t100-o80-s10005
+[27/60] hard    cap  16000 sat 0.00 tokens  15844 clustered-n8-t100-o20-s10005
+[28/60] hard    cap  16000 sat 0.00 tokens  15844 clustered-n6-t100-o80-s10006
+[29/60] hard    cap  16000 sat 0.00 tokens  15844 clustered-n8-t100-o80-s10005
+[30/60] hard    cap  16000 sat 0.00 tokens  15844 clustered-n6-t100-o20-s10007
+[31/60] easy    cap  32000 sat 0.00 tokens  21374 clustered-n4-t20-o20-s10005
+[32/60] easy    cap  32000 sat 0.00 tokens  31844 clustered-n6-t20-o20-s10005
+[33/60] easy    cap  32000 sat 0.50 tokens  30675 clustered-n8-t20-o20-s10005
+[34/60] easy    cap  32000 sat 1.00 tokens  31035 clustered-n4-t20-o80-s10005
+[35/60] easy    cap  32000 sat 0.00 tokens  31157 clustered-n6-t20-o80-s10005
+[36/60] medium  cap  32000 sat 1.00 tokens  30385 clustered-n4-t100-o20-s10005
+[37/60] medium  cap  32000 sat 0.00 tokens  31844 clustered-n6-t100-o20-s10005
+[38/60] medium  cap  32000 sat 0.00 tokens  31844 clustered-n8-t85-o20-s10005
+[39/60] medium  cap  32000 sat 1.00 tokens  31855 clustered-n4-t100-o80-s10005
+[40/60] medium  cap  32000 sat 0.00 tokens  31844 clustered-n6-t85-o20-s10005
+[41/60] hard    cap  32000 sat 0.00 tokens  31844 clustered-n6-t100-o80-s10005
+[42/60] hard    cap  32000 sat 0.00 tokens  31844 clustered-n8-t100-o20-s10005
+[43/60] hard    cap  32000 sat 0.00 tokens  31322 clustered-n6-t100-o80-s10006
+[44/60] hard    cap  32000 sat 0.00 tokens  31844 clustered-n8-t100-o80-s10005
+[45/60] hard    cap  32000 sat 1.00 tokens  31861 clustered-n6-t100-o20-s10007
+[46/60] easy    cap  64000 sat 0.00 tokens  21374 clustered-n4-t20-o20-s10005
+[47/60] easy    cap  64000 sat 0.83 tokens  58016 clustered-n6-t20-o20-s10005
+[48/60] easy    cap  64000 sat 0.50 tokens  45005 clustered-n8-t20-o20-s10005
+[49/60] easy    cap  64000 sat 1.00 tokens  31035 clustered-n4-t20-o80-s10005
+[50/60] easy    cap  64000 sat 0.00 tokens  39579 clustered-n6-t20-o80-s10005
+[51/60] medium  cap  64000 sat 1.00 tokens  32766 clustered-n4-t100-o20-s10005
+[52/60] medium  cap  64000 sat 0.67 tokens  61433 clustered-n6-t100-o20-s10005
+[53/60] medium  cap  64000 sat 0.00 tokens  63844 clustered-n8-t85-o20-s10005
+[54/60] medium  cap  64000 sat 1.00 tokens  43029 clustered-n4-t100-o80-s10005
+[55/60] medium  cap  64000 sat 0.00 tokens  43275 clustered-n6-t85-o20-s10005
+[56/60] hard    cap  64000 sat 0.00 tokens  63834 clustered-n6-t100-o80-s10005
+[57/60] hard    cap  64000 sat 1.00 tokens  63934 clustered-n8-t100-o20-s10005
+[58/60] hard    cap  64000 sat 1.00 tokens  56628 clustered-n6-t100-o80-s10006
+[59/60] hard    cap  64000 sat 1.00 tokens  58957 clustered-n8-t100-o80-s10005
+[60/60] hard    cap  64000 sat 1.00 tokens  44287 clustered-n6-t100-o20-s10007
+
+========================================================================
+cap   8000: {"n_runs": 15, "mean_satisfaction": 0.0, "satisfaction": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "mean_tokens": 7697.2, "proposal_attempts": 0, "proposal_parse_rate": null, "proposal_validity_rate": null, "proposal_acceptance_rate": null, "rejection_reasons": {}, "termination": {"aborted": 10, "budget": 5}, "finish_reason": {"stop": 104, "length": 10}}
+cap  16000: {"n_runs": 15, "mean_satisfaction": 0.0667, "satisfaction": [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "mean_tokens": 15708.3, "proposal_attempts": 2, "proposal_parse_rate": 1.0, "proposal_validity_rate": 0.5, "proposal_acceptance_rate": 0.5, "rejection_reasons": {"travel_infeasible": 1}, "termination": {"budget": 5, "aborted": 10}, "finish_reason": {"stop": 153, "length": 10}}
+cap  32000: {"n_runs": 15, "mean_satisfaction": 0.3, "satisfaction": [0.0, 0.0, 0.5, 1.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0], "mean_tokens": 30838.1, "proposal_attempts": 15, "proposal_parse_rate": 1.0, "proposal_validity_rate": 0.5333, "proposal_acceptance_rate": 0.3333, "rejection_reasons": {"travel_infeasible": 6, "window_violation": 3}, "termination": {"agent_finish": 2, "aborted": 8, "budget": 5}, "finish_reason": {"stop": 218, "length": 9}}
+cap  64000: {"n_runs": 15, "mean_satisfaction": 0.6, "satisfaction": [0.0, 0.8333333333333334, 0.5, 1.0, 0.0, 1.0, 0.6666666666666666, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0], "mean_tokens": 48466.4, "proposal_attempts": 45, "proposal_parse_rate": 1.0, "proposal_validity_rate": 0.5778, "proposal_acceptance_rate": 0.2444, "rejection_reasons": {"travel_infeasible": 14, "window_violation": 11, "overlapping_meeting": 1}, "termination": {"agent_finish": 10, "aborted": 3, "budget": 2}, "finish_reason": {"stop": 286, "length": 2}}
+=== c3_mas ===
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+========================================================================
+PILOT SWEEP over the frozen subset -- composition is replayed, never chosen
+========================================================================
+subset  : results/manifests/subset__pilot__29d836cb5614.json  (29d836cb5614)
+binning : e6a365481dd4   grid pilot
+condition c3_mas | caps [8000, 16000, 32000, 64000] | shard 0/2 | max_model_len 32768 | timeout 1800.0s
+items: 60 of 120 in the canonical order
+verified 15 distinct instances against the manifest: id, complexity metric, optimum and level all match
+resume: 0 verified complete on disk, 60 to run
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[1/60] easy    cap   8000 sat 0.00 tokens   5631 clustered-n4-t20-o20-s10005
+[2/60] easy    cap   8000 sat 0.00 tokens   5908 clustered-n6-t20-o20-s10005
+[3/60] easy    cap   8000 sat 0.00 tokens   5567 clustered-n8-t20-o20-s10005
+[4/60] easy    cap   8000 sat 0.00 tokens   5555 clustered-n4-t20-o80-s10005
+[5/60] easy    cap   8000 sat 0.00 tokens   5908 clustered-n6-t20-o80-s10005
+[6/60] medium  cap   8000 sat 0.00 tokens   5600 clustered-n4-t100-o20-s10005
+[7/60] medium  cap   8000 sat 0.00 tokens   5908 clustered-n6-t100-o20-s10005
+[8/60] medium  cap   8000 sat 0.00 tokens   5678 clustered-n8-t85-o20-s10005
+[9/60] medium  cap   8000 sat 0.00 tokens   5332 clustered-n4-t100-o80-s10005
+[10/60] medium  cap   8000 sat 0.00 tokens   5908 clustered-n6-t85-o20-s10005
+[11/60] hard    cap   8000 sat 0.00 tokens   5908 clustered-n6-t100-o80-s10005
+[12/60] hard    cap   8000 sat 0.00 tokens   5701 clustered-n8-t100-o20-s10005
+[13/60] hard    cap   8000 sat 0.00 tokens   5908 clustered-n6-t100-o80-s10006
+[14/60] hard    cap   8000 sat 0.00 tokens   5808 clustered-n8-t100-o80-s10005
+[15/60] hard    cap   8000 sat 0.00 tokens   5908 clustered-n6-t100-o20-s10007
+[16/60] easy    cap  16000 sat 0.00 tokens  11552 clustered-n4-t20-o20-s10005
+[17/60] easy    cap  16000 sat 0.00 tokens  11908 clustered-n6-t20-o20-s10005
+[18/60] easy    cap  16000 sat 0.00 tokens  11839 clustered-n8-t20-o20-s10005
+[19/60] easy    cap  16000 sat 0.00 tokens  11613 clustered-n4-t20-o80-s10005
+[20/60] easy    cap  16000 sat 0.00 tokens  11908 clustered-n6-t20-o80-s10005
+[21/60] medium  cap  16000 sat 0.00 tokens  11722 clustered-n4-t100-o20-s10005
+[22/60] medium  cap  16000 sat 0.00 tokens  11908 clustered-n6-t100-o20-s10005
+[23/60] medium  cap  16000 sat 0.00 tokens  11568 clustered-n8-t85-o20-s10005
+[24/60] medium  cap  16000 sat 0.00 tokens  11672 clustered-n4-t100-o80-s10005
+[25/60] medium  cap  16000 sat 0.00 tokens  11908 clustered-n6-t85-o20-s10005
+[26/60] hard    cap  16000 sat 0.00 tokens  11606 clustered-n6-t100-o80-s10005
+[27/60] hard    cap  16000 sat 0.00 tokens  11052 clustered-n8-t100-o20-s10005
+[28/60] hard    cap  16000 sat 0.00 tokens  11345 clustered-n6-t100-o80-s10006
+[29/60] hard    cap  16000 sat 0.00 tokens  11694 clustered-n8-t100-o80-s10005
+[30/60] hard    cap  16000 sat 0.00 tokens  11718 clustered-n6-t100-o20-s10007
+[31/60] easy    cap  32000 sat 1.00 tokens  23965 clustered-n4-t20-o20-s10005
+[32/60] easy    cap  32000 sat 0.50 tokens  24277 clustered-n6-t20-o20-s10005
+[33/60] easy    cap  32000 sat 0.50 tokens  26085 clustered-n8-t20-o20-s10005
+[34/60] easy    cap  32000 sat 0.50 tokens  26197 clustered-n4-t20-o80-s10005
+[35/60] easy    cap  32000 sat 0.50 tokens  25398 clustered-n6-t20-o80-s10005
+[36/60] medium  cap  32000 sat 1.00 tokens  22015 clustered-n4-t100-o20-s10005
+[37/60] medium  cap  32000 sat 0.00 tokens  23908 clustered-n6-t100-o20-s10005
+[38/60] medium  cap  32000 sat 0.00 tokens  23908 clustered-n8-t85-o20-s10005
+[39/60] medium  cap  32000 sat 1.00 tokens  24199 clustered-n4-t100-o80-s10005
+[40/60] medium  cap  32000 sat 1.00 tokens  31129 clustered-n6-t85-o20-s10005
+[41/60] hard    cap  32000 sat 0.50 tokens  24926 clustered-n6-t100-o80-s10005
+[42/60] hard    cap  32000 sat 0.00 tokens  23908 clustered-n8-t100-o20-s10005
+[43/60] hard    cap  32000 sat 0.00 tokens  23908 clustered-n6-t100-o80-s10006
+[44/60] hard    cap  32000 sat 0.00 tokens  23908 clustered-n8-t100-o80-s10005
+[45/60] hard    cap  32000 sat 0.00 tokens  23908 clustered-n6-t100-o20-s10007
+[46/60] easy    cap  64000 sat 1.00 tokens  23948 clustered-n4-t20-o20-s10005
+[47/60] easy    cap  64000 sat 1.00 tokens  45911 clustered-n6-t20-o20-s10005
+[48/60] easy    cap  64000 sat 0.50 tokens  45462 clustered-n8-t20-o20-s10005
+[49/60] easy    cap  64000 sat 0.50 tokens  18955 clustered-n4-t20-o80-s10005
+[50/60] easy    cap  64000 sat 1.00 tokens  34149 clustered-n6-t20-o80-s10005
+[51/60] medium  cap  64000 sat 1.00 tokens  21911 clustered-n4-t100-o20-s10005
+[52/60] medium  cap  64000 sat 0.67 tokens  25229 clustered-n6-t100-o20-s10005
+[53/60] medium  cap  64000 sat 0.80 tokens  38629 clustered-n8-t85-o20-s10005
+[54/60] medium  cap  64000 sat 1.00 tokens  23468 clustered-n4-t100-o80-s10005
+[55/60] medium  cap  64000 sat 0.60 tokens  23410 clustered-n6-t85-o20-s10005
+[56/60] hard    cap  64000 sat 1.00 tokens  39133 clustered-n6-t100-o80-s10005
+[57/60] hard    cap  64000 sat 1.00 tokens  56944 clustered-n8-t100-o20-s10005
+[58/60] hard    cap  64000 sat 1.00 tokens  42435 clustered-n6-t100-o80-s10006
+[59/60] hard    cap  64000 sat 1.00 tokens  49427 clustered-n8-t100-o80-s10005
+[60/60] hard    cap  64000 sat 1.00 tokens  30966 clustered-n6-t100-o20-s10007
+
+========================================================================
+cap   8000: {"n_runs": 15, "mean_satisfaction": 0.0, "satisfaction": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "mean_tokens": 5748.5, "proposal_attempts": 0, "proposal_parse_rate": null, "proposal_validity_rate": null, "proposal_acceptance_rate": null, "rejection_reasons": {}, "termination": {"agent_finish": 8, "aborted": 7}, "finish_reason": {"stop": 85, "length": 16}}
+cap  16000: {"n_runs": 15, "mean_satisfaction": 0.0, "satisfaction": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "mean_tokens": 11667.5, "proposal_attempts": 1, "proposal_parse_rate": 1.0, "proposal_validity_rate": 0.0, "proposal_acceptance_rate": 0.0, "rejection_reasons": {"travel_infeasible": 1}, "termination": {"agent_finish": 11, "aborted": 4}, "finish_reason": {"stop": 162, "length": 17}}
+cap  32000: {"n_runs": 15, "mean_satisfaction": 0.4333, "satisfaction": [1.0, 0.5, 0.5, 0.5, 0.5, 1.0, 0.0, 0.0, 1.0, 1.0, 0.5, 0.0, 0.0, 0.0, 0.0], "mean_tokens": 24775.9, "proposal_attempts": 26, "proposal_parse_rate": 1.0, "proposal_validity_rate": 0.8462, "proposal_acceptance_rate": 0.6538, "rejection_reasons": {"travel_infeasible": 3, "window_violation": 1}, "termination": {"agent_finish": 7, "aborted": 8}, "finish_reason": {"stop": 249, "length": 18}}
+cap  64000: {"n_runs": 15, "mean_satisfaction": 0.8711, "satisfaction": [1.0, 1.0, 0.5, 0.5, 1.0, 1.0, 0.6666666666666666, 0.8, 1.0, 0.6, 1.0, 1.0, 1.0, 1.0, 1.0], "mean_tokens": 34665.1, "proposal_attempts": 42, "proposal_parse_rate": 1.0, "proposal_validity_rate": 0.8571, "proposal_acceptance_rate": 0.619, "rejection_reasons": {"travel_infeasible": 5, "window_violation": 1}, "termination": {"agent_finish": 14, "aborted": 1}, "finish_reason": {"stop": 301, "length": 5}}
+SHARD0 DONE

@@ -1,0 +1,1154 @@
+{
+  "schema_version": "harness_slice/1.0",
+  "run_id": "c3_mas__clustered-n8-t80-o100-s30003__cap64000__Qwen-Qwen3-32B-AWQ",
+  "timestamp_utc": "2026-08-12T16:58:39+00:00",
+  "condition": "c3_mas",
+  "cap": 64000,
+  "model_label": "Qwen/Qwen3-32B-AWQ",
+  "finalization_reserve": 256,
+  "seeds": {
+    "generator": 30003,
+    "solver": 0,
+    "inference": 42
+  },
+  "provenance": {
+    "git_commit": "4e52673ac1fbf51107e454d1a81aae4491c30d70",
+    "git_branch": "claude/university-server-tests-prep-f24e26"
+  },
+  "instance": {
+    "instance_id": "clustered-n8-t80-o100-s30003",
+    "generator_params": {
+      "n_people": 8,
+      "tightness": 0.8,
+      "overlap": 1.0,
+      "travel_structure": "clustered"
+    },
+    "n_people": 8,
+    "travel_structure": "clustered",
+    "waiting_allowed": true,
+    "start_time": 0,
+    "end_of_day": 480,
+    "meeting_duration": 30,
+    "complexity_metric": 1,
+    "level": "easy"
+  },
+  "oracle": {
+    "optimum": 3,
+    "status": "OPTIMAL",
+    "proven_optimal": true,
+    "latency_seconds": 0.029541175812482834
+  },
+  "agent": {
+    "n_steps": 25,
+    "finalization_mismatch": false,
+    "termination": "agent_finish",
+    "empty_turns": 1,
+    "proposals": [
+      {
+        "schema_version": "proposal/1.0",
+        "condition": "c3_mas",
+        "role": "worker_a",
+        "step": 11,
+        "raw": "p5@180, p3@230, p7@270",
+        "parsed": true,
+        "plan": [
+          {
+            "person_id": "p5",
+            "start_time": 180
+          },
+          {
+            "person_id": "p3",
+            "start_time": 230
+          },
+          {
+            "person_id": "p7",
+            "start_time": 270
+          }
+        ],
+        "n_meetings": 3,
+        "valid": true,
+        "reasons": [],
+        "accepted_into_best_plan": true
+      },
+      {
+        "schema_version": "proposal/1.0",
+        "condition": "c3_mas",
+        "role": "worker_b",
+        "step": 10,
+        "raw": "p0@180, p2@217, p6@252",
+        "parsed": true,
+        "plan": [
+          {
+            "person_id": "p0",
+            "start_time": 180
+          },
+          {
+            "person_id": "p2",
+            "start_time": 217
+          },
+          {
+            "person_id": "p6",
+            "start_time": 252
+          }
+        ],
+        "n_meetings": 3,
+        "valid": true,
+        "reasons": [],
+        "accepted_into_best_plan": true
+      },
+      {
+        "schema_version": "proposal/1.0",
+        "condition": "c3_mas",
+        "role": "critic",
+        "step": 0,
+        "raw": "p0@180, p2@217, p6@252",
+        "parsed": true,
+        "plan": [
+          {
+            "person_id": "p0",
+            "start_time": 180
+          },
+          {
+            "person_id": "p2",
+            "start_time": 217
+          },
+          {
+            "person_id": "p6",
+            "start_time": 252
+          }
+        ],
+        "n_meetings": 3,
+        "valid": true,
+        "reasons": [],
+        "accepted_into_best_plan": false,
+        "in_pool": true
+      }
+    ],
+    "transcript": [
+      {
+        "role": "system",
+        "content": "[worker_a conversation]"
+      },
+      {
+        "role": "system",
+        "content": "You are a meeting-planning agent. Plan a one-day route that meets as many people as possible.\nYou start at location 'start' at minute 0. Every meeting lasts exactly 30 minutes and must fit inside the person's availability window. You must have time to travel between consecutive meetings, and every meeting must end by minute 480. You may arrive early and wait for a window to open.\n\nWork step by step. Each step write one 'Thought:' line, then exactly one of:\n  Action: list_people[]\n  Action: get_availability[person_id]\n  Action: get_travel_time[from_location, to_location]\nYou will receive an 'Observation:' with the result. Record your plan (even a partial one) at any time with:\n  Action: propose[p0@10, p1@60]   (person_id @ meeting-start-minute)\nYou may refine and propose again. When you are done, write 'Action: finish'."
+      },
+      {
+        "role": "user",
+        "content": "Plan the route now. Start by listing the people."
+      },
+      {
+        "role": "assistant",
+        "content": "Action: list_people[]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: People: p1, p3, p5, p7"
+      },
+      {
+        "role": "assistant",
+        "content": "Action: get_availability[p1]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: availability(p1) = {'person_id': 'p1', 'location': 'loc_1', 'window_start': 180, 'window_end': 300}"
+      },
+      {
+        "role": "assistant",
+        "content": "Action: get_travel_time[start, loc_1]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: travel_time(start -> loc_1) = 29 min"
+      },
+      {
+        "role": "assistant",
+        "content": "Action: get_availability[p3]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: availability(p3) = {'person_id': 'p3', 'location': 'loc_3', 'window_start': 180, 'window_end': 300}"
+      },
+      {
+        "role": "assistant",
+        "content": "Action: get_availability[p5]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: availability(p5) = {'person_id': 'p5', 'location': 'loc_5', 'window_start': 180, 'window_end': 300}"
+      },
+      {
+        "role": "assistant",
+        "content": "Action: get_availability[p7]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: availability(p7) = {'person_id': 'p7', 'location': 'loc_7', 'window_start': 180, 'window_end': 300}"
+      },
+      {
+        "role": "assistant",
+        "content": "Thought: I need to determine the travel times from the start to each person's location and between their locations to plan the optimal route. Let's gather all necessary travel times.\n\nAction: get_travel_time[start, loc_3]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: travel_time(start -> loc_3) = 30 min"
+      },
+      {
+        "role": "assistant",
+        "content": "Action: get_travel_time[start, loc_5]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: travel_time(start -> loc_5) = 24 min"
+      },
+      {
+        "role": "assistant",
+        "content": "Action: get_travel_time[start, loc_7]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: travel_time(start -> loc_7) = 26 min"
+      },
+      {
+        "role": "assistant",
+        "content": "Thought: To determine the optimal order, I need travel times between each pair of locations. Starting with loc_5 (closest to start), I'll gather travel times from loc_5 to other locations to plan subsequent meetings.\n\nAction: get_travel_time[loc_5, loc_1]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: travel_time(loc_5 -> loc_1) = 19 min"
+      },
+      {
+        "role": "assistant",
+        "content": "Thought: The optimal route allows meeting p5, p3, and p7 within their availability windows. Starting at loc_5 (p5), then traveling to loc_3 (p3), and finally to loc_7 (p7), with sufficient time for each 30-minute meeting and travel.\n\nAction: propose[p5@180, p3@230, p7@270]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: Recorded a plan with 3 meeting(s)."
+      },
+      {
+        "role": "assistant",
+        "content": "Thought: I need to verify the travel times between loc_3 (p3) and loc_7 (p7) to ensure the proposed schedule is feasible. Without knowing this travel time, I cannot confirm if the final meeting at p7 will fit within their window.\n\nAction: get_travel_time[loc_3, loc_7]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: travel_time(loc_3 -> loc_7) = 6 min"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      },
+      {
+        "role": "system",
+        "content": "[worker_b conversation]"
+      },
+      {
+        "role": "system",
+        "content": "You are a meeting-planning agent. Plan a one-day route that meets as many people as possible.\nYou start at location 'start' at minute 0. Every meeting lasts exactly 30 minutes and must fit inside the person's availability window. You must have time to travel between consecutive meetings, and every meeting must end by minute 480. You may arrive early and wait for a window to open.\n\nWork step by step. Each step write one 'Thought:' line, then exactly one of:\n  Action: list_people[]\n  Action: get_availability[person_id]\n  Action: get_travel_time[from_location, to_location]\nYou will receive an 'Observation:' with the result. Record your plan (even a partial one) at any time with:\n  Action: propose[p0@10, p1@60]   (person_id @ meeting-start-minute)\nYou may refine and propose again. When you are done, write 'Action: finish'."
+      },
+      {
+        "role": "user",
+        "content": "Plan the route now. Start by listing the people."
+      },
+      {
+        "role": "assistant",
+        "content": "Action: list_people[]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: People: p0, p2, p4, p6"
+      },
+      {
+        "role": "assistant",
+        "content": "Action: get_availability[p0]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: availability(p0) = {'person_id': 'p0', 'location': 'loc_0', 'window_start': 180, 'window_end': 300}"
+      },
+      {
+        "role": "assistant",
+        "content": "Thought: I need to determine the travel time from the start location to p0's location (loc_0) to see if I can arrive in time for their availability window (180-300). \n\nAction: get_travel_time[start, loc_0]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: travel_time(start -> loc_0) = 24 min"
+      },
+      {
+        "role": "assistant",
+        "content": "Thought: I can reach p0's location at 24 minutes, but their availability starts at 180. I can wait until 180 to start a meeting that ends at 210. Next, I need to check other people's availability to plan subsequent meetings.\n\nAction: get_availability[p2]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: availability(p2) = {'person_id': 'p2', 'location': 'loc_2', 'window_start': 180, 'window_end': 300}"
+      },
+      {
+        "role": "assistant",
+        "content": "Action: get_travel_time[loc_0, loc_2]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: travel_time(loc_0 -> loc_2) = 7 min"
+      },
+      {
+        "role": "assistant",
+        "content": "Action: get_availability[p4]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: availability(p4) = {'person_id': 'p4', 'location': 'loc_4', 'window_start': 180, 'window_end': 300}"
+      },
+      {
+        "role": "assistant",
+        "content": "Action: get_travel_time[loc_2, loc_4]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: travel_time(loc_2 -> loc_4) = 28 min"
+      },
+      {
+        "role": "assistant",
+        "content": "Action: get_availability[p6]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: availability(p6) = {'person_id': 'p6', 'location': 'loc_6', 'window_start': 180, 'window_end': 300}"
+      },
+      {
+        "role": "assistant",
+        "content": "Action: get_travel_time[loc_2, loc_6]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: travel_time(loc_2 -> loc_6) = 5 min"
+      },
+      {
+        "role": "assistant",
+        "content": "Action: propose[p0@180, p2@217, p6@252]"
+      },
+      {
+        "role": "user",
+        "content": "Observation: Recorded a plan with 3 meeting(s)."
+      },
+      {
+        "role": "assistant",
+        "content": "Action: finish"
+      },
+      {
+        "role": "system",
+        "content": "[critic conversation]"
+      },
+      {
+        "role": "system",
+        "content": "You are a meeting-plan reviewer. Two planning agents proposed meetings with the candidate people listed below; their combined schedule is a rough draft that may break the rules. Coordinate the candidates into the best full plan you can justify.\nThe route starts at location 'start' at minute 0. Every meeting lasts exactly 30 minutes and must fit inside the person's availability window. There must be enough time to travel between consecutive meetings, and every meeting must end by minute 480. You may arrive early and wait for a window to open."
+      },
+      {
+        "role": "user",
+        "content": "Task data.\nCandidate people (person_id @ location, window start-end):\np0 @ loc_0, 180-300\np2 @ loc_2, 180-300\np3 @ loc_3, 180-300\np5 @ loc_5, 180-300\np6 @ loc_6, 180-300\np7 @ loc_7, 180-300\nTravel times in minutes (from: to=minutes):\nfrom start: start=0, loc_0=24, loc_2=19, loc_3=30, loc_5=24, loc_6=24, loc_7=26\nfrom loc_0: start=24, loc_0=0, loc_2=7, loc_3=53, loc_5=43, loc_6=9, loc_7=50\nfrom loc_2: start=19, loc_0=7, loc_2=0, loc_3=50, loc_5=41, loc_6=5, loc_7=46\nfrom loc_3: start=30, loc_0=53, loc_2=50, loc_3=0, loc_5=15, loc_6=54, loc_7=6\nfrom loc_5: start=24, loc_0=43, loc_2=41, loc_3=15, loc_5=0, loc_6=46, loc_7=16\nfrom loc_6: start=24, loc_0=9, loc_2=5, loc_3=54, loc_5=46, loc_6=0, loc_7=50\nfrom loc_7: start=26, loc_0=50, loc_2=46, loc_3=6, loc_5=16, loc_6=50, loc_7=0\nDraft plan (person_id @ start-minute, in visiting order; it may break the rules): p0@180, p5@180, p2@217, p3@230, p6@252, p7@270\n\nCheck the draft step by step: every availability window, the travel time between consecutive meetings, and the end-of-day deadline. You may reorder meetings, change start minutes, or leave meetings out. Use ONLY people from the candidate list above -- do not add anyone else. Then output your final plan on ONE line, exactly in this format:\nAction: propose[p0@10, p1@60]\nPropose the FULL plan in visiting order (person_id @ meeting-start-minute). Output exactly one such line and nothing after it."
+      },
+      {
+        "role": "assistant",
+        "content": "Action: propose[p0@180, p2@217, p6@252]"
+      }
+    ]
+  },
+  "usage_audit": {
+    "has_endpoint_usage": true,
+    "n_internal_calls": 26,
+    "n_endpoint_records": 26,
+    "calls_aligned": true,
+    "totals": {
+      "internal_input_tokens": 13807,
+      "internal_thinking_tokens": 39098,
+      "internal_answer_tokens": 677,
+      "internal_total_tokens": 53582,
+      "endpoint_prompt_tokens": 13807,
+      "endpoint_completion_tokens": 39775,
+      "endpoint_total_tokens": 53582,
+      "delta_total_tokens": 0,
+      "relative_delta_total": 0.0
+    },
+    "per_call": [
+      {
+        "role": "worker_a",
+        "internal_input_tokens": 225,
+        "internal_thinking_tokens": 1177,
+        "internal_answer_tokens": 7,
+        "internal_total_tokens": 1409,
+        "endpoint_prompt_tokens": 225,
+        "endpoint_completion_tokens": 1184,
+        "endpoint_total_tokens": 1409,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_a",
+        "internal_input_tokens": 256,
+        "internal_thinking_tokens": 1108,
+        "internal_answer_tokens": 10,
+        "internal_total_tokens": 1374,
+        "endpoint_prompt_tokens": 256,
+        "endpoint_completion_tokens": 1118,
+        "endpoint_total_tokens": 1374,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_a",
+        "internal_input_tokens": 316,
+        "internal_thinking_tokens": 299,
+        "internal_answer_tokens": 13,
+        "internal_total_tokens": 628,
+        "endpoint_prompt_tokens": 316,
+        "endpoint_completion_tokens": 312,
+        "endpoint_total_tokens": 628,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_a",
+        "internal_input_tokens": 353,
+        "internal_thinking_tokens": 452,
+        "internal_answer_tokens": 10,
+        "internal_total_tokens": 815,
+        "endpoint_prompt_tokens": 353,
+        "endpoint_completion_tokens": 462,
+        "endpoint_total_tokens": 815,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_a",
+        "internal_input_tokens": 413,
+        "internal_thinking_tokens": 569,
+        "internal_answer_tokens": 10,
+        "internal_total_tokens": 992,
+        "endpoint_prompt_tokens": 413,
+        "endpoint_completion_tokens": 579,
+        "endpoint_total_tokens": 992,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_a",
+        "internal_input_tokens": 473,
+        "internal_thinking_tokens": 506,
+        "internal_answer_tokens": 10,
+        "internal_total_tokens": 989,
+        "endpoint_prompt_tokens": 473,
+        "endpoint_completion_tokens": 516,
+        "endpoint_total_tokens": 989,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_a",
+        "internal_input_tokens": 533,
+        "internal_thinking_tokens": 1139,
+        "internal_answer_tokens": 48,
+        "internal_total_tokens": 1720,
+        "endpoint_prompt_tokens": 533,
+        "endpoint_completion_tokens": 1187,
+        "endpoint_total_tokens": 1720,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_a",
+        "internal_input_tokens": 605,
+        "internal_thinking_tokens": 623,
+        "internal_answer_tokens": 13,
+        "internal_total_tokens": 1241,
+        "endpoint_prompt_tokens": 605,
+        "endpoint_completion_tokens": 636,
+        "endpoint_total_tokens": 1241,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_a",
+        "internal_input_tokens": 642,
+        "internal_thinking_tokens": 1021,
+        "internal_answer_tokens": 13,
+        "internal_total_tokens": 1676,
+        "endpoint_prompt_tokens": 642,
+        "endpoint_completion_tokens": 1034,
+        "endpoint_total_tokens": 1676,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_a",
+        "internal_input_tokens": 679,
+        "internal_thinking_tokens": 1174,
+        "internal_answer_tokens": 60,
+        "internal_total_tokens": 1913,
+        "endpoint_prompt_tokens": 679,
+        "endpoint_completion_tokens": 1234,
+        "endpoint_total_tokens": 1913,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_a",
+        "internal_input_tokens": 765,
+        "internal_thinking_tokens": 5141,
+        "internal_answer_tokens": 89,
+        "internal_total_tokens": 5995,
+        "endpoint_prompt_tokens": 765,
+        "endpoint_completion_tokens": 5230,
+        "endpoint_total_tokens": 5995,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_a",
+        "internal_input_tokens": 874,
+        "internal_thinking_tokens": 1406,
+        "internal_answer_tokens": 70,
+        "internal_total_tokens": 2350,
+        "endpoint_prompt_tokens": 874,
+        "endpoint_completion_tokens": 1476,
+        "endpoint_total_tokens": 2350,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_a",
+        "internal_input_tokens": 969,
+        "internal_thinking_tokens": 1833,
+        "internal_answer_tokens": 0,
+        "internal_total_tokens": 2802,
+        "endpoint_prompt_tokens": 969,
+        "endpoint_completion_tokens": 1833,
+        "endpoint_total_tokens": 2802,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_b",
+        "internal_input_tokens": 225,
+        "internal_thinking_tokens": 1177,
+        "internal_answer_tokens": 7,
+        "internal_total_tokens": 1409,
+        "endpoint_prompt_tokens": 225,
+        "endpoint_completion_tokens": 1184,
+        "endpoint_total_tokens": 1409,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_b",
+        "internal_input_tokens": 256,
+        "internal_thinking_tokens": 394,
+        "internal_answer_tokens": 10,
+        "internal_total_tokens": 660,
+        "endpoint_prompt_tokens": 256,
+        "endpoint_completion_tokens": 404,
+        "endpoint_total_tokens": 660,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_b",
+        "internal_input_tokens": 316,
+        "internal_thinking_tokens": 555,
+        "internal_answer_tokens": 58,
+        "internal_total_tokens": 929,
+        "endpoint_prompt_tokens": 316,
+        "endpoint_completion_tokens": 613,
+        "endpoint_total_tokens": 929,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_b",
+        "internal_input_tokens": 398,
+        "internal_thinking_tokens": 244,
+        "internal_answer_tokens": 70,
+        "internal_total_tokens": 712,
+        "endpoint_prompt_tokens": 398,
+        "endpoint_completion_tokens": 314,
+        "endpoint_total_tokens": 712,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_b",
+        "internal_input_tokens": 518,
+        "internal_thinking_tokens": 524,
+        "internal_answer_tokens": 15,
+        "internal_total_tokens": 1057,
+        "endpoint_prompt_tokens": 518,
+        "endpoint_completion_tokens": 539,
+        "endpoint_total_tokens": 1057,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_b",
+        "internal_input_tokens": 558,
+        "internal_thinking_tokens": 833,
+        "internal_answer_tokens": 10,
+        "internal_total_tokens": 1401,
+        "endpoint_prompt_tokens": 558,
+        "endpoint_completion_tokens": 843,
+        "endpoint_total_tokens": 1401,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_b",
+        "internal_input_tokens": 618,
+        "internal_thinking_tokens": 453,
+        "internal_answer_tokens": 15,
+        "internal_total_tokens": 1086,
+        "endpoint_prompt_tokens": 618,
+        "endpoint_completion_tokens": 468,
+        "endpoint_total_tokens": 1086,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_b",
+        "internal_input_tokens": 659,
+        "internal_thinking_tokens": 612,
+        "internal_answer_tokens": 10,
+        "internal_total_tokens": 1281,
+        "endpoint_prompt_tokens": 659,
+        "endpoint_completion_tokens": 622,
+        "endpoint_total_tokens": 1281,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_b",
+        "internal_input_tokens": 719,
+        "internal_thinking_tokens": 2750,
+        "internal_answer_tokens": 15,
+        "internal_total_tokens": 3484,
+        "endpoint_prompt_tokens": 719,
+        "endpoint_completion_tokens": 2765,
+        "endpoint_total_tokens": 3484,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_b",
+        "internal_input_tokens": 759,
+        "internal_thinking_tokens": 3368,
+        "internal_answer_tokens": 26,
+        "internal_total_tokens": 4153,
+        "endpoint_prompt_tokens": 759,
+        "endpoint_completion_tokens": 3394,
+        "endpoint_total_tokens": 4153,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "worker_b",
+        "internal_input_tokens": 805,
+        "internal_thinking_tokens": 4421,
+        "internal_answer_tokens": 5,
+        "internal_total_tokens": 5231,
+        "endpoint_prompt_tokens": 805,
+        "endpoint_completion_tokens": 4426,
+        "endpoint_total_tokens": 5231,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "critic",
+        "internal_input_tokens": 762,
+        "internal_thinking_tokens": 7319,
+        "internal_answer_tokens": 26,
+        "internal_total_tokens": 8107,
+        "endpoint_prompt_tokens": 762,
+        "endpoint_completion_tokens": 7345,
+        "endpoint_total_tokens": 8107,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      },
+      {
+        "role": "finalize",
+        "internal_input_tokens": 111,
+        "internal_thinking_tokens": 0,
+        "internal_answer_tokens": 57,
+        "internal_total_tokens": 168,
+        "endpoint_prompt_tokens": 111,
+        "endpoint_completion_tokens": 57,
+        "endpoint_total_tokens": 168,
+        "endpoint_reasoning_tokens": null,
+        "delta_total_tokens": 0,
+        "relative_delta_total": 0.0,
+        "has_endpoint_usage": true,
+        "notes": []
+      }
+    ],
+    "notes": [
+      "internal output counts include <think> tags and inter-part whitespace (split at the last </think>); expect ~0 delta, small residuals only when text segments are re-tokenised instead of using endpoint token ids"
+    ]
+  },
+  "transcript_sanity": {
+    "n_messages": 56,
+    "think_leak": false,
+    "think_open_message_indices": [],
+    "think_close_message_indices": [],
+    "oracle_term_hits": [],
+    "clean": true
+  },
+  "run_result": {
+    "schema_version": "result/1.0",
+    "run_id": "c3_mas__clustered-n8-t80-o100-s30003__cap64000__Qwen-Qwen3-32B-AWQ",
+    "instance_id": "clustered-n8-t80-o100-s30003",
+    "seed": 30003,
+    "condition": "c3_mas",
+    "level": "easy",
+    "cap": 64000,
+    "model": "Qwen/Qwen3-32B-AWQ",
+    "sampling": {
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "thinking_enabled": true,
+      "seed": 42
+    },
+    "final_plan": {
+      "schema_version": "answer/1.0",
+      "meetings": [
+        {
+          "person_id": "p5",
+          "start_time": 180
+        },
+        {
+          "person_id": "p3",
+          "start_time": 230
+        },
+        {
+          "person_id": "p7",
+          "start_time": 270
+        }
+      ]
+    },
+    "best_plan_so_far": {
+      "schema_version": "answer/1.0",
+      "meetings": [
+        {
+          "person_id": "p5",
+          "start_time": 180
+        },
+        {
+          "person_id": "p3",
+          "start_time": 230
+        },
+        {
+          "person_id": "p7",
+          "start_time": 270
+        }
+      ]
+    },
+    "tokens": {
+      "cap": 64000,
+      "total": 53582,
+      "input_tokens": 13807,
+      "thinking_tokens": 39098,
+      "answer_tokens": 677,
+      "n_calls": 26,
+      "budget_exhausted": false
+    },
+    "score": {
+      "valid": true,
+      "satisfaction": 1.0,
+      "n_valid_meetings": 3,
+      "solver_optimum": 3,
+      "optimality": true,
+      "invalid_reasons": []
+    },
+    "latency_seconds": 1195.1185051612556,
+    "calls": [
+      {
+        "role": "worker_a",
+        "input_tokens": 225,
+        "thinking_tokens": 1177,
+        "answer_tokens": 7,
+        "latency_seconds": 34.57566354237497,
+        "finish_reason": "stop",
+        "requested_max_tokens": 23679,
+        "effective_max_tokens": 23679,
+        "context_limited": false
+      },
+      {
+        "role": "worker_a",
+        "input_tokens": 256,
+        "thinking_tokens": 1108,
+        "answer_tokens": 10,
+        "latency_seconds": 32.68242937512696,
+        "finish_reason": "stop",
+        "requested_max_tokens": 22239,
+        "effective_max_tokens": 22239,
+        "context_limited": false
+      },
+      {
+        "role": "worker_a",
+        "input_tokens": 316,
+        "thinking_tokens": 299,
+        "answer_tokens": 13,
+        "latency_seconds": 9.259269634261727,
+        "finish_reason": "stop",
+        "requested_max_tokens": 20805,
+        "effective_max_tokens": 20805,
+        "context_limited": false
+      },
+      {
+        "role": "worker_a",
+        "input_tokens": 353,
+        "thinking_tokens": 452,
+        "answer_tokens": 10,
+        "latency_seconds": 13.641154991462827,
+        "finish_reason": "stop",
+        "requested_max_tokens": 20140,
+        "effective_max_tokens": 20140,
+        "context_limited": false
+      },
+      {
+        "role": "worker_a",
+        "input_tokens": 413,
+        "thinking_tokens": 569,
+        "answer_tokens": 10,
+        "latency_seconds": 17.07602738030255,
+        "finish_reason": "stop",
+        "requested_max_tokens": 19265,
+        "effective_max_tokens": 19265,
+        "context_limited": false
+      },
+      {
+        "role": "worker_a",
+        "input_tokens": 473,
+        "thinking_tokens": 506,
+        "answer_tokens": 10,
+        "latency_seconds": 15.287705859169364,
+        "finish_reason": "stop",
+        "requested_max_tokens": 18213,
+        "effective_max_tokens": 18213,
+        "context_limited": false
+      },
+      {
+        "role": "worker_a",
+        "input_tokens": 533,
+        "thinking_tokens": 1139,
+        "answer_tokens": 48,
+        "latency_seconds": 35.063051253557205,
+        "finish_reason": "stop",
+        "requested_max_tokens": 17164,
+        "effective_max_tokens": 17164,
+        "context_limited": false
+      },
+      {
+        "role": "worker_a",
+        "input_tokens": 605,
+        "thinking_tokens": 623,
+        "answer_tokens": 13,
+        "latency_seconds": 18.905334752053022,
+        "finish_reason": "stop",
+        "requested_max_tokens": 15372,
+        "effective_max_tokens": 15372,
+        "context_limited": false
+      },
+      {
+        "role": "worker_a",
+        "input_tokens": 642,
+        "thinking_tokens": 1021,
+        "answer_tokens": 13,
+        "latency_seconds": 30.677603717893362,
+        "finish_reason": "stop",
+        "requested_max_tokens": 14094,
+        "effective_max_tokens": 14094,
+        "context_limited": false
+      },
+      {
+        "role": "worker_a",
+        "input_tokens": 679,
+        "thinking_tokens": 1174,
+        "answer_tokens": 60,
+        "latency_seconds": 36.65138491615653,
+        "finish_reason": "stop",
+        "requested_max_tokens": 12381,
+        "effective_max_tokens": 12381,
+        "context_limited": false
+      },
+      {
+        "role": "worker_a",
+        "input_tokens": 765,
+        "thinking_tokens": 5141,
+        "answer_tokens": 89,
+        "latency_seconds": 158.75889401696622,
+        "finish_reason": "stop",
+        "requested_max_tokens": 10382,
+        "effective_max_tokens": 10382,
+        "context_limited": false
+      },
+      {
+        "role": "worker_a",
+        "input_tokens": 874,
+        "thinking_tokens": 1406,
+        "answer_tokens": 70,
+        "latency_seconds": 44.05729613266885,
+        "finish_reason": "stop",
+        "requested_max_tokens": 4278,
+        "effective_max_tokens": 4278,
+        "context_limited": false
+      },
+      {
+        "role": "worker_a",
+        "input_tokens": 969,
+        "thinking_tokens": 1833,
+        "answer_tokens": 0,
+        "latency_seconds": 54.96029422059655,
+        "finish_reason": "length",
+        "requested_max_tokens": 1833,
+        "effective_max_tokens": 1833,
+        "context_limited": false
+      },
+      {
+        "role": "worker_b",
+        "input_tokens": 225,
+        "thinking_tokens": 1177,
+        "answer_tokens": 7,
+        "latency_seconds": 34.58642637729645,
+        "finish_reason": "stop",
+        "requested_max_tokens": 23679,
+        "effective_max_tokens": 23679,
+        "context_limited": false
+      },
+      {
+        "role": "worker_b",
+        "input_tokens": 256,
+        "thinking_tokens": 394,
+        "answer_tokens": 10,
+        "latency_seconds": 11.87354001402855,
+        "finish_reason": "stop",
+        "requested_max_tokens": 22239,
+        "effective_max_tokens": 22239,
+        "context_limited": false
+      },
+      {
+        "role": "worker_b",
+        "input_tokens": 316,
+        "thinking_tokens": 555,
+        "answer_tokens": 58,
+        "latency_seconds": 18.003675248473883,
+        "finish_reason": "stop",
+        "requested_max_tokens": 21519,
+        "effective_max_tokens": 21519,
+        "context_limited": false
+      },
+      {
+        "role": "worker_b",
+        "input_tokens": 398,
+        "thinking_tokens": 244,
+        "answer_tokens": 70,
+        "latency_seconds": 9.402585539966822,
+        "finish_reason": "stop",
+        "requested_max_tokens": 20508,
+        "effective_max_tokens": 20508,
+        "context_limited": false
+      },
+      {
+        "role": "worker_b",
+        "input_tokens": 518,
+        "thinking_tokens": 524,
+        "answer_tokens": 15,
+        "latency_seconds": 16.04926604963839,
+        "finish_reason": "stop",
+        "requested_max_tokens": 19676,
+        "effective_max_tokens": 19676,
+        "context_limited": false
+      },
+      {
+        "role": "worker_b",
+        "input_tokens": 558,
+        "thinking_tokens": 833,
+        "answer_tokens": 10,
+        "latency_seconds": 25.017228400334716,
+        "finish_reason": "stop",
+        "requested_max_tokens": 18579,
+        "effective_max_tokens": 18579,
+        "context_limited": false
+      },
+      {
+        "role": "worker_b",
+        "input_tokens": 618,
+        "thinking_tokens": 453,
+        "answer_tokens": 15,
+        "latency_seconds": 14.017013538628817,
+        "finish_reason": "stop",
+        "requested_max_tokens": 17118,
+        "effective_max_tokens": 17118,
+        "context_limited": false
+      },
+      {
+        "role": "worker_b",
+        "input_tokens": 659,
+        "thinking_tokens": 612,
+        "answer_tokens": 10,
+        "latency_seconds": 18.554426291957498,
+        "finish_reason": "stop",
+        "requested_max_tokens": 15991,
+        "effective_max_tokens": 15991,
+        "context_limited": false
+      },
+      {
+        "role": "worker_b",
+        "input_tokens": 719,
+        "thinking_tokens": 2750,
+        "answer_tokens": 15,
+        "latency_seconds": 82.67806187085807,
+        "finish_reason": "stop",
+        "requested_max_tokens": 14650,
+        "effective_max_tokens": 14650,
+        "context_limited": false
+      },
+      {
+        "role": "worker_b",
+        "input_tokens": 759,
+        "thinking_tokens": 3368,
+        "answer_tokens": 26,
+        "latency_seconds": 101.83416961506009,
+        "finish_reason": "stop",
+        "requested_max_tokens": 11126,
+        "effective_max_tokens": 11126,
+        "context_limited": false
+      },
+      {
+        "role": "worker_b",
+        "input_tokens": 805,
+        "thinking_tokens": 4421,
+        "answer_tokens": 5,
+        "latency_seconds": 133.80653692223132,
+        "finish_reason": "stop",
+        "requested_max_tokens": 6927,
+        "effective_max_tokens": 6927,
+        "context_limited": false
+      },
+      {
+        "role": "critic",
+        "input_tokens": 762,
+        "thinking_tokens": 7319,
+        "answer_tokens": 26,
+        "latency_seconds": 225.87449020333588,
+        "finish_reason": "stop",
+        "requested_max_tokens": 17675,
+        "effective_max_tokens": 17675,
+        "context_limited": false
+      },
+      {
+        "role": "finalize",
+        "input_tokens": 111,
+        "thinking_tokens": 0,
+        "answer_tokens": 57,
+        "latency_seconds": 1.735921585932374,
+        "finish_reason": "stop",
+        "requested_max_tokens": 10475,
+        "effective_max_tokens": 10475,
+        "context_limited": false
+      }
+    ],
+    "timestamp": "2026-08-12T16:58:39+00:00",
+    "notes": "pilot sweep, subset 911e4864d6fb"
+  },
+  "pilot_sweep": {
+    "metadata_version": "pilot_sweep/1.0",
+    "subset_hash": "911e4864d6fb8ea2a78ff465f8e55a286d3c48afc1b8403d5e63f231bf96fd91",
+    "binning_hash": "8e671cd13dbb262b638048eff58241226f09d5804373534789915bc302ba0dff",
+    "grid_name": "bands_budget_dev",
+    "git_commit": "4e52673ac1fbf51107e454d1a81aae4491c30d70",
+    "condition": "c3_mas",
+    "cap": 64000,
+    "level": "easy",
+    "model": "Qwen/Qwen3-32B-AWQ",
+    "endpoint": "http://localhost:8000/v1",
+    "max_model_len": 32768,
+    "request_timeout_seconds": 1800.0,
+    "shard": {
+      "index": 0,
+      "of": 1
+    },
+    "written_utc": "2026-08-12T16:58:39+00:00"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "schema_version": "heldout_export/1.0",
+  "exported_utc": "2026-09-01T11:12:02+00:00",
+  "standing": "Descriptive export. No hypothesis test, no p-value, no correction and no decision is computed here. The confirmatory analysis is scripts/analyse_heldout.py under the plan frozen 2026-08-27; an ordering visible in these tables describes the sample and is not a finding.",
+  "runs_dir": "results/logs/heldout",
+  "n_runs": 3960,
+  "n_instances": 198,
+  "schema": [
+    {
+      "name": "run_id",
+      "sqlite_type": "TEXT",
+      "meaning": "run identity and the stem of the source document"
+    },
+    {
+      "name": "condition",
+      "sqlite_type": "TEXT",
+      "meaning": "c1_react | c2_verify_revise | c3_mas | c4_planner_critic | c5_best_of_3"
+    },
+    {
+      "name": "cap",
+      "sqlite_type": "INTEGER",
+      "meaning": "token budget cap of this run"
+    },
+    {
+      "name": "instance_id",
+      "sqlite_type": "TEXT",
+      "meaning": "frozen instance the run was made on"
+    },
+    {
+      "name": "block",
+      "sqlite_type": "TEXT",
+      "meaning": "A = the n=8 density design, B = the n=4/5/6 sizes"
+    },
+    {
+      "name": "band",
+      "sqlite_type": "TEXT",
+      "meaning": "low | medium | high for Block A; empty for Block B, which is not a density band"
+    },
+    {
+      "name": "n_people",
+      "sqlite_type": "INTEGER",
+      "meaning": "generator parameter, never a complexity level"
+    },
+    {
+      "name": "optimum",
+      "sqlite_type": "INTEGER",
+      "meaning": "oracle optimum of the instance, the denominator of satisfaction"
+    },
+    {
+      "name": "conflict_pairs",
+      "sqlite_type": "INTEGER",
+      "meaning": "binding conflict pairs of the instance"
+    },
+    {
+      "name": "satisfaction",
+      "sqlite_type": "REAL",
+      "meaning": "achieved objective / oracle optimum; 0 if the plan is invalid"
+    },
+    {
+      "name": "valid",
+      "sqlite_type": "INTEGER",
+      "meaning": "1 if the final plan passed the validator, else 0"
+    },
+    {
+      "name": "n_meetings",
+      "sqlite_type": "INTEGER",
+      "meaning": "meetings in the final plan"
+    },
+    {
+      "name": "tokens_total",
+      "sqlite_type": "INTEGER",
+      "meaning": "all tokens booked to this run, thinking included"
+    },
+    {
+      "name": "n_calls",
+      "sqlite_type": "INTEGER",
+      "meaning": "LLM calls; the per-call records stay in the document"
+    },
+    {
+      "name": "termination",
+      "sqlite_type": "TEXT",
+      "meaning": "how the run ended, as the agent reported it"
+    },
+    {
+      "name": "source_json",
+      "sqlite_type": "TEXT",
+      "meaning": "path of the run document this row was built from, relative to the repository root where possible"
+    },
+    {
+      "name": "details_json",
+      "sqlite_type": "TEXT",
+      "meaning": "the document's remaining small fields, as JSON"
+    }
+  ],
+  "n_columns": 17,
+  "sqlite_table": "runs",
+  "details_json_excludes": {
+    "agent.transcript_and_proposal_records": "large; counts kept in details_json",
+    "run_result.calls": "large; n_calls kept as a column"
+  },
+  "source_document_reference": "every row carries `source_json`, the path of the document it was built from; `run_id` is that file's stem. The full run, including the transcript and the per-call records that are not copied here, is recoverable from it.",
+  "band_alias": {
+    "easy": "low",
+    "medium": "medium",
+    "hard": "high"
+  },
+  "conditions": [
+    "c1_react",
+    "c2_verify_revise",
+    "c3_mas",
+    "c4_planner_critic",
+    "c5_best_of_3"
+  ],
+  "caps": [
+    16000,
+    32000,
+    64000,
+    128000
+  ],
+  "strata": [
+    "band=high",
+    "band=low",
+    "band=medium",
+    "n=4",
+    "n=5",
+    "n=6"
+  ],
+  "completeness_audit": {
+    "n_expected": 3960,
+    "n_verified": 3960,
+    "all_checks_passed": true
+  },
+  "parquet": "not written: no parquet engine (ImportError). Re-run as `VIRTUAL_ENV=$PWD/.venv-harness uv run --with pyarrow python -m scripts.export_heldout_results ...` to produce it.",
+  "higher_order_gap_H_available": true
+}

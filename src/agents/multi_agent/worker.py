@@ -103,7 +103,8 @@ def run_worker(
     view = WorkerBudgetView(shared=shared_ledger, quota=quota)
     # The view duck-types the ledger interface agent_step consumes.
     ctx = LoopContext(
-        instance=sub_instance, client=client, ledger=view, max_steps=max_steps  # type: ignore[arg-type]
+        instance=sub_instance, client=client, ledger=view,  # type: ignore[arg-type]
+        max_steps=max_steps, condition="c3_mas",
     )
 
     # The C1 wiring with one difference: "finalize" ends the SUB-LOOP (C3-6 --
@@ -132,5 +133,8 @@ def run_worker(
         transcript=final_state["messages"],
         n_steps=final_state["step"],
         aborted=final_state.get("aborted", False),
+        # Relabelled like the calls, so a worker's rejected proposals stay attributable
+        # to it once the two workers' rows are merged at the instance level.
+        proposals=[{**p, "role": label} for p in final_state.get("proposals", [])],
         global_budget_cut=view.global_cut,
     )

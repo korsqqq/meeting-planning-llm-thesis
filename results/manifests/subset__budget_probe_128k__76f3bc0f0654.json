@@ -1,0 +1,259 @@
+{
+  "schema_version": "pilot_subset/1.0",
+  "selector_version": "probe_subset/1.0",
+  "purpose": "frozen 12-instance subset for the exploratory 128 000 budget probe; entries copied verbatim from the parent, nothing regenerated",
+  "manifest_hash": "8e671cd13dbb262b638048eff58241226f09d5804373534789915bc302ba0dff",
+  "manifest_schema_version": "pilot_manifest/1.0",
+  "grid_name": "bands_budget_dev",
+  "seed_range_name": "budget_dev",
+  "parent_subset_hash": "911e4864d6fb8ea2a78ff465f8e55a286d3c48afc1b8403d5e63f231bf96fd91",
+  "probe_cap": 128000,
+  "selection_rule": "per band, the first 2 instances with oracle optimum 3 and the first 2 with optimum 4, in the parent manifest's canonical order; position and structural facts only",
+  "forbidden_inputs": [
+    "satisfaction",
+    "feasibility",
+    "termination",
+    "token usage",
+    "any other agent outcome from the completed 64 000 runs"
+  ],
+  "per_level_requested": 4,
+  "counts": {
+    "easy": 4,
+    "medium": 4,
+    "hard": 4
+  },
+  "short_levels": [],
+  "representation": {
+    "easy": {
+      "n_people": [
+        8
+      ],
+      "travel_structure": [
+        "clustered",
+        "random"
+      ],
+      "tightness": [
+        0.6,
+        0.8
+      ],
+      "optimum_counts": {
+        "3": 2,
+        "4": 2
+      },
+      "conflict_pairs": [
+        0,
+        1
+      ]
+    },
+    "medium": {
+      "n_people": [
+        8
+      ],
+      "travel_structure": [
+        "clustered",
+        "line",
+        "uniform"
+      ],
+      "tightness": [
+        0.8,
+        0.9
+      ],
+      "optimum_counts": {
+        "3": 2,
+        "4": 2
+      },
+      "conflict_pairs": [
+        7
+      ]
+    },
+    "hard": {
+      "n_people": [
+        8
+      ],
+      "travel_structure": [
+        "clustered",
+        "random",
+        "uniform"
+      ],
+      "tightness": [
+        0.9,
+        1.0
+      ],
+      "optimum_counts": {
+        "3": 2,
+        "4": 2
+      },
+      "conflict_pairs": [
+        13,
+        14,
+        15
+      ]
+    }
+  },
+  "instances": {
+    "easy": [
+      {
+        "instance_id": "random-n8-t80-o100-s30000",
+        "seed": 30000,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 1,
+        "cell": {
+          "n_people": 8,
+          "tightness": 0.8,
+          "overlap": 1.0,
+          "travel_structure": "random"
+        }
+      },
+      {
+        "instance_id": "random-n8-t80-o80-s30002",
+        "seed": 30002,
+        "level": "easy",
+        "optimum": 3,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 8,
+          "tightness": 0.8,
+          "overlap": 0.8,
+          "travel_structure": "random"
+        }
+      },
+      {
+        "instance_id": "clustered-n8-t60-o100-s30001",
+        "seed": 30001,
+        "level": "easy",
+        "optimum": 4,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 8,
+          "tightness": 0.6,
+          "overlap": 1.0,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "clustered-n8-t60-o100-s30004",
+        "seed": 30004,
+        "level": "easy",
+        "optimum": 4,
+        "complexity_metric": 0,
+        "cell": {
+          "n_people": 8,
+          "tightness": 0.6,
+          "overlap": 1.0,
+          "travel_structure": "clustered"
+        }
+      }
+    ],
+    "medium": [
+      {
+        "instance_id": "line-n8-t90-o80-s30039",
+        "seed": 30039,
+        "level": "medium",
+        "optimum": 3,
+        "complexity_metric": 7,
+        "cell": {
+          "n_people": 8,
+          "tightness": 0.9,
+          "overlap": 0.8,
+          "travel_structure": "line"
+        }
+      },
+      {
+        "instance_id": "line-n8-t80-o100-s30040",
+        "seed": 30040,
+        "level": "medium",
+        "optimum": 3,
+        "complexity_metric": 7,
+        "cell": {
+          "n_people": 8,
+          "tightness": 0.8,
+          "overlap": 1.0,
+          "travel_structure": "line"
+        }
+      },
+      {
+        "instance_id": "uniform-n8-t90-o50-s30036",
+        "seed": 30036,
+        "level": "medium",
+        "optimum": 4,
+        "complexity_metric": 7,
+        "cell": {
+          "n_people": 8,
+          "tightness": 0.9,
+          "overlap": 0.5,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "clustered-n8-t90-o20-s30041",
+        "seed": 30041,
+        "level": "medium",
+        "optimum": 4,
+        "complexity_metric": 7,
+        "cell": {
+          "n_people": 8,
+          "tightness": 0.9,
+          "overlap": 0.2,
+          "travel_structure": "clustered"
+        }
+      }
+    ],
+    "hard": [
+      {
+        "instance_id": "random-n8-t90-o80-s30015",
+        "seed": 30015,
+        "level": "hard",
+        "optimum": 3,
+        "complexity_metric": 13,
+        "cell": {
+          "n_people": 8,
+          "tightness": 0.9,
+          "overlap": 0.8,
+          "travel_structure": "random"
+        }
+      },
+      {
+        "instance_id": "clustered-n8-t90-o80-s30017",
+        "seed": 30017,
+        "level": "hard",
+        "optimum": 3,
+        "complexity_metric": 15,
+        "cell": {
+          "n_people": 8,
+          "tightness": 0.9,
+          "overlap": 0.8,
+          "travel_structure": "clustered"
+        }
+      },
+      {
+        "instance_id": "uniform-n8-t100-o50-s30024",
+        "seed": 30024,
+        "level": "hard",
+        "optimum": 4,
+        "complexity_metric": 14,
+        "cell": {
+          "n_people": 8,
+          "tightness": 1.0,
+          "overlap": 0.5,
+          "travel_structure": "uniform"
+        }
+      },
+      {
+        "instance_id": "uniform-n8-t90-o50-s30027",
+        "seed": 30027,
+        "level": "hard",
+        "optimum": 4,
+        "complexity_metric": 14,
+        "cell": {
+          "n_people": 8,
+          "tightness": 0.9,
+          "overlap": 0.5,
+          "travel_structure": "uniform"
+        }
+      }
+    ]
+  },
+  "content_hash": "76f3bc0f06547a7d0fa1593c62bd207c0c027d94324030bf10b35a198eea6100",
+  "timestamp_utc": "2026-08-15T01:01:50+00:00"
+}

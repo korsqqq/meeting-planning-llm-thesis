@@ -1,0 +1,20 @@
+# requirements/harness.txt
+# CPU-only harness environment (generator, oracle, budget, agents, scorer, tests).
+# Deliberately SEPARATE from requirements/serving.txt: vLLM pins its own torch /
+# transformers stack, and the harness must not be dragged along by those pins.
+#
+# These are the direct dependencies with minimum bounds only. The EXACT versions
+# used for the thesis come from freezing the installed environment on the run
+# machine into requirements/harness.lock.txt (see SETUP.md); that lock file, not
+# this one, is the reproducibility record.
+#
+# Python: 3.12 (>=3.11 is a hard requirement -- src/schemas uses enum.StrEnum).
+
+pydantic>=2.7
+langgraph>=0.2
+openai>=1.40
+transformers>=4.51          # Qwen3 chat template support
+jinja2>=3.1                 # required by apply_chat_template
+ortools>=9.10               # CP-SAT oracle
+huggingface-hub>=0.24       # pinned-revision downloads of tokenizer files
+pytest>=8.0

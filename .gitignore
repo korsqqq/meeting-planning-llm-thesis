@@ -1,76 +1,49 @@
-﻿# Environment variables and secrets
+# Секреты
 .env
-.env.*
-!.env.example
-*.pem
-*.key
-credentials.json
+*.env
 
-# Python environments
+# Результаты экспериментов (большие файлы)
+results/logs/
+
+# Выходные файлы Slurm-задач: каждый GPU-job пишет сюда свой .out, лог vLLM,
+# provenance и summary. Без этого правила любой job делает дерево грязным сам
+# собой, и provenance.dirty перестаёт означать «есть незакоммиченные правки
+# кода» — ровно тогда, когда этот флаг нужен, перед held-out.
+# Игнорируется ТОЛЬКО logs/hpc/: logs/ в целом остаётся видимым.
+logs/hpc/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
 .venv/
 venv/
-env/
 
-# Python generated files
-__pycache__/
-*.py[cod]
-*$py.class
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-coverage.xml
-htmlcov/
+# LaTeX мусор.
+# ВНИМАНИЕ: *.log и *.out раньше стояли без области действия и молча съедали КАЖДЫЙ
+# .log в репозитории — логи прогонщика формального пилота и все логи vLLM. Файлы
+# копировались, добавлялись через git add, git status показывал чисто, и в коммит они
+# не попадали. Уцелели только pre-flight записи, потому что они .txt. Расширения .aux,
+# .toc, .fls, .fdb_latexmk и .synctex.gz однозначно латеховские и остаются глобальными;
+# два неоднозначных ограничены каталогом, где живёт LaTeX.
+*.aux
+thesis/**/*.log
+thesis/**/*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
 
-# Build artifacts
-build/
-dist/
-*.egg-info/
-
-# IDE and editor files
-.idea/
-.vscode/
-*.swp
-*.swo
-
-# Operating system files
+# OS
 .DS_Store
 Thumbs.db
 
-# Local experiment output
-results/logs/
-logs/
-tmp/
-.cache/
-
-# Local model files
-models/
-checkpoints/
-*.safetensors
-*.gguf
-
-# AI assistant working files
-.claude/
-.codex/
-CLAUDE.md
-AGENTS.md
-PROGRESS.md
-ai_notes/
-chat_logs/
-.github/copilot-instructions.md
-
-# LaTeX temporary files
-*.aux
-*.bbl
-*.bcf
-*.blg
-*.fdb_latexmk
-*.fls
-*.log
-*.out
-*.run.xml
-*.synctex.gz
-*.toc
-
-# Local thesis documents
+# Local artifacts
 expose_Andrii_Korsun final version.pdf
+# Heavy derived artefacts. Both are rebuildable from results/logs/heldout and are
+# far too large to version: the tarball is 13 MB and the SQLite mirror 16.6 MB.
+heldout_results_3960.tar.gz
+results/exports/heldout/*.sqlite
+
+# Local tooling
+.claude/

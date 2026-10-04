@@ -19,6 +19,7 @@ from src.agents.react_core import (
     finalize_step,
     initial_state,
     route_after_agent,
+    termination_reason,
     tool_step,
 )
 from src.core import DEFAULT_FINALIZATION_RESERVE, BudgetLedger, LLMClient
@@ -42,10 +43,18 @@ def run_react(
     cap: int,
     max_steps: int = 12,
     finalization_reserve: int = DEFAULT_FINALIZATION_RESERVE,
+    retry_on_empty: bool = False,
 ) -> ReactResult:
-    """Run C1 on one instance under a token `cap`. Returns the run artifacts."""
+    """Run C1 on one instance under a token `cap`. Returns the run artifacts.
+
+    `retry_on_empty` is the EXPERIMENTAL arm of the empty-turn A/B and defaults to the
+    locked behaviour (False). See `LoopContext.retry_on_empty`.
+    """
     ledger = BudgetLedger(cap=cap, finalization_reserve=finalization_reserve)
-    ctx = LoopContext(instance=instance, client=client, ledger=ledger, max_steps=max_steps)
+    ctx = LoopContext(
+        instance=instance, client=client, ledger=ledger, max_steps=max_steps,
+        retry_on_empty=retry_on_empty, condition="c1_react",
+    )
 
     graph = StateGraph(ReactState)
     graph.add_node("agent", lambda s: agent_step(s, ctx))
@@ -74,4 +83,7 @@ def run_react(
         transcript=final_state["messages"],
         n_steps=final_state["step"],
         finalization_mismatch=final_state.get("finalization_mismatch", False),
+        empty_turns=final_state.get("empty_turns", 0),
+        termination=termination_reason(final_state, max_steps),
+        proposals=final_state.get("proposals", []),
     )

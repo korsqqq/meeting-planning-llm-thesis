@@ -1,0 +1,95 @@
+{
+  "schema_version": "pilot_manifest/1.0",
+  "selector_version": "band_manifest/1.0",
+  "grid_name": "bands_held_out_n8",
+  "purpose": "frozen density bands (THESIS_DECISIONS section 3, amendment 2026-08-09); level labels are a compatibility alias for the bands",
+  "seed_range_name": "held_out_n8",
+  "seed_range": {
+    "start": 100000,
+    "end": 109999
+  },
+  "n_people": 8,
+  "bands": [
+    {
+      "band": "low",
+      "level": "easy",
+      "pairs": [
+        0,
+        1
+      ],
+      "D": [
+        0.0,
+        0.0357
+      ]
+    },
+    {
+      "band": "medium",
+      "level": "medium",
+      "pairs": [
+        7,
+        7
+      ],
+      "D": [
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "band": "high",
+      "level": "hard",
+      "pairs": [
+        13,
+        16
+      ],
+      "D": [
+        0.4643,
+        0.5714
+      ]
+    }
+  ],
+  "boundaries": {
+    "b1_easy_max": 1,
+    "b2_medium_max": 7
+  },
+  "n_per_band": 50,
+  "n_accepted": 150,
+  "level_counts": {
+    "easy": 50,
+    "medium": 50,
+    "hard": 50
+  },
+  "pool": {
+    "dir": "results/calibration/heldout_n8",
+    "git_commit": null,
+    "seed_start": 100000,
+    "seed_end": 100399,
+    "n_candidates": 38400,
+    "candidates_sha256": "1f0e6bf3807020c08738c49acf071438956248b9e5cf295c69cb85df464dcb56"
+  },
+  "selection": {
+    "optimum_histogram": {
+      "3": 32,
+      "4": 18
+    },
+    "reference_histogram": {
+      "3": 41,
+      "4": 24
+    },
+    "scaled_reference": {
+      "3": 32,
+      "4": 18
+    },
+    "used_the_scaled_reference": true,
+    "attempts": [
+      {
+        "histogram": {
+          "3": 32,
+          "4": 18
+        },
+        "attainable": true
+      }
+    ]
+  },
+  "content_hash": "2bc8927fd3b0730c4016500c224784cca496df694d82b73f23dd33dfd43579c6",
+  "timestamp_utc": "2026-08-27T02:33:51+00:00"
+}

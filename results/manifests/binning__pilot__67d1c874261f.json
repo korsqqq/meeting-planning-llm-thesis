@@ -1,0 +1,7297 @@
+{
+  "schema_version": "pilot_manifest/1.0",
+  "grid_name": "pilot",
+  "grid": {
+    "n_people": [
+      4,
+      6,
+      8
+    ],
+    "tightness": [
+      0.2,
+      0.7,
+      0.85,
+      1.0
+    ],
+    "overlap": [
+      0.2,
+      0.8
+    ],
+    "travel_structure": [
+      "uniform",
+      "clustered"
+    ]
+  },
+  "seed_range": {
+    "start": 10000,
+    "end": 20000
+  },
+  "n_per_cell": 5,
+  "n_cells": 48,
+  "n_accepted": 240,
+  "boundaries": {
+    "b1_easy_max": 0,
+    "b2_medium_max": 5
+  },
+  "level_counts": {
+    "easy": 123,
+    "medium": 62,
+    "hard": 55
+  },
+  "cells": [
+    {
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t20-o20-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n4-t20-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.012
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n4-t20-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n4-t20-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n4-t20-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n4-t20-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t20-o20-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n4-t20-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n4-t20-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n4-t20-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n4-t20-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n4-t20-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t20-o80-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n4-t20-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n4-t20-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n4-t20-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n4-t20-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n4-t20-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t20-o80-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n4-t20-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n4-t20-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n4-t20-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n4-t20-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n4-t20-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t70-o20-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n4-t70-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n4-t70-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n4-t70-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 0,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n4-t70-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n4-t70-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.005
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t70-o20-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n4-t70-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.004
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n4-t70-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n4-t70-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 0,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n4-t70-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n4-t70-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t70-o80-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n4-t70-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n4-t70-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n4-t70-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 0,
+          "solve_seconds": 0.007
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n4-t70-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n4-t70-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t70-o80-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n4-t70-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n4-t70-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n4-t70-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n4-t70-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n4-t70-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 0,
+          "solve_seconds": 0.007
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t85-o20-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n4-t85-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 0,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n4-t85-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 1,
+          "solve_seconds": 0.003
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n4-t85-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 1,
+          "solve_seconds": 0.004
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n4-t85-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 2,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n4-t85-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.004
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t85-o20-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n4-t85-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.004
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n4-t85-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.004
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n4-t85-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 1,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n4-t85-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 0,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n4-t85-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.004
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t85-o80-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n4-t85-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 3,
+          "solve_seconds": 0.004
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n4-t85-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 4,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n4-t85-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 3,
+          "solve_seconds": 0.004
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n4-t85-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 2,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n4-t85-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 2,
+          "solve_seconds": 0.005
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t85-o80-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n4-t85-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 2,
+          "solve_seconds": 0.003
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n4-t85-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 2,
+          "solve_seconds": 0.003
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n4-t85-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 5,
+          "solve_seconds": 0.004
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n4-t85-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 1,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n4-t85-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 1,
+          "solve_seconds": 0.005
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t100-o20-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n4-t100-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 2,
+          "solve_seconds": 0.004
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n4-t100-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 2,
+          "solve_seconds": 0.003
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n4-t100-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 3,
+          "solve_seconds": 0.004
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n4-t100-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 3,
+          "solve_seconds": 0.003
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n4-t100-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 1,
+          "solve_seconds": 0.004
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t100-o20-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n4-t100-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 1,
+          "solve_seconds": 0.003
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n4-t100-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 1,
+          "solve_seconds": 0.003
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n4-t100-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 3,
+          "solve_seconds": 0.004
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n4-t100-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 1,
+          "complexity_metric": 3,
+          "solve_seconds": 0.004
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n4-t100-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 2,
+          "solve_seconds": 0.004
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t100-o80-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n4-t100-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 4,
+          "solve_seconds": 0.003
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n4-t100-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 1,
+          "complexity_metric": 6,
+          "solve_seconds": 0.003
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n4-t100-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 1,
+          "complexity_metric": 6,
+          "solve_seconds": 0.003
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n4-t100-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 5,
+          "solve_seconds": 0.004
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n4-t100-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 1,
+          "complexity_metric": 6,
+          "solve_seconds": 0.004
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t100-o80-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n4-t100-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 5,
+          "solve_seconds": 0.003
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n4-t100-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 1,
+          "complexity_metric": 6,
+          "solve_seconds": 0.003
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n4-t100-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 1,
+          "complexity_metric": 6,
+          "solve_seconds": 0.003
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n4-t100-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 5,
+          "solve_seconds": 0.003
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n4-t100-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 5,
+          "solve_seconds": 0.004
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t20-o20-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n6-t20-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.012
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n6-t20-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.01
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n6-t20-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.01
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n6-t20-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.01
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n6-t20-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.009
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t20-o20-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n6-t20-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.011
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n6-t20-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.009
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n6-t20-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.011
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n6-t20-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 0,
+          "solve_seconds": 0.014
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n6-t20-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.009
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t20-o80-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n6-t20-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.01
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n6-t20-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.013
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n6-t20-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.01
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n6-t20-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.01
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n6-t20-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.011
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t20-o80-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n6-t20-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.011
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n6-t20-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.01
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n6-t20-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.011
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n6-t20-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 0,
+          "solve_seconds": 0.011
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n6-t20-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.009
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t70-o20-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n6-t70-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.008
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n6-t70-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.012
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n6-t70-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 0,
+          "solve_seconds": 0.009
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n6-t70-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 0,
+          "solve_seconds": 0.01
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n6-t70-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 0,
+          "solve_seconds": 0.012
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t70-o20-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n6-t70-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 0,
+          "solve_seconds": 0.008
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n6-t70-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 0,
+          "solve_seconds": 0.009
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n6-t70-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.009
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n6-t70-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 0,
+          "solve_seconds": 0.011
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n6-t70-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.009
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t70-o80-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n6-t70-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.016
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n6-t70-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 0,
+          "solve_seconds": 0.018
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n6-t70-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.016
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n6-t70-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.014
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n6-t70-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.016
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t70-o80-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n6-t70-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.017
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n6-t70-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.019
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n6-t70-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.011
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n6-t70-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 0,
+          "solve_seconds": 0.014
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n6-t70-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.015
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t85-o20-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n6-t85-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 1,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n6-t85-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 3,
+          "solve_seconds": 0.007
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n6-t85-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 1,
+          "solve_seconds": 0.008
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n6-t85-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 1,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n6-t85-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 1,
+          "solve_seconds": 0.007
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t85-o20-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n6-t85-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 1,
+          "solve_seconds": 0.007
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n6-t85-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 1,
+          "solve_seconds": 0.008
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n6-t85-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 2,
+          "solve_seconds": 0.007
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n6-t85-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 2,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n6-t85-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 0,
+          "solve_seconds": 0.006
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t85-o80-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n6-t85-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 2,
+          "solve_seconds": 0.009
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n6-t85-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 8,
+          "solve_seconds": 0.009
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n6-t85-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 5,
+          "solve_seconds": 0.008
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n6-t85-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 4,
+          "solve_seconds": 0.01
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n6-t85-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 6,
+          "solve_seconds": 0.007
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t85-o80-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n6-t85-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 4,
+          "solve_seconds": 0.01
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n6-t85-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 3,
+          "solve_seconds": 0.009
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n6-t85-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 4,
+          "solve_seconds": 0.008
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n6-t85-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 8,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n6-t85-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 2,
+          "solve_seconds": 0.009
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t100-o20-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n6-t100-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 2,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n6-t100-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 7,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n6-t100-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 7,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n6-t100-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 5,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n6-t100-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 5,
+          "solve_seconds": 0.005
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t100-o20-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n6-t100-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 6,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n6-t100-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 7,
+          "solve_seconds": 0.004
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n6-t100-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 7,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n6-t100-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 6,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n6-t100-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 3,
+          "solve_seconds": 0.005
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t100-o80-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n6-t100-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 13,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n6-t100-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 1,
+          "complexity_metric": 15,
+          "solve_seconds": 0.004
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n6-t100-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 12,
+          "solve_seconds": 0.004
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n6-t100-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 13,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n6-t100-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 13,
+          "solve_seconds": 0.005
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t100-o80-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n6-t100-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 11,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n6-t100-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 1,
+          "complexity_metric": 15,
+          "solve_seconds": 0.004
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n6-t100-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 14,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n6-t100-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 1,
+          "complexity_metric": 15,
+          "solve_seconds": 0.005
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n6-t100-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 1,
+          "complexity_metric": 15,
+          "solve_seconds": 0.004
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t20-o20-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n8-t20-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 8,
+          "complexity_metric": 0,
+          "solve_seconds": 0.029
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n8-t20-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 8,
+          "complexity_metric": 0,
+          "solve_seconds": 0.02
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n8-t20-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 8,
+          "complexity_metric": 0,
+          "solve_seconds": 0.019
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n8-t20-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 8,
+          "complexity_metric": 0,
+          "solve_seconds": 0.023
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n8-t20-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 8,
+          "complexity_metric": 0,
+          "solve_seconds": 0.023
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t20-o20-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n8-t20-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 7,
+          "complexity_metric": 0,
+          "solve_seconds": 0.018
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n8-t20-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 8,
+          "complexity_metric": 0,
+          "solve_seconds": 0.034
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n8-t20-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.039
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n8-t20-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.037
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n8-t20-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 7,
+          "complexity_metric": 0,
+          "solve_seconds": 0.136
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t20-o80-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n8-t20-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 8,
+          "complexity_metric": 0,
+          "solve_seconds": 0.025
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n8-t20-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 8,
+          "complexity_metric": 0,
+          "solve_seconds": 0.019
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n8-t20-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 8,
+          "complexity_metric": 0,
+          "solve_seconds": 0.02
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n8-t20-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 8,
+          "complexity_metric": 0,
+          "solve_seconds": 0.019
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n8-t20-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 8,
+          "complexity_metric": 0,
+          "solve_seconds": 0.018
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t20-o80-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n8-t20-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 7,
+          "complexity_metric": 0,
+          "solve_seconds": 0.022
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n8-t20-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 7,
+          "complexity_metric": 0,
+          "solve_seconds": 0.046
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n8-t20-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.088
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n8-t20-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.032
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n8-t20-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 7,
+          "complexity_metric": 0,
+          "solve_seconds": 0.122
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t70-o20-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n8-t70-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.023
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n8-t70-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.027
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n8-t70-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 7,
+          "complexity_metric": 0,
+          "solve_seconds": 0.018
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n8-t70-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.022
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n8-t70-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 7,
+          "complexity_metric": 0,
+          "solve_seconds": 0.025
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t70-o20-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n8-t70-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.018
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n8-t70-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 0,
+          "solve_seconds": 0.034
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n8-t70-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 1,
+          "solve_seconds": 0.016
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n8-t70-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 1,
+          "solve_seconds": 0.021
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n8-t70-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 0,
+          "solve_seconds": 0.028
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t70-o80-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n8-t70-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.072
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n8-t70-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.085
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n8-t70-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 0,
+          "solve_seconds": 0.089
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n8-t70-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.093
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n8-t70-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.06
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t70-o80-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n8-t70-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.067
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n8-t70-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.064
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n8-t70-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 1,
+          "solve_seconds": 0.036
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n8-t70-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 1,
+          "solve_seconds": 0.021
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n8-t70-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 0,
+          "solve_seconds": 0.092
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t85-o20-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n8-t85-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 1,
+          "solve_seconds": 0.017
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n8-t85-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 4,
+          "solve_seconds": 0.009
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n8-t85-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 1,
+          "solve_seconds": 0.013
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n8-t85-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 2,
+          "solve_seconds": 0.012
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n8-t85-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 6,
+          "complexity_metric": 2,
+          "solve_seconds": 0.013
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t85-o20-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n8-t85-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 3,
+          "solve_seconds": 0.01
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n8-t85-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 2,
+          "solve_seconds": 0.009
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n8-t85-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 6,
+          "solve_seconds": 0.008
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n8-t85-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 3,
+          "solve_seconds": 0.01
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n8-t85-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 5,
+          "complexity_metric": 3,
+          "solve_seconds": 0.014
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t85-o80-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n8-t85-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 11,
+          "solve_seconds": 0.016
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n8-t85-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 9,
+          "solve_seconds": 0.013
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n8-t85-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 6,
+          "solve_seconds": 0.015
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n8-t85-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 8,
+          "solve_seconds": 0.018
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n8-t85-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 6,
+          "solve_seconds": 0.018
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t85-o80-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n8-t85-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 8,
+          "solve_seconds": 0.013
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n8-t85-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 6,
+          "solve_seconds": 0.014
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n8-t85-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 13,
+          "solve_seconds": 0.011
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n8-t85-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 12,
+          "solve_seconds": 0.012
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n8-t85-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 8,
+          "solve_seconds": 0.014
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t100-o20-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n8-t100-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 11,
+          "solve_seconds": 0.009
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n8-t100-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 9,
+          "solve_seconds": 0.007
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n8-t100-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 7,
+          "solve_seconds": 0.008
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n8-t100-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 7,
+          "solve_seconds": 0.009
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n8-t100-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 9,
+          "solve_seconds": 0.008
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t100-o20-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n8-t100-o20-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 7,
+          "solve_seconds": 0.009
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n8-t100-o20-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 9,
+          "solve_seconds": 0.007
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n8-t100-o20-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 4,
+          "complexity_metric": 10,
+          "solve_seconds": 0.007
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n8-t100-o20-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 11,
+          "solve_seconds": 0.027
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n8-t100-o20-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 11,
+          "solve_seconds": 0.008
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t100-o80-clustered",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "clustered-n8-t100-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 23,
+          "solve_seconds": 0.007
+        },
+        {
+          "seed": 10001,
+          "instance_id": "clustered-n8-t100-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 3,
+          "complexity_metric": 23,
+          "solve_seconds": 0.007
+        },
+        {
+          "seed": 10002,
+          "instance_id": "clustered-n8-t100-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 24,
+          "solve_seconds": 0.007
+        },
+        {
+          "seed": 10003,
+          "instance_id": "clustered-n8-t100-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 23,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10004,
+          "instance_id": "clustered-n8-t100-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 26,
+          "solve_seconds": 0.008
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    },
+    {
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t100-o80-uniform",
+      "accepted": [
+        {
+          "seed": 10000,
+          "instance_id": "uniform-n8-t100-o80-s10000",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 25,
+          "solve_seconds": 0.008
+        },
+        {
+          "seed": 10001,
+          "instance_id": "uniform-n8-t100-o80-s10001",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 25,
+          "solve_seconds": 0.006
+        },
+        {
+          "seed": 10002,
+          "instance_id": "uniform-n8-t100-o80-s10002",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 26,
+          "solve_seconds": 0.007
+        },
+        {
+          "seed": 10003,
+          "instance_id": "uniform-n8-t100-o80-s10003",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 1,
+          "complexity_metric": 28,
+          "solve_seconds": 0.007
+        },
+        {
+          "seed": 10004,
+          "instance_id": "uniform-n8-t100-o80-s10004",
+          "status": "OPTIMAL",
+          "proven_optimal": true,
+          "optimum": 2,
+          "complexity_metric": 27,
+          "solve_seconds": 0.008
+        }
+      ],
+      "rejected": [],
+      "n_considered": 5,
+      "complete": true,
+      "seed_range_exhausted": false,
+      "rates": {
+        "not_proven_rate": 0.0,
+        "optimum_zero_rate": 0.0,
+        "n_not_proven": 0,
+        "n_optimum_zero": 0
+      }
+    }
+  ],
+  "pool": [
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n4-t20-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.012,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t20-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n4-t20-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t20-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n4-t20-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t20-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n4-t20-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t20-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n4-t20-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t20-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n4-t20-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t20-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n4-t20-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t20-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n4-t20-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t20-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n4-t20-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t20-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n4-t20-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t20-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n4-t20-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t20-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n4-t20-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t20-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n4-t20-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t20-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n4-t20-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t20-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n4-t20-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t20-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n4-t20-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t20-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n4-t20-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t20-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n4-t20-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t20-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n4-t20-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t20-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n4-t20-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t20-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n4-t70-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t70-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n4-t70-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t70-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n4-t70-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 0,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t70-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n4-t70-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t70-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n4-t70-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t70-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n4-t70-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t70-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n4-t70-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t70-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n4-t70-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 0,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t70-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n4-t70-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t70-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n4-t70-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t70-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n4-t70-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t70-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n4-t70-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t70-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n4-t70-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 0,
+      "solve_seconds": 0.007,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t70-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n4-t70-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t70-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n4-t70-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t70-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n4-t70-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t70-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n4-t70-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t70-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n4-t70-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t70-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n4-t70-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t70-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n4-t70-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 0,
+      "solve_seconds": 0.007,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t70-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n4-t85-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 0,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t85-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n4-t85-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 1,
+      "solve_seconds": 0.003,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t85-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n4-t85-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 1,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t85-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n4-t85-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 2,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t85-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n4-t85-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t85-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n4-t85-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t85-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n4-t85-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t85-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n4-t85-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 1,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t85-o20-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n4-t85-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 0,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t85-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n4-t85-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t85-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n4-t85-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 3,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t85-o80-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n4-t85-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 4,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t85-o80-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n4-t85-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 3,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t85-o80-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n4-t85-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 2,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t85-o80-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n4-t85-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 2,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t85-o80-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n4-t85-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 2,
+      "solve_seconds": 0.003,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t85-o80-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n4-t85-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 2,
+      "solve_seconds": 0.003,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t85-o80-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n4-t85-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 5,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t85-o80-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n4-t85-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 1,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t85-o80-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n4-t85-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 1,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 4,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t85-o80-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n4-t100-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 2,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t100-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n4-t100-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 2,
+      "solve_seconds": 0.003,
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t100-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n4-t100-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 3,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t100-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n4-t100-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 3,
+      "solve_seconds": 0.003,
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t100-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n4-t100-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 1,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t100-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n4-t100-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 1,
+      "solve_seconds": 0.003,
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t100-o20-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n4-t100-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 1,
+      "solve_seconds": 0.003,
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t100-o20-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n4-t100-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 3,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t100-o20-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n4-t100-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 1,
+      "complexity_metric": 3,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t100-o20-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n4-t100-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 2,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t100-o20-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n4-t100-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 4,
+      "solve_seconds": 0.003,
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t100-o80-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n4-t100-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 1,
+      "complexity_metric": 6,
+      "solve_seconds": 0.003,
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t100-o80-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n4-t100-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 1,
+      "complexity_metric": 6,
+      "solve_seconds": 0.003,
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t100-o80-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n4-t100-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 5,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t100-o80-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n4-t100-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 1,
+      "complexity_metric": 6,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n4-t100-o80-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n4-t100-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 5,
+      "solve_seconds": 0.003,
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t100-o80-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n4-t100-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 1,
+      "complexity_metric": 6,
+      "solve_seconds": 0.003,
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t100-o80-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n4-t100-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 1,
+      "complexity_metric": 6,
+      "solve_seconds": 0.003,
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t100-o80-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n4-t100-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 5,
+      "solve_seconds": 0.003,
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t100-o80-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n4-t100-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 5,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 4,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n4-t100-o80-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n6-t20-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.012,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t20-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n6-t20-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.01,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t20-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n6-t20-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.01,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t20-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n6-t20-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.01,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t20-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n6-t20-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.009,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t20-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n6-t20-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.011,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t20-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n6-t20-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.009,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t20-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n6-t20-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.011,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t20-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n6-t20-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 0,
+      "solve_seconds": 0.014,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t20-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n6-t20-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.009,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t20-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n6-t20-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.01,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t20-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n6-t20-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.013,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t20-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n6-t20-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.01,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t20-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n6-t20-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.01,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t20-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n6-t20-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.011,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t20-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n6-t20-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.011,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t20-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n6-t20-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.01,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t20-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n6-t20-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.011,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t20-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n6-t20-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 0,
+      "solve_seconds": 0.011,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t20-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n6-t20-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.009,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t20-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n6-t70-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.008,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t70-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n6-t70-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.012,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t70-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n6-t70-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 0,
+      "solve_seconds": 0.009,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t70-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n6-t70-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 0,
+      "solve_seconds": 0.01,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t70-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n6-t70-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 0,
+      "solve_seconds": 0.012,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t70-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n6-t70-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 0,
+      "solve_seconds": 0.008,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t70-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n6-t70-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 0,
+      "solve_seconds": 0.009,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t70-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n6-t70-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.009,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t70-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n6-t70-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 0,
+      "solve_seconds": 0.011,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t70-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n6-t70-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.009,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t70-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n6-t70-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.016,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t70-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n6-t70-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 0,
+      "solve_seconds": 0.018,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t70-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n6-t70-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.016,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t70-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n6-t70-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.014,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t70-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n6-t70-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.016,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t70-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n6-t70-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.017,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t70-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n6-t70-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.019,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t70-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n6-t70-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.011,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t70-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n6-t70-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 0,
+      "solve_seconds": 0.014,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t70-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n6-t70-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.015,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t70-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n6-t85-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 1,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t85-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n6-t85-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 3,
+      "solve_seconds": 0.007,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t85-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n6-t85-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 1,
+      "solve_seconds": 0.008,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t85-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n6-t85-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 1,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t85-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n6-t85-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 1,
+      "solve_seconds": 0.007,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t85-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n6-t85-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 1,
+      "solve_seconds": 0.007,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t85-o20-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n6-t85-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 1,
+      "solve_seconds": 0.008,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t85-o20-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n6-t85-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 2,
+      "solve_seconds": 0.007,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t85-o20-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n6-t85-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 2,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t85-o20-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n6-t85-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 0,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t85-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n6-t85-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 2,
+      "solve_seconds": 0.009,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t85-o80-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n6-t85-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 8,
+      "solve_seconds": 0.009,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t85-o80-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n6-t85-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 5,
+      "solve_seconds": 0.008,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t85-o80-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n6-t85-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 4,
+      "solve_seconds": 0.01,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t85-o80-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n6-t85-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 6,
+      "solve_seconds": 0.007,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t85-o80-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n6-t85-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 4,
+      "solve_seconds": 0.01,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t85-o80-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n6-t85-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 3,
+      "solve_seconds": 0.009,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t85-o80-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n6-t85-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 4,
+      "solve_seconds": 0.008,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t85-o80-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n6-t85-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 8,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t85-o80-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n6-t85-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 2,
+      "solve_seconds": 0.009,
+      "cell": {
+        "n_people": 6,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t85-o80-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n6-t100-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 2,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t100-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n6-t100-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 7,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t100-o20-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n6-t100-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 7,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t100-o20-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n6-t100-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 5,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t100-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n6-t100-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 5,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t100-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n6-t100-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 6,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t100-o20-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n6-t100-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 7,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t100-o20-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n6-t100-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 7,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t100-o20-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n6-t100-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 6,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t100-o20-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n6-t100-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 3,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t100-o20-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n6-t100-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 13,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t100-o80-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n6-t100-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 1,
+      "complexity_metric": 15,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t100-o80-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n6-t100-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 12,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t100-o80-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n6-t100-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 13,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t100-o80-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n6-t100-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 13,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n6-t100-o80-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n6-t100-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 11,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t100-o80-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n6-t100-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 1,
+      "complexity_metric": 15,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t100-o80-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n6-t100-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 14,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t100-o80-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n6-t100-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 1,
+      "complexity_metric": 15,
+      "solve_seconds": 0.005,
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t100-o80-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n6-t100-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 1,
+      "complexity_metric": 15,
+      "solve_seconds": 0.004,
+      "cell": {
+        "n_people": 6,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n6-t100-o80-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n8-t20-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 8,
+      "complexity_metric": 0,
+      "solve_seconds": 0.029,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t20-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n8-t20-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 8,
+      "complexity_metric": 0,
+      "solve_seconds": 0.02,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t20-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n8-t20-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 8,
+      "complexity_metric": 0,
+      "solve_seconds": 0.019,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t20-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n8-t20-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 8,
+      "complexity_metric": 0,
+      "solve_seconds": 0.023,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t20-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n8-t20-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 8,
+      "complexity_metric": 0,
+      "solve_seconds": 0.023,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t20-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n8-t20-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 7,
+      "complexity_metric": 0,
+      "solve_seconds": 0.018,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t20-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n8-t20-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 8,
+      "complexity_metric": 0,
+      "solve_seconds": 0.034,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t20-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n8-t20-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.039,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t20-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n8-t20-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.037,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t20-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n8-t20-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 7,
+      "complexity_metric": 0,
+      "solve_seconds": 0.136,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t20-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n8-t20-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 8,
+      "complexity_metric": 0,
+      "solve_seconds": 0.025,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t20-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n8-t20-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 8,
+      "complexity_metric": 0,
+      "solve_seconds": 0.019,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t20-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n8-t20-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 8,
+      "complexity_metric": 0,
+      "solve_seconds": 0.02,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t20-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n8-t20-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 8,
+      "complexity_metric": 0,
+      "solve_seconds": 0.019,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t20-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n8-t20-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 8,
+      "complexity_metric": 0,
+      "solve_seconds": 0.018,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t20-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n8-t20-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 7,
+      "complexity_metric": 0,
+      "solve_seconds": 0.022,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t20-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n8-t20-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 7,
+      "complexity_metric": 0,
+      "solve_seconds": 0.046,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t20-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n8-t20-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.088,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t20-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n8-t20-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.032,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t20-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n8-t20-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 7,
+      "complexity_metric": 0,
+      "solve_seconds": 0.122,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.2,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t20-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n8-t70-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.023,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t70-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n8-t70-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.027,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t70-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n8-t70-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 7,
+      "complexity_metric": 0,
+      "solve_seconds": 0.018,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t70-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n8-t70-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.022,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t70-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n8-t70-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 7,
+      "complexity_metric": 0,
+      "solve_seconds": 0.025,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t70-o20-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n8-t70-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.018,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t70-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n8-t70-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 0,
+      "solve_seconds": 0.034,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t70-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n8-t70-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 1,
+      "solve_seconds": 0.016,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t70-o20-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n8-t70-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 1,
+      "solve_seconds": 0.021,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t70-o20-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n8-t70-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 0,
+      "solve_seconds": 0.028,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t70-o20-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n8-t70-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.072,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t70-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n8-t70-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.085,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t70-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n8-t70-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 0,
+      "solve_seconds": 0.089,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t70-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n8-t70-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.093,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t70-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n8-t70-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.06,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t70-o80-clustered",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n8-t70-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.067,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t70-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n8-t70-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.064,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t70-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n8-t70-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 1,
+      "solve_seconds": 0.036,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t70-o80-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n8-t70-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 1,
+      "solve_seconds": 0.021,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t70-o80-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n8-t70-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 0,
+      "solve_seconds": 0.092,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.7,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t70-o80-uniform",
+      "level": "easy"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n8-t85-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 1,
+      "solve_seconds": 0.017,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t85-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n8-t85-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 4,
+      "solve_seconds": 0.009,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t85-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n8-t85-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 1,
+      "solve_seconds": 0.013,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t85-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n8-t85-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 2,
+      "solve_seconds": 0.012,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t85-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n8-t85-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 6,
+      "complexity_metric": 2,
+      "solve_seconds": 0.013,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t85-o20-clustered",
+      "level": "medium"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n8-t85-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 3,
+      "solve_seconds": 0.01,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t85-o20-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n8-t85-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 2,
+      "solve_seconds": 0.009,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t85-o20-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n8-t85-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 6,
+      "solve_seconds": 0.008,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t85-o20-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n8-t85-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 3,
+      "solve_seconds": 0.01,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t85-o20-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n8-t85-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 5,
+      "complexity_metric": 3,
+      "solve_seconds": 0.014,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t85-o20-uniform",
+      "level": "medium"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n8-t85-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 11,
+      "solve_seconds": 0.016,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t85-o80-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n8-t85-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 9,
+      "solve_seconds": 0.013,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t85-o80-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n8-t85-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 6,
+      "solve_seconds": 0.015,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t85-o80-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n8-t85-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 8,
+      "solve_seconds": 0.018,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t85-o80-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n8-t85-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 6,
+      "solve_seconds": 0.018,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t85-o80-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n8-t85-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 8,
+      "solve_seconds": 0.013,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t85-o80-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n8-t85-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 6,
+      "solve_seconds": 0.014,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t85-o80-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n8-t85-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 13,
+      "solve_seconds": 0.011,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t85-o80-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n8-t85-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 12,
+      "solve_seconds": 0.012,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t85-o80-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n8-t85-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 8,
+      "solve_seconds": 0.014,
+      "cell": {
+        "n_people": 8,
+        "tightness": 0.85,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t85-o80-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n8-t100-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 11,
+      "solve_seconds": 0.009,
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t100-o20-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n8-t100-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 9,
+      "solve_seconds": 0.007,
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t100-o20-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n8-t100-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 7,
+      "solve_seconds": 0.008,
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t100-o20-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n8-t100-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 7,
+      "solve_seconds": 0.009,
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t100-o20-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n8-t100-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 9,
+      "solve_seconds": 0.008,
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t100-o20-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n8-t100-o20-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 7,
+      "solve_seconds": 0.009,
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t100-o20-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n8-t100-o20-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 9,
+      "solve_seconds": 0.007,
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t100-o20-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n8-t100-o20-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 4,
+      "complexity_metric": 10,
+      "solve_seconds": 0.007,
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t100-o20-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n8-t100-o20-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 11,
+      "solve_seconds": 0.027,
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t100-o20-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n8-t100-o20-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 11,
+      "solve_seconds": 0.008,
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.2,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t100-o20-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "clustered-n8-t100-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 23,
+      "solve_seconds": 0.007,
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t100-o80-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "clustered-n8-t100-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 3,
+      "complexity_metric": 23,
+      "solve_seconds": 0.007,
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t100-o80-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "clustered-n8-t100-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 24,
+      "solve_seconds": 0.007,
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t100-o80-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "clustered-n8-t100-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 23,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t100-o80-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "clustered-n8-t100-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 26,
+      "solve_seconds": 0.008,
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "clustered"
+      },
+      "cell_key": "n8-t100-o80-clustered",
+      "level": "hard"
+    },
+    {
+      "seed": 10000,
+      "instance_id": "uniform-n8-t100-o80-s10000",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 25,
+      "solve_seconds": 0.008,
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t100-o80-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10001,
+      "instance_id": "uniform-n8-t100-o80-s10001",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 25,
+      "solve_seconds": 0.006,
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t100-o80-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10002,
+      "instance_id": "uniform-n8-t100-o80-s10002",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 26,
+      "solve_seconds": 0.007,
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t100-o80-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10003,
+      "instance_id": "uniform-n8-t100-o80-s10003",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 1,
+      "complexity_metric": 28,
+      "solve_seconds": 0.007,
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t100-o80-uniform",
+      "level": "hard"
+    },
+    {
+      "seed": 10004,
+      "instance_id": "uniform-n8-t100-o80-s10004",
+      "status": "OPTIMAL",
+      "proven_optimal": true,
+      "optimum": 2,
+      "complexity_metric": 27,
+      "solve_seconds": 0.008,
+      "cell": {
+        "n_people": 8,
+        "tightness": 1.0,
+        "overlap": 0.8,
+        "travel_structure": "uniform"
+      },
+      "cell_key": "n8-t100-o80-uniform",
+      "level": "hard"
+    }
+  ],
+  "incomplete_cells": [],
+  "content_hash": "67d1c874261f59eb3c4a040113562e7693514235a20375a5341adebec72ce302",
+  "timestamp_utc": "2026-08-04T22:24:55+00:00",
+  "wall_seconds": 3.2
+}

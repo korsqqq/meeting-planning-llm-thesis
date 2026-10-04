@@ -20,7 +20,7 @@ mirroring the input/output boundary of a call:
 
 The ledger then checks the identity total = input + thinking + answer (TokenUsage).
 
-FP8-8B/FP8-32B parity is verified empirically, not assumed: an automated test asserts
+AWQ-8B/AWQ-32B parity is verified empirically, not assumed: an automated test asserts
 that both served checkpoints render identical chat-template strings AND identical
 token-id sequences on five representative prompt shapes currently used by the harness
 (see `tests/test_tokenizer.py::test_tokenizer_parity_across_qwen3_sizes`). Chat
@@ -36,11 +36,13 @@ from transformers import AutoTokenizer
 
 __all__ = ["DEFAULT_TOKENIZER", "QwenTokenizer"]
 
-# The tokenizer of the served checkpoint itself (the FP8 repo, not the base repo:
+# The tokenizer of the served checkpoint itself (the AWQ repo, not the base repo:
 # separate HF repos ship their own tokenizer files and revisions). Parity with
-# Qwen3-32B-FP8 is asserted by test, not assumed
-# (test_tokenizer_parity_across_qwen3_sizes).
-DEFAULT_TOKENIZER = "Qwen/Qwen3-8B-FP8"
+# Qwen3-32B-AWQ is asserted by test, not assumed
+# (test_tokenizer_parity_across_qwen3_sizes). AWQ INT4 replaced FP8 because the
+# run machine is Ampere (RTX A6000, SM 8.6), which has no native FP8 support --
+# see THESIS_DECISIONS.md section 1.
+DEFAULT_TOKENIZER = "Qwen/Qwen3-8B-AWQ"
 
 
 class QwenTokenizer:

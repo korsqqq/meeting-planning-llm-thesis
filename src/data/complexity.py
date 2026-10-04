@@ -58,7 +58,8 @@ def level_boundaries(metrics: Sequence[int]) -> tuple[int, int]:
     The conflict distribution is strongly zero-inflated (roughly half of a broad
     pilot sweep has 0 binding conflicts), so a naive tertile over the whole sample
     collapses -- both cut points land on 0 and the medium bin vanishes. We therefore
-    anchor easy on the 0-conflict mass (b1 = 0, consistent with the predefined easy-level anchor) and split the POSITIVE conflicts at their median into medium and hard
+    anchor easy on the 0-conflict mass (b1 = 0, matching the registered "easy = 0
+    conflicts") and split the POSITIVE conflicts at their median into medium and hard
     (the quantile cut THESIS_DECISIONS.md section 3 prescribes, applied where it is
     not degenerate). Boundaries still come from the pilot data, not a priori.
     """

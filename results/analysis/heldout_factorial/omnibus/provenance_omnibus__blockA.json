@@ -1,0 +1,26 @@
+{
+  "schema_version": "heldout_factorial/1.0",
+  "step": "omnibus",
+  "written_utc": "2026-09-15T21:02:05+00:00",
+  "git_commit": "6220d8dfa435e0ee1b748e8f462ae80a5063c591",
+  "git_dirty": false,
+  "versions": {
+    "python": "3.12.13",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5"
+  },
+  "configuration": {
+    "runs": "D:\\thesis-mas-planning\\results\\exports\\heldout\\runs.csv",
+    "out": "D:\\thesis-mas-planning\\results\\analysis\\heldout_factorial",
+    "step": "omnibus",
+    "perms": 99999,
+    "perm_seed": 20260914,
+    "block": "A",
+    "outcome": "satisfaction",
+    "exclude_16k": false
+  },
+  "inputs": {
+    "results\\exports\\heldout\\runs.csv": "0e6698396d7309f724775a15fcad5a90fd660cb54c6ba5c90181d892f6a66ffc"
+  },
+  "standing": "procedures specified after all runs were complete; not pre-registered (THESIS_DECISIONS.md section 5, amendment 2026-09-14)"
+}

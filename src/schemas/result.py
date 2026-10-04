@@ -48,6 +48,27 @@ class CallRecord(BaseModel):
     thinking_tokens: int = Field(ge=0)   # tokens inside the <think> block
     answer_tokens: int = Field(ge=0)     # tokens of the visible answer
     latency_seconds: float = Field(ge=0.0)
+    # Why the endpoint stopped generating, verbatim ("stop", "length", ...). Diagnostic
+    # only: nothing routes on it. It is what separates a generation cut short by the
+    # per-call grant from a model that closed </think> and then emitted nothing -- the
+    # two look identical in the token counts, and the empty-post-think rule (section 2)
+    # treats them the same. Optional so that offline scripted clients, which have no
+    # endpoint to report one, stay valid.
+    finish_reason: str | None = None
+    # Context-window accounting: what the budget guard granted, what was actually sent
+    # after the deployment's window was applied, and whether the two differ. Diagnostic
+    # only -- the ledger books the REALISED tokens, so a limited call simply leaves its
+    # unspent grant in the budget. None on offline clients, which have no window.
+    requested_max_tokens: int | None = None
+    effective_max_tokens: int | None = None
+    context_limited: bool = False
+    # C5 only (§4 C5): which of the three Best-of-3 search trajectories issued this call,
+    # and the sampling seed it actually used. Optional and defaulting to None so every
+    # document written before C5 existed, and every call in C1-C4, stays valid unchanged
+    # -- the sweep runner's schema check and the existing analysers are unaffected. The
+    # single finalisation call never carries them: it is outside the attempt sequence.
+    attempt_index: int | None = None
+    sampling_seed: int | None = None
 
 
 class TokenUsage(BaseModel):
@@ -113,7 +134,7 @@ class RunResult(BaseModel):
     condition: Condition
     level: Level
     cap: int = Field(gt=0)
-    model: str                              # e.g. "Qwen/Qwen3-32B-FP8"
+    model: str                              # e.g. "Qwen/Qwen3-32B-AWQ"
     sampling: SamplingConfig
 
     # Plans: the emitted answer and the best valid intermediate plan, kept apart.

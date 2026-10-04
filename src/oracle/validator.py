@@ -1,7 +1,7 @@
 # src/oracle/validator.py
 """Hidden hard-constraint validator (independent of the solver).
 
-THESIS_DECISIONS.md section 5 / PROGRESS.md: a plan is valid only if it violates
+THESIS_DECISIONS.md section 5: a plan is valid only if it violates
 no hard constraint; any violation makes the whole plan invalid and scores 0 (no
 partial credit). This module is the single authority on validity. It is kept
 INDEPENDENT of solver.py and brute_force.py so a bug in the oracle cannot hide a

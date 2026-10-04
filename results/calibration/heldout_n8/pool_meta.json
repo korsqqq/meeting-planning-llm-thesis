@@ -1,0 +1,238 @@
+{
+  "schema_version": "structural_calibration/1.0",
+  "merged": true,
+  "merged_utc": "2026-08-27T02:22:30+00:00",
+  "n_people": 8,
+  "seed_range_name": "held_out_n8",
+  "seed_start": 100000,
+  "seed_end": 100399,
+  "n_seeds": 400,
+  "n_completed": 38400,
+  "tightness": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "overlap": [
+    0.2,
+    0.5,
+    0.8,
+    1.0
+  ],
+  "structures": [
+    "uniform",
+    "clustered",
+    "line",
+    "random"
+  ],
+  "candidates_sha256": "1f0e6bf3807020c08738c49acf071438956248b9e5cf295c69cb85df464dcb56",
+  "blocks": [
+    {
+      "schema_version": "structural_calibration/1.0",
+      "purpose": "structural calibration pool; collects, decides nothing",
+      "git_commit": "72e9cded2e56eb3d04340efbfaea973d788df3fe",
+      "n_people": 8,
+      "seed_range_name": "held_out_n8",
+      "seed_start": 100000,
+      "seed_end": 100099,
+      "reserved_range": [
+        100000,
+        109999
+      ],
+      "tightness": [
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        0.9,
+        1.0
+      ],
+      "overlap": [
+        0.2,
+        0.5,
+        0.8,
+        1.0
+      ],
+      "structures": [
+        "uniform",
+        "clustered",
+        "line",
+        "random"
+      ],
+      "n_expected": 9600,
+      "n_completed": 9600,
+      "n_not_proven": 0,
+      "wall_seconds": 1668.5,
+      "audit": {
+        "n_candidates": 9600,
+        "n_expected": 9600,
+        "distinct_instance_ids": 9600,
+        "distinct_knob_keys": 9600,
+        "seed_range_observed": [
+          100000,
+          100099
+        ],
+        "unproven_optima": 0,
+        "triangle_triples_per_instance": 504,
+        "all_checks_passed": true
+      },
+      "_block_dir": "results/calibration/heldout_n8_b0"
+    },
+    {
+      "schema_version": "structural_calibration/1.0",
+      "purpose": "structural calibration pool; collects, decides nothing",
+      "git_commit": "72e9cded2e56eb3d04340efbfaea973d788df3fe",
+      "n_people": 8,
+      "seed_range_name": "held_out_n8",
+      "seed_start": 100100,
+      "seed_end": 100199,
+      "reserved_range": [
+        100000,
+        109999
+      ],
+      "tightness": [
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        0.9,
+        1.0
+      ],
+      "overlap": [
+        0.2,
+        0.5,
+        0.8,
+        1.0
+      ],
+      "structures": [
+        "uniform",
+        "clustered",
+        "line",
+        "random"
+      ],
+      "n_expected": 9600,
+      "n_completed": 9600,
+      "n_not_proven": 0,
+      "wall_seconds": 2170.9,
+      "audit": {
+        "n_candidates": 9600,
+        "n_expected": 9600,
+        "distinct_instance_ids": 9600,
+        "distinct_knob_keys": 9600,
+        "seed_range_observed": [
+          100100,
+          100199
+        ],
+        "unproven_optima": 0,
+        "triangle_triples_per_instance": 504,
+        "all_checks_passed": true
+      },
+      "_block_dir": "results/calibration/heldout_n8_b1"
+    },
+    {
+      "schema_version": "structural_calibration/1.0",
+      "purpose": "structural calibration pool; collects, decides nothing",
+      "git_commit": "72e9cded2e56eb3d04340efbfaea973d788df3fe",
+      "n_people": 8,
+      "seed_range_name": "held_out_n8",
+      "seed_start": 100200,
+      "seed_end": 100299,
+      "reserved_range": [
+        100000,
+        109999
+      ],
+      "tightness": [
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        0.9,
+        1.0
+      ],
+      "overlap": [
+        0.2,
+        0.5,
+        0.8,
+        1.0
+      ],
+      "structures": [
+        "uniform",
+        "clustered",
+        "line",
+        "random"
+      ],
+      "n_expected": 9600,
+      "n_completed": 9600,
+      "n_not_proven": 0,
+      "wall_seconds": 2141.7,
+      "audit": {
+        "n_candidates": 9600,
+        "n_expected": 9600,
+        "distinct_instance_ids": 9600,
+        "distinct_knob_keys": 9600,
+        "seed_range_observed": [
+          100200,
+          100299
+        ],
+        "unproven_optima": 0,
+        "triangle_triples_per_instance": 504,
+        "all_checks_passed": true
+      },
+      "_block_dir": "results/calibration/heldout_n8_b2"
+    },
+    {
+      "schema_version": "structural_calibration/1.0",
+      "purpose": "structural calibration pool; collects, decides nothing",
+      "git_commit": "72e9cded2e56eb3d04340efbfaea973d788df3fe",
+      "n_people": 8,
+      "seed_range_name": "held_out_n8",
+      "seed_start": 100300,
+      "seed_end": 100399,
+      "reserved_range": [
+        100000,
+        109999
+      ],
+      "tightness": [
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        0.9,
+        1.0
+      ],
+      "overlap": [
+        0.2,
+        0.5,
+        0.8,
+        1.0
+      ],
+      "structures": [
+        "uniform",
+        "clustered",
+        "line",
+        "random"
+      ],
+      "n_expected": 9600,
+      "n_completed": 9600,
+      "n_not_proven": 0,
+      "wall_seconds": 1739.0,
+      "audit": {
+        "n_candidates": 9600,
+        "n_expected": 9600,
+        "distinct_instance_ids": 9600,
+        "distinct_knob_keys": 9600,
+        "seed_range_observed": [
+          100300,
+          100399
+        ],
+        "unproven_optima": 0,
+        "triangle_triples_per_instance": 504,
+        "all_checks_passed": true
+      },
+      "_block_dir": "results/calibration/heldout_n8_b3"
+    }
+  ]
+}

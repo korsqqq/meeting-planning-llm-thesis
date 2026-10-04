@@ -1,0 +1,19 @@
+{
+  "n_rows": 3960,
+  "n_tasks": 198,
+  "n_expected_runs": 3960,
+  "n_duplicate_expected_ids": 0,
+  "n_duplicate_run_ids": 0,
+  "missing_runs": [],
+  "unexpected_runs": [],
+  "tasks_without_20_runs": {},
+  "all_cells_complete": true,
+  "valid_rate_all_ones": true,
+  "termination_totals": {
+    "agent_finish": 2276,
+    "aborted": 1197,
+    "budget": 487
+  },
+  "aborted_saved_plan_retained_total": 190,
+  "aborted_with_positive_satisfaction": 190
+}

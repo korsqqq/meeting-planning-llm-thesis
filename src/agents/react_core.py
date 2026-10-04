@@ -12,7 +12,9 @@ The nodes are plain functions of `(state, ctx)`; each condition wires its own gr
 them (the wiring differs per condition, so it is not shared). The budget discipline
 (THESIS_DECISIONS section 2) is identical across conditions and lives in `BudgetLedger`:
 every reasoning call is capped at `max_new_tokens = max(0, remaining - reserve - input)`,
-so `remaining >= reserve` always holds and the short finalisation emit always fits.
+so `remaining >= reserve` always holds and the short finalisation emit always fits. The
+ledger also carries an OPTIONAL per-call ceiling (`max_call_tokens`, off by default --
+see `src/core/budget.py` for why it cannot be switched on as it stands).
 """
 
 from __future__ import annotations
@@ -20,13 +22,13 @@ from __future__ import annotations
 import json
 import re
 import time
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from operator import add
 from typing import Annotated, Any, TypedDict
 
 from src.agents.tools import get_availability, get_travel_time, list_people
 from src.core import BudgetLedger, LLMClient
-from src.oracle import is_valid
+from src.oracle import validate
 from src.schemas import AnswerContract, CallRecord, Instance, Meeting, TokenUsage
 
 __all__ = [
@@ -40,6 +42,8 @@ __all__ = [
     "finalize_step",
     "route_after_agent",
     "initial_state",
+    "termination_reason",
+    "proposal_record",
 ]
 
 # Minimal schema for the terminal emit (vLLM `guided_json`; the prompt guides Ollama).
@@ -84,10 +88,12 @@ def _parse_action(text: str) -> dict[str, Any] | None:
         # Strip surrounding quotes the model often adds: get_travel_time['start', 'loc_0'].
         args = [a.strip().strip("'\"") for a in arg_str.split(",")] if arg_str else []
         if tool == "finish":
-            return {"tool": "finish", "args": []}
-        return {"tool": tool, "args": args}
+            return {"tool": "finish", "args": [], "raw": arg_str}
+        # `raw` is the argument text exactly as written, kept so a rejected proposal can
+        # be reported as the agent phrased it (diagnostics only; nothing parses it).
+        return {"tool": tool, "args": args, "raw": arg_str}
     if _FINISH_RE.search(text):
-        return {"tool": "finish", "args": []}
+        return {"tool": "finish", "args": [], "raw": ""}
     return None
 
 
@@ -163,6 +169,68 @@ def _initial_messages(instance: Instance) -> list[dict[str, str]]:
     return [{"role": "system", "content": system}, {"role": "user", "content": user}]
 
 
+PROPOSAL_SCHEMA_VERSION = "proposal/1.0"
+
+
+def proposal_record(
+    instance: Instance,
+    plan: AnswerContract | None,
+    *,
+    step: int,
+    role: str,
+    condition: str,
+    raw: str,
+    best_len: int,
+) -> dict[str, Any]:
+    """One row of the rejected-proposal taxonomy (§5 secondary metric, §6).
+
+    Written at the moment the propose is handled, where the parse result and the
+    validator verdict are both already in hand -- never by re-parsing a stored
+    transcript, which would depend on the transcript's formatting and could drift
+    from what the harness actually did.
+
+    Measured on what the agent PROPOSED, not on the scored plan: `best_plan_so_far`
+    only ever accepts validator-approved plans and the scored `final_plan` equals it,
+    so the scored artefact is valid or empty by construction and carries no error
+    information. Every propose the hidden gate refused does.
+
+    Harness-side only: the row is never shown to the agent, exactly like the gate
+    itself, and nothing in the loop routes on it. `plan is None` means the arguments
+    did not parse into meetings at all.
+
+    Row shape (`PROPOSAL_SCHEMA_VERSION`, stable -- fields are added, never renamed):
+      schema_version, condition, role, step, raw, parsed, plan, n_meetings, valid,
+      reasons (multi-label, empty iff valid), accepted_into_best_plan.
+    """
+    parsed = plan is not None
+    reasons = (
+        ["malformed"] if not parsed
+        else [str(getattr(r, "value", r)) for r in validate(instance, plan)]
+    )
+    n_meetings = len(plan.meetings) if parsed else 0
+    return {
+        "schema_version": PROPOSAL_SCHEMA_VERSION,
+        "condition": condition,
+        "role": role,
+        "step": step,
+        "raw": raw,
+        "parsed": parsed,
+        "plan": (
+            [{"person_id": m.person_id, "start_time": m.start_time} for m in plan.meetings]
+            if parsed else None
+        ),
+        "n_meetings": n_meetings,
+        "valid": parsed and not reasons,
+        # Multi-label on purpose: one plan can break several hard constraints at once,
+        # and collapsing them to the first would bias the breakdown toward whichever
+        # check the validator happens to run first.
+        "reasons": reasons,
+        # Whether this proposal actually became best_plan_so_far: valid AND strictly
+        # longer than what was held, the same gate the scoring path applies.
+        "accepted_into_best_plan": parsed and not reasons and n_meetings > best_len,
+    }
+
+
 def _plan_from_args(args: list[str]) -> AnswerContract | None:
     """Parse a proposed plan written as `p0@10, p1@60` into an AnswerContract."""
     meetings: list[Meeting] = []
@@ -181,6 +249,9 @@ def _plan_from_args(args: list[str]) -> AnswerContract | None:
 class ReactState(TypedDict):
     messages: Annotated[list[dict[str, str]], add]
     calls: Annotated[list[CallRecord], add]
+    # Every propose the agent made, with the validator's verdict. Harness-side only:
+    # this is the rejected-proposal taxonomy, never anything the agent can see.
+    proposals: Annotated[list[dict[str, Any]], add]
     pending_tool: dict[str, Any] | None
     finalize: bool
     via_budget: bool
@@ -193,6 +264,11 @@ class ReactState(TypedDict):
     best_plan: AnswerContract
     step: int
     no_action_streak: int
+    # Consecutive empty post-think turns, and the run total. Only the EXPERIMENTAL
+    # `retry_on_empty` treatment reads the streak; `empty_turns` is diagnostic in both
+    # arms, so the locked behaviour can be reported on the same footing.
+    empty_streak: int
+    empty_turns: int
     # True iff the terminal emit parsed but did NOT round-trip best_plan_so_far (the plan
     # was then discarded in favour of the structural best). Integrity diagnostic only.
     finalization_mismatch: bool
@@ -209,6 +285,18 @@ class ReactResult:
     transcript: list[dict[str, str]]
     n_steps: int
     finalization_mismatch: bool = False
+    # Diagnostics, both arms of the empty-turn A/B (section 2). `empty_turns` counts
+    # post-think turns that carried no content; `termination` says what ended the loop.
+    empty_turns: int = 0
+    termination: str = "unknown"
+    # Rejected-proposal taxonomy: one row per propose, with the validator's reasons.
+    proposals: list[dict[str, Any]] = field(default_factory=list)
+    # Condition-specific, LOG-ONLY diagnostics, written straight into the result document
+    # and read by nothing in any loop. Empty for every condition that has none. It exists
+    # so a condition can record what its own structure produced -- C5's three trajectory
+    # products and the winning attempt, C4's pool and evidence coverage -- without either
+    # inventing a per-condition result type or teaching this core about any condition.
+    diagnostics: dict[str, Any] = field(default_factory=dict)
 
 
 @dataclass
@@ -219,12 +307,21 @@ class LoopContext:
     client: LLMClient
     ledger: BudgetLedger
     max_steps: int
+    # Condition label stamped onto every proposal row, so the taxonomy can be split by
+    # condition without joining against the run record. Diagnostics only.
+    condition: str = ""
+    # EXPERIMENTAL, default OFF -- the locked section-2 behaviour is "first empty
+    # post-think turn finalises immediately". True grants exactly one retry, the same
+    # single retry a non-empty formatting slip already gets; a second CONSECUTIVE empty
+    # turn finalises as before. Only `scripts/run_empty_retry_ab.py` sets this.
+    retry_on_empty: bool = False
 
 
 def initial_state(instance: Instance) -> ReactState:
     return {
         "messages": _initial_messages(instance),
         "calls": [],
+        "proposals": [],
         "pending_tool": None,
         "finalize": False,
         "via_budget": False,
@@ -233,8 +330,25 @@ def initial_state(instance: Instance) -> ReactState:
         "best_plan": AnswerContract.empty(),
         "step": 0,
         "no_action_streak": 0,
+        "empty_streak": 0,
+        "empty_turns": 0,
         "finalization_mismatch": False,
     }
+
+
+def termination_reason(state: ReactState, max_steps: int) -> str:
+    """Why the loop stopped: 'aborted' | 'budget' | 'max_steps' | 'agent_finish'.
+
+    Diagnostic only -- nothing routes on it. The order matters: an aborted loop may
+    also happen to be out of budget, and the abort is the more specific statement.
+    """
+    if state.get("aborted"):
+        return "aborted"
+    if state.get("via_budget"):
+        return "budget"
+    if state.get("step", 0) >= max_steps:
+        return "max_steps"
+    return "agent_finish"
 
 
 # --------------------------------------------------------------------------- #
@@ -262,6 +376,10 @@ def agent_step(state: ReactState, ctx: LoopContext) -> dict[str, Any]:
         thinking_tokens=resp.thinking_tokens,
         answer_tokens=resp.answer_tokens,
         latency_seconds=latency,
+        finish_reason=resp.finish_reason,
+        requested_max_tokens=resp.requested_max_tokens,
+        effective_max_tokens=resp.effective_max_tokens,
+        context_limited=resp.context_limited,
     )
     # Only the post-think answer is ever visible to the loop. raw_text may hold a
     # truncated <think> block (the grant was spent inside reasoning); it must never
@@ -272,13 +390,26 @@ def agent_step(state: ReactState, ctx: LoopContext) -> dict[str, Any]:
 
     if action is None:
         if not visible.strip():
-            # Empty post-think content (nothing after </think>, or nothing at all):
-            # retrying only re-encodes context and drains the budget. Finalise now,
-            # while the most budget remains for the terminal emit's own input.
-            # `aborted` makes every condition route straight to finalisation.
-            updates["messages"] = [{"role": "assistant", "content": visible}]
-            updates["finalize"] = True
-            updates["aborted"] = True
+            # Empty post-think content (nothing after </think>, or nothing at all).
+            # LOCKED default: finalise now, while the most budget remains for the
+            # terminal emit's own input -- retrying only re-encodes context and drains
+            # the budget. `aborted` makes every condition route straight to finalisation.
+            empty_streak = state.get("empty_streak", 0) + 1
+            updates["empty_turns"] = state.get("empty_turns", 0) + 1
+            if ctx.retry_on_empty and empty_streak < 2:
+                # EXPERIMENTAL arm only: one retry, exactly as a non-empty formatting
+                # slip gets. A second CONSECUTIVE empty turn falls through and aborts.
+                updates["messages"] = [
+                    {"role": "assistant", "content": visible},
+                    {"role": "user", "content": "Observation: Your last turn contained "
+                     "no answer. Write one line 'Action: <tool>[args]' or "
+                     "'Action: finish'."},
+                ]
+                updates["empty_streak"] = empty_streak
+            else:
+                updates["messages"] = [{"role": "assistant", "content": visible}]
+                updates["finalize"] = True
+                updates["aborted"] = True
         else:
             streak = state.get("no_action_streak", 0) + 1
             if streak >= 2:  # one retry for a non-empty formatting slip, then stop
@@ -292,16 +423,24 @@ def agent_step(state: ReactState, ctx: LoopContext) -> dict[str, Any]:
                      "one line 'Action: <tool>[args]' or 'Action: finish'."},
                 ]
                 updates["no_action_streak"] = streak
+                updates["empty_streak"] = 0  # a non-empty turn breaks the empty chain
     elif action["tool"] == "propose":
         updates["no_action_streak"] = 0
+        updates["empty_streak"] = 0
         plan = _plan_from_args(action["args"])
+        record = proposal_record(
+            instance, plan, step=state["step"] + 1, role="react_step",
+            condition=ctx.condition, raw=action.get("raw", ""),
+            best_len=len(state["best_plan"].meetings),
+        )
+        updates["proposals"] = [record]
         if plan is None:
             obs = "Could not parse the plan. Use 'Action: propose[p0@10, p1@60]'."
         else:
             # Keep the best VALID plan as best_plan_so_far. This is hidden harness
             # bookkeeping: the agent is told nothing about validity (no oracle/validator
             # leakage) -- the Observation only echoes the count it proposed.
-            if is_valid(instance, plan) and len(plan.meetings) > len(state["best_plan"].meetings):
+            if record["accepted_into_best_plan"]:
                 updates["best_plan"] = plan
             obs = f"Recorded a plan with {len(plan.meetings)} meeting(s)."
         updates["messages"] = [
@@ -310,16 +449,23 @@ def agent_step(state: ReactState, ctx: LoopContext) -> dict[str, Any]:
         ]
     elif action["tool"] == "finish":
         updates["no_action_streak"] = 0
+        updates["empty_streak"] = 0
         if action["args"]:  # finish may carry an inline plan
             plan = _plan_from_args(action["args"])
-            if (plan is not None and is_valid(instance, plan)
-                    and len(plan.meetings) > len(state["best_plan"].meetings)):
+            record = proposal_record(
+                instance, plan, step=state["step"] + 1, role="finish",
+                condition=ctx.condition, raw=action.get("raw", ""),
+                best_len=len(state["best_plan"].meetings),
+            )
+            updates["proposals"] = [record]
+            if record["accepted_into_best_plan"]:
                 updates["best_plan"] = plan
         updates["messages"] = [{"role": "assistant", "content": visible}]
         updates["finalize"] = True
     else:
         updates["messages"] = [{"role": "assistant", "content": visible}]
         updates["no_action_streak"] = 0
+        updates["empty_streak"] = 0
         updates["pending_tool"] = action
     return updates
 
@@ -369,6 +515,10 @@ def finalize_step(state: ReactState, ctx: LoopContext) -> dict[str, Any]:
             thinking_tokens=resp.thinking_tokens,
             answer_tokens=resp.answer_tokens,
             latency_seconds=latency,
+            finish_reason=resp.finish_reason,
+            requested_max_tokens=resp.requested_max_tokens,
+            effective_max_tokens=resp.effective_max_tokens,
+            context_limited=resp.context_limited,
         )]
         # thinking is OFF here, so the whole completion is the answer; raw_text is
         # never consulted (it could only ever add a stray <think> block).

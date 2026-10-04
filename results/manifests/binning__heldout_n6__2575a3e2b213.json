@@ -1,0 +1,66 @@
+{
+  "schema_version": "pilot_manifest/1.0",
+  "selector_version": "lowcx_manifest/1.0",
+  "grid_name": "lowcx_n6",
+  "purpose": "lower-complexity extension: 12 instances at a fixed oracle optimum. Level labels describe conflict density and never task size; n is a generator parameter and is not a complexity metric",
+  "seed_range_name": "held_out_n6",
+  "seed_range": {
+    "start": 130000,
+    "end": 139999
+  },
+  "n_people": 6,
+  "fixed_optimum": 3,
+  "n_per_size": 16,
+  "n_accepted": 16,
+  "boundaries": {
+    "b1_easy_max": 0,
+    "b2_medium_max": 3
+  },
+  "boundary_derivation": {
+    "rule": "the frozen n = 8 cut-points as densities, floored at this size: easy is D <= 1/28, medium is D <= 7/28",
+    "reference_n": 8,
+    "reference_pairs": [
+      1,
+      7
+    ],
+    "max_pairs_here": 15
+  },
+  "level_counts": {
+    "easy": 2,
+    "medium": 8,
+    "hard": 6
+  },
+  "pool": {
+    "dir": "results\\calibration\\heldout_n6",
+    "git_commit": "72e9cded2e56eb3d04340efbfaea973d788df3fe",
+    "seed_start": 130000,
+    "seed_end": 130099,
+    "n_candidates": 9600,
+    "candidates_sha256": "169ea07e6aa97c4d92c96c3f061e8804f6f6d161c436e46f4ea2fb72b6818b8b"
+  },
+  "selection": {
+    "rule": "earliest admissible selection in canonical order (seed, travel structure, tightness, overlap) at O = 3",
+    "fixed_optimum": 3,
+    "diversity": {
+      "min_tightness_values": 2,
+      "max_tightness_share": "6/10",
+      "travel_structure_histogram": {
+        "clustered": 4,
+        "line": 4,
+        "random": 4,
+        "uniform": 4
+      },
+      "travel_structure_rule": "exact and identical at every size, so a change in n is not accompanied by a change in travel topology; supersedes the weaker 'at least 2 structures' rule, which an equal split satisfies",
+      "one_instance_per_seed": true
+    },
+    "n_eligible": 1625,
+    "solver": {
+      "workers": 1,
+      "random_seed": 0,
+      "objective": "minimise total canonical rank"
+    },
+    "no_agent_information_used": true
+  },
+  "content_hash": "2575a3e2b213581929ace2810972d282994abd04c755d9759a2b8dac2847910a",
+  "timestamp_utc": "2026-08-27T01:07:43+00:00"
+}
